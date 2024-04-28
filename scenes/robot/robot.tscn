@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2kdgndw35lu3"]
+
+[ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/vacuum-1.png" id="1_18w56"]
+[ext_resource type="Script" path="res://scenes/robot/robot.gd" id="1_hsmhs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd4qp"]
+radius = 304.199
+
+[node name="Robot" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_hsmhs")
+_accel = 600.0
+_max_move_speed = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_18w56")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xd4qp")
