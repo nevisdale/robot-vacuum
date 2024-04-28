@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2kdgndw35lu3"]
+[gd_scene load_steps=5 format=3 uid="uid://b2kdgndw35lu3"]
 
 [ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/vacuum-1.png" id="1_18w56"]
 [ext_resource type="Script" path="res://scenes/robot/robot.gd" id="1_hsmhs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xd4qp"]
 radius = 123.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw8ib"]
+radius = 159.201
 
 [node name="Robot" type="CharacterBody2D" groups=["Robot"]]
 collision_mask = 6
@@ -19,3 +22,8 @@ texture = ExtResource("1_18w56")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xd4qp")
+
+[node name="CaptureArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaptureArea"]
+shape = SubResource("CircleShape2D_aw8ib")
