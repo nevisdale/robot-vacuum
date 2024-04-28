@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b52vhty5fh5vd"]
+
+[ext_resource type="Script" path="res://scenes/tests/test_room.gd" id="1_eksd2"]
+[ext_resource type="PackedScene" uid="uid://b2kdgndw35lu3" path="res://scenes/robot/robot.tscn" id="1_ttpwf"]
+
+[node name="TestRoom" type="Node2D"]
+script = ExtResource("1_eksd2")
+
+[node name="GarbageContainer" type="Node2D" parent="."]
+
+[node name="Robot" parent="." instance=ExtResource("1_ttpwf")]
+position = Vector2(964, 540)
+_friction = 1200.0
+
+[node name="Camera2D" type="Camera2D" parent="Robot"]
+limit_smoothed = true
+position_smoothing_enabled = true
