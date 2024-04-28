@@ -4,16 +4,17 @@
 [ext_resource type="Script" path="res://scenes/robot/robot.gd" id="1_hsmhs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xd4qp"]
-radius = 304.199
+radius = 123.0
 
 [node name="Robot" type="CharacterBody2D"]
+collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_hsmhs")
 _accel = 600.0
 _max_move_speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_18w56")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
