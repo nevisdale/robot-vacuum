@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_xd4qp"]
 radius = 123.0
 
-[node name="Robot" type="CharacterBody2D"]
+[node name="Robot" type="CharacterBody2D" groups=["Robot"]]
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_hsmhs")
