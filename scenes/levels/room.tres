@@ -1,0 +1,27 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://d2sew2b8063he"]
+
+[ext_resource type="Texture2D" uid="uid://cjp4rpt68k1he" path="res://assets/floor/tile_test.png" id="1_c4fwx"]
+[ext_resource type="Texture2D" uid="uid://cowq3tl2grjd5" path="res://assets/floor/wall_test.png" id="2_jvhhx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqouw"]
+texture = ExtResource("1_c4fwx")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5fxg6"]
+resource_name = "walls"
+texture = ExtResource("2_jvhhx")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 17
+sources/0 = SubResource("TileSetAtlasSource_nqouw")
+sources/1 = SubResource("TileSetAtlasSource_5fxg6")

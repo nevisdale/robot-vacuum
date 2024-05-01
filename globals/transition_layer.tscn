@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu74bja3wehg"]
+
+[ext_resource type="Script" path="res://globals/transition_layer.gd" id="1_p3ato"]
+
+[sub_resource type="Animation" id="Animation_qojjp"]
+resource_name = "fade_to_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f7grb"]
+_data = {
+"fade_to_black": SubResource("Animation_qojjp")
+}
+
+[node name="TransitionLayer" type="CanvasLayer"]
+script = ExtResource("1_p3ato")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f7grb")
+}

@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://buta7u5jlis0k"]
+[gd_scene load_steps=2 format=3 uid="uid://buta7u5jlis0k"]
+
+[ext_resource type="Script" path="res://scenes/garbage/garbage.gd" id="1_oxuco"]
 
 [node name="Garbage" type="Area2D" groups=["Garbage"]]
+collision_layer = 2
+script = ExtResource("1_oxuco")

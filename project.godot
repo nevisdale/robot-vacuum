@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="robot-vacuum"
+run/main_scene="res://scenes/tests/test_room.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://globals/globals.gd"
+TransitionLayer="*res://globals/transition_layer.tscn"
 
 [display]
 
@@ -53,6 +59,11 @@ move_down={
 2d_physics/layer_1="Robot"
 2d_physics/layer_2="Garbage"
 2d_physics/layer_3="Objects"
+2d_physics/layer_4="ChargeStation"
+2d_physics/layer_5="BigGarbage"
+2d_physics/layer_6="Bin"
+2d_physics/layer_7="Walls"
+2d_physics/layer_8="Cat"
 
 [rendering]
 
