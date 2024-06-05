@@ -1,19 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://hu6dnmbjpsiv"]
+[gd_scene load_steps=4 format=3 uid="uid://sccon78toguh"]
 
-[ext_resource type="PackedScene" uid="uid://buta7u5jlis0k" path="res://scenes/garbage/garbage.tscn" id="1_ddlda"]
-[ext_resource type="Texture2D" uid="uid://d2eiwd8n5lsst" path="res://assets/garbage/seed-three.png" id="2_mqy1h"]
+[ext_resource type="Texture2D" uid="uid://d2eiwd8n5lsst" path="res://assets/garbage/seed-three.png" id="1_hqn2w"]
+[ext_resource type="Script" path="res://scripts/garbage/Seed3.cs" id="1_sdrow"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhm1v"]
-radius = 7.0
-height = 36.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nclhp"]
+radius = 67.0
+height = 324.0
 
-[node name="Seed3" instance=ExtResource("1_ddlda")]
-
-[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
-position = Vector2(17, -2)
+[node name="Seed3" type="Area2D"]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_mqy1h")
+collision_layer = 2
+script = ExtResource("1_sdrow")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(154, -22)
+texture = ExtResource("1_hqn2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_qhm1v")
+shape = SubResource("CapsuleShape2D_nclhp")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ykv6f55ab02i"]
+
+[ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/robot.png" id="1_20euf"]
+[ext_resource type="Script" path="res://scripts/Robot.cs" id="1_tmt85"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jojqk"]
+radius = 122.004
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bsbo3"]
+radius = 180.011
+
+[node name="Robot" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_tmt85")
+movementSpeed = 300.0
+rotationSpeedRadian = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_20euf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jojqk")
+
+[node name="GarbageCaprureArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaprureArea"]
+shape = SubResource("CircleShape2D_bsbo3")

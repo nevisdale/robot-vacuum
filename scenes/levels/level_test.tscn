@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://pdnq708v4bg"]
+
+[ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_ytpr6"]
+[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="2_gydpc"]
+
+[node name="LevelTest" type="Node2D"]
+
+[node name="Robot" parent="." instance=ExtResource("1_ytpr6")]
+
+[node name="Camera2D" type="Camera2D" parent="Robot"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(577, -599)
+texture = ExtResource("2_gydpc")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(613, 425)
+texture = ExtResource("2_gydpc")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(-781, 425)
+texture = ExtResource("2_gydpc")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(-781, -591)
+texture = ExtResource("2_gydpc")
