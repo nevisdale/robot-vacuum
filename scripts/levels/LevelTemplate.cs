@@ -3,6 +3,8 @@ using Godot.NativeInterop;
 using System;
 using System.Collections.Generic;
 
+namespace Level;
+
 public partial class LevelTemplate : Node2D {
 	private Godot.Collections.Array<PackedScene> garbageScenes = new(){
 		ResourceLoader.Load<PackedScene>("res://scenes/garbage/seed_1.tscn"),
