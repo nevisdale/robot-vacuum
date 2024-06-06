@@ -54,8 +54,7 @@ rotate_right={
 [layer_names]
 
 2d_physics/layer_1="Robot"
-2d_physics/layer_2="CapturedGarbage"
-2d_physics/layer_3="MovedGarbage"
+2d_physics/layer_2="Garbage"
 
 [rendering]
 
