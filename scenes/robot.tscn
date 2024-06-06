@@ -10,11 +10,13 @@ radius = 122.004
 radius = 180.011
 
 [node name="Robot" type="CharacterBody2D"]
-collision_mask = 0
+collision_layer = 2
+collision_mask = 15
 motion_mode = 1
 script = ExtResource("1_tmt85")
 movementSpeed = 400.0
 rotationSpeedRadian = 3.5
+pushForce = 10000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708
@@ -24,7 +26,9 @@ texture = ExtResource("1_20euf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jojqk")
 
-[node name="GarbageCaprureArea" type="Area2D" parent="."]
+[node name="GarbageCaptureArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaprureArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaptureArea"]
 shape = SubResource("CircleShape2D_bsbo3")

@@ -9,7 +9,8 @@ height = 216.0
 
 [node name="Seed2" type="Area2D"]
 scale = Vector2(0.1, 0.1)
-collision_layer = 2
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("1_2oemo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

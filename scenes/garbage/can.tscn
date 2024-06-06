@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c526jsececbsr"]
+[gd_scene load_steps=4 format=3 uid="uid://c526jsececbsr"]
 
+[ext_resource type="Script" path="res://scripts/garbage/Can.cs" id="1_wem5h"]
 [ext_resource type="Texture2D" uid="uid://bk3xfepven47a" path="res://assets/garbage/can.png" id="1_wnpd1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
@@ -7,10 +8,13 @@ radius = 26.0
 height = 104.0
 
 [node name="Can" type="RigidBody2D"]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 8
+collision_mask = 15
+mass = 0.1
 gravity_scale = 1.66533e-16
 linear_damp = 5.0
+angular_damp = 5.0
+script = ExtResource("1_wem5h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -5)

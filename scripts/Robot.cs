@@ -1,5 +1,8 @@
 using Godot;
 using System;
+using System.Reflection.Metadata;
+
+namespace Objects;
 
 public partial class Robot : CharacterBody2D {
 	const string MOVE_FORWARD_INPUT_ACTION = "move_forward";
@@ -8,9 +11,16 @@ public partial class Robot : CharacterBody2D {
 
 	[Export] private float movementSpeed = 1;
 	[Export] private float rotationSpeedRadian = 1;
+	[Export] private float pushForce = 5000f;
+
+
+	private Area2D garbageCaptureArea;
 
 	public override void _Ready() {
 		Rotate(-Mathf.Pi / 2);
+
+		garbageCaptureArea = GetNode<Area2D>("GarbageCaptureArea");
+		garbageCaptureArea.AreaEntered += GarbageCaptureArea_OnAreaEntered;
 	}
 
 	public override void _PhysicsProcess(double delta) {
@@ -31,5 +41,24 @@ public partial class Robot : CharacterBody2D {
 
 		Velocity = velocity;
 		MoveAndSlide();
+
+		for (int i = 0; i < GetSlideCollisionCount(); i++) {
+			KinematicCollision2D kinematicCollision = GetSlideCollision(i);
+			if (kinematicCollision.GetCollider() is RigidBody2D rb) {
+				Vector2 force = pushForce * (float)delta * -kinematicCollision.GetNormal();
+				Vector2 position = kinematicCollision.GetPosition() - rb.GlobalPosition;
+				rb.ApplyForce(force, position);
+			}
+		}
+	}
+
+	private void GarbageCaptureArea_OnAreaEntered(Area2D area) {
+		if (area is not Garbage.IGarbage garbage) {
+			return;
+		}
+
+		if (garbage.CanBeCapturedByRobot()) {
+			garbage.CaptureAndDestroy(GlobalPosition);
+		}
 	}
 }
