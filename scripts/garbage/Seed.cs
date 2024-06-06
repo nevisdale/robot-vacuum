@@ -1,7 +1,8 @@
 using Godot;
-using System;
 
-public partial class Seed3 : Area2D {
+namespace Garbage;
+
+public partial class Seed : Area2D {
 	const float SCALE_FACTOR = 0.2f;
 	const float TWEEN_DURATION = 0.3f;
 

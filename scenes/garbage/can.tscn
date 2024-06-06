@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c526jsececbsr"]
+
+[ext_resource type="Texture2D" uid="uid://bk3xfepven47a" path="res://assets/garbage/can.png" id="1_wnpd1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
+radius = 26.0
+height = 104.0
+
+[node name="Can" type="RigidBody2D"]
+collision_layer = 4
+gravity_scale = 1.66533e-16
+linear_damp = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -5)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_wnpd1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3ci8u")

@@ -25,6 +25,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="robot-vacuum"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_forward={
@@ -51,6 +55,7 @@ rotate_right={
 
 2d_physics/layer_1="Robot"
 2d_physics/layer_2="CapturedGarbage"
+2d_physics/layer_3="MovedGarbage"
 
 [rendering]
 
