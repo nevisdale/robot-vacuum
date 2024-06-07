@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cov7p3qwj4nbr"]
+
+[ext_resource type="PackedScene" uid="uid://bmtcq538yxbsp" path="res://scenes/levels/level_template.tscn" id="1_jaf21"]
+[ext_resource type="PackedScene" uid="uid://cbcura8obn6n3" path="res://scenes/garbage/seed_1.tscn" id="2_3btve"]
+[ext_resource type="PackedScene" uid="uid://cddhok1c57ojm" path="res://scenes/levels/level_2.tscn" id="3_32ggk"]
+[ext_resource type="PackedScene" uid="uid://cylb1x0u4t22m" path="res://scenes/garbage/seed_2.tscn" id="3_avd3a"]
+[ext_resource type="PackedScene" uid="uid://sccon78toguh" path="res://scenes/garbage/seed_3.tscn" id="4_kig5n"]
+
+[node name="Level1" instance=ExtResource("1_jaf21")]
+nextScene = ExtResource("3_32ggk")
+
+[node name="Seed1" parent="GarbageContainer" index="0" instance=ExtResource("2_3btve")]
+position = Vector2(795, 363)
+
+[node name="Seed10" parent="GarbageContainer" index="1" instance=ExtResource("2_3btve")]
+position = Vector2(470, 383)
+
+[node name="Seed7" parent="GarbageContainer" index="2" instance=ExtResource("2_3btve")]
+position = Vector2(631, 383)
+
+[node name="Seed4" parent="GarbageContainer" index="3" instance=ExtResource("2_3btve")]
+position = Vector2(531, 502)
+
+[node name="Seed3" parent="GarbageContainer" index="4" instance=ExtResource("4_kig5n")]
+position = Vector2(902, 387)
+
+[node name="Seed12" parent="GarbageContainer" index="5" instance=ExtResource("4_kig5n")]
+position = Vector2(503, 758)
+
+[node name="Seed9" parent="GarbageContainer" index="6" instance=ExtResource("4_kig5n")]
+position = Vector2(970, 214)
+
+[node name="Seed6" parent="GarbageContainer" index="7" instance=ExtResource("4_kig5n")]
+position = Vector2(660, 237)
+
+[node name="Seed2" parent="GarbageContainer" index="8" instance=ExtResource("3_avd3a")]
+position = Vector2(639, 616)
+
+[node name="Seed5" parent="GarbageContainer" index="9" instance=ExtResource("3_avd3a")]
+position = Vector2(506, 626)
+
+[node name="Seed8" parent="GarbageContainer" index="10" instance=ExtResource("3_avd3a")]
+position = Vector2(691, 501)
+
+[node name="Seed11" parent="GarbageContainer" index="11" instance=ExtResource("3_avd3a")]
+position = Vector2(495, 297)
+
+[node name="Seed13" parent="GarbageContainer" index="12" instance=ExtResource("3_avd3a")]
+position = Vector2(311, 241)

@@ -14,9 +14,13 @@ public partial class UI : CanvasLayer {
 
 	public override void _Process(double delta) {
 		string labelText = "go to charging station";
-		if (G.Globals.GarbageCount > 0) {
+		if (!IsComplete()) {
 			labelText = $"you need to capture {G.Globals.GarbageCount} garbage items";
 		}
 		label.Text = labelText;
+	}
+
+	public bool IsComplete() {
+		return G.Globals.GarbageCount == 0;
 	}
 }
