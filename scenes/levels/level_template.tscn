@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmtcq538yxbsp"]
+[gd_scene load_steps=10 format=3 uid="uid://bmtcq538yxbsp"]
 
 [ext_resource type="Script" path="res://scripts/levels/LevelTemplate.cs" id="1_vwv8c"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
@@ -6,10 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://cylb1x0u4t22m" path="res://scenes/garbage/seed_2.tscn" id="3_5mgf8"]
 [ext_resource type="PackedScene" uid="uid://sccon78toguh" path="res://scenes/garbage/seed_3.tscn" id="4_ej2et"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="5_jbigv"]
-[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/bin.tscn" id="7_g4ww0"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="7_g4ww0"]
+[ext_resource type="PackedScene" uid="uid://oh0oorki4j30" path="res://scenes/ui/ui.tscn" id="8_ksv60"]
+[ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charging_station.tscn" id="9_6v1cl"]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("garbageContainer")]
 script = ExtResource("1_vwv8c")
+garbageContainer = NodePath("GarbageContainer")
+
+[node name="ChargingStation" parent="." instance=ExtResource("9_6v1cl")]
+position = Vector2(1348, 407)
 
 [node name="GarbageContainer" type="Node2D" parent="."]
 
@@ -42,4 +48,6 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="Bin" parent="." instance=ExtResource("7_g4ww0")]
-position = Vector2(249, 529)
+position = Vector2(249, 531)
+
+[node name="UI" parent="." instance=ExtResource("8_ksv60")]

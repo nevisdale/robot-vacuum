@@ -16,7 +16,7 @@ motion_mode = 1
 script = ExtResource("1_tmt85")
 movementSpeed = 400.0
 rotationSpeedRadian = 3.5
-pushForce = 10000.0
+pushForce = 12000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708
