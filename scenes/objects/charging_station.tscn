@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cna5b0cu8gvw1"]
+[gd_scene load_steps=5 format=3 uid="uid://cna5b0cu8gvw1"]
 
 [ext_resource type="Script" path="res://scripts/objects/ChargingStation.cs" id="1_d7suy"]
-[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="1_w3o7d"]
+[ext_resource type="Texture2D" uid="uid://b7acy8jsm70aq" path="res://assets/objects/station.png" id="2_7g7m7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws661"]
 radius = 31.257
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv30y"]
+size = Vector2(254, 68)
 
 [node name="ChargingStation" type="Area2D"]
 collision_layer = 4
@@ -12,8 +15,17 @@ collision_mask = 2
 script = ExtResource("1_d7suy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_w3o7d")
+rotation = -1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_7g7m7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ws661")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 74)
+shape = SubResource("RectangleShape2D_gv30y")

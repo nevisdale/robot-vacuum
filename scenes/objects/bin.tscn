@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bonjdc4kt2wxw"]
 
-[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="1_bpgf5"]
 [ext_resource type="Script" path="res://scripts/objects/Bin.cs" id="1_wtp5a"]
+[ext_resource type="Texture2D" uid="uid://u0e25n6st200" path="res://assets/objects/bin.png" id="2_xmbet"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_co4md"]
-size = Vector2(126, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_w6wpb"]
+radius = 63.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gqjdx"]
-radius = 93.2631
+radius = 151.013
 
 [node name="Bin" type="StaticBody2D"]
 collision_layer = 4
@@ -15,15 +15,19 @@ collision_mask = 15
 script = ExtResource("1_wtp5a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-texture = ExtResource("1_bpgf5")
+position = Vector2(108, 22)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xmbet")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_co4md")
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_w6wpb")
 
 [node name="GarbageCaptureArea" type="Area2D" parent="."]
+position = Vector2(0, -12)
 collision_layer = 4
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaptureArea"]
+position = Vector2(0, -46)
 shape = SubResource("CircleShape2D_gqjdx")
