@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Godot;
 
 namespace Level;
@@ -18,22 +19,28 @@ public partial class LevelTemplate : Node2D {
 		RandomRotateGarbage();
 	}
 
-	public override void _Process(double delta) {
+	public override async void _Process(double delta) {
 		if (Input.IsActionJustPressed(RESTART_INPUT_ACTION)) {
-			Error err = GetTree().ReloadCurrentScene();
-			if (err != Error.Ok) {
-				GD.PrintErr($"can't reload the scene: {err}");
+			Task<Error> task = Global.TransitionLayer.Instance.ReloadCurrentSceneAsync();
+			await task;
+			if (task.Result != Error.Ok) {
+				GD.PrintErr($"can't reload the scene: {task.Result}");
 			}
 		}
 
 	}
 
-	public override void _PhysicsProcess(double delta) {
+	public override async void _PhysicsProcess(double delta) {
 		G.Globals.GarbageCount = garbageContainer.GetChildCount();
 
 		if (chargingStation.IsComplete()) {
 			if (nextScene != null) {
-				GetTree().ChangeSceneToPacked(nextScene);
+				Task<Error> task = Global.TransitionLayer.Instance.LoadPackedScene(nextScene);
+				await task;
+				if (task.Result != Error.Ok) {
+					GD.PrintErr($"can't load the next scene: {task.Result}");
+				}
+
 			} else {
 				GD.Print("next scene is empty. you complete the level");
 			}
