@@ -3,6 +3,8 @@ using Godot;
 namespace Level;
 
 public partial class LevelTemplate : Node2D {
+	private const string RESTART_INPUT_ACTION = "restart";
+
 	[Export] private Node2D garbageContainer;
 	[Export] private PackedScene nextScene;
 	[Export] private Objects.ChargingStation chargingStation;
@@ -14,6 +16,16 @@ public partial class LevelTemplate : Node2D {
 		}
 
 		RandomRotateGarbage();
+	}
+
+	public override void _Process(double delta) {
+		if (Input.IsActionJustPressed(RESTART_INPUT_ACTION)) {
+			Error err = GetTree().ReloadCurrentScene();
+			if (err != Error.Ok) {
+				GD.PrintErr($"can't reload the scene: {err}");
+			}
+		}
+
 	}
 
 	public override void _PhysicsProcess(double delta) {
