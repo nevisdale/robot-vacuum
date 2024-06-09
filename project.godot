@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="robot-vacuum"
-run/main_scene="res://scenes/tests/test_room.tscn"
+run/main_scene="res://scenes/levels/level_1.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://icon.svg"
 
