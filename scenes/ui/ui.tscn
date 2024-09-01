@@ -15,5 +15,5 @@ theme_override_constants/margin_top = 10
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "dfdfdfdfdfdfdf"
+text = "you need to capture N garbage item(s)"
 vertical_alignment = 1
