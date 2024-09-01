@@ -12,6 +12,9 @@ public partial class Cat : Node2D {
     [Export]
     private PathFollow2D pathFollow;
 
+    [Export]
+    private float speed = 200f;
+
 
     public override void _Ready() {
         Debug.Assert(pathFollow != null, "PathFollow is not set");
@@ -23,7 +26,7 @@ public partial class Cat : Node2D {
     }
 
     public override void _Process(double delta) {
-        pathFollow.Progress += 200 * (float)delta;
+        pathFollow.Progress += speed * (float)delta;
         GlobalPosition = pathFollow.GlobalPosition;
     }
 
