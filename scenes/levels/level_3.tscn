@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw2dd3asuftmr"]
+
+[ext_resource type="PackedScene" uid="uid://bmtcq538yxbsp" path="res://scenes/levels/level_template.tscn" id="1_wadip"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/emenies/cat.tscn" id="2_ttuje"]
+
+[sub_resource type="Curve2D" id="Curve2D_t5ibw"]
+_data = {
+"points": PackedVector2Array(-218.911, 403.882, 218.911, -403.882, 273, 297, -52.6065, -162.911, 52.6065, 162.911, 886, 294, 273.215, -67.8794, -273.215, 67.8794, 642, 813, 71.2734, 327.518, -71.2734, -327.518, 70, 601, -25.4548, 220.608, 25.4548, -220.608, 273, 296, 0, 0, 0, 0, 273, 297)
+}
+point_count = 6
+
+[node name="LevelTemplate" instance=ExtResource("1_wadip")]
+
+[node name="Enemies" type="Node2D" parent="." index="4"]
+
+[node name="Cat1" type="Node2D" parent="Enemies" index="0"]
+
+[node name="Cat" parent="Enemies/Cat1" index="0" node_paths=PackedStringArray("pathFollow") instance=ExtResource("2_ttuje")]
+position = Vector2(344, 516)
+pathFollow = NodePath("../Path2D/PathFollow2D")
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat1" index="1"]
+position = Vector2(-81, -34)
+curve = SubResource("Curve2D_t5ibw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat1/Path2D" index="0"]
+position = Vector2(273, 297)
+rotation = -1.0741

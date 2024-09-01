@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Godot;
+using Objects;
 
 namespace Level;
 
@@ -9,12 +11,22 @@ public partial class LevelTemplate : Node2D {
 	[Export] private Node2D garbageContainer;
 	[Export] private PackedScene nextScene;
 	[Export] private Objects.ChargingStation chargingStation;
+	[Export] Robot robot;
 
 	public override void _Ready() {
 		G.Globals.GarbageCount = garbageContainer.GetChildCount();
-		if (chargingStation == null) {
-			GD.PrintErr("charging must be not empty");
-		}
+
+		Debug.Assert(chargingStation != null, "charging must be not empty");
+		Debug.Assert(robot != null, "robot must be not empty");
+
+		robot.RobotOnDestroyed += () => {
+			Task<Error> task = Global.TransitionLayer.Instance.ReloadCurrentSceneAsync();
+			task.ContinueWith(t => {
+				if (t.Result != Error.Ok) {
+					GD.PrintErr($"can't reload the scene: {t.Result}");
+				}
+			});
+		};
 
 		RandomRotateGarbage();
 	}

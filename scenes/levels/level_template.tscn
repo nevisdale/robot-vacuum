@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://oh0oorki4j30" path="res://scenes/ui/ui.tscn" id="8_ksv60"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charging_station.tscn" id="9_6v1cl"]
 
-[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("garbageContainer", "chargingStation")]
+[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("garbageContainer", "chargingStation", "robot")]
 script = ExtResource("1_vwv8c")
 garbageContainer = NodePath("GarbageContainer")
 chargingStation = NodePath("ChargingStation")
+robot = NodePath("Robot")
 
 [node name="ChargingStation" parent="." instance=ExtResource("9_6v1cl")]
 position = Vector2(1348, 407)
