@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bw2dd3asuftmr"]
+[gd_scene load_steps=8 format=3 uid="uid://bw2dd3asuftmr"]
 
 [ext_resource type="PackedScene" uid="uid://bmtcq538yxbsp" path="res://scenes/levels/level_template.tscn" id="1_wadip"]
+[ext_resource type="PackedScene" uid="uid://cq4xoj6q36o0g" path="res://scenes/levels/level_4.tscn" id="2_mk3j2"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/emenies/cat.tscn" id="2_ttuje"]
 [ext_resource type="PackedScene" uid="uid://cbcura8obn6n3" path="res://scenes/garbage/seed_1.tscn" id="2_ygucx"]
 [ext_resource type="PackedScene" uid="uid://sccon78toguh" path="res://scenes/garbage/seed_3.tscn" id="3_p2h8p"]
@@ -12,7 +13,8 @@ _data = {
 }
 point_count = 5
 
-[node name="LevelTemplate" instance=ExtResource("1_wadip")]
+[node name="Level3" instance=ExtResource("1_wadip")]
+nextScene = ExtResource("2_mk3j2")
 
 [node name="Seed1" parent="GarbageContainer" index="0" instance=ExtResource("2_ygucx")]
 position = Vector2(877, 606)
