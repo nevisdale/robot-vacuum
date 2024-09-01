@@ -5,6 +5,9 @@ using System.Reflection.Metadata;
 namespace Objects;
 
 public partial class Robot : CharacterBody2D {
+	[Signal]
+	public delegate void RobotOnDestroyedEventHandler();
+
 	const string MOVE_FORWARD_INPUT_ACTION = "move_forward";
 	const string ROTATE_LEFT_INPUT_ACTION = "rotate_left";
 	const string ROTATE_RIGHT_INPUT_ACTION = "rotate_right";
@@ -50,6 +53,11 @@ public partial class Robot : CharacterBody2D {
 				rb.ApplyForce(force, position);
 			}
 		}
+	}
+
+	public void Destroy() {
+		ProcessMode = ProcessModeEnum.Disabled;
+		EmitSignal(SignalName.RobotOnDestroyed);
 	}
 
 	private void GarbageCaptureArea_OnAreaEntered(Area2D area) {

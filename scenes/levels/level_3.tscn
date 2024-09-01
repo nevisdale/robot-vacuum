@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw2dd3asuftmr"]
+
+[ext_resource type="PackedScene" uid="uid://bmtcq538yxbsp" path="res://scenes/levels/level_template.tscn" id="1_wadip"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/emenies/cat.tscn" id="2_ttuje"]
+[ext_resource type="PackedScene" uid="uid://cbcura8obn6n3" path="res://scenes/garbage/seed_1.tscn" id="2_ygucx"]
+[ext_resource type="PackedScene" uid="uid://sccon78toguh" path="res://scenes/garbage/seed_3.tscn" id="3_p2h8p"]
+[ext_resource type="PackedScene" uid="uid://cylb1x0u4t22m" path="res://scenes/garbage/seed_2.tscn" id="4_hogn6"]
+
+[sub_resource type="Curve2D" id="Curve2D_euwfj"]
+_data = {
+"points": PackedVector2Array(81.7099, 370.512, -81.7099, -370.512, -131, 288, -281.758, -77.4835, 281.758, 77.4835, 552, 179, 229.633, -395.87, -229.633, 395.87, 718, 912, 69.0308, 85.9362, -69.0308, -85.9362, 29, 872, 0, 0, 0, 0, -130, 289)
+}
+point_count = 5
+
+[node name="LevelTemplate" instance=ExtResource("1_wadip")]
+
+[node name="Seed1" parent="GarbageContainer" index="0" instance=ExtResource("2_ygucx")]
+position = Vector2(877, 606)
+
+[node name="Seed10" parent="GarbageContainer" index="1" instance=ExtResource("2_ygucx")]
+position = Vector2(552, 626)
+
+[node name="Seed7" parent="GarbageContainer" index="2" instance=ExtResource("2_ygucx")]
+position = Vector2(713, 626)
+
+[node name="Seed4" parent="GarbageContainer" index="3" instance=ExtResource("2_ygucx")]
+position = Vector2(613, 745)
+
+[node name="Seed3" parent="GarbageContainer" index="4" instance=ExtResource("3_p2h8p")]
+position = Vector2(984, 630)
+
+[node name="Seed12" parent="GarbageContainer" index="5" instance=ExtResource("3_p2h8p")]
+position = Vector2(585, 1001)
+
+[node name="Seed9" parent="GarbageContainer" index="6" instance=ExtResource("3_p2h8p")]
+position = Vector2(1052, 457)
+
+[node name="Seed6" parent="GarbageContainer" index="7" instance=ExtResource("3_p2h8p")]
+position = Vector2(742, 480)
+
+[node name="Seed2" parent="GarbageContainer" index="8" instance=ExtResource("4_hogn6")]
+position = Vector2(721, 859)
+
+[node name="Seed5" parent="GarbageContainer" index="9" instance=ExtResource("4_hogn6")]
+position = Vector2(588, 869)
+
+[node name="Seed8" parent="GarbageContainer" index="10" instance=ExtResource("4_hogn6")]
+position = Vector2(773, 744)
+
+[node name="Seed11" parent="GarbageContainer" index="11" instance=ExtResource("4_hogn6")]
+position = Vector2(577, 540)
+
+[node name="Seed13" parent="GarbageContainer" index="12" instance=ExtResource("4_hogn6")]
+position = Vector2(393, 484)
+
+[node name="Robot" parent="." index="2"]
+position = Vector2(1133, 953)
+
+[node name="CatPath1" type="Node2D" parent="Enemies" index="0"]
+
+[node name="Cat" parent="Enemies/CatPath1" index="0" node_paths=PackedStringArray("pathFollow") instance=ExtResource("2_ttuje")]
+position = Vector2(375, 187)
+pathFollow = NodePath("../Path2D/PathFollow2D")
+speed = 500.0
+
+[node name="Path2D" type="Path2D" parent="Enemies/CatPath1" index="1"]
+position = Vector2(445, 325)
+scale = Vector2(0.661314, 0.687445)
+curve = SubResource("Curve2D_euwfj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/CatPath1/Path2D" index="0"]
+position = Vector2(-131, 288)
+rotation = -1.78785
