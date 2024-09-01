@@ -20,6 +20,7 @@ position = Vector2(1348, 407)
 position = Vector2(950, 743)
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 metadata/_edit_group_ = true
