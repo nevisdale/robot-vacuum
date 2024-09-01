@@ -1,16 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgg5o80f7xh4r"]
 
 [ext_resource type="Script" path="res://scripts/enemies/Cat.cs" id="1_qrwey"]
-[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="2_cf4wb"]
+[ext_resource type="Texture2D" uid="uid://btjnltrfjcpfo" path="res://assets/objects/cat.png" id="2_1tewu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m73f"]
-radius = 146.123
+radius = 243.296
 
 [node name="Cat" type="Node2D"]
 script = ExtResource("1_qrwey")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_cf4wb")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1tewu")
 
 [node name="CaptureArea" type="Area2D" parent="."]
 collision_layer = 16

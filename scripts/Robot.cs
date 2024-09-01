@@ -19,6 +19,8 @@ public partial class Robot : CharacterBody2D {
 
 	private Area2D garbageCaptureArea;
 
+	public bool CanBeDestroyed { get; private set; } = true;
+
 	public override void _Ready() {
 		Rotate(-Mathf.Pi / 2);
 

@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using System.IO;
 using Godot;
@@ -33,6 +34,9 @@ public partial class Cat : Node2D {
     private void CaptureArea_BodyEntered(Node2D body) {
         Debug.Assert(body is Robot, "Cat can only capture robots");
         var robot = (Robot)body;
+        if (!robot.CanBeDestroyed) {
+            return;
+        }
 
         Tween tween = CreateTween();
         tween.SetEase(Tween.EaseType.Out);
