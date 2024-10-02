@@ -11,14 +11,20 @@ config_version=5
 [application]
 
 config/name="robot-vacuum"
-run/main_scene="res://scenes/levels/level_1.tscn"
-config/features=PackedStringArray("4.3", "C#", "Mobile")
+run/main_scene="res://scenes/levels/test.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://scripts/globals/Globals.cs"
+State="*res://scripts/globals/state.gd"
 TransitionLayer="*res://scenes/globals/transition_layer.tscn"
+
+[debug]
+
+gdscript/warnings/unassigned_variable=2
+gdscript/warnings/unassigned_variable_op_assign=2
+gdscript/warnings/untyped_declaration=2
 
 [display]
 
@@ -67,8 +73,6 @@ restart={
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Robot"
 2d_physics/layer_3="Objects"
-2d_physics/layer_4="Garbage"
-2d_physics/layer_5="Enemy"
 
 [rendering]
 

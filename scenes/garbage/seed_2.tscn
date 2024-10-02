@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cylb1x0u4t22m"]
 
-[ext_resource type="Script" path="res://scripts/garbage/Seed.cs" id="1_2oemo"]
+[ext_resource type="Script" path="res://scripts/garbage/seed.gd" id="1_hbrs0"]
 [ext_resource type="Texture2D" uid="uid://btxn5kmlymgqj" path="res://assets/garbage/seed-two.png" id="1_jhhbr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t3apx"]
@@ -9,9 +9,9 @@ height = 216.0
 
 [node name="Seed2" type="Area2D"]
 scale = Vector2(0.1, 0.1)
-collision_layer = 8
+collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_2oemo")
+script = ExtResource("1_hbrs0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(172, 12)

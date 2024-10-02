@@ -1,31 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmtcq538yxbsp"]
+[gd_scene load_steps=7 format=3 uid="uid://beto5bgm5v55j"]
 
-[ext_resource type="Script" path="res://scripts/levels/LevelTemplate.cs" id="1_vwv8c"]
+[ext_resource type="Script" path="res://scripts/levels/level_template.gd" id="1_os6ty"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
-[ext_resource type="PackedScene" uid="uid://oh0oorki4j30" path="res://scenes/ui/ui.tscn" id="8_ksv60"]
-[ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charging_station.tscn" id="9_6v1cl"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_5dq6o"]
+[ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_7e6ij"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_67k3f"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="3_kuby7"]
 
-[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("garbageContainer", "chargingStation", "robot")]
-script = ExtResource("1_vwv8c")
-garbageContainer = NodePath("GarbageContainer")
-chargingStation = NodePath("ChargingStation")
-robot = NodePath("Robot")
+[node name="LevelTemplate" type="Node2D"]
+script = ExtResource("1_os6ty")
 
-[node name="ChargingStation" parent="." instance=ExtResource("9_6v1cl")]
-position = Vector2(1348, 407)
+[node name="Garbage" type="Node2D" parent="."]
 
-[node name="GarbageContainer" type="Node2D" parent="."]
+[node name="SeedSet" parent="Garbage" instance=ExtResource("2_5dq6o")]
+position = Vector2(-374, 4)
+
+[node name="Can" parent="Garbage" instance=ExtResource("3_67k3f")]
+position = Vector2(-208, 272)
+
+[node name="Charger" parent="." instance=ExtResource("3_7e6ij")]
+position = Vector2(562, 308)
 
 [node name="Robot" parent="." instance=ExtResource("1_yyibw")]
-position = Vector2(950, 743)
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.7, 0.7)
-position_smoothing_enabled = true
-position_smoothing_speed = 4.0
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
-[node name="UI" parent="." instance=ExtResource("8_ksv60")]
-
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Bin" parent="." instance=ExtResource("3_kuby7")]
+position = Vector2(-446, 362)

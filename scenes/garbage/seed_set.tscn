@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://mc2cclmylgpj"]
+
+[ext_resource type="PackedScene" uid="uid://cbcura8obn6n3" path="res://scenes/garbage/seed_1.tscn" id="1_jlv3w"]
+[ext_resource type="Script" path="res://scripts/garbage/seed_set.gd" id="1_l06h2"]
+[ext_resource type="PackedScene" uid="uid://cylb1x0u4t22m" path="res://scenes/garbage/seed_2.tscn" id="2_ouyyl"]
+[ext_resource type="PackedScene" uid="uid://sccon78toguh" path="res://scenes/garbage/seed_3.tscn" id="3_kl6pr"]
+
+[node name="SeedSet" type="Node2D"]
+script = ExtResource("1_l06h2")
+
+[node name="Seed1" parent="." instance=ExtResource("1_jlv3w")]
+position = Vector2(-24, -8)
+
+[node name="Seed2" parent="." instance=ExtResource("2_ouyyl")]
+position = Vector2(37, -26)
+
+[node name="Seed3" parent="." instance=ExtResource("3_kl6pr")]
+position = Vector2(-0.999992, 40)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bonjdc4kt2wxw"]
 
-[ext_resource type="Script" path="res://scripts/objects/Bin.cs" id="1_wtp5a"]
+[ext_resource type="Script" path="res://scripts/objects/bin.gd" id="1_h3krc"]
 [ext_resource type="Texture2D" uid="uid://u0e25n6st200" path="res://assets/objects/bin.png" id="2_xmbet"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6wpb"]
@@ -11,8 +11,8 @@ radius = 151.013
 
 [node name="Bin" type="StaticBody2D"]
 collision_layer = 4
-collision_mask = 15
-script = ExtResource("1_wtp5a")
+collision_mask = 7
+script = ExtResource("1_h3krc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(108, 22)
@@ -26,7 +26,7 @@ shape = SubResource("CircleShape2D_w6wpb")
 [node name="GarbageCaptureArea" type="Area2D" parent="."]
 position = Vector2(0, -12)
 collision_layer = 4
-collision_mask = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaptureArea"]
 position = Vector2(0, -46)
