@@ -2,16 +2,18 @@ extends CharacterBody2D
 
 class_name Robot
 
+# emitted when the robot is captured by an enemy
+signal captured
+
 @export var _move_speed: float = 1
 @export var _rotation_speed_radian: float = 1
 @export var _push_force: float = 5000
 
 
-@onready var garbage_capture_area: Area2D = $GarbageCaptureArea
+@onready var _garbage_capture_area: Area2D = $GarbageCaptureArea
 
 func _ready() -> void:
-	garbage_capture_area.area_entered.connect(_try_capture_garbage)
-	pass
+	_garbage_capture_area.area_entered.connect(_try_capture_garbage)
 
 func _physics_process(delta: float) -> void:
 	# rotate the robot
@@ -38,6 +40,13 @@ func _physics_process(delta: float) -> void:
 		var force := _push_force * delta * -kinematic_collision.get_normal()
 		var pos := kinematic_collision.get_position() - rb.global_position
 		rb.apply_force(force, pos)
+
+func make_captured() -> void:
+	captured.emit()
+
+func make_not_movable() -> void:
+	_move_speed = 0
+	_rotation_speed_radian = 0
 
 func _try_capture_garbage(area: Area2D) -> void:
 	if not Garbage.is_garbage(area):
