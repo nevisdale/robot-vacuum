@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkkpn836lspf1"]
+[gd_scene load_steps=2 format=3 uid="uid://bkkpn836lspf1"]
 
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_2wo8i"]
-[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="2_c05gy"]
-[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_db6it"]
 
 [node name="Test" type="Node2D"]
 
@@ -11,21 +9,3 @@ position = Vector2(652, 454)
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.7, 0.7)
-
-[node name="Can" parent="." instance=ExtResource("2_c05gy")]
-position = Vector2(1346, 692)
-
-[node name="SeedSet" parent="." instance=ExtResource("3_db6it")]
-position = Vector2(238, 210)
-
-[node name="SeedSet2" parent="." instance=ExtResource("3_db6it")]
-position = Vector2(538, 208)
-
-[node name="SeedSet3" parent="." instance=ExtResource("3_db6it")]
-position = Vector2(184, 428)
-
-[node name="SeedSet4" parent="." instance=ExtResource("3_db6it")]
-position = Vector2(182, 630)
-
-[node name="SeedSet5" parent="." instance=ExtResource("3_db6it")]
-position = Vector2(128, 266)
