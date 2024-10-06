@@ -73,6 +73,7 @@ restart={
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Robot"
 2d_physics/layer_3="Objects"
+2d_physics/layer_4="Enemy"
 
 [rendering]
 
