@@ -10,5 +10,6 @@ func _ready() -> void:
 
 func _robot_entered(_robot: Node2D) -> void:
 	assert(_robot is Robot, "charger area can only be entered by a robot")
+
 	if GlobalState.garbage_left == 0:
 		level_complete.emit()
