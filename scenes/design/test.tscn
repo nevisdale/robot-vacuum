@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://2wbtmmmn3d05"]
+
+[ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_clq54"]
+[ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="2_xc2bt"]
+[ext_resource type="Texture2D" uid="uid://c6cqxbn1emqgg" path="res://assets/objects/flower.png" id="3_mu163"]
+[ext_resource type="Texture2D" uid="uid://bw58f3ea5hpqf" path="res://assets/objects/table.png" id="4_eg2wa"]
+[ext_resource type="Texture2D" uid="uid://u0e25n6st200" path="res://assets/objects/bin.png" id="5_n75r8"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Charger" parent="." instance=ExtResource("2_xc2bt")]
+position = Vector2(881, 1400)
+
+[node name="Robot" parent="." instance=ExtResource("1_clq54")]
+position = Vector2(884, 1315)
+
+[node name="Camera2D" type="Camera2D" parent="Robot"]
+zoom = Vector2(0.75, 0.75)
+
+[node name="Flower" type="Sprite2D" parent="."]
+position = Vector2(2288, 113)
+texture = ExtResource("3_mu163")
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(900, 582)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("4_eg2wa")
+
+[node name="Bin" type="Sprite2D" parent="."]
+position = Vector2(1988, 1253)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("5_n75r8")
+
+[editable path="Robot"]
