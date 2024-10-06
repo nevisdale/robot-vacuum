@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var _collision_shape: CollisionShape2D = $CollisionShape2D
 
 
 # see Garbage.is_garbage for more details
@@ -26,4 +26,4 @@ func capture(capturer: Node2D) -> void:
 	# strange behavior:
 	#	when you push the can towards the trash can,
 	# 	the robot is pushed out when the can disappears.
-	collision_shape.set_deferred("disabled", true)
+	_collision_shape.set_deferred("disabled", true)
