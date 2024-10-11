@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://dn07m4pur6h4s"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_87kf8"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_hvk5q"]
+[ext_resource type="PackedScene" uid="uid://cdabe0na3cyet" path="res://scenes/enemies/cat_path.tscn" id="2_krjv7"]
+[ext_resource type="PackedScene" uid="uid://dwjmicc7dj7op" path="res://scenes/objects/table.tscn" id="2_xfv5l"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_6h2b7"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_imycx"]
+
+[sub_resource type="Curve2D" id="Curve2D_odxep"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -235, -871, 0, 0, 0, 0, 611, -869, 0, 0, 0, 0, 837, -681, 0, 0, 0, 0, 839, -301, 0, 0, 0, 0, 623, -97, 0, 0, 0, 0, -337, -99, 0, 0, 0, 0, -545, -319, 0, 0, 0, 0, -545, -697, 0, 0, 0, 0, -235, -871)
+}
+point_count = 9
+
+[node name="Level5" instance=ExtResource("1_87kf8")]
+
+[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
+position = Vector2(-125, -532)
+
+[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_hvk5q")]
+position = Vector2(3, -570)
+
+[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_hvk5q")]
+position = Vector2(275, -587)
+
+[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_hvk5q")]
+position = Vector2(462, -515)
+
+[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("2_hvk5q")]
+position = Vector2(426, -368)
+
+[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("2_hvk5q")]
+position = Vector2(279, -362)
+
+[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("2_hvk5q")]
+position = Vector2(175, -460)
+
+[node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("2_hvk5q")]
+position = Vector2(128, -362)
+
+[node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("2_hvk5q")]
+position = Vector2(-14, -377)
+
+[node name="SeedSet10" parent="Garbage" index="9" instance=ExtResource("2_hvk5q")]
+position = Vector2(-86, -441)
+
+[node name="SeedSet11" parent="Garbage" index="10" instance=ExtResource("2_hvk5q")]
+position = Vector2(18, -498)
+
+[node name="SeedSet12" parent="Garbage" index="11" instance=ExtResource("2_hvk5q")]
+position = Vector2(114, -581)
+
+[node name="Can" parent="Garbage" index="12" instance=ExtResource("3_6h2b7")]
+position = Vector2(87, -782)
+
+[node name="Can2" parent="Garbage" index="13" instance=ExtResource("3_6h2b7")]
+position = Vector2(593, -820)
+
+[node name="Can3" parent="Garbage" index="14" instance=ExtResource("3_6h2b7")]
+position = Vector2(-560, -509)
+
+[node name="Charger" parent="." index="1"]
+position = Vector2(573, 438)
+
+[node name="CatPath" parent="Enemies" index="0" instance=ExtResource("2_krjv7")]
+curve = SubResource("Curve2D_odxep")
+
+[node name="Table" parent="." index="4" instance=ExtResource("2_xfv5l")]
+position = Vector2(156, -476)
+
+[node name="Bin" parent="." index="5" instance=ExtResource("5_imycx")]
+position = Vector2(358, -1108)
