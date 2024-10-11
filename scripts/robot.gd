@@ -9,8 +9,9 @@ signal captured
 @export var _rotation_speed_radian: float = 1
 @export var _push_force: float = 5000
 
-
 @onready var _garbage_capture_area: Area2D = $GarbageCaptureArea
+
+var _visible: bool = true
 
 func _ready() -> void:
 	_garbage_capture_area.area_entered.connect(_try_capture_garbage)
@@ -41,6 +42,9 @@ func _physics_process(delta: float) -> void:
 		var pos := kinematic_collision.get_position() - rb.global_position
 		rb.apply_force(force, pos)
 
+func can_be_captured() -> bool:
+	return _visible
+
 func make_captured() -> void:
 	captured.emit()
 
@@ -56,3 +60,6 @@ func _try_capture_garbage(area: Area2D) -> void:
 	var capturer := self
 	if Garbage.can_be_captured_by_robot(garbage):
 		Garbage.capture(garbage, capturer)
+
+func make_visible(v: bool) -> void:
+	_visible = v
