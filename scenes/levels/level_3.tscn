@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=6 format=3 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://cdabe0na3cyet" path="res://scenes/enemies/cat_path.tscn" id="2_8nseo"]
+[ext_resource type="PackedScene" uid="uid://bsdxv4fks5dhn" path="res://scenes/levels/level_4.tscn" id="2_hs7hh"]
 
 [sub_resource type="Curve2D" id="Curve2D_ohwwd"]
 _data = {
@@ -11,6 +12,7 @@ _data = {
 point_count = 8
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
+next_level = ExtResource("2_hs7hh")
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
 position = Vector2(-511, -334)
