@@ -30,13 +30,17 @@ func _process(delta: float) -> void:
 		_path_follow.progress += _move_speed * delta
 		# flip the Sprite2D in x axis
 		# if the Cat is moving to the left
-		_sprite.flip_h = _prev_global_position.x > global_position.x
+		const epsilon := 1
+		_sprite.flip_h = _prev_global_position.x > global_position.x + epsilon
 	_prev_global_position = global_position
 
 func _capture_robot(body: Node2D) -> void:
 	assert(body is Robot, "Cat can only capture Robot")
 
 	var robot := body as Robot
+
+	if not robot.can_be_captured():
+		return
 
 	# stop following the path
 	# in order to move to the robot's position
