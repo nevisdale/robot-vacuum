@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn07m4pur6h4s"]
+[gd_scene load_steps=8 format=4 uid="uid://dn07m4pur6h4s"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_87kf8"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_hvk5q"]
@@ -15,59 +15,44 @@ point_count = 9
 
 [node name="Level5" instance=ExtResource("1_87kf8")]
 
-[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
-position = Vector2(-125, -532)
-
-[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_hvk5q")]
-position = Vector2(3, -570)
-
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_hvk5q")]
-position = Vector2(275, -587)
-
-[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_hvk5q")]
-position = Vector2(462, -515)
-
-[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("2_hvk5q")]
-position = Vector2(426, -368)
-
-[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("2_hvk5q")]
-position = Vector2(279, -362)
-
-[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("2_hvk5q")]
-position = Vector2(175, -460)
-
-[node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("2_hvk5q")]
-position = Vector2(128, -362)
-
-[node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("2_hvk5q")]
-position = Vector2(-14, -377)
-
-[node name="SeedSet10" parent="Garbage" index="9" instance=ExtResource("2_hvk5q")]
-position = Vector2(-86, -441)
-
-[node name="SeedSet11" parent="Garbage" index="10" instance=ExtResource("2_hvk5q")]
-position = Vector2(18, -498)
-
-[node name="SeedSet12" parent="Garbage" index="11" instance=ExtResource("2_hvk5q")]
-position = Vector2(114, -581)
-
-[node name="Can" parent="Garbage" index="12" instance=ExtResource("3_6h2b7")]
-position = Vector2(87, -782)
-
-[node name="Can2" parent="Garbage" index="13" instance=ExtResource("3_6h2b7")]
-position = Vector2(593, -820)
-
-[node name="Can3" parent="Garbage" index="14" instance=ExtResource("3_6h2b7")]
-position = Vector2(-560, -509)
+[node name="Walls" parent="FloorWall" index="0"]
+tile_map_data = PackedByteArray("AAD8//n/AAAAAAAAAAD9//n/AAAAAAAAAAD+//n/AAAAAAAAAAD///n/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAD7//n/AAAAAAAAAAD6//n/AAAAAAAAAAD5//n/AAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="1"]
-position = Vector2(573, 438)
+position = Vector2(165, 512)
 
-[node name="CatPath" parent="Enemies" index="0" instance=ExtResource("2_krjv7")]
-curve = SubResource("Curve2D_odxep")
+[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
+position = Vector2(-104, -487)
+
+[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_hvk5q")]
+position = Vector2(473, -508)
+
+[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_hvk5q")]
+position = Vector2(170, -238)
+
+[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_hvk5q")]
+position = Vector2(202, -702)
+
+[node name="Can" parent="Garbage" index="4" instance=ExtResource("3_6h2b7")]
+position = Vector2(87, -782)
+
+[node name="Can2" parent="Garbage" index="5" instance=ExtResource("3_6h2b7")]
+position = Vector2(593, -820)
+
+[node name="Robot" parent="." index="3"]
+position = Vector2(162, 414)
+
+[node name="Camera2D" parent="Robot" index="3"]
+limit_left = -1700
+limit_top = -1550
+limit_right = 1800
+limit_bottom = 950
 
 [node name="Table" parent="." index="4" instance=ExtResource("2_xfv5l")]
 position = Vector2(156, -476)
 
 [node name="Bin" parent="." index="5" instance=ExtResource("5_imycx")]
 position = Vector2(358, -1108)
+
+[node name="CatPath" parent="Enemies" index="0" instance=ExtResource("2_krjv7")]
+curve = SubResource("Curve2D_odxep")

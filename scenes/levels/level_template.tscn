@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://beto5bgm5v55j"]
+[gd_scene load_steps=5 format=3 uid="uid://beto5bgm5v55j"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_template.gd" id="1_os6ty"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
+[ext_resource type="TileSet" uid="uid://bvn1wijevdrcb" path="res://scenes/levels/level_wall_ugly.tres" id="2_totiq"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_7e6ij"]
 
 [node name="LevelTemplate" type="Node2D"]
 script = ExtResource("1_os6ty")
 
-[node name="Garbage" type="Node2D" parent="."]
+[node name="FloorWall" type="Node2D" parent="."]
+
+[node name="Walls" type="TileMapLayer" parent="FloorWall"]
+tile_set = ExtResource("2_totiq")
 
 [node name="Charger" parent="." instance=ExtResource("3_7e6ij")]
 position = Vector2(562, 308)
+
+[node name="Garbage" type="Node2D" parent="."]
 
 [node name="Robot" parent="." instance=ExtResource("1_yyibw")]
 

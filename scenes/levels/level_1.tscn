@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://djw2miqcpjv1m"]
+[gd_scene load_steps=4 format=4 uid="uid://djw2miqcpjv1m"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_7pyra"]
 [ext_resource type="PackedScene" uid="uid://6ls2xag8nwcq" path="res://scenes/levels/level_2.tscn" id="2_c0oon"]
@@ -7,41 +7,233 @@
 [node name="Level1" instance=ExtResource("1_7pyra")]
 next_level = ExtResource("2_c0oon")
 
+[node name="Walls" parent="FloorWall" index="0"]
+tile_map_data = PackedByteArray("AAD4/wIAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wAAAAAAAAAAAAD4////AAAAAAAAAAD4//7/AAAAAAAAAAD4//3/AAAAAAAAAAD4//z/AAAAAAAAAAD4//v/AAAAAAAAAAD4//r/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD4/wMAAAAAAAAAAAA=")
+
+[node name="Charger" parent="." index="1"]
+position = Vector2(174, 572)
+
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_o15sh")]
-position = Vector2(-312, -236)
 
 [node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_o15sh")]
-position = Vector2(-486, -310)
+position = Vector2(-552, -190)
 
 [node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_o15sh")]
-position = Vector2(-492, -114)
+position = Vector2(-493, 209)
 
 [node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_o15sh")]
-position = Vector2(-710, -202)
+position = Vector2(-322, -15)
 
 [node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("2_o15sh")]
-position = Vector2(-682, 76)
+position = Vector2(-260, -264)
 
 [node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("2_o15sh")]
-position = Vector2(-404, -504)
+position = Vector2(42, -233)
 
 [node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("2_o15sh")]
-position = Vector2(-362, 422)
+position = Vector2(-154, 272)
 
 [node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("2_o15sh")]
-position = Vector2(-426, 194)
+position = Vector2(-724, 29)
 
 [node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("2_o15sh")]
-position = Vector2(-654, 328)
+position = Vector2(-611, -673)
 
 [node name="SeedSet10" parent="Garbage" index="9" instance=ExtResource("2_o15sh")]
-position = Vector2(-184, 300)
+position = Vector2(-1163, -863)
 
 [node name="SeedSet11" parent="Garbage" index="10" instance=ExtResource("2_o15sh")]
-position = Vector2(-346, 6)
+position = Vector2(-1104, -464)
 
 [node name="SeedSet12" parent="Garbage" index="11" instance=ExtResource("2_o15sh")]
-position = Vector2(-196, -468)
+position = Vector2(-933, -688)
 
 [node name="SeedSet13" parent="Garbage" index="12" instance=ExtResource("2_o15sh")]
-position = Vector2(-704, -470)
+position = Vector2(-871, -937)
+
+[node name="SeedSet14" parent="Garbage" index="13" instance=ExtResource("2_o15sh")]
+position = Vector2(-569, -906)
+
+[node name="SeedSet15" parent="Garbage" index="14" instance=ExtResource("2_o15sh")]
+position = Vector2(-765, -401)
+
+[node name="SeedSet16" parent="Garbage" index="15" instance=ExtResource("2_o15sh")]
+position = Vector2(-1335, -644)
+
+[node name="SeedSet17" parent="Garbage" index="16" instance=ExtResource("2_o15sh")]
+position = Vector2(-770, 558)
+
+[node name="SeedSet18" parent="Garbage" index="17" instance=ExtResource("2_o15sh")]
+position = Vector2(-1322, 368)
+
+[node name="SeedSet19" parent="Garbage" index="18" instance=ExtResource("2_o15sh")]
+position = Vector2(-1263, 767)
+
+[node name="SeedSet20" parent="Garbage" index="19" instance=ExtResource("2_o15sh")]
+position = Vector2(-1092, 543)
+
+[node name="SeedSet21" parent="Garbage" index="20" instance=ExtResource("2_o15sh")]
+position = Vector2(-1030, 294)
+
+[node name="SeedSet22" parent="Garbage" index="21" instance=ExtResource("2_o15sh")]
+position = Vector2(-728, 325)
+
+[node name="SeedSet23" parent="Garbage" index="22" instance=ExtResource("2_o15sh")]
+position = Vector2(-924, 830)
+
+[node name="SeedSet24" parent="Garbage" index="23" instance=ExtResource("2_o15sh")]
+position = Vector2(-1494, 587)
+
+[node name="SeedSet25" parent="Garbage" index="24" instance=ExtResource("2_o15sh")]
+position = Vector2(-782, -99)
+
+[node name="SeedSet26" parent="Garbage" index="25" instance=ExtResource("2_o15sh")]
+position = Vector2(-1334, -289)
+
+[node name="SeedSet27" parent="Garbage" index="26" instance=ExtResource("2_o15sh")]
+position = Vector2(-1275, 110)
+
+[node name="SeedSet28" parent="Garbage" index="27" instance=ExtResource("2_o15sh")]
+position = Vector2(-1104, -114)
+
+[node name="SeedSet29" parent="Garbage" index="28" instance=ExtResource("2_o15sh")]
+position = Vector2(-1042, -363)
+
+[node name="SeedSet30" parent="Garbage" index="29" instance=ExtResource("2_o15sh")]
+position = Vector2(-740, -332)
+
+[node name="SeedSet31" parent="Garbage" index="30" instance=ExtResource("2_o15sh")]
+position = Vector2(-936, 173)
+
+[node name="SeedSet32" parent="Garbage" index="31" instance=ExtResource("2_o15sh")]
+position = Vector2(-1506, -70)
+
+[node name="SeedSet33" parent="Garbage" index="32" instance=ExtResource("2_o15sh")]
+position = Vector2(452, -744)
+
+[node name="SeedSet34" parent="Garbage" index="33" instance=ExtResource("2_o15sh")]
+position = Vector2(-100, -934)
+
+[node name="SeedSet35" parent="Garbage" index="34" instance=ExtResource("2_o15sh")]
+position = Vector2(-41, -535)
+
+[node name="SeedSet36" parent="Garbage" index="35" instance=ExtResource("2_o15sh")]
+position = Vector2(130, -759)
+
+[node name="SeedSet37" parent="Garbage" index="36" instance=ExtResource("2_o15sh")]
+position = Vector2(192, -1008)
+
+[node name="SeedSet38" parent="Garbage" index="37" instance=ExtResource("2_o15sh")]
+position = Vector2(494, -977)
+
+[node name="SeedSet39" parent="Garbage" index="38" instance=ExtResource("2_o15sh")]
+position = Vector2(298, -472)
+
+[node name="SeedSet40" parent="Garbage" index="39" instance=ExtResource("2_o15sh")]
+position = Vector2(-272, -715)
+
+[node name="SeedSet41" parent="Garbage" index="40" instance=ExtResource("2_o15sh")]
+position = Vector2(1614, -760)
+
+[node name="SeedSet42" parent="Garbage" index="41" instance=ExtResource("2_o15sh")]
+position = Vector2(1062, -950)
+
+[node name="SeedSet43" parent="Garbage" index="42" instance=ExtResource("2_o15sh")]
+position = Vector2(1121, -551)
+
+[node name="SeedSet44" parent="Garbage" index="43" instance=ExtResource("2_o15sh")]
+position = Vector2(1292, -775)
+
+[node name="SeedSet45" parent="Garbage" index="44" instance=ExtResource("2_o15sh")]
+position = Vector2(1354, -1024)
+
+[node name="SeedSet46" parent="Garbage" index="45" instance=ExtResource("2_o15sh")]
+position = Vector2(1656, -993)
+
+[node name="SeedSet47" parent="Garbage" index="46" instance=ExtResource("2_o15sh")]
+position = Vector2(1460, -488)
+
+[node name="SeedSet48" parent="Garbage" index="47" instance=ExtResource("2_o15sh")]
+position = Vector2(890, -731)
+
+[node name="SeedSet49" parent="Garbage" index="48" instance=ExtResource("2_o15sh")]
+position = Vector2(1134, -103)
+
+[node name="SeedSet50" parent="Garbage" index="49" instance=ExtResource("2_o15sh")]
+position = Vector2(582, -293)
+
+[node name="SeedSet51" parent="Garbage" index="50" instance=ExtResource("2_o15sh")]
+position = Vector2(641, 106)
+
+[node name="SeedSet52" parent="Garbage" index="51" instance=ExtResource("2_o15sh")]
+position = Vector2(812, -118)
+
+[node name="SeedSet53" parent="Garbage" index="52" instance=ExtResource("2_o15sh")]
+position = Vector2(874, -367)
+
+[node name="SeedSet54" parent="Garbage" index="53" instance=ExtResource("2_o15sh")]
+position = Vector2(1176, -336)
+
+[node name="SeedSet55" parent="Garbage" index="54" instance=ExtResource("2_o15sh")]
+position = Vector2(980, 169)
+
+[node name="SeedSet56" parent="Garbage" index="55" instance=ExtResource("2_o15sh")]
+position = Vector2(410, -74)
+
+[node name="SeedSet57" parent="Garbage" index="56" instance=ExtResource("2_o15sh")]
+position = Vector2(1720, 234)
+
+[node name="SeedSet58" parent="Garbage" index="57" instance=ExtResource("2_o15sh")]
+position = Vector2(1168, 44)
+
+[node name="SeedSet59" parent="Garbage" index="58" instance=ExtResource("2_o15sh")]
+position = Vector2(1227, 443)
+
+[node name="SeedSet60" parent="Garbage" index="59" instance=ExtResource("2_o15sh")]
+position = Vector2(1398, 219)
+
+[node name="SeedSet61" parent="Garbage" index="60" instance=ExtResource("2_o15sh")]
+position = Vector2(1460, -30)
+
+[node name="SeedSet62" parent="Garbage" index="61" instance=ExtResource("2_o15sh")]
+position = Vector2(1762, 1)
+
+[node name="SeedSet63" parent="Garbage" index="62" instance=ExtResource("2_o15sh")]
+position = Vector2(1566, 506)
+
+[node name="SeedSet64" parent="Garbage" index="63" instance=ExtResource("2_o15sh")]
+position = Vector2(996, 263)
+
+[node name="SeedSet65" parent="Garbage" index="64" instance=ExtResource("2_o15sh")]
+position = Vector2(1362, 558)
+
+[node name="SeedSet66" parent="Garbage" index="65" instance=ExtResource("2_o15sh")]
+position = Vector2(810, 368)
+
+[node name="SeedSet67" parent="Garbage" index="66" instance=ExtResource("2_o15sh")]
+position = Vector2(869, 767)
+
+[node name="SeedSet68" parent="Garbage" index="67" instance=ExtResource("2_o15sh")]
+position = Vector2(1040, 543)
+
+[node name="SeedSet69" parent="Garbage" index="68" instance=ExtResource("2_o15sh")]
+position = Vector2(1102, 294)
+
+[node name="SeedSet70" parent="Garbage" index="69" instance=ExtResource("2_o15sh")]
+position = Vector2(1404, 325)
+
+[node name="SeedSet71" parent="Garbage" index="70" instance=ExtResource("2_o15sh")]
+position = Vector2(1208, 830)
+
+[node name="SeedSet72" parent="Garbage" index="71" instance=ExtResource("2_o15sh")]
+position = Vector2(638, 587)
+
+[node name="Robot" parent="." index="3"]
+position = Vector2(181, 477)
+
+[node name="Camera2D" parent="Robot" index="3"]
+limit_left = -1800
+limit_top = -1300
+limit_right = 2050
+limit_bottom = 1050
+limit_smoothed = true
