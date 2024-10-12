@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylvv3qjkwd58"
-path="res://.godot/imported/wall-ugly.png-c632039169ce483b940221b80ba624f3.ctex"
+uid="uid://j257ewi107nr"
+path="res://.godot/imported/bin2.png-a50d564ec8356917ad33ee9bfd50a683.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/wall-ugly.png"
-dest_files=["res://.godot/imported/wall-ugly.png-c632039169ce483b940221b80ba624f3.ctex"]
+source_file="res://assets/objects/bin2.png"
+dest_files=["res://.godot/imported/bin2.png-a50d564ec8356917ad33ee9bfd50a683.ctex"]
 
 [params]
 
