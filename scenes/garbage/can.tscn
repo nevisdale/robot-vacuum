@@ -12,8 +12,8 @@ collision_layer = 4
 collision_mask = 7
 mass = 0.1
 gravity_scale = 0.0
-linear_damp = 5.0
-angular_damp = 5.0
+linear_damp = 3.0
+angular_damp = 3.0
 script = ExtResource("1_hbb5e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
