@@ -9,6 +9,8 @@ class_name LevelTemplate
 @onready var charger: Charger = $Charger
 
 func _ready() -> void:
+	GlobalState.garbage_left = garbage.get_child_count()
+
 	charger.level_complete.connect(_on_level_complete)
 	robot.captured.connect(_on_robot_captured)
 
