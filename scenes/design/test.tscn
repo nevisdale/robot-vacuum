@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://2wbtmmmn3d05"]
+[gd_scene load_steps=10 format=3 uid="uid://2wbtmmmn3d05"]
 
 [ext_resource type="Texture2D" uid="uid://dj3jce4r4lbfa" path="res://assets/objects/floor.png" id="1_0oray"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_clq54"]
@@ -7,15 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c6cqxbn1emqgg" path="res://assets/objects/flower.png" id="3_mu163"]
 [ext_resource type="Texture2D" uid="uid://bw58f3ea5hpqf" path="res://assets/objects/table.png" id="4_eg2wa"]
 [ext_resource type="Texture2D" uid="uid://u0e25n6st200" path="res://assets/objects/bin.png" id="5_n75r8"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykds5"]
-texture = ExtResource("1_0oray")
-texture_region_size = Vector2i(890, 890)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_yhpr1"]
-tile_size = Vector2i(890, 890)
-sources/4 = SubResource("TileSetAtlasSource_ykds5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x14bl"]
 texture = ExtResource("1_0oray")
@@ -26,16 +17,6 @@ texture_region_size = Vector2i(890, 890)
 sources/1 = SubResource("TileSetAtlasSource_x14bl")
 
 [node name="Test" type="Node2D"]
-
-[node name="TileMap" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource("TileSet_yhpr1")
-format = 2
-
-[node name="Layer0" type="TileMapLayer" parent="TileMap"]
-use_parent_material = true
-tile_map_data = PackedByteArray("AAD//wAABAAAAAAAAAAAAAAABAAAAAAAAAABAAAABAAAAAAAAAACAAAABAAAAAAAAAD//wEABAAAAAAAAAAAAAEABAAAAAAAAAABAAEABAAAAAAAAAACAAEABAAAAAAAAAD//wIABAAAAAAAAAAAAAIABAAAAAAAAAABAAIABAAAAAAAAAACAAIABAAAAAAAAAACAP//BAAAAAAAAAABAP//BAAAAAAAAAAAAP//BAAAAAAAAAD/////BAAAAAAAAAD+////BAAAAAAAAAD+/wAABAAAAAAAAAD+/wEABAAAAAAAAAD+/wIABAAAAAAAAAD+/wMABAAAAAAAAAD//wMABAAAAAAAAAAAAAMABAAAAAAAAAABAAMABAAAAAAAAAACAAMABAAAAAAAAAADAAMABAAAAAAAAAADAAIABAAAAAAAAAADAAEABAAAAAAAAAADAAAABAAAAAAAAAADAP//BAAAAAAAAAACAP7/BAAAAAAAAAADAP7/BAAAAAAAAAABAP7/BAAAAAAAAAAAAP7/BAAAAAAAAAD///7/BAAAAAAAAAD+//7/BAAAAAAAAAD9//7/BAAAAAAAAAD9////BAAAAAAAAAD9/wAABAAAAAAAAAD9/wEABAAAAAAAAAD9/wIABAAAAAAAAAD9/wMABAAAAAAAAAAEAP7/BAAAAAAAAAAEAP//BAAAAAAAAAAEAAAABAAAAAAAAAAEAAEABAAAAAAAAAAEAAMABAAAAAAAAAAEAAIABAAAAAAAAAAEAAQABAAAAAAAAAADAAQABAAAAAAAAAACAAQABAAAAAAAAAABAAQABAAAAAAAAAAAAAQABAAAAAAAAAD//wQABAAAAAAAAAD+/wQABAAAAAAAAAD9/wQABAAAAAAAAAA=")
-tile_set = SubResource("TileSet_yhpr1")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 visible = false
