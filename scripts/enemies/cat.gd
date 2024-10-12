@@ -35,9 +35,11 @@ func _process(delta: float) -> void:
 	_prev_global_position = global_position
 
 func _capture_robot(body: Node2D) -> void:
-	assert(body is Robot, "Cat can only capture Robot")
-
+	# TODO: fix it
+	# cat might capture walls or other objects
 	var robot := body as Robot
+	if robot == null:
+		return
 
 	if not robot.can_be_captured():
 		return
