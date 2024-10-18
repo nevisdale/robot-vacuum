@@ -1,13 +1,13 @@
-extends Area2D
+extends StaticBody2D
 
 class_name Table
 
 @onready var _sprite: Sprite2D = $Sprite2D
-
+@onready var _hide_robot_area: Area2D = $HideRobotArea
 
 func _ready() -> void:
-	body_entered.connect(_try_hide_robot)
-	body_exited.connect(_try_show_robot)
+	_hide_robot_area.body_entered.connect(_try_hide_robot)
+	_hide_robot_area.body_exited.connect(_try_show_robot)
 
 func _try_hide_robot(body: Node2D) -> void:
 	var robot: Robot = body as Robot

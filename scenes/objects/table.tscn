@@ -1,20 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwjmicc7dj7op"]
+[gd_scene load_steps=5 format=3 uid="uid://dwjmicc7dj7op"]
 
 [ext_resource type="Script" path="res://scripts/objects/table.gd" id="1_yqfnm"]
 [ext_resource type="Texture2D" uid="uid://0a2dlmu5nt8y" path="res://assets/objects/table3.png" id="2_e3ny5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbxo2"]
-size = Vector2(384, 128)
+size = Vector2(34, 45)
 
-[node name="Table" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amycq"]
+size = Vector2(614, 264)
+
+[node name="Table" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_yqfnm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -11)
+position = Vector2(-9, -20)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("2_e3ny5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Leg1" type="CollisionShape2D" parent="."]
+position = Vector2(-344, 201.5)
 shape = SubResource("RectangleShape2D_hbxo2")
+
+[node name="Leg2" type="CollisionShape2D" parent="."]
+position = Vector2(327, 207)
+shape = SubResource("RectangleShape2D_hbxo2")
+
+[node name="HideRobotArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HideRobotArea"]
+shape = SubResource("RectangleShape2D_amycq")
