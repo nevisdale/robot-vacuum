@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-State="*res://scripts/globals/state.gd"
+State="*res://scenes/globals/state.gd"
 TransitionLayer="*res://scenes/globals/transition_layer.tscn"
 
 [debug]

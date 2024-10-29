@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c526jsececbsr"]
 
-[ext_resource type="Script" path="res://scripts/garbage/can.gd" id="1_hbb5e"]
+[ext_resource type="Script" path="res://scenes/garbage/can.gd" id="1_hbb5e"]
 [ext_resource type="Texture2D" uid="uid://bk3xfepven47a" path="res://assets/garbage/can.png" id="1_wnpd1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]

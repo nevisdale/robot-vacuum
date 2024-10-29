@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://sccon78toguh"]
 
-[ext_resource type="Script" path="res://scripts/garbage/seed.gd" id="1_7habu"]
+[ext_resource type="Script" path="res://scenes/garbage/seed.gd" id="1_7habu"]
 [ext_resource type="Texture2D" uid="uid://d2eiwd8n5lsst" path="res://assets/garbage/seed-three.png" id="1_hqn2w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nclhp"]

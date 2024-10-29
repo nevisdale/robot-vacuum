@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ykv6f55ab02i"]
 
 [ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/robot.png" id="1_20euf"]
-[ext_resource type="Script" path="res://scripts/robot.gd" id="1_toptu"]
+[ext_resource type="Script" path="res://scenes/robot.gd" id="1_toptu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jojqk"]
 radius = 122.004

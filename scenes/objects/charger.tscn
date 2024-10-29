@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cna5b0cu8gvw1"]
 
-[ext_resource type="Script" path="res://scripts/objects/charger.gd" id="1_jmpy5"]
+[ext_resource type="Script" path="res://scenes/objects/charger.gd" id="1_jmpy5"]
 [ext_resource type="Texture2D" uid="uid://b7acy8jsm70aq" path="res://assets/objects/station.png" id="2_7g7m7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws661"]
