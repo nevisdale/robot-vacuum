@@ -7,7 +7,7 @@
 size = Vector2(34, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amycq"]
-size = Vector2(614, 264)
+size = Vector2(440, 124)
 
 [node name="Table" type="StaticBody2D"]
 collision_layer = 4

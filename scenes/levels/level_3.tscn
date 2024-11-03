@@ -1,18 +1,19 @@
-[gd_scene load_steps=6 format=4 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=7 format=4 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
+[ext_resource type="PackedScene" uid="uid://dn07m4pur6h4s" path="res://scenes/levels/level_4.tscn" id="2_0iyk1"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
-[ext_resource type="PackedScene" uid="uid://cdabe0na3cyet" path="res://scenes/enemies/cat_path.tscn" id="2_8nseo"]
-[ext_resource type="PackedScene" uid="uid://bsdxv4fks5dhn" path="res://scenes/levels/level_4.tscn" id="2_hs7hh"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_71fbv"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
 
-[sub_resource type="Curve2D" id="Curve2D_ohwwd"]
+[sub_resource type="Curve2D" id="Curve2D_ri2uf"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -929, -632, -213.359, 0, 213.359, 0, -449, -732, -94.5263, -66.1684, 94.5263, 66.1684, 18, -586, 39.1609, -166.096, -39.1609, 166.096, 74, -238, 0, 0, 0, 0, -367, -5, 318.689, 106.68, -318.689, -106.68, -1010, -128, 0, 0, 0, 0, -1127, -484, 0, 0, 0, 0, -929, -632)
+"points": PackedVector2Array(-11.7015, 393.17, 11.7015, -393.17, -628, 33, -56.1672, -294.878, 56.1672, 294.878, 1445, 63, 9.36119, -231.689, -9.36119, 231.689, -455, 702, -205.946, 301.898, 205.946, -301.898, 1574, 815, 0, 0, 0, 0, -628, 33)
 }
-point_count = 8
+point_count = 5
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
-next_level = ExtResource("2_hs7hh")
+next_level = ExtResource("2_0iyk1")
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
@@ -21,62 +22,70 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 tile_map_data = PackedByteArray("AAD4//v/AAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5//v/AAAAAAAAAAD6//v/AAAAAAAAAAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="1"]
-position = Vector2(5, 756)
+position = Vector2(5, 845)
 
-[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
 position = Vector2(-20, 203)
 
-[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_7ydgx")]
-position = Vector2(-363, -56)
+[node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("2_7ydgx")]
+position = Vector2(-500, -228)
 
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_7ydgx")]
-position = Vector2(-6, -406)
+[node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("2_7ydgx")]
+position = Vector2(415, -574)
 
-[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_7ydgx")]
-position = Vector2(502, -549)
+[node name="SeedSet5" parent="Garbage" index="3" instance=ExtResource("2_7ydgx")]
+position = Vector2(-109, -508)
 
-[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("2_7ydgx")]
-position = Vector2(807, -203)
+[node name="SeedSet6" parent="Garbage" index="4" instance=ExtResource("2_7ydgx")]
+position = Vector2(1078, 220)
 
-[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
-position = Vector2(718, 319)
+[node name="SeedSet7" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
+position = Vector2(610, -136)
 
-[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("2_7ydgx")]
-position = Vector2(595, 14)
+[node name="SeedSet8" parent="Garbage" index="6" instance=ExtResource("2_7ydgx")]
+position = Vector2(-1129, 35)
 
-[node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("2_7ydgx")]
-position = Vector2(325, -106)
-
-[node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("2_7ydgx")]
-position = Vector2(300, -358)
-
-[node name="SeedSet10" parent="Garbage" index="9" instance=ExtResource("2_7ydgx")]
-position = Vector2(-699, -106)
-
-[node name="SeedSet11" parent="Garbage" index="10" instance=ExtResource("2_7ydgx")]
-position = Vector2(-1000, -342)
-
-[node name="SeedSet12" parent="Garbage" index="11" instance=ExtResource("2_7ydgx")]
-position = Vector2(-570, 202)
-
-[node name="SeedSet13" parent="Garbage" index="12" instance=ExtResource("2_7ydgx")]
-position = Vector2(-581, -585)
-
-[node name="SeedSet14" parent="Garbage" index="13" instance=ExtResource("2_7ydgx")]
-position = Vector2(-164, -654)
-
-[node name="SeedSet15" parent="Garbage" index="14" instance=ExtResource("2_7ydgx")]
-position = Vector2(-1020, 95)
+[node name="SeedSet9" parent="Garbage" index="7" instance=ExtResource("2_7ydgx")]
+position = Vector2(-1068, -695)
 
 [node name="Robot" parent="." index="3"]
-position = Vector2(7, 658)
+position = Vector2(13, 735)
 
 [node name="Camera2D" parent="Robot" index="3"]
 limit_left = -1900
 limit_top = -1100
 limit_right = 1550
 limit_bottom = 1100
+metadata/_edit_lock_ = true
 
-[node name="CatPath" parent="Enemies" index="0" instance=ExtResource("2_8nseo")]
-position = Vector2(468, 114)
-curve = SubResource("Curve2D_ohwwd")
+[node name="Enemies" parent="." index="4"]
+position = Vector2(-606, -564)
+
+[node name="Path2D" type="Path2D" parent="Enemies" index="0"]
+position = Vector2(35, -47)
+curve = SubResource("Curve2D_ri2uf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D" index="0"]
+position = Vector2(-628, 33)
+rotates = false
+cubic_interp = false
+
+[node name="Cat" parent="Enemies/Path2D/PathFollow2D" index="0" instance=ExtResource("4_71fbv")]
+
+[node name="Flower" parent="Env" index="0" instance=ExtResource("4_yjrwq")]
+position = Vector2(-1369, 412)
+
+[node name="Flower2" parent="Env" index="1" instance=ExtResource("4_yjrwq")]
+position = Vector2(-920, 548)
+
+[node name="Flower3" parent="Env" index="2" instance=ExtResource("4_yjrwq")]
+position = Vector2(662, 597)
+
+[node name="Flower4" parent="Env" index="3" instance=ExtResource("4_yjrwq")]
+position = Vector2(1242, 438)
+
+[node name="Flower5" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
+position = Vector2(1133, -683)
+
+[node name="Flower6" parent="Env" index="5" instance=ExtResource("4_yjrwq")]
+position = Vector2(-1458, -737)

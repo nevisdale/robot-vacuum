@@ -25,6 +25,8 @@ position = Vector2(562, 308)
 [node name="Robot" parent="." instance=ExtResource("1_yyibw")]
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.55, 0.55)
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Env" type="Node2D" parent="."]
