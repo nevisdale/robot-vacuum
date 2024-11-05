@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://chx44geeqika1"]
 
-[ext_resource type="Script" path="res://scenes/globals/transition_layer.gd" id="1_k834n"]
+[ext_resource type="Script" path="res://scripts/globals/TransitionLayer.cs" id="1_ylqy7"]
 
 [sub_resource type="Animation" id="Animation_qembv"]
 resource_name = "black_screen"
@@ -24,7 +24,7 @@ _data = {
 }
 
 [node name="TransitionLayer" type="CanvasLayer"]
-script = ExtResource("1_k834n")
+script = ExtResource("1_ylqy7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

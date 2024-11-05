@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://bonjdc4kt2wxw"]
 
-[ext_resource type="Script" path="res://scenes/objects/bin.gd" id="1_h3krc"]
+[ext_resource type="Script" path="res://scripts/objects/Bin.cs" id="1_jdjnk"]
 [ext_resource type="Texture2D" uid="uid://c1srou5p7gvn0" path="res://assets/objects/bin.png" id="2_6ip3n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6wpb"]
 radius = 63.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gqjdx"]
-radius = 151.013
+radius = 167.003
 
 [node name="Bin" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 7
-script = ExtResource("1_h3krc")
+script = ExtResource("1_jdjnk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, -62)

@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=6 format=4 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
-[ext_resource type="PackedScene" uid="uid://dn07m4pur6h4s" path="res://scenes/levels/level_4.tscn" id="2_0iyk1"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_71fbv"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
@@ -13,7 +12,6 @@ _data = {
 point_count = 5
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
-next_level = ExtResource("2_0iyk1")
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
