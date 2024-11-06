@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcermr314lpi4"]
+
+[ext_resource type="Script" path="res://scripts/objects/FloorButton.cs" id="1_agfli"]
+[ext_resource type="Texture2D" uid="uid://duecpajqo1ax3" path="res://assets/objects/floor_button_arrow.png" id="2_nxwtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tej4p"]
+size = Vector2(76, 76)
+
+[node name="FloorButton" type="Area2D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_agfli")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nxwtc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tej4p")
