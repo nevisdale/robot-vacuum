@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=4 uid="uid://dyxi00rlk01hp"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_yiwac"]
+[ext_resource type="Script" path="res://scripts/levels/LevelDraft003.cs" id="2_eb8g1"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="3_81xof"]
+[ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="4_c3pt3"]
+[ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="4_gtu8g"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="4_rmb7c"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_w1a8q"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="7_u8gop"]
+
+[node name="LevelDraft003" instance=ExtResource("1_yiwac")]
+script = ExtResource("2_eb8g1")
+
+[node name="Walls" parent="FloorWall" index="1"]
+tile_map_data = PackedByteArray("AAD5/wMAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAA=")
+
+[node name="CarGoToRightButton" parent="." index="1" instance=ExtResource("4_c3pt3")]
+position = Vector2(1113, 514)
+
+[node name="CarGoToLeftButton" parent="." index="2" instance=ExtResource("4_c3pt3")]
+position = Vector2(-901, -218)
+rotation = 3.14159
+
+[node name="Charger" parent="." index="3"]
+position = Vector2(457, 911)
+
+[node name="Can" parent="Garbage" index="0" instance=ExtResource("4_rmb7c")]
+position = Vector2(732, 213)
+
+[node name="Can2" parent="Garbage" index="1" instance=ExtResource("4_rmb7c")]
+position = Vector2(746, 304)
+
+[node name="SeedSet" parent="Garbage" index="2" instance=ExtResource("5_w1a8q")]
+position = Vector2(-1145, -645)
+
+[node name="SeedSet2" parent="Garbage" index="3" instance=ExtResource("5_w1a8q")]
+position = Vector2(-536, -1027)
+
+[node name="SeedSet3" parent="Garbage" index="4" instance=ExtResource("5_w1a8q")]
+position = Vector2(-541, -592)
+
+[node name="Can3" parent="Garbage" index="5" instance=ExtResource("4_rmb7c")]
+position = Vector2(-905, -722)
+
+[node name="Robot" parent="." index="5"]
+position = Vector2(383, 558)
+
+[node name="Car" parent="Enemies" index="0" instance=ExtResource("4_gtu8g")]
+position = Vector2(-849, 13)
+_pushForce = 4000.0
+
+[node name="Flower" parent="Env" index="0" instance=ExtResource("3_81xof")]
+position = Vector2(-192, -1107)
+
+[node name="Flower2" parent="Env" index="1" instance=ExtResource("3_81xof")]
+position = Vector2(-198, -880)
+
+[node name="Flower3" parent="Env" index="2" instance=ExtResource("3_81xof")]
+position = Vector2(-204, -653)
+
+[node name="Flower4" parent="Env" index="3" instance=ExtResource("3_81xof")]
+position = Vector2(-207, -442)
+
+[node name="Flower5" parent="Env" index="4" instance=ExtResource("3_81xof")]
+position = Vector2(-217, -222)
+
+[node name="Flower6" parent="Env" index="5" instance=ExtResource("3_81xof")]
+position = Vector2(-431, -212)
+
+[node name="Flower11" parent="Env" index="6" instance=ExtResource("3_81xof")]
+position = Vector2(-632, -202)
+
+[node name="Flower7" parent="Env" index="7" instance=ExtResource("3_81xof")]
+position = Vector2(-1366, -180)
+
+[node name="Flower8" parent="Env" index="8" instance=ExtResource("3_81xof")]
+position = Vector2(-1149, -202)
+
+[node name="Flower10" parent="Env" index="9" instance=ExtResource("3_81xof")]
+position = Vector2(-1146, 289)
+
+[node name="Bin" parent="." index="8" instance=ExtResource("7_u8gop")]
+position = Vector2(-1146, 79)
