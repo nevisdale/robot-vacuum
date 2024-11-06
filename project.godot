@@ -44,6 +44,10 @@ movie_writer/disable_vsync=true
 
 import/blender/enabled=false
 
+[global_group]
+
+is_garbage="object is garbage. must implement IGarbage"
+
 [input]
 
 move_forward={
