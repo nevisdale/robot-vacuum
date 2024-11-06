@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=4 uid="uid://6ls2xag8nwcq"]
+[gd_scene load_steps=6 format=4 uid="uid://6ls2xag8nwcq"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ipeqd"]
+[ext_resource type="PackedScene" uid="uid://bh8xclapgtyp4" path="res://scenes/levels/level_3.tscn" id="2_forfv"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="2_utxut"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_vrmf7"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_22u6l"]
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
+_nextLevelScene = ExtResource("2_forfv")
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
@@ -37,7 +39,7 @@ position = Vector2(-580, -394)
 [node name="Robot" parent="." index="3"]
 position = Vector2(0, 579)
 
-[node name="Camera2D" parent="Robot" index="3"]
+[node name="Camera2D" parent="Robot" index="4"]
 limit_left = -1850
 limit_top = -1400
 limit_right = 1900

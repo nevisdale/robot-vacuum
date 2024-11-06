@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://dn07m4pur6h4s"]
+[gd_scene load_steps=10 format=4 uid="uid://dn07m4pur6h4s"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ndio2"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="2_1e333"]
+[ext_resource type="PackedScene" uid="uid://bsdxv4fks5dhn" path="res://scenes/levels/level_5.tscn" id="2_d6k3o"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="3_gbxrl"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_ltoqd"]
 [ext_resource type="PackedScene" uid="uid://dwjmicc7dj7op" path="res://scenes/objects/table.tscn" id="5_qyfgl"]
@@ -15,6 +16,7 @@ _data = {
 point_count = 5
 
 [node name="Level4" instance=ExtResource("1_ndio2")]
+_nextLevelScene = ExtResource("2_d6k3o")
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD+//3/AAAAAAAAAAD9//3/AAAAAAAAAAA=")
@@ -82,19 +84,16 @@ position = Vector2(365, -276)
 [node name="Robot" parent="." index="3"]
 position = Vector2(162, 511)
 
-[node name="Camera2D" parent="Robot" index="3"]
+[node name="Camera2D" parent="Robot" index="4"]
 limit_left = -1700
 limit_top = -1550
 limit_right = 1800
 limit_bottom = 950
 
-[node name="Table" parent="." index="4" instance=ExtResource("5_qyfgl")]
-position = Vector2(155, -25)
-
-[node name="Bin" parent="." index="5" instance=ExtResource("3_gbxrl")]
+[node name="Bin" parent="." index="4" instance=ExtResource("3_gbxrl")]
 position = Vector2(-94, -1024)
 
-[node name="Bin2" parent="." index="6" instance=ExtResource("3_gbxrl")]
+[node name="Bin2" parent="." index="5" instance=ExtResource("3_gbxrl")]
 position = Vector2(337, -1060)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]
@@ -108,6 +107,9 @@ cubic_interp = false
 
 [node name="Cat" parent="Enemies/Path2D/PathFollow2D" index="0" instance=ExtResource("5_ukyc7")]
 _move_speed = 350.0
+
+[node name="Table" parent="." index="7" instance=ExtResource("5_qyfgl")]
+position = Vector2(155, -25)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("5_ujfha")]
 position = Vector2(128, -952)
