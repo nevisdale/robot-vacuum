@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://duecpajqo1ax3" path="res://assets/objects/floor_button_arrow.png" id="2_nxwtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tej4p"]
-size = Vector2(76, 76)
+size = Vector2(218, 198)
 
 [node name="FloorButton" type="Area2D"]
 collision_layer = 4
@@ -15,4 +15,5 @@ script = ExtResource("1_agfli")
 texture = ExtResource("2_nxwtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 16)
 shape = SubResource("RectangleShape2D_tej4p")
