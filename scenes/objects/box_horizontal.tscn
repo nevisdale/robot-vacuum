@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://52khmyn6hrlx"]
+
+[ext_resource type="Texture2D" uid="uid://7y70cgqxi67c" path="res://assets/objects/box_horizontal.png" id="1_jr1fe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5umv6"]
+size = Vector2(318, 308)
+
+[node name="BoxHorizontal" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(18, 26)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_jr1fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_5umv6")
