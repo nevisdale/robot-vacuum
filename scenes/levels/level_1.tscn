@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=4 uid="uid://djw2miqcpjv1m"]
+[gd_scene load_steps=9 format=4 uid="uid://djw2miqcpjv1m"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_7pyra"]
 [ext_resource type="PackedScene" uid="uid://6ls2xag8nwcq" path="res://scenes/levels/level_2.tscn" id="2_c0oon"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_o15sh"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="4_ucb5x"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="5_6ue3q"]
+[ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="6_1y5ox"]
+[ext_resource type="PackedScene" uid="uid://drw1jqmt8sljb" path="res://scenes/objects/box_angle.tscn" id="7_sqmmq"]
+[ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_2dk55"]
 
 [node name="Level1" instance=ExtResource("1_7pyra")]
 _nextLevelScene = ExtResource("2_c0oon")
@@ -27,3 +32,18 @@ limit_top = -1300
 limit_right = 2050
 limit_bottom = 1050
 limit_smoothed = true
+
+[node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("4_ucb5x")]
+position = Vector2(-1209, -337)
+
+[node name="BoxVertical" parent="Env" index="1" instance=ExtResource("5_6ue3q")]
+position = Vector2(-543, -590)
+
+[node name="BoxVerticalOpen" parent="Env" index="2" instance=ExtResource("6_1y5ox")]
+position = Vector2(338, -752)
+
+[node name="BoxAngle" parent="Env" index="3" instance=ExtResource("7_sqmmq")]
+position = Vector2(1419, 247)
+
+[node name="BoxAngleOpen" parent="Env" index="4" instance=ExtResource("8_2dk55")]
+position = Vector2(1166, -496)
