@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=4 uid="uid://nke1atqviiix"]
 
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_clq54"]
-[ext_resource type="TileSet" uid="uid://bimn3vtswwynk" path="res://scenes/levels/level_wall_ugly.tres" id="1_hn10i"]
-[ext_resource type="TileSet" uid="uid://m6l25lfi74sf" path="res://scenes/levels/level_floor.tres" id="2_ufljo"]
+[ext_resource type="TileSet" uid="uid://bvn1wijevdrcb" path="res://scenes/levels/level_wall_ugly.tres" id="1_hn10i"]
+[ext_resource type="TileSet" uid="uid://dll7gohkg350f" path="res://scenes/levels/level_floor.tres" id="2_ufljo"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="2_xc2bt"]
 
 [node name="Test" type="Node2D"]
