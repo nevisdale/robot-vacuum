@@ -6,11 +6,13 @@ public partial class Table : StaticBody2D
 {
 	private Sprite2D _sprite;
 	private Area2D _hideRobotArea;
+	private ColorRect _colorRect;
 
 	public override void _Ready()
 	{
 		_hideRobotArea = GetNode<Area2D>("HideRobotArea");
 		_sprite = GetNode<Sprite2D>("Sprite2D");
+		_colorRect = GetNode<ColorRect>("ColorRect");
 
 		_hideRobotArea.BodyEntered += HideRobotArea_OnBodyEntered;
 		_hideRobotArea.BodyExited += HideRobotArea_OnBodyExited;
@@ -36,12 +38,14 @@ public partial class Table : StaticBody2D
 
 	private void SetTableVisibility(bool visible)
 	{
-		const float HIDE_ALPHA = 0.5f;
-		const float SHOW_ALPHA = 1f;
 		const float DURATION = 0.5f;
 
-		float targetAlpha = visible ? SHOW_ALPHA : HIDE_ALPHA;
+		float colorRectAlpha = visible ? 0 : 0.2f;
+		float spriteAlpha = visible ? 1f : 0.5f;
+
 		Tween tween = CreateTween();
-		tween.TweenProperty(_sprite, "modulate:a", targetAlpha, DURATION);
+		tween.SetParallel(true);
+		tween.TweenProperty(_sprite, "modulate:a", spriteAlpha, DURATION);
+		tween.TweenProperty(_colorRect, "color:a", colorRectAlpha, DURATION);
 	}
 }
