@@ -4,7 +4,7 @@ using RobotVacuum.Scripts.Objects;
 
 namespace RobotVacuum.Scripts.Levels;
 
-public partial class LevelDraft004 : LevelTemplate
+public partial class Level8 : LevelTemplate
 {
     private Car _car = null;
     private FloorButton _carGoToLeftButton = null;
