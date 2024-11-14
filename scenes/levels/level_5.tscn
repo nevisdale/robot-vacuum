@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=4 uid="uid://bsdxv4fks5dhn"]
+[gd_scene load_steps=9 format=4 uid="uid://bsdxv4fks5dhn"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_87kf8"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_hvk5q"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_6h2b7"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_xqgwe"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_imycx"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="6_6qg0k"]
+
+[sub_resource type="Curve2D" id="Curve2D_c8epa"]
+_data = {
+"points": PackedVector2Array(-516.311, 366.472, 516.311, -366.472, -727, -887, -173.307, -194.97, 173.307, 194.97, 676, -633, 140.812, -256.35, -140.812, 256.35, 679, 11, 140.812, 187.749, -140.812, -187.749, -693, 196, 1.80528, 261.766, -1.80528, -261.766, -355, -322, 0, 0, 0, 0, -727, -887)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_4h3lk"]
+_data = {
+"points": PackedVector2Array(343.55, 438.23, -343.55, -438.23, 901, -949, -29.7563, -492.332, 29.7563, 492.332, -836, -364, -630.293, 110.91, 630.293, -110.91, 625, 178, 105.5, 505.858, -105.5, -505.858, 652, -456, 0, 0, 0, 0, 901, -949)
+}
+point_count = 5
 
 [node name="Level5" instance=ExtResource("1_87kf8")]
 
@@ -11,10 +25,10 @@
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
 
 [node name="Walls" parent="FloorWall" index="1"]
-tile_map_data = PackedByteArray("AAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD6//r/AAAAAAAAAAD5//r/AAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD6//r/AAAAAAAAAAD5//r/AAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="1"]
-position = Vector2(70, 464)
+position = Vector2(32, 1043)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
 position = Vector2(895, -448)
@@ -71,13 +85,56 @@ position = Vector2(517, -902)
 position = Vector2(541, -232)
 
 [node name="Robot" parent="." index="3"]
-position = Vector2(73, 354)
+position = Vector2(35, 936)
 
-[node name="Camera2D" parent="Robot" index="4"]
+[node name="Camera2D" parent="Robot" index="3"]
 limit_left = -1550
 limit_top = -1300
 limit_right = 1550
 limit_bottom = 960
 
+[node name="Cat1" type="Node2D" parent="Enemies" index="0"]
+position = Vector2(-254, 43)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat1" index="0"]
+curve = SubResource("Curve2D_c8epa")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat1/Path2D" index="0"]
+position = Vector2(-727, -887)
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat1/Path2D/PathFollow2D" index="0" instance=ExtResource("4_xqgwe")]
+
+[node name="Cat2" type="Node2D" parent="Enemies" index="1"]
+position = Vector2(99, -2)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat2" index="0"]
+curve = SubResource("Curve2D_4h3lk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat2/Path2D" index="0"]
+position = Vector2(133.308, 209.263)
+progress = 3318.97
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat2/Path2D/PathFollow2D" index="0" instance=ExtResource("4_xqgwe")]
+
 [node name="Bin" parent="." index="5" instance=ExtResource("5_imycx")]
 position = Vector2(70, -493)
+
+[node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("6_6qg0k")]
+position = Vector2(-1277, -354)
+
+[node name="BoxHorizontal2" parent="Env" index="1" instance=ExtResource("6_6qg0k")]
+position = Vector2(-1086, 714)
+
+[node name="BoxHorizontal3" parent="Env" index="2" instance=ExtResource("6_6qg0k")]
+position = Vector2(-1319, 66)
+
+[node name="BoxHorizontal4" parent="Env" index="3" instance=ExtResource("6_6qg0k")]
+position = Vector2(1279, -226)
+
+[node name="BoxHorizontal5" parent="Env" index="4" instance=ExtResource("6_6qg0k")]
+position = Vector2(695, 748)
+
+[node name="BoxHorizontal6" parent="Env" index="5" instance=ExtResource("6_6qg0k")]
+position = Vector2(1220, 526)
