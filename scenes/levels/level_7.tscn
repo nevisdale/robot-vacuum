@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://7j7sfsjys3xt"]
+[gd_scene load_steps=11 format=4 uid="uid://7j7sfsjys3xt"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_45l2g"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_ee6kn"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="5_dswgr"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="6_8xp1a"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="7_bh1m7"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="8_ekho4"]
 
 [sub_resource type="Curve2D" id="Curve2D_fu2wh"]
 _data = {
@@ -58,6 +59,9 @@ rotates = false
 
 [node name="Cat" parent="Enemies/Cat/Path2D/PathFollow2D" index="0" instance=ExtResource("6_8xp1a")]
 _move_speed = 420.0
+
+[node name="Flower" parent="Env" index="0" instance=ExtResource("8_ekho4")]
+position = Vector2(-347, -769)
 
 [node name="Bin" parent="." index="8" instance=ExtResource("7_bh1m7")]
 position = Vector2(-1151, -564)
