@@ -51,7 +51,7 @@ position = Vector2(-1068, -695)
 [node name="Robot" parent="." index="3"]
 position = Vector2(13, 735)
 
-[node name="Camera2D" parent="Robot" index="4"]
+[node name="Camera2D" parent="Robot" index="3"]
 limit_left = -1900
 limit_top = -1100
 limit_right = 1550
