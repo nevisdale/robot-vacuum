@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=4 uid="uid://6ls2xag8nwcq"]
+[gd_scene load_steps=12 format=4 uid="uid://6ls2xag8nwcq"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ipeqd"]
 [ext_resource type="PackedScene" uid="uid://bh8xclapgtyp4" path="res://scenes/levels/level_3.tscn" id="2_forfv"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="2_utxut"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_vrmf7"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_22u6l"]
+[ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="5_byxkr"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="6_2dk5l"]
+[ext_resource type="Texture2D" uid="uid://dvpsodocvxpwv" path="res://assets/objects/sofa_empty.png" id="7_6qwxn"]
+[ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_gnj3k"]
+[ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="10_4o5y2"]
+[ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="11_qmfnb"]
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
 _nextLevelScene = ExtResource("2_forfv")
@@ -16,28 +22,52 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 tile_map_data = PackedByteArray("AAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD6//r/AAAAAAAAAAD5//r/AAAAAAAAAAD4//r/AAAAAAAAAAD4//v/AAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="1"]
-position = Vector2(-1, 698)
+position = Vector2(-1, 894)
 
-[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_vrmf7")]
-position = Vector2(-217, -703)
+[node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_vrmf7")]
+position = Vector2(-414, -284)
 
-[node name="SeedSet13" parent="Garbage" index="1" instance=ExtResource("2_vrmf7")]
-position = Vector2(600, 225)
+[node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("2_vrmf7")]
+position = Vector2(135, -390)
 
-[node name="SeedSet14" parent="Garbage" index="2" instance=ExtResource("2_vrmf7")]
-position = Vector2(-1118, 242)
+[node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("2_vrmf7")]
+position = Vector2(628, -284)
 
-[node name="Can2" parent="Garbage" index="3" instance=ExtResource("3_22u6l")]
-position = Vector2(-176, 188)
+[node name="SeedSet5" parent="Garbage" index="3" instance=ExtResource("2_vrmf7")]
+position = Vector2(1215, -502)
 
-[node name="Can3" parent="Garbage" index="4" instance=ExtResource("3_22u6l")]
-position = Vector2(967, 43)
+[node name="SeedSet6" parent="Garbage" index="4" instance=ExtResource("2_vrmf7")]
+position = Vector2(-904, -15)
 
-[node name="Can4" parent="Garbage" index="5" instance=ExtResource("3_22u6l")]
-position = Vector2(-580, -394)
+[node name="SeedSet7" parent="Garbage" index="5" instance=ExtResource("2_vrmf7")]
+position = Vector2(-450, 229)
+
+[node name="SeedSet8" parent="Garbage" index="6" instance=ExtResource("2_vrmf7")]
+position = Vector2(1140, -64)
+
+[node name="SeedSet9" parent="Garbage" index="7" instance=ExtResource("2_vrmf7")]
+position = Vector2(579, 94)
+
+[node name="SeedSet10" parent="Garbage" index="8" instance=ExtResource("2_vrmf7")]
+position = Vector2(919, 414)
+
+[node name="SeedSet11" parent="Garbage" index="9" instance=ExtResource("2_vrmf7")]
+position = Vector2(-949, 565)
+
+[node name="SeedSet12" parent="Garbage" index="10" instance=ExtResource("3_22u6l")]
+position = Vector2(804, -91)
+rotation = -2.00232
+
+[node name="SeedSet13" parent="Garbage" index="11" instance=ExtResource("3_22u6l")]
+position = Vector2(-494, -58)
+rotation = -0.658543
+
+[node name="SeedSet14" parent="Garbage" index="12" instance=ExtResource("3_22u6l")]
+position = Vector2(319, -521)
+rotation = -1.26904
 
 [node name="Robot" parent="." index="3"]
-position = Vector2(0, 579)
+position = Vector2(-2, 809)
 
 [node name="Camera2D" parent="Robot" index="3"]
 limit_left = -1850
@@ -45,5 +75,39 @@ limit_top = -1400
 limit_right = 1900
 limit_bottom = 1100
 
-[node name="Bin" parent="." index="4" instance=ExtResource("2_utxut")]
-position = Vector2(404, -125)
+[node name="BoxVerticalOpen" parent="Env" index="0" instance=ExtResource("5_byxkr")]
+position = Vector2(-1469, 451)
+rotation = 0.142483
+
+[node name="BoxVerticalOpen2" parent="Env" index="1" instance=ExtResource("5_byxkr")]
+position = Vector2(1448, 441)
+rotation = -1.64956
+
+[node name="BoxVertical2" parent="Env" index="2" instance=ExtResource("6_2dk5l")]
+position = Vector2(-1536, -155)
+rotation = -0.15193
+
+[node name="BoxVertical3" parent="Env" index="3" instance=ExtResource("6_2dk5l")]
+position = Vector2(1577, -382)
+rotation = -0.107935
+
+[node name="SofaEmpty" type="Sprite2D" parent="Env" index="4"]
+position = Vector2(113, -223)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("7_6qwxn")
+
+[node name="BoxAngleOpen" parent="Env" index="5" instance=ExtResource("8_gnj3k")]
+position = Vector2(1451, -995)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("2_utxut")]
+position = Vector2(140, 1)
+
+[node name="Chair" type="Sprite2D" parent="." index="7"]
+position = Vector2(-1208, -692)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("10_4o5y2")
+
+[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
+position = Vector2(-1211, -929)
+scale = Vector2(2.06731, 2)
+texture = ExtResource("11_qmfnb")

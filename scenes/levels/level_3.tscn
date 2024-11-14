@@ -1,28 +1,36 @@
-[gd_scene load_steps=7 format=4 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=11 format=4 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://dn07m4pur6h4s" path="res://scenes/levels/level_4.tscn" id="2_0iyk1"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_71fbv"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
+[ext_resource type="Texture2D" uid="uid://dvpsodocvxpwv" path="res://assets/objects/sofa_empty.png" id="6_05yrm"]
+[ext_resource type="Texture2D" uid="uid://b1l5vesh164o3" path="res://assets/objects/cosmetic_table.png" id="7_7t1eq"]
+[ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="7_pbr1o"]
+[ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="8_cisik"]
 
 [sub_resource type="Curve2D" id="Curve2D_ri2uf"]
 _data = {
-"points": PackedVector2Array(-11.7015, 393.17, 11.7015, -393.17, -628, 33, -56.1672, -294.878, 56.1672, 294.878, 1445, 63, 9.36119, -231.689, -9.36119, 231.689, -455, 702, -205.946, 301.898, 205.946, -301.898, 1574, 815, 0, 0, 0, 0, -628, 33)
+"points": PackedVector2Array(-11.7015, 393.17, 11.7015, -393.17, -628, 32.2877, 0, 0, 0, 0, 24.5561, -248.717, 0, 0, 0, 0, 275.926, -243.681, -56.1672, -294.878, 56.1672, 294.878, 1445, 63, 9.36119, -231.689, -9.36119, 231.689, -455, 702, -205.946, 301.898, 205.946, -301.898, 1574, 815, 0, 0, 0, 0, -628, 33)
 }
-point_count = 5
+point_count = 7
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
 _nextLevelScene = ExtResource("2_0iyk1")
+
+[node name="FloorWall" parent="." index="0"]
+metadata/_edit_lock_ = true
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
 
 [node name="Walls" parent="FloorWall" index="1"]
-tile_map_data = PackedByteArray("AAD4//v/AAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5//v/AAAAAAAAAAD6//v/AAAAAAAAAAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAA=")
+position = Vector2(-672, -528)
+tile_map_data = PackedByteArray("AAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAIAPv/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAADAAcAAAAAAAAAAAACAAcAAAAAAAAAAAABAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAD//wcAAAAAAAAAAAD+/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAD8/wcAAAAAAAAAAAD7/wcAAAAAAAAAAAD7//z/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD7/wUAAAAAAAAAAAD7/wYAAAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="1"]
-position = Vector2(5, 845)
+position = Vector2(-23, 1087)
 
 [node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
 position = Vector2(-20, 203)
@@ -30,62 +38,59 @@ position = Vector2(-20, 203)
 [node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("2_7ydgx")]
 position = Vector2(-500, -228)
 
-[node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("2_7ydgx")]
-position = Vector2(415, -574)
-
-[node name="SeedSet5" parent="Garbage" index="3" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet5" parent="Garbage" index="2" instance=ExtResource("2_7ydgx")]
 position = Vector2(-109, -508)
 
-[node name="SeedSet6" parent="Garbage" index="4" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet6" parent="Garbage" index="3" instance=ExtResource("2_7ydgx")]
 position = Vector2(1078, 220)
 
-[node name="SeedSet7" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet7" parent="Garbage" index="4" instance=ExtResource("2_7ydgx")]
 position = Vector2(610, -136)
 
-[node name="SeedSet8" parent="Garbage" index="6" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet8" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
 position = Vector2(-1129, 35)
 
-[node name="SeedSet9" parent="Garbage" index="7" instance=ExtResource("2_7ydgx")]
-position = Vector2(-1068, -695)
-
 [node name="Robot" parent="." index="3"]
-position = Vector2(13, 735)
+position = Vector2(-19, 958)
 
-[node name="Camera2D" parent="Robot" index="4"]
-limit_left = -1900
-limit_top = -1100
-limit_right = 1550
-limit_bottom = 1100
+[node name="Camera2D" parent="Robot" index="3"]
 metadata/_edit_lock_ = true
 
 [node name="Enemies" parent="." index="4"]
 position = Vector2(-606, -564)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]
-position = Vector2(35, -47)
+position = Vector2(102, 108)
+scale = Vector2(0.99455, 0.992865)
 curve = SubResource("Curve2D_ri2uf")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D" index="0"]
-position = Vector2(-628, 33)
+position = Vector2(-628, 32.2877)
 rotates = false
 cubic_interp = false
 
 [node name="Cat" parent="Enemies/Path2D/PathFollow2D" index="0" instance=ExtResource("4_71fbv")]
+position = Vector2(554, 594)
 
-[node name="Flower" parent="Env" index="0" instance=ExtResource("4_yjrwq")]
-position = Vector2(-1369, 412)
+[node name="Flower5" parent="Env" index="0" instance=ExtResource("4_yjrwq")]
+position = Vector2(1371, -1290)
 
-[node name="Flower2" parent="Env" index="1" instance=ExtResource("4_yjrwq")]
-position = Vector2(-920, 548)
+[node name="SofaEmpty" type="Sprite2D" parent="Env" index="1"]
+position = Vector2(239, -582)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("6_05yrm")
 
-[node name="Flower3" parent="Env" index="2" instance=ExtResource("4_yjrwq")]
-position = Vector2(662, 597)
+[node name="CosmeticTable" type="Sprite2D" parent="." index="6"]
+position = Vector2(1233, -653)
+scale = Vector2(2.2632, 2.2632)
+texture = ExtResource("7_7t1eq")
 
-[node name="Flower4" parent="Env" index="3" instance=ExtResource("4_yjrwq")]
-position = Vector2(1242, 438)
+[node name="Chair" type="Sprite2D" parent="." index="7"]
+position = Vector2(-1030, -983)
+scale = Vector2(2.44351, 2.36902)
+texture = ExtResource("7_pbr1o")
 
-[node name="Flower5" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
-position = Vector2(1133, -683)
-
-[node name="Flower6" parent="Env" index="5" instance=ExtResource("4_yjrwq")]
-position = Vector2(-1458, -737)
+[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
+position = Vector2(-1027, -1231)
+scale = Vector2(2.51104, 2.09176)
+texture = ExtResource("8_cisik")
