@@ -34,6 +34,7 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_amycq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -11337.0
 offset_top = -9690.0
 offset_right = 11377.0

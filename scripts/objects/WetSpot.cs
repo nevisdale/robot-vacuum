@@ -13,19 +13,19 @@ public partial class WetSpot : Area2D
 
     private void OnBodyEntered(Node2D body)
     {
-        if (body is Can can)
+        if (body is PhysicsGarbage garbage)
         {
-            GD.Print($"{can.Name} entered wet spot {Name}");
-            can.AddWetSpot();
+            GD.Print($"{garbage.Name} entered wet spot {Name}");
+            garbage.AddWetSpot();
         }
     }
 
     private void OnBodyExited(Node2D body)
     {
-        if (body is Can can)
+        if (body is PhysicsGarbage garbage)
         {
-            GD.Print($"{can.Name} removed from wet spot {Name}");
-            can.RemoveWetSpot();
+            GD.Print($"{garbage.Name} removed from wet spot {Name}");
+            garbage.RemoveWetSpot();
         }
     }
 }

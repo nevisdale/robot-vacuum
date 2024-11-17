@@ -44,7 +44,7 @@ public partial class Car : CharacterBody2D
 
 		if (positionBefore.IsEqualApprox(GlobalPosition))
 		{
-			TryToPushCan(delta);
+			TryPushGarbage(delta);
 		}
 	}
 
@@ -55,7 +55,7 @@ public partial class Car : CharacterBody2D
 
 	// if the car stuck, try to push the can
 	// it could be if car is stuck between a wall and a can
-	private void TryToPushCan(double delta)
+	private void TryPushGarbage(double delta)
 	{
 		if (!_useRayCast || _direction == Vector2.Zero)
 		{
@@ -79,13 +79,13 @@ public partial class Car : CharacterBody2D
 			}
 
 			GodotObject collider = rayCast.GetCollider();
-			if (collider is not Can can)
+			if (collider is not PhysicsGarbage garbage)
 			{
 				continue;
 			}
 			Vector2 force = _pushForce * _direction * (float)delta;
-			can.ApplyCentralForce(force);
-			GD.Print($"{can.Name} has been pushed by {Name}");
+			garbage.ApplyCentralForce(force);
+			GD.Print($"{garbage.Name} has been pushed by {Name}");
 			break;
 		}
 	}

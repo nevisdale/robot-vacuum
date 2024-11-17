@@ -14,6 +14,10 @@ public partial class Table : StaticBody2D
 		_sprite = GetNode<Sprite2D>("Sprite2D");
 		_colorRect = GetNode<ColorRect>("ColorRect");
 
+		// Visible my be disabled in the editor,
+		// because it prevents the editor choose other nodes
+		_colorRect.Visible = true;
+
 		_hideRobotArea.BodyEntered += HideRobotArea_OnBodyEntered;
 		_hideRobotArea.BodyExited += HideRobotArea_OnBodyExited;
 	}

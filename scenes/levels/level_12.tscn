@@ -1,0 +1,187 @@
+[gd_scene load_steps=14 format=4 uid="uid://bmmjij1w0pkce"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_my1kp"]
+[ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_c2v8l"]
+[ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_prse3"]
+[ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_wewp2"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="3_aongh"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="4_7b0hl"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_cv06o"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_wwtal"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="6_ayvto"]
+[ext_resource type="PackedScene" uid="uid://dwjmicc7dj7op" path="res://scenes/objects/table.tscn" id="8_sg202"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="9_c6fmb"]
+
+[sub_resource type="Curve2D" id="Curve2D_u6jwg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3144, 512, 0, 0, 0, 0, 510, 516, 0, 0, 0, 0, 508, 859, 0, 0, 0, 0, -3140, 826, 0, 0, 0, 0, -3144, 512)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_og5vy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1945, 418, 0, 0, 0, 0, -1908, 755, 0, 0, 0, 0, -2628, 743, 0, 0, 0, 0, -2616, 409, 0, 0, 0, 0, -1945, 418)
+}
+point_count = 5
+
+[node name="Level12" instance=ExtResource("1_my1kp")]
+
+[node name="Floor" parent="FloorWall" index="0"]
+tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD8/wEAAAAAAAAAAAD8/wAAAAAAAAAAAAD8////AAAAAAAAAAD8//7/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAA=")
+
+[node name="Walls" parent="FloorWall" index="1"]
+tile_map_data = PackedByteArray("AAD2//n/AAAAAAAAAAD3//n/AAAAAAAAAAD4//n/AAAAAAAAAAD5//n/AAAAAAAAAAD6//n/AAAAAAAAAAD7//n/AAAAAAAAAAD8//n/AAAAAAAAAAD9//n/AAAAAAAAAAD+//n/AAAAAAAAAAD///n/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAKAPn/AAAAAAAAAAAKAPr/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAADAAcAAAAAAAAAAAACAAcAAAAAAAAAAAABAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAD//wcAAAAAAAAAAAD+/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAD8/wcAAAAAAAAAAAD7/wcAAAAAAAAAAAD6/wcAAAAAAAAAAAD5/wcAAAAAAAAAAAD4/wcAAAAAAAAAAAD3/wcAAAAAAAAAAAD2/wcAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAD1/wcAAAAAAAAAAAAJAAMAAAAAAAAAAAD0/wcAAAAAAAAAAADz/wcAAAAAAAAAAADy/wcAAAAAAAAAAADx/wcAAAAAAAAAAADx/wYAAAAAAAAAAADx/wUAAAAAAAAAAADx/wQAAAAAAAAAAADz/wMAAAAAAAAAAADy/wMAAAAAAAAAAADx/wMAAAAAAAAAAAA=")
+
+[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_c2v8l")]
+position = Vector2(1055, 1040)
+scale = Vector2(-1.28282, 1.1079)
+
+[node name="WetSpot2" parent="WetSpots" index="1" instance=ExtResource("2_c2v8l")]
+position = Vector2(-1278, 196)
+scale = Vector2(-2.56282, 2.7879)
+
+[node name="FloorButton" parent="Buttons/Left" index="0" instance=ExtResource("2_wewp2")]
+position = Vector2(629, 1576)
+rotation = -3.12744
+
+[node name="FloorButton" parent="Buttons/Right" index="0" instance=ExtResource("2_wewp2")]
+position = Vector2(-2227, 1408)
+
+[node name="Charger" parent="." index="3"]
+position = Vector2(1416, 1566)
+
+[node name="Can" parent="Garbage" index="0" instance=ExtResource("4_7b0hl")]
+position = Vector2(1035, 1299)
+
+[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("5_wwtal")]
+position = Vector2(-1839, 1274)
+
+[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("5_wwtal")]
+position = Vector2(-1797, 1530)
+
+[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("5_wwtal")]
+position = Vector2(-1242, 1145)
+
+[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("5_wwtal")]
+position = Vector2(-1524, 1367)
+
+[node name="Robot" parent="." index="5"]
+position = Vector2(1031, 1566)
+
+[node name="Car" parent="Enemies" index="0" instance=ExtResource("2_prse3")]
+position = Vector2(1745, 660)
+
+[node name="Cat" type="Node2D" parent="Enemies" index="1"]
+position = Vector2(6, 755)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat" index="0"]
+curve = SubResource("Curve2D_u6jwg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat/Path2D" index="0"]
+position = Vector2(-202.299, 515.22)
+progress = 2941.7
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat/Path2D/PathFollow2D" index="0" instance=ExtResource("4_cv06o")]
+_move_speed = 800.0
+
+[node name="Cat2" type="Node2D" parent="Enemies" index="2"]
+position = Vector2(944, -322)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat2" index="0"]
+curve = SubResource("Curve2D_og5vy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat2/Path2D" index="0"]
+position = Vector2(-1945, 418)
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat2/Path2D/PathFollow2D" index="0" instance=ExtResource("4_cv06o")]
+position = Vector2(2, 34)
+_move_speed = 600.0
+
+[node name="BoxVertical" parent="Env" index="0" instance=ExtResource("3_aongh")]
+position = Vector2(2034, 662)
+
+[node name="BoxVertical11" parent="Env" index="1" instance=ExtResource("3_aongh")]
+position = Vector2(1839, 1490)
+
+[node name="BoxVertical2" parent="Env" index="2" instance=ExtResource("3_aongh")]
+position = Vector2(-2931, 976)
+
+[node name="BoxVertical8" parent="Env" index="3" instance=ExtResource("3_aongh")]
+position = Vector2(-2610, 978)
+
+[node name="BoxVertical9" parent="Env" index="4" instance=ExtResource("3_aongh")]
+position = Vector2(-2281, 957)
+
+[node name="BoxVertical10" parent="Env" index="5" instance=ExtResource("3_aongh")]
+position = Vector2(-1888, 883)
+
+[node name="BoxVertical3" parent="Env" index="6" instance=ExtResource("3_aongh")]
+position = Vector2(-687, -118)
+
+[node name="BoxVertical4" parent="Env" index="7" instance=ExtResource("3_aongh")]
+position = Vector2(-708, 380)
+
+[node name="BoxVertical5" parent="Env" index="8" instance=ExtResource("3_aongh")]
+position = Vector2(-1867, -161)
+
+[node name="BoxVertical6" parent="Env" index="9" instance=ExtResource("3_aongh")]
+position = Vector2(-1875, 211)
+
+[node name="BoxVertical12" parent="Env" index="10" instance=ExtResource("3_aongh")]
+position = Vector2(-1887, 528)
+
+[node name="BoxVertical7" parent="Env" index="11" instance=ExtResource("3_aongh")]
+position = Vector2(-2157, 359)
+
+[node name="Table" parent="Env" index="12" instance=ExtResource("8_sg202")]
+position = Vector2(-1249, 851)
+
+[node name="Flower7" parent="Env" index="13" instance=ExtResource("9_c6fmb")]
+position = Vector2(1228, 1216)
+
+[node name="Flower8" parent="Env" index="14" instance=ExtResource("9_c6fmb")]
+position = Vector2(1485, 1197)
+
+[node name="Flower11" parent="Env" index="15" instance=ExtResource("9_c6fmb")]
+position = Vector2(716, 1212)
+
+[node name="Flower12" parent="Env" index="16" instance=ExtResource("9_c6fmb")]
+position = Vector2(853, 1228)
+
+[node name="Flower9" parent="Env" index="17" instance=ExtResource("9_c6fmb")]
+position = Vector2(1735, 1190)
+
+[node name="Flower10" parent="Env" index="18" instance=ExtResource("9_c6fmb")]
+position = Vector2(1899, 1026)
+
+[node name="Flower13" parent="Env" index="19" instance=ExtResource("9_c6fmb")]
+position = Vector2(91, 1041)
+
+[node name="Flower14" parent="Env" index="20" instance=ExtResource("9_c6fmb")]
+position = Vector2(-143, 1025)
+
+[node name="Flower15" parent="Env" index="21" instance=ExtResource("9_c6fmb")]
+position = Vector2(-381, 1046)
+
+[node name="Flower16" parent="Env" index="22" instance=ExtResource("9_c6fmb")]
+position = Vector2(-616, 1042)
+
+[node name="Flower19" parent="Env" index="23" instance=ExtResource("9_c6fmb")]
+position = Vector2(-645, 853)
+
+[node name="Flower17" parent="Env" index="24" instance=ExtResource("9_c6fmb")]
+position = Vector2(346, 1048)
+
+[node name="Flower18" parent="Env" index="25" instance=ExtResource("9_c6fmb")]
+position = Vector2(585, 1081)
+
+[node name="Bin" parent="." index="8" instance=ExtResource("6_ayvto")]
+position = Vector2(-1310, -211)
+
+[node name="Bin2" parent="." index="9" instance=ExtResource("6_ayvto")]
+position = Vector2(-1028, -312)
+
+[node name="Bin3" parent="." index="10" instance=ExtResource("6_ayvto")]
+position = Vector2(-1565, -356)

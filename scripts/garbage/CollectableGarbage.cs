@@ -2,7 +2,7 @@ using Godot;
 
 namespace RobotVacuum.Scripts.Garbage;
 
-public partial class Seed : Area2D, IGarbage
+public partial class CollectableGarbage : Area2D, IGarbage
 {
     private const float TWEEN_DURATION = 0.3f;
     private const float TWEEN_SCALE_FACTOR = 0.2f;

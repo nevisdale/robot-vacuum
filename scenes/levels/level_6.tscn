@@ -16,7 +16,7 @@ tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAA
 [node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("3_k8s3l")]
 position = Vector2(-999, 635)
 
-[node name="Charger" parent="." index="2"]
+[node name="Charger" parent="." index="3"]
 position = Vector2(-207, 926)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_fxbjy")]
@@ -25,14 +25,14 @@ position = Vector2(-1614, -607)
 [node name="Can2" parent="Garbage" index="1" instance=ExtResource("5_u1nxh")]
 position = Vector2(-1169, -562)
 
-[node name="Robot" parent="." index="4"]
+[node name="Robot" parent="." index="5"]
 position = Vector2(-210, 627)
-
-[node name="Car" parent="Enemies" index="0" instance=ExtResource("6_prqbp")]
-position = Vector2(-1567, 101)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("8_g107f")]
 position = Vector2(-806, -425)
+
+[node name="Car" parent="Enemies" index="0" instance=ExtResource("6_prqbp")]
+position = Vector2(-1567, 101)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_wbmns")]
 position = Vector2(-479, -823)

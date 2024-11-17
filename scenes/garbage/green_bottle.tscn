@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://mq4g4jsqjbrq"]
 
-[ext_resource type="Script" path="res://scripts/garbage/Can.cs" id="1_xona3"]
+[ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_xona3"]
 [ext_resource type="Texture2D" uid="uid://dk8ujl8l6b7dh" path="res://assets/garbage/bottle-green.png" id="2_4opds"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]

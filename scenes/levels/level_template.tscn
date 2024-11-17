@@ -10,6 +10,8 @@
 script = ExtResource("1_sdfn2")
 
 [node name="FloorWall" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Floor" type="TileMapLayer" parent="FloorWall"]
 tile_set = ExtResource("2_syuls")

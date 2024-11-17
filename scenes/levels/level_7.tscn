@@ -27,7 +27,7 @@ rotation = 3.14159
 [node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("2_ee6kn")]
 position = Vector2(463, 182)
 
-[node name="Charger" parent="." index="2"]
+[node name="Charger" parent="." index="3"]
 position = Vector2(852, 544)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("3_p0jqu")]
@@ -37,8 +37,11 @@ rotation = 1.55469
 [node name="SeedSet" parent="Garbage" index="1" instance=ExtResource("4_oorho")]
 position = Vector2(-274, -120)
 
-[node name="Robot" parent="." index="4"]
+[node name="Robot" parent="." index="5"]
 position = Vector2(84, 378)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("7_bh1m7")]
+position = Vector2(-1151, -564)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_dswgr")]
 position = Vector2(816, -529)
@@ -57,9 +60,6 @@ rotates = false
 
 [node name="Cat" parent="Enemies/Cat/Path2D/PathFollow2D" index="0" instance=ExtResource("6_8xp1a")]
 _move_speed = 420.0
-
-[node name="Bin" parent="." index="6" instance=ExtResource("7_bh1m7")]
-position = Vector2(-1151, -564)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("8_ekho4")]
 position = Vector2(-347, -769)

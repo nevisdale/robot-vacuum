@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbcura8obn6n3"]
 
 [ext_resource type="Texture2D" uid="uid://3nukjb475bvn" path="res://assets/garbage/seed-one.png" id="1_2hgal"]
-[ext_resource type="Script" path="res://scripts/garbage/Seed.cs" id="1_c6yyn"]
+[ext_resource type="Script" path="res://scripts/garbage/CollectableGarbage.cs" id="1_c6yyn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5gt64"]
 radius = 79.0

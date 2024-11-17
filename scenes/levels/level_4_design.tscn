@@ -31,7 +31,7 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD5//n/AAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPn/AAAAAAAAAAD5//j/AAAAAAAAAAD5//f/AAAAAAAAAAD6//f/AAAAAAAAAAD7//f/AAAAAAAAAAD8//f/AAAAAAAAAAD9//f/AAAAAAAAAAD+//f/AAAAAAAAAAD///f/AAAAAAAAAAAAAPf/AAAAAAAAAAABAPf/AAAAAAAAAAACAPf/AAAAAAAAAAADAPf/AAAAAAAAAAAEAPf/AAAAAAAAAAAFAPf/AAAAAAAAAAAGAPf/AAAAAAAAAAAHAPf/AAAAAAAAAAAHAPj/AAAAAAAAAAA=")
 
-[node name="Charger" parent="." index="1"]
+[node name="Charger" parent="." index="3"]
 position = Vector2(165, 603)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_xub3o")]
@@ -92,8 +92,18 @@ rotation = 0.812532
 position = Vector2(-502, -916)
 rotation = 2.61835
 
-[node name="Robot" parent="." index="3"]
+[node name="Table" parent="." index="5" instance=ExtResource("7_do863")]
+position = Vector2(153, -33)
+metadata/_edit_lock_ = true
+
+[node name="Robot" parent="." index="6"]
 position = Vector2(162, 511)
+
+[node name="Bin" parent="." index="7" instance=ExtResource("5_ho0th")]
+position = Vector2(-94, -1024)
+
+[node name="Bin2" parent="." index="8" instance=ExtResource("5_ho0th")]
+position = Vector2(343, -1026)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]
 curve = SubResource("Curve2D_8aem5")
@@ -106,10 +116,6 @@ cubic_interp = false
 
 [node name="Cat" parent="Enemies/Path2D/PathFollow2D" index="0" instance=ExtResource("6_l5820")]
 position = Vector2(-55.4754, -96.2758)
-
-[node name="Table" parent="." index="5" instance=ExtResource("7_do863")]
-position = Vector2(153, -33)
-metadata/_edit_lock_ = true
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("8_flbq7")]
 position = Vector2(128, -952)
@@ -170,7 +176,6 @@ position = Vector2(-172, -1290)
 
 [node name="Flower21" parent="Env" index="19" instance=ExtResource("8_flbq7")]
 position = Vector2(675, -1389)
-scale = Vector2(1, 1)
 
 [node name="Sofa" parent="Env" index="20" instance=ExtResource("9_ldstq")]
 position = Vector2(431, -1796)
@@ -193,9 +198,3 @@ scale = Vector2(2.43049, 2.2)
 [node name="CosmeticTable2" parent="Env" index="24" instance=ExtResource("12_hst2w")]
 position = Vector2(1096, -1379)
 scale = Vector2(2.2, 2.2)
-
-[node name="Bin" parent="." index="7" instance=ExtResource("5_ho0th")]
-position = Vector2(-94, -1024)
-
-[node name="Bin2" parent="." index="8" instance=ExtResource("5_ho0th")]
-position = Vector2(343, -1026)

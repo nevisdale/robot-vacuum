@@ -2,9 +2,9 @@ using Godot;
 
 namespace RobotVacuum.Scripts.Garbage;
 
-public partial class Can : RigidBody2D, IGarbage
+public partial class PhysicsGarbage : RigidBody2D, IGarbage
 {
-    private record _CanDampData(float LinearDamp, float AngularDamp);
+    private record _dampData(float LinearDamp, float AngularDamp);
 
     private const float TWEEN_DURATION = 0.3f;
     private const float TWEEN_SCALE_FACTOR = 0.2f;
@@ -13,13 +13,13 @@ public partial class Can : RigidBody2D, IGarbage
 
     // needed for detecting wet spots and apply damp data
     private int _wetSpotCount = 0;
-    private _CanDampData _initialDampData;
-    private readonly _CanDampData _onWetSpotDampData = new(0f, 0f);
+    private _dampData _initialDampData;
+    private readonly _dampData _onWetSpotDampData = new(0f, 0f);
 
     public override void _Ready()
     {
         _collisionShape = GetNode<CollisionShape2D>("CollisionShape2D");
-        _initialDampData = new _CanDampData(LinearDamp, AngularDamp);
+        _initialDampData = new _dampData(LinearDamp, AngularDamp);
     }
 
     public bool CanBeCapturedByBin() => true;
@@ -34,8 +34,8 @@ public partial class Can : RigidBody2D, IGarbage
         tween.TweenProperty(this, "scale", Scale * TWEEN_SCALE_FACTOR, TWEEN_DURATION);
 
         // strange behavior:
-        // when you push the can towards the trash can,
-        // the robot is pushed out when the can disappears.
+        // when you push the physics garbage towards the trash,
+        // the robot is pushed out when the the garbage disappears.
         _collisionShape.SetDeferred("disabled", true);
     }
 
@@ -53,7 +53,7 @@ public partial class Can : RigidBody2D, IGarbage
 
     private void UpdateDamp()
     {
-        _CanDampData applyDampData = _onWetSpotDampData;
+        _dampData applyDampData = _onWetSpotDampData;
         if (_wetSpotCount == 0)
         {
             applyDampData = _initialDampData;
