@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://bmovsuwoo0t7j"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_mgqcc"]
+[ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="3_74da6"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_qbmja"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="4_024wk"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="6_x3ga3"]
+
+[node name="LevelDraft001" instance=ExtResource("1_mgqcc")]
+
+[node name="WetSpot" parent="." index="0" instance=ExtResource("3_74da6")]
+position = Vector2(-764, -796)
+scale = Vector2(2, 2)
+
+[node name="WetSpot3" parent="." index="1" instance=ExtResource("3_74da6")]
+position = Vector2(667, -990)
+scale = Vector2(2, 2)
+
+[node name="WetSpot2" parent="." index="2" instance=ExtResource("3_74da6")]
+position = Vector2(2338, -837)
+
+[node name="WetSpot4" parent="." index="3" instance=ExtResource("3_74da6")]
+position = Vector2(2334, -999)
+
+[node name="WetSpot5" parent="." index="4" instance=ExtResource("3_74da6")]
+position = Vector2(2331, -1179)
+
+[node name="Walls" parent="FloorWall" index="1"]
+tile_map_data = PackedByteArray("AAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wYAAAAAAAAAAAD5/wcAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAA=")
+
+[node name="Can" parent="Garbage" index="0" instance=ExtResource("3_qbmja")]
+position = Vector2(-269, -785)
+rotation = 1.5708
+
+[node name="Can4" parent="Garbage" index="1" instance=ExtResource("3_qbmja")]
+position = Vector2(506, -542)
+rotation = 1.5708
+
+[node name="Can3" parent="Garbage" index="2" instance=ExtResource("3_qbmja")]
+position = Vector2(2357, -344)
+rotation = 1.5708
+
+[node name="Can2" parent="Garbage" index="3" instance=ExtResource("3_qbmja")]
+position = Vector2(504, -394)
+rotation = 1.5708
+
+[node name="BoxVertical" parent="Env" index="0" instance=ExtResource("4_024wk")]
+position = Vector2(-552, -1060)
+
+[node name="BoxVertical2" parent="Env" index="1" instance=ExtResource("4_024wk")]
+position = Vector2(-566, -537)
+
+[node name="Bin" parent="." index="11" instance=ExtResource("6_x3ga3")]
+position = Vector2(-1170, -777)
