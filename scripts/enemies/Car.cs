@@ -12,7 +12,7 @@ public partial class Car : CharacterBody2D
 	private float _pushForce = 5000f;
 
 	[Export]
-	private Vector2 _initDirection = Vector2.Zero;
+	private Vector2 _direction = Vector2.Zero;
 
 	[Export]
 	private bool _useRayCast = true;
@@ -20,11 +20,9 @@ public partial class Car : CharacterBody2D
 	private Node2D _rayCastsLeft = null;
 	private Node2D _rayCastsRight = null;
 
-	private Vector2 _direction;
 
 	public override void _Ready()
 	{
-		_direction = _initDirection;
 		_rayCastsLeft = GetNode<Node2D>("RayCastLeft");
 		_rayCastsRight = GetNode<Node2D>("RayCastRight");
 	}

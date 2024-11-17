@@ -25,8 +25,12 @@ position = Vector2(2334, -999)
 [node name="WetSpot5" parent="." index="4" instance=ExtResource("3_74da6")]
 position = Vector2(2331, -1179)
 
+[node name="WetSpot6" parent="." index="5" instance=ExtResource("3_74da6")]
+position = Vector2(-1342, 902)
+scale = Vector2(1, 7.88)
+
 [node name="Walls" parent="FloorWall" index="1"]
-tile_map_data = PackedByteArray("AAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wYAAAAAAAAAAAD5/wcAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wYAAAAAAAAAAAD5/wcAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD7/wUAAAAAAAAAAAD7/wYAAAAAAAAAAAD7/wcAAAAAAAAAAAA=")
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("3_qbmja")]
 position = Vector2(-269, -785)
@@ -44,11 +48,11 @@ rotation = 1.5708
 position = Vector2(504, -394)
 rotation = 1.5708
 
+[node name="Bin" parent="." index="12" instance=ExtResource("6_x3ga3")]
+position = Vector2(-1170, -777)
+
 [node name="BoxVertical" parent="Env" index="0" instance=ExtResource("4_024wk")]
 position = Vector2(-552, -1060)
 
 [node name="BoxVertical2" parent="Env" index="1" instance=ExtResource("4_024wk")]
 position = Vector2(-566, -537)
-
-[node name="Bin" parent="." index="11" instance=ExtResource("6_x3ga3")]
-position = Vector2(-1170, -777)

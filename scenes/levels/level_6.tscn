@@ -1,8 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://m0cs4wssg0hf"]
+[gd_scene load_steps=8 format=4 uid="uid://m0cs4wssg0hf"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l6gs"]
-[ext_resource type="Script" path="res://scripts/levels/Level6.cs" id="2_4f0ff"]
-[ext_resource type="PackedScene" uid="uid://7j7sfsjys3xt" path="res://scenes/levels/level_7.tscn" id="3_24hgd"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_k8s3l"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_fxbjy"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="5_u1nxh"]
@@ -11,13 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="8_g107f"]
 
 [node name="Level6" instance=ExtResource("1_0l6gs")]
-script = ExtResource("2_4f0ff")
-_nextLevelScene = ExtResource("3_24hgd")
 
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAD7//v/AAAAAAAAAAD6//v/AAAAAAAAAAD5//v/AAAAAAAAAAD4//v/AAAAAAAAAAD3//v/AAAAAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAABAPz/AAAAAAAAAAABAP3/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAA=")
 
-[node name="CarGoToRightButton" parent="." index="1" instance=ExtResource("3_k8s3l")]
+[node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("3_k8s3l")]
 position = Vector2(-999, 635)
 
 [node name="Charger" parent="." index="2"]
@@ -34,6 +30,9 @@ position = Vector2(-210, 627)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_prqbp")]
 position = Vector2(-1567, 101)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("8_g107f")]
+position = Vector2(-806, -425)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_wbmns")]
 position = Vector2(-479, -823)
@@ -58,6 +57,3 @@ position = Vector2(-1254, -85)
 
 [node name="Flower8" parent="Env" index="7" instance=ExtResource("7_wbmns")]
 position = Vector2(-1872, -79)
-
-[node name="Bin" parent="." index="7" instance=ExtResource("8_g107f")]
-position = Vector2(-806, -425)

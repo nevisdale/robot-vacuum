@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://7j7sfsjys3xt"]
+[gd_scene load_steps=10 format=4 uid="uid://7j7sfsjys3xt"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_45l2g"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_ee6kn"]
-[ext_resource type="Script" path="res://scripts/levels/Level7.cs" id="2_ihpom"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_p0jqu"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_oorho"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="5_dswgr"]
@@ -17,19 +16,18 @@ _data = {
 point_count = 4
 
 [node name="Level7" instance=ExtResource("1_45l2g")]
-script = ExtResource("2_ihpom")
 
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAAFAPz/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAD8//z/AAAAAAAAAAD7//z/AAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD9//z/AAAAAAAAAAD+//z/AAAAAAAAAAD///z/AAAAAAAAAAA=")
 
-[node name="CarGoToLeftButton" parent="." index="1" instance=ExtResource("2_ee6kn")]
+[node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("2_ee6kn")]
 position = Vector2(-392, 305)
 rotation = 3.14159
 
-[node name="CarGoToRightButton" parent="." index="2" instance=ExtResource("2_ee6kn")]
+[node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("2_ee6kn")]
 position = Vector2(463, 182)
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(852, 544)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("3_p0jqu")]
@@ -39,7 +37,7 @@ rotation = 1.55469
 [node name="SeedSet" parent="Garbage" index="1" instance=ExtResource("4_oorho")]
 position = Vector2(-274, -120)
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(84, 378)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_dswgr")]
@@ -60,8 +58,8 @@ rotates = false
 [node name="Cat" parent="Enemies/Cat/Path2D/PathFollow2D" index="0" instance=ExtResource("6_8xp1a")]
 _move_speed = 420.0
 
+[node name="Bin" parent="." index="6" instance=ExtResource("7_bh1m7")]
+position = Vector2(-1151, -564)
+
 [node name="Flower" parent="Env" index="0" instance=ExtResource("8_ekho4")]
 position = Vector2(-347, -769)
-
-[node name="Bin" parent="." index="8" instance=ExtResource("7_bh1m7")]
-position = Vector2(-1151, -564)
