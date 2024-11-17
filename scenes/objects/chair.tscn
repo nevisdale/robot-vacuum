@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ybbs4t33jpo"]
+
+[ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="1_qq5yc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltp1i"]
+size = Vector2(82.875, 81)
+
+[node name="Chair" type="StaticBody2D"]
+collision_layer = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qq5yc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5625, -11.5)
+shape = SubResource("RectangleShape2D_ltp1i")

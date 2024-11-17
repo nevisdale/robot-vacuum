@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_71fbv"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
-[ext_resource type="Texture2D" uid="uid://dvpsodocvxpwv" path="res://assets/objects/sofa_empty.png" id="6_05yrm"]
+[ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="6_blyqv"]
 [ext_resource type="Texture2D" uid="uid://b1l5vesh164o3" path="res://assets/objects/cosmetic_table.png" id="7_7t1eq"]
 [ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="7_pbr1o"]
 [ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="8_cisik"]
@@ -75,10 +75,9 @@ position = Vector2(554, 594)
 [node name="Flower5" parent="Env" index="0" instance=ExtResource("4_yjrwq")]
 position = Vector2(1371, -1290)
 
-[node name="SofaEmpty" type="Sprite2D" parent="Env" index="1"]
-position = Vector2(239, -582)
+[node name="Sofa" parent="Env" index="1" instance=ExtResource("6_blyqv")]
+position = Vector2(365, -1328)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("6_05yrm")
 
 [node name="CosmeticTable" type="Sprite2D" parent="." index="6"]
 position = Vector2(1233, -653)

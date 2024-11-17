@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnb38c8vujvsu"]
+
+[ext_resource type="Texture2D" uid="uid://dvpsodocvxpwv" path="res://assets/objects/sofa_empty.png" id="1_42ckx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsyip"]
+size = Vector2(752, 205)
+
+[node name="Sofa" type="StaticBody2D"]
+collision_layer = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-108, 462)
+texture = ExtResource("1_42ckx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 2)
+shape = SubResource("RectangleShape2D_tsyip")
