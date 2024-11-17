@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/enemies/Car.cs" id="1_q1vg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8j7"]
-size = Vector2(322, 172)
+size = Vector2(302, 172)
 
 [node name="Car" type="CharacterBody2D"]
 disable_mode = 1
@@ -18,7 +18,73 @@ script = ExtResource("1_q1vg6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-12, 18)
 texture = ExtResource("1_jks55")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_7u8j7")
+metadata/_edit_lock_ = true
+
+[node name="RayCastLeft" type="Node2D" parent="."]
+
+[node name="RayCast2D1" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 0)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D2" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 41)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D3" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 86)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D4" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-145, -41)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D5" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-145, -77)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCastRight" type="Node2D" parent="."]
+
+[node name="RayCast2D1" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(148, 22)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D2" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(148, 65)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D3" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(148, -34)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D4" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(148, -74)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D5" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(148, 88)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
