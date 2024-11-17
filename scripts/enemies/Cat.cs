@@ -53,12 +53,15 @@ public partial class Cat : Node2D
 
 	private void RobotCaptureArea_OnBodyEntered(Node body)
 	{
-		_targetRobot = body as Robot;
-		if (_targetRobot == null)
+		// do not use _targetRobot property,
+		// because it may override the existing _targetRobot
+		if (body is not Robot robot)
 		{
 			GD.Print($"{Name} captured a non-Robot object {body.Name}. ignore it.");
 			return;
 		}
+		_targetRobot = robot; // make sure it's a Robot
+
 
 		if (_targetRobot.CanBeCapturedByEnemy)
 		{

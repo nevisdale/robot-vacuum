@@ -17,15 +17,25 @@ tile_set = ExtResource("2_syuls")
 [node name="Walls" type="TileMapLayer" parent="FloorWall"]
 tile_set = ExtResource("2_totiq")
 
+[node name="WetSpots" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Left" type="Node2D" parent="Buttons"]
+
+[node name="Right" type="Node2D" parent="Buttons"]
+
 [node name="Charger" parent="." instance=ExtResource("3_7e6ij")]
 position = Vector2(562, 308)
 
 [node name="Garbage" type="Node2D" parent="."]
 
 [node name="Robot" parent="." instance=ExtResource("1_yyibw")]
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.55, 0.55)
+metadata/_edit_lock_ = true
 
 [node name="Enemies" type="Node2D" parent="."]
 

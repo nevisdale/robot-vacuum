@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://dyxi00rlk01hp"]
+[gd_scene load_steps=8 format=4 uid="uid://dyxi00rlk01hp"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ayjuo"]
-[ext_resource type="Script" path="res://scripts/levels/Level9.cs" id="2_clus4"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_7au6t"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="4_7nymm"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_h6bty"]
@@ -10,19 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="8_l7v3h"]
 
 [node name="Level9" instance=ExtResource("1_ayjuo")]
-script = ExtResource("2_clus4")
 
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD5/wMAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAA=")
 
-[node name="CarGoToRightButton" parent="." index="1" instance=ExtResource("3_7au6t")]
-position = Vector2(1113, 514)
-
-[node name="CarGoToLeftButton" parent="." index="2" instance=ExtResource("3_7au6t")]
+[node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("3_7au6t")]
 position = Vector2(-901, -218)
 rotation = 3.14159
 
-[node name="Charger" parent="." index="3"]
+[node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("3_7au6t")]
+position = Vector2(1113, 514)
+
+[node name="Charger" parent="." index="2"]
 position = Vector2(457, 911)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_7nymm")]
@@ -43,12 +41,15 @@ position = Vector2(-541, -592)
 [node name="Can3" parent="Garbage" index="5" instance=ExtResource("4_7nymm")]
 position = Vector2(-905, -722)
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(383, 558)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_4h2yc")]
 position = Vector2(-849, 13)
 _pushForce = 4000.0
+
+[node name="Bin" parent="." index="6" instance=ExtResource("8_l7v3h")]
+position = Vector2(-1146, 79)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_kli22")]
 position = Vector2(-192, -1107)
@@ -79,6 +80,3 @@ position = Vector2(-1149, -202)
 
 [node name="Flower10" parent="Env" index="9" instance=ExtResource("7_kli22")]
 position = Vector2(-1146, 289)
-
-[node name="Bin" parent="." index="8" instance=ExtResource("8_l7v3h")]
-position = Vector2(-1146, 79)

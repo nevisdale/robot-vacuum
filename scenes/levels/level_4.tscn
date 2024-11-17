@@ -24,8 +24,14 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD8//n/AAAAAAAAAAD9//n/AAAAAAAAAAD+//n/AAAAAAAAAAD///n/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAD7//n/AAAAAAAAAAD6//n/AAAAAAAAAAD5//n/AAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAA=")
 
-[node name="Charger" parent="." index="1"]
+[node name="Charger" parent="." index="3"]
 position = Vector2(165, 603)
+
+[node name="Bin" parent="." index="4" instance=ExtResource("3_gbxrl")]
+position = Vector2(-94, -1024)
+
+[node name="Bin2" parent="." index="5" instance=ExtResource("3_gbxrl")]
+position = Vector2(337, -1060)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("2_1e333")]
 position = Vector2(-487, -913)
@@ -81,7 +87,7 @@ position = Vector2(-115, -254)
 [node name="SeedSet14" parent="Garbage" index="17" instance=ExtResource("3_ltoqd")]
 position = Vector2(365, -276)
 
-[node name="Robot" parent="." index="3"]
+[node name="Robot" parent="." index="7"]
 position = Vector2(162, 511)
 
 [node name="Camera2D" parent="Robot" index="3"]
@@ -90,11 +96,8 @@ limit_top = -1550
 limit_right = 1800
 limit_bottom = 950
 
-[node name="Bin" parent="." index="4" instance=ExtResource("3_gbxrl")]
-position = Vector2(-94, -1024)
-
-[node name="Bin2" parent="." index="5" instance=ExtResource("3_gbxrl")]
-position = Vector2(337, -1060)
+[node name="Table" parent="." index="8" instance=ExtResource("5_qyfgl")]
+position = Vector2(155, -25)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]
 curve = SubResource("Curve2D_8aem5")
@@ -107,9 +110,6 @@ cubic_interp = false
 
 [node name="Cat" parent="Enemies/Path2D/PathFollow2D" index="0" instance=ExtResource("5_ukyc7")]
 _move_speed = 350.0
-
-[node name="Table" parent="." index="7" instance=ExtResource("5_qyfgl")]
-position = Vector2(155, -25)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("5_ujfha")]
 position = Vector2(128, -952)

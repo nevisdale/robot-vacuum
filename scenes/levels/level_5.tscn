@@ -29,7 +29,7 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD6//r/AAAAAAAAAAD5//r/AAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAA=")
 
-[node name="Charger" parent="." index="1"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(32, 1043)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
@@ -86,7 +86,7 @@ position = Vector2(517, -902)
 [node name="Can4" parent="Garbage" index="17" instance=ExtResource("3_6h2b7")]
 position = Vector2(541, -232)
 
-[node name="Robot" parent="." index="3"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(35, 936)
 
 [node name="Camera2D" parent="Robot" index="3"]
@@ -94,6 +94,9 @@ limit_left = -1550
 limit_top = -1300
 limit_right = 1550
 limit_bottom = 960
+
+[node name="Bin" parent="." index="5" instance=ExtResource("5_imycx")]
+position = Vector2(70, -493)
 
 [node name="Cat1" type="Node2D" parent="Enemies" index="0"]
 position = Vector2(-254, 43)
@@ -119,9 +122,6 @@ progress = 3318.97
 rotates = false
 
 [node name="Cat" parent="Enemies/Cat2/Path2D/PathFollow2D" index="0" instance=ExtResource("4_xqgwe")]
-
-[node name="Bin" parent="." index="5" instance=ExtResource("5_imycx")]
-position = Vector2(70, -493)
 
 [node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("6_6qg0k")]
 position = Vector2(-1277, -354)
