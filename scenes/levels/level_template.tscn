@@ -17,6 +17,8 @@ tile_set = ExtResource("2_syuls")
 [node name="Walls" type="TileMapLayer" parent="FloorWall"]
 tile_set = ExtResource("2_totiq")
 
+[node name="WetSpots" type="Node2D" parent="."]
+
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="Buttons"]

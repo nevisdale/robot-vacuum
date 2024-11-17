@@ -14,8 +14,8 @@
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAIAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAD7//z/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAA=")
 
-[node name="WetSpot" parent="." index="1" instance=ExtResource("4_w6wkj")]
-position = Vector2(1423, 256)
+[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("4_w6wkj")]
+position = Vector2(1214, 237)
 scale = Vector2(1.5, 1.5)
 
 [node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("3_6jwgy")]
@@ -52,14 +52,14 @@ position = Vector2(1387, 1226)
 [node name="Camera2D" parent="Robot" index="3"]
 zoom = Vector2(0.4, 0.4)
 
-[node name="Car" parent="Enemies" index="0" instance=ExtResource("6_q88wr")]
-position = Vector2(223, 172)
-
-[node name="Bin" parent="." index="7" instance=ExtResource("8_s3u1l")]
+[node name="Bin" parent="." index="6" instance=ExtResource("8_s3u1l")]
 position = Vector2(2068, 245)
 
-[node name="Bin2" parent="." index="8" instance=ExtResource("8_s3u1l")]
+[node name="Bin2" parent="." index="7" instance=ExtResource("8_s3u1l")]
 position = Vector2(-774, 1164)
+
+[node name="Car" parent="Enemies" index="0" instance=ExtResource("6_q88wr")]
+position = Vector2(223, 172)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_0m12b")]
 position = Vector2(-77, -568)

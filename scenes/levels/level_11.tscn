@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=4 uid="uid://d14b0v56ibbga"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_8cesp"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="2_1kois"]
+[ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_y3ujv"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_dqcvm"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="3_tolx5"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_3qkih"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="7_xn5fd"]
+
+[node name="Level11" instance=ExtResource("1_8cesp")]
+
+[node name="Floor" parent="FloorWall" index="0"]
+tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAP7/AAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
+
+[node name="Walls" parent="FloorWall" index="1"]
+tile_map_data = PackedByteArray("AAD3//r/AAAAAAAAAAD3//v/AAAAAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3//n/AAAAAAAAAAD4//n/AAAAAAAAAAD5//n/AAAAAAAAAAD6//n/AAAAAAAAAAD7//n/AAAAAAAAAAD8//n/AAAAAAAAAAD9//n/AAAAAAAAAAD+//n/AAAAAAAAAAD///n/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAD3/wUAAAAAAAAAAAD3/wYAAAAAAAAAAAA=")
+
+[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_y3ujv")]
+position = Vector2(-1428, -87)
+
+[node name="WetSpot2" parent="WetSpots" index="1" instance=ExtResource("2_y3ujv")]
+position = Vector2(-1079, -108)
+
+[node name="WetSpot3" parent="WetSpots" index="2" instance=ExtResource("2_y3ujv")]
+position = Vector2(-8, -648)
+
+[node name="WetSpot4" parent="WetSpots" index="3" instance=ExtResource("2_y3ujv")]
+position = Vector2(-12, -968)
+
+[node name="WetSpot5" parent="WetSpots" index="4" instance=ExtResource("2_y3ujv")]
+position = Vector2(1433, -162)
+
+[node name="WetSpot6" parent="WetSpots" index="5" instance=ExtResource("2_y3ujv")]
+position = Vector2(1720, -158)
+
+[node name="WetSpot7" parent="WetSpots" index="6" instance=ExtResource("2_y3ujv")]
+position = Vector2(-1224, -83)
+
+[node name="WetSpot8" parent="WetSpots" index="7" instance=ExtResource("2_y3ujv")]
+position = Vector2(5, -847)
+
+[node name="Can" parent="Garbage" index="0" instance=ExtResource("3_dqcvm")]
+position = Vector2(-795, -91)
+rotation = 1.56086
+
+[node name="Can2" parent="Garbage" index="1" instance=ExtResource("3_dqcvm")]
+position = Vector2(-23, -452)
+
+[node name="Can3" parent="Garbage" index="2" instance=ExtResource("3_dqcvm")]
+position = Vector2(1124, -145)
+rotation = -1.55727
+
+[node name="Bin" parent="." index="7" instance=ExtResource("7_xn5fd")]
+position = Vector2(-1860, -71)
+
+[node name="Bin2" parent="." index="8" instance=ExtResource("7_xn5fd")]
+position = Vector2(-33, -1325)
+
+[node name="Bin3" parent="." index="9" instance=ExtResource("7_xn5fd")]
+position = Vector2(2093, -154)
+
+[node name="BoxVertical" parent="Env" index="0" instance=ExtResource("2_1kois")]
+position = Vector2(-253, -806)
+
+[node name="BoxVertical2" parent="Env" index="1" instance=ExtResource("2_1kois")]
+position = Vector2(216, -795)
+
+[node name="BoxHorizontal" parent="Env" index="2" instance=ExtResource("3_tolx5")]
+position = Vector2(-1084, -386)
+
+[node name="BoxHorizontal5" parent="Env" index="3" instance=ExtResource("3_tolx5")]
+position = Vector2(-677, -581)
+
+[node name="BoxHorizontal6" parent="Env" index="4" instance=ExtResource("3_tolx5")]
+position = Vector2(-793, 407)
+
+[node name="BoxHorizontal7" parent="Env" index="5" instance=ExtResource("3_tolx5")]
+position = Vector2(619, -639)
+
+[node name="BoxHorizontal8" parent="Env" index="6" instance=ExtResource("3_tolx5")]
+position = Vector2(1034, -593)
+
+[node name="BoxHorizontal9" parent="Env" index="7" instance=ExtResource("3_tolx5")]
+position = Vector2(1063, 341)
+
+[node name="BoxHorizontal2" parent="Env" index="8" instance=ExtResource("3_tolx5")]
+position = Vector2(-1109, 112)
+
+[node name="BoxHorizontal3" parent="Env" index="9" instance=ExtResource("3_tolx5")]
+position = Vector2(1441, -441)
+
+[node name="BoxHorizontal4" parent="Env" index="10" instance=ExtResource("3_tolx5")]
+position = Vector2(1449, 70)
+
+[node name="Flower" parent="Env" index="11" instance=ExtResource("4_3qkih")]
+position = Vector2(-727, 760)
+
+[node name="Flower2" parent="Env" index="12" instance=ExtResource("4_3qkih")]
+position = Vector2(-756, 1022)
+
+[node name="Flower3" parent="Env" index="13" instance=ExtResource("4_3qkih")]
+position = Vector2(-785, 1271)
+
+[node name="Flower4" parent="Env" index="14" instance=ExtResource("4_3qkih")]
+position = Vector2(-789, 1537)
+
+[node name="Flower5" parent="Env" index="15" instance=ExtResource("4_3qkih")]
+position = Vector2(1042, 698)
+
+[node name="Flower6" parent="Env" index="16" instance=ExtResource("4_3qkih")]
+position = Vector2(1025, 947)
+
+[node name="Flower7" parent="Env" index="17" instance=ExtResource("4_3qkih")]
+position = Vector2(1025, 1209)
+
+[node name="Flower8" parent="Env" index="18" instance=ExtResource("4_3qkih")]
+position = Vector2(1025, 1462)
