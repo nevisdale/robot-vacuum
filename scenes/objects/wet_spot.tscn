@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://xo747btjxusq"]
+
+[ext_resource type="Script" path="res://scripts/objects/WetSpot.cs" id="1_kclf1"]
+[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="1_tyebh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4p5v"]
+size = Vector2(326, 304)
+
+[node name="WetSpot" type="Area2D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_kclf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5625, 2.32812)
+texture = ExtResource("1_tyebh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i4p5v")
