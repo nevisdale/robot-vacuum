@@ -5,6 +5,8 @@ namespace RobotVacuum.Scripts;
 
 public partial class Robot : CharacterBody2D
 {
+	private const float LIGHT_ENERGY_MIN = 1f;
+	private const float LIGHT_ENERGY_MAX = 10f;
 
 	[Export] private float _moveSpeed = 1f;
 	[Export] private float _rotationSpeedRadian = 1f;
@@ -31,14 +33,25 @@ public partial class Robot : CharacterBody2D
 		}
 	}
 
+	private AnimationPlayer _animationPlayer = null;
 	private Area2D _garbage_capture_area = null;
+	private PointLight2D _pointLightGreen = null;
+	private PointLight2D _pointLightRed = null;
+
+	private int _dangerCount = 0;
+	private Tween _tweenInDanger = null;
 
 	public override void _Ready()
 	{
 		_garbage_capture_area = GetNode<Area2D>("GarbageCaptureArea");
+		_pointLightGreen = GetNode<PointLight2D>("PointLightGreen");
+		_pointLightRed = GetNode<PointLight2D>("PointLightRed");
+
 		_garbage_capture_area.AreaEntered += GarbageCaptureArea_OnAreaEntered;
 
 		_canBeCapturedByEnemy = true;
+
+		OutDangerAreaTweenAnimation();
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -112,5 +125,63 @@ public partial class Robot : CharacterBody2D
 	{
 		_moveSpeed = 0f;
 		_rotationSpeedRadian = 0f;
+	}
+
+	public void OutDanderAreaForce()
+	{
+		_dangerCount = 0;
+		OutDangerAreaTweenAnimation();
+	}
+
+	public void InDangerArea()
+	{
+		if (!CanBeCapturedByEnemy)
+		{
+			return;
+		}
+		_dangerCount += 1;
+		if (_dangerCount == 1)
+		{
+			InDangerAreaTweenAnimation();
+		}
+	}
+
+	public void OutDangerArea()
+	{
+		if (_dangerCount == 0)
+		{
+			return;
+		}
+		_dangerCount -= 1;
+		if (_dangerCount == 0)
+		{
+			OutDangerAreaTweenAnimation();
+		}
+	}
+
+	private void InDangerAreaTweenAnimation()
+	{
+		Tween tween = CreateTween();
+		tween.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MIN, 0.5);
+
+		// run this tween little bit faster,
+		// it shows that the robot is in danger area
+		_tweenInDanger = CreateTween();
+		_tweenInDanger.SetLoops();
+		_tweenInDanger.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MAX, 0.2);
+		_tweenInDanger.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MIN, 0.2);
+	}
+
+	private async void OutDangerAreaTweenAnimation()
+	{
+		if (_tweenInDanger != null)
+		{
+			await ToSignal(_tweenInDanger, "loop_finished");
+			_tweenInDanger.Stop();
+			_tweenInDanger = null;
+		}
+
+		Tween tween = CreateTween();
+		tween.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MAX, 0.5);
 	}
 }

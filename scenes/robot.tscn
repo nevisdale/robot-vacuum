@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ykv6f55ab02i"]
+[gd_scene load_steps=6 format=3 uid="uid://ykv6f55ab02i"]
 
 [ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/robot.png" id="1_20euf"]
 [ext_resource type="Script" path="res://scripts/Robot.cs" id="1_ctbai"]
+[ext_resource type="Texture2D" uid="uid://djil48q11t72" path="res://assets/light/circle.png" id="3_nyjvg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jojqk"]
 radius = 122.004
@@ -32,3 +33,15 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageCaptureArea"]
 shape = SubResource("CircleShape2D_bsbo3")
+
+[node name="PointLightRed" type="PointLight2D" parent="."]
+position = Vector2(-26, -32)
+color = Color(0.728417, 0.156644, 0.150435, 1)
+texture = ExtResource("3_nyjvg")
+texture_scale = 0.05
+
+[node name="PointLightGreen" type="PointLight2D" parent="."]
+position = Vector2(27, -31)
+color = Color(0.191198, 0.486082, 0.186145, 1)
+texture = ExtResource("3_nyjvg")
+texture_scale = 0.05

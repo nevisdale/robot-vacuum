@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgg5o80f7xh4r"]
+[gd_scene load_steps=5 format=3 uid="uid://cgg5o80f7xh4r"]
 
 [ext_resource type="Script" path="res://scripts/enemies/Cat.cs" id="1_8u83f"]
 [ext_resource type="Texture2D" uid="uid://bkis2f3rf6dm1" path="res://assets/objects/cat.png" id="2_bndmw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m73f"]
 radius = 243.296
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_woaju"]
+radius = 574.014
 
 [node name="Cat" type="Node2D"]
 script = ExtResource("1_8u83f")
@@ -19,3 +22,10 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RobotCaptureArea"]
 shape = SubResource("CircleShape2D_5m73f")
+
+[node name="DangerArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerArea"]
+shape = SubResource("CircleShape2D_woaju")
