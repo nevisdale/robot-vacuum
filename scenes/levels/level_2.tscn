@@ -22,7 +22,7 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD6//r/AAAAAAAAAAD5//r/AAAAAAAAAAD4//r/AAAAAAAAAAD4//v/AAAAAAAAAAA=")
 
-[node name="Charger" parent="." index="1"]
+[node name="Charger" parent="." index="3"]
 position = Vector2(-1, 894)
 
 [node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_vrmf7")]
@@ -67,7 +67,7 @@ rotation = -0.658543
 position = Vector2(319, -521)
 rotation = -1.26904
 
-[node name="Robot" parent="." index="3"]
+[node name="Robot" parent="." index="5"]
 position = Vector2(-2, 809)
 
 [node name="Camera2D" parent="Robot" index="3"]
@@ -75,6 +75,19 @@ limit_left = -1850
 limit_top = -1400
 limit_right = 1900
 limit_bottom = 1100
+
+[node name="Bin" parent="." index="6" instance=ExtResource("2_utxut")]
+position = Vector2(140, 1)
+
+[node name="Chair" type="Sprite2D" parent="." index="7"]
+position = Vector2(-1208, -754)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("10_4o5y2")
+
+[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
+position = Vector2(-1211, -957)
+scale = Vector2(2.06731, 2)
+texture = ExtResource("11_qmfnb")
 
 [node name="BoxVerticalOpen" parent="Env" index="0" instance=ExtResource("5_byxkr")]
 position = Vector2(-1469, 451)
@@ -104,16 +117,3 @@ texture = ExtResource("7_6qwxn")
 
 [node name="BoxAngleOpen" parent="Env" index="6" instance=ExtResource("8_gnj3k")]
 position = Vector2(1451, -995)
-
-[node name="Bin" parent="." index="6" instance=ExtResource("2_utxut")]
-position = Vector2(140, 1)
-
-[node name="Chair" type="Sprite2D" parent="." index="7"]
-position = Vector2(-1208, -754)
-scale = Vector2(2.1, 2.1)
-texture = ExtResource("10_4o5y2")
-
-[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
-position = Vector2(-1211, -957)
-scale = Vector2(2.06731, 2)
-texture = ExtResource("11_qmfnb")

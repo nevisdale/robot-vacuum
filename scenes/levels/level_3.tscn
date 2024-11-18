@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=12 format=4 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://dn07m4pur6h4s" path="res://scenes/levels/level_4.tscn" id="2_0iyk1"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="4_71fbv"]
+[ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="4_q7p07"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
+[ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="6_4b18y"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="6_blyqv"]
-[ext_resource type="Texture2D" uid="uid://b1l5vesh164o3" path="res://assets/objects/cosmetic_table.png" id="7_7t1eq"]
-[ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="7_pbr1o"]
+[ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="7_4e4o3"]
 [ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="8_cisik"]
 
 [sub_resource type="Curve2D" id="Curve2D_ri2uf"]
@@ -50,22 +51,25 @@ position = Vector2(-1129, 35)
 [node name="Robot" parent="." index="5"]
 position = Vector2(-19, 958)
 
-[node name="CosmeticTable" type="Sprite2D" parent="." index="6"]
-position = Vector2(1233, -653)
-scale = Vector2(2.2632, 2.2632)
-texture = ExtResource("7_7t1eq")
+[node name="CosmeticTable2" parent="." index="6" instance=ExtResource("4_q7p07")]
+position = Vector2(1283, -515)
+scale = Vector2(2.2, 2.2)
 
-[node name="Chair" type="Sprite2D" parent="." index="7"]
-position = Vector2(-1030, -983)
-scale = Vector2(2.44351, 2.36902)
-texture = ExtResource("7_pbr1o")
-
-[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
+[node name="ComputerTable" type="Sprite2D" parent="." index="7"]
+visible = false
 position = Vector2(-1027, -1231)
 scale = Vector2(2.51104, 2.09176)
 texture = ExtResource("8_cisik")
 
-[node name="Enemies" parent="." index="9"]
+[node name="Chair" parent="." index="8" instance=ExtResource("6_4b18y")]
+position = Vector2(-1060, -965)
+scale = Vector2(2.44, 2.209)
+
+[node name="ComputerTable2" parent="." index="9" instance=ExtResource("7_4e4o3")]
+position = Vector2(-1059, -1207)
+scale = Vector2(2.43, 2.2)
+
+[node name="Enemies" parent="." index="10"]
 position = Vector2(-606, -564)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]

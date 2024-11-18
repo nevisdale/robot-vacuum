@@ -1,0 +1,157 @@
+[gd_scene load_steps=17 format=4 uid="uid://hquxq7e0y1ri"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_44l5p"]
+[ext_resource type="PackedScene" uid="uid://m0cs4wssg0hf" path="res://scenes/levels/level_6.tscn" id="2_chkqe"]
+[ext_resource type="Texture2D" uid="uid://dx054k8m75m8t" path="res://assets/objects/carpet.png" id="3_iofsk"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_lkxxh"]
+[ext_resource type="PackedScene" uid="uid://is5wx7gomf1e" path="res://scenes/garbage/baby_bottle.tscn" id="5_1p124"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_isrfn"]
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="6_pmcps"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="7_v3cw1"]
+[ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="8_rrbfg"]
+[ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="9_223e6"]
+[ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="9_q4cpu"]
+[ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="10_kh2m0"]
+[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="11_deuvq"]
+[ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="13_2c8pi"]
+
+[sub_resource type="Curve2D" id="Curve2D_c8epa"]
+_data = {
+"points": PackedVector2Array(-516.311, 366.472, 516.311, -366.472, -727, -887, -173.307, -194.97, 173.307, 194.97, 676, -633, 140.812, -256.35, -140.812, 256.35, 679, 11, 140.812, 187.749, -140.812, -187.749, -693, 196, 1.80528, 261.766, -1.80528, -261.766, -355, -322, 0, 0, 0, 0, -727, -887)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_4h3lk"]
+_data = {
+"points": PackedVector2Array(343.55, 438.23, -343.55, -438.23, 901, -949, 0, 0, 0, 0, 198, -1093, -29.7563, -492.332, 29.7563, 492.332, -836, -364, -630.293, 110.91, 630.293, -110.91, 625, 178, 105.5, 505.858, -105.5, -505.858, 652, -456, 0, 0, 0, 0, 901, -949)
+}
+point_count = 6
+
+[node name="Level5" instance=ExtResource("1_44l5p")]
+_nextLevelScene = ExtResource("2_chkqe")
+
+[node name="Floor" parent="FloorWall" index="0"]
+tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
+
+[node name="Walls" parent="FloorWall" index="1"]
+tile_map_data = PackedByteArray("AAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAD5//r/AAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAD5//n/AAAAAAAAAAD5//j/AAAAAAAAAAD6//j/AAAAAAAAAAD7//j/AAAAAAAAAAD8//j/AAAAAAAAAAD9//j/AAAAAAAAAAD+//j/AAAAAAAAAAD///j/AAAAAAAAAAAAAPj/AAAAAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAADAPj/AAAAAAAAAAAEAPj/AAAAAAAAAAAFAPj/AAAAAAAAAAAGAPj/AAAAAAAAAAAGAPn/AAAAAAAAAAA=")
+
+[node name="Carpet" type="Sprite2D" parent="." index="2"]
+position = Vector2(14.0001, -535)
+scale = Vector2(2.43056, 2.62751)
+texture = ExtResource("3_iofsk")
+
+[node name="Charger" parent="." index="4"]
+position = Vector2(-680, 627)
+
+[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("3_lkxxh")]
+position = Vector2(895, -448)
+
+[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("3_lkxxh")]
+position = Vector2(778, -774)
+
+[node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("3_lkxxh")]
+position = Vector2(-405, -979)
+
+[node name="SeedSet6" parent="Garbage" index="3" instance=ExtResource("3_lkxxh")]
+position = Vector2(-637, -707)
+
+[node name="SeedSet7" parent="Garbage" index="4" instance=ExtResource("3_lkxxh")]
+position = Vector2(-838, -417)
+
+[node name="SeedSet8" parent="Garbage" index="5" instance=ExtResource("3_lkxxh")]
+position = Vector2(-424, -433)
+
+[node name="SeedSet9" parent="Garbage" index="6" instance=ExtResource("3_lkxxh")]
+position = Vector2(-163, -584)
+
+[node name="BabyBottle" parent="Garbage" index="7" instance=ExtResource("5_1p124")]
+position = Vector2(518, -914)
+rotation = 0.816093
+
+[node name="BabyBottle3" parent="Garbage" index="8" instance=ExtResource("5_1p124")]
+position = Vector2(497, -214)
+rotation = -1.17743
+
+[node name="BabyBottle2" parent="Garbage" index="9" instance=ExtResource("5_1p124")]
+position = Vector2(-253, -855)
+rotation = -1.88066
+
+[node name="BabyBottle4" parent="Garbage" index="10" instance=ExtResource("5_1p124")]
+position = Vector2(-359, -249)
+rotation = 2.60526
+
+[node name="SeedSet10" parent="Garbage" index="11" instance=ExtResource("3_lkxxh")]
+position = Vector2(432, -769)
+
+[node name="SeedSet11" parent="Garbage" index="12" instance=ExtResource("3_lkxxh")]
+position = Vector2(235, -1103)
+
+[node name="SeedSet12" parent="Garbage" index="13" instance=ExtResource("3_lkxxh")]
+position = Vector2(520, -451)
+
+[node name="SeedSet13" parent="Garbage" index="14" instance=ExtResource("3_lkxxh")]
+position = Vector2(277, -234)
+
+[node name="SeedSet14" parent="Garbage" index="15" instance=ExtResource("3_lkxxh")]
+position = Vector2(-135, -212)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("5_isrfn")]
+position = Vector2(70, -493)
+
+[node name="Robot" parent="." index="7"]
+position = Vector2(-689, 539)
+
+[node name="Cat1" type="Node2D" parent="Enemies" index="0"]
+position = Vector2(-254, 43)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat1" index="0"]
+curve = SubResource("Curve2D_c8epa")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat1/Path2D" index="0"]
+position = Vector2(-727, -887)
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat1/Path2D/PathFollow2D" index="0" instance=ExtResource("6_pmcps")]
+
+[node name="Cat2" type="Node2D" parent="Enemies" index="1"]
+position = Vector2(99, -2)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Cat2" index="0"]
+curve = SubResource("Curve2D_4h3lk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat2/Path2D" index="0"]
+position = Vector2(68.5026, 205.441)
+progress = 3318.97
+rotates = false
+
+[node name="Cat" parent="Enemies/Cat2/Path2D/PathFollow2D" index="0" instance=ExtResource("6_pmcps")]
+
+[node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("7_v3cw1")]
+position = Vector2(-1269, -427)
+
+[node name="BoxHorizontal3" parent="Env" index="1" instance=ExtResource("7_v3cw1")]
+position = Vector2(-1265, -43)
+
+[node name="CosmeticTable" parent="Env" index="2" instance=ExtResource("9_223e6")]
+position = Vector2(1185, -333)
+scale = Vector2(2.2, 2.2)
+
+[node name="Chair" parent="Env" index="3" instance=ExtResource("8_rrbfg")]
+position = Vector2(-923, -1279)
+scale = Vector2(2.44, 2.44)
+
+[node name="ComputerTable" parent="Env" index="4" instance=ExtResource("9_q4cpu")]
+position = Vector2(-907, -1464)
+scale = Vector2(2.43049, 2.2)
+
+[node name="Sofa" parent="Env" index="5" instance=ExtResource("10_kh2m0")]
+position = Vector2(426, -1547)
+scale = Vector2(1.6, 1.6)
+
+[node name="Tv" parent="Env" index="6" instance=ExtResource("13_2c8pi")]
+position = Vector2(531, 601)
+scale = Vector2(1.8, 1.8)
+
+[node name="Flower20" parent="." index="10" instance=ExtResource("11_deuvq")]
+position = Vector2(1324, -1505)

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_gp3l1"]
 [ext_resource type="PackedScene" uid="uid://bsdxv4fks5dhn" path="res://scenes/levels/level_5.tscn" id="2_dli23"]
+[ext_resource type="Texture2D" uid="uid://dx054k8m75m8t" path="res://assets/objects/carpet.png" id="3_bv2tj"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_xub3o"]
 [ext_resource type="PackedScene" uid="uid://mq4g4jsqjbrq" path="res://scenes/garbage/green_bottle.tscn" id="5_c1lcj"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_ho0th"]
@@ -11,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="8_flbq7"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="9_ldstq"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="11_6whfe"]
-[ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="12_g4wte"]
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="12_hst2w"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="12_y0kb3"]
 
@@ -31,7 +31,12 @@ tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAA
 [node name="Walls" parent="FloorWall" index="1"]
 tile_map_data = PackedByteArray("AAD5//n/AAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPn/AAAAAAAAAAD5//j/AAAAAAAAAAD5//f/AAAAAAAAAAD6//f/AAAAAAAAAAD7//f/AAAAAAAAAAD8//f/AAAAAAAAAAD9//f/AAAAAAAAAAD+//f/AAAAAAAAAAD///f/AAAAAAAAAAAAAPf/AAAAAAAAAAABAPf/AAAAAAAAAAACAPf/AAAAAAAAAAADAPf/AAAAAAAAAAAEAPf/AAAAAAAAAAAFAPf/AAAAAAAAAAAGAPf/AAAAAAAAAAAHAPf/AAAAAAAAAAAHAPj/AAAAAAAAAAA=")
 
-[node name="Charger" parent="." index="3"]
+[node name="Carpet" type="Sprite2D" parent="." index="1"]
+position = Vector2(155, -816)
+scale = Vector2(2.44444, 2.52722)
+texture = ExtResource("3_bv2tj")
+
+[node name="Charger" parent="." index="4"]
 position = Vector2(165, 603)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_xub3o")]
@@ -92,17 +97,17 @@ rotation = 0.812532
 position = Vector2(-502, -916)
 rotation = 2.61835
 
-[node name="Table" parent="." index="5" instance=ExtResource("7_do863")]
-position = Vector2(153, -33)
-metadata/_edit_lock_ = true
-
 [node name="Robot" parent="." index="6"]
 position = Vector2(162, 511)
 
-[node name="Bin" parent="." index="7" instance=ExtResource("5_ho0th")]
+[node name="Table" parent="." index="7" instance=ExtResource("7_do863")]
+position = Vector2(153, -33)
+metadata/_edit_lock_ = true
+
+[node name="Bin" parent="." index="8" instance=ExtResource("5_ho0th")]
 position = Vector2(-94, -1024)
 
-[node name="Bin2" parent="." index="8" instance=ExtResource("5_ho0th")]
+[node name="Bin2" parent="." index="9" instance=ExtResource("5_ho0th")]
 position = Vector2(343, -1026)
 
 [node name="Path2D" type="Path2D" parent="Enemies" index="0"]
@@ -185,16 +190,10 @@ scale = Vector2(1.6, 1.6)
 position = Vector2(-960, -1533)
 scale = Vector2(2.44, 2.44)
 
-[node name="ComputerTable" type="Sprite2D" parent="Env" index="22"]
-visible = false
-position = Vector2(-967, -1705)
-scale = Vector2(2.51104, 2.09176)
-texture = ExtResource("12_g4wte")
-
-[node name="ComputerTable2" parent="Env" index="23" instance=ExtResource("12_y0kb3")]
+[node name="ComputerTable" parent="Env" index="22" instance=ExtResource("12_y0kb3")]
 position = Vector2(-944, -1718)
 scale = Vector2(2.43049, 2.2)
 
-[node name="CosmeticTable2" parent="Env" index="24" instance=ExtResource("12_hst2w")]
+[node name="CosmeticTable" parent="Env" index="23" instance=ExtResource("12_hst2w")]
 position = Vector2(1096, -1379)
 scale = Vector2(2.2, 2.2)
