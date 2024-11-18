@@ -96,10 +96,7 @@ position = Vector2(277, -234)
 [node name="SeedSet14" parent="Garbage" index="15" instance=ExtResource("3_lkxxh")]
 position = Vector2(-135, -212)
 
-[node name="Bin" parent="." index="6" instance=ExtResource("5_isrfn")]
-position = Vector2(70, -493)
-
-[node name="Robot" parent="." index="7"]
+[node name="Robot" parent="." index="6"]
 position = Vector2(-689, 539)
 
 [node name="Cat1" type="Node2D" parent="Enemies" index="0"]
@@ -126,6 +123,9 @@ progress = 3318.97
 rotates = false
 
 [node name="Cat" parent="Enemies/Cat2/Path2D/PathFollow2D" index="0" instance=ExtResource("6_pmcps")]
+
+[node name="Bin" parent="." index="8" instance=ExtResource("5_isrfn")]
+position = Vector2(70, -493)
 
 [node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("7_v3cw1")]
 position = Vector2(-1269, -427)

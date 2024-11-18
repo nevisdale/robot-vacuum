@@ -70,7 +70,7 @@ rotation = -1.26904
 [node name="Robot" parent="." index="5"]
 position = Vector2(-2, 809)
 
-[node name="Camera2D" parent="Robot" index="3"]
+[node name="Camera2D" parent="Robot" index="5"]
 limit_left = -1850
 limit_top = -1400
 limit_right = 1900
