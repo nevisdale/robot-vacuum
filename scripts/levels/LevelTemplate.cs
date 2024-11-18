@@ -8,8 +8,7 @@ namespace RobotVacuum.Scripts.Levels;
 
 public partial class LevelTemplate : Node2D
 {
-	[Export]
-	private PackedScene _nextLevelScene = null;
+	[Export] private PackedScene _nextLevelScene = null;
 
 	private Robot _robot = null;
 	private Node2D _garbageContainer = null;
@@ -18,6 +17,9 @@ public partial class LevelTemplate : Node2D
 	private Node2D _rightButtonsGroup = null;
 	private Node2D _enemyGroup = null;
 	private List<Car> _cars = new();
+
+	// needs to reload current scene only once
+	private bool _robot_captured = false;
 
 	public override void _Ready()
 	{
@@ -56,6 +58,11 @@ public partial class LevelTemplate : Node2D
 
 	private void Robot_OnCapturedByEnemy()
 	{
+		if (_robot_captured)
+		{
+			return;
+		}
+		_robot_captured = true;
 		TransitionLayer.Instance.ReloadCurrentScene();
 	}
 
