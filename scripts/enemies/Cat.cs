@@ -8,6 +8,7 @@ public partial class Cat : Node2D
 
 	private Area2D _robot_capture_area;
 	private Sprite2D _sprite;
+	private Area2D _danger_area;
 
 	private PathFollow2D _path_follow;
 
@@ -24,6 +25,7 @@ public partial class Cat : Node2D
 	{
 		_robot_capture_area = GetNode<Area2D>("RobotCaptureArea");
 		_sprite = GetNode<Sprite2D>("Sprite2D");
+		_danger_area = GetNode<Area2D>("DangerArea");
 		_path_follow = GetParentOrNull<PathFollow2D>();
 
 		if (_path_follow == null)
@@ -35,6 +37,9 @@ public partial class Cat : Node2D
 
 		_robot_capture_area.BodyEntered += RobotCaptureArea_OnBodyEntered;
 		_robot_capture_area.BodyExited += RobotCaptureArea_OnBodyExited;
+
+		_danger_area.BodyEntered += DangerArea_OnBodyEntered;
+		_danger_area.BodyExited += DangerArea_OnBodyExited;
 	}
 
 	public override void _Process(double delta)
@@ -127,5 +132,22 @@ public partial class Cat : Node2D
 			_targetRobot = null;
 		};
 		_captureTween.TweenProperty(this, "global_position", _targetRobot.GlobalPosition, TWEEN_DURATION);
+	}
+
+
+	private void DangerArea_OnBodyEntered(Node2D body)
+	{
+		if (body is Robot robot)
+		{
+			robot.InDangerArea();
+		}
+	}
+
+	private void DangerArea_OnBodyExited(Node2D body)
+	{
+		if (body is Robot robot)
+		{
+			robot.OutDangerArea();
+		}
 	}
 }

@@ -37,7 +37,7 @@ position = Vector2(601, -810)
 [node name="Can4" parent="Garbage" index="2" instance=ExtResource("4_jegh1")]
 position = Vector2(705, -302)
 
-[node name="Camera2D" parent="Robot" index="3"]
+[node name="Camera2D" parent="Robot" index="5"]
 zoom = Vector2(0.4, 0.4)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("6_kmqfk")]

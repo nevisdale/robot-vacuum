@@ -1,3 +1,4 @@
+using System;
 using Godot;
 using RobotVacuum.Scripts.Garbage;
 
@@ -12,11 +13,16 @@ public partial class Car : CharacterBody2D
 
 	private Node2D _rayCastsLeft = null;
 	private Node2D _rayCastsRight = null;
+	private Area2D _dangerArea = null;
 
 	public override void _Ready()
 	{
 		_rayCastsLeft = GetNode<Node2D>("RayCastLeft");
 		_rayCastsRight = GetNode<Node2D>("RayCastRight");
+		_dangerArea = GetNode<Area2D>("DangerArea");
+
+		_dangerArea.BodyEntered += DangerArea_OnBodyEntered;
+		_dangerArea.BodyExited += DangerArea_OnBodyExited;
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -44,6 +50,8 @@ public partial class Car : CharacterBody2D
 
 		if (positionBefore.IsEqualApprox(GlobalPosition))
 		{
+			// the car may be stuck
+			// try to push the garbage in order to move the car
 			TryPushGarbage(delta);
 		}
 	}
@@ -87,6 +95,30 @@ public partial class Car : CharacterBody2D
 			garbage.ApplyCentralForce(force);
 			GD.Print($"{garbage.Name} has been pushed by {Name}");
 			break;
+		}
+	}
+
+	private void DangerArea_OnBodyEntered(Node2D body)
+	{
+		if (_direction == Vector2.Zero)
+		{
+			return;
+		}
+		if (body is Robot robot)
+		{
+			robot.InDangerArea();
+		}
+	}
+
+	private void DangerArea_OnBodyExited(Node2D body)
+	{
+		if (_direction == Vector2.Zero)
+		{
+			return;
+		}
+		if (body is Robot robot)
+		{
+			robot.OutDangerArea();
 		}
 	}
 }
