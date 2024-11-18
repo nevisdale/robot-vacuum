@@ -78,7 +78,7 @@ position = Vector2(6, 755)
 curve = SubResource("Curve2D_u6jwg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Cat/Path2D" index="0"]
-position = Vector2(-202.299, 515.22)
+position = Vector2(-202.303, 515.22)
 progress = 2941.7
 rotates = false
 
