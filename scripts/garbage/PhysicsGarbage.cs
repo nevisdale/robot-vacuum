@@ -39,6 +39,15 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
         _collisionShape.SetDeferred("disabled", true);
     }
 
+    // Push applies a force to the physics garbage.
+    // pass pushForce multiplied by delta to make the force frame rate independent.
+    public void Push(KinematicCollision2D kinematicCollision, float pushForce)
+    {
+        Vector2 force = pushForce * -kinematicCollision.GetNormal();
+        Vector2 pos = kinematicCollision.GetPosition() - GlobalPosition;
+        ApplyForce(force, pos);
+    }
+
     public void AddWetSpot()
     {
         _wetSpotCount++;
