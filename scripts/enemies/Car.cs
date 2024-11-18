@@ -5,21 +5,13 @@ namespace RobotVacuum.Scripts.Enemies;
 
 public partial class Car : CharacterBody2D
 {
-	[Export]
-	private float _speed = 1000f;
-
-	[Export]
-	private float _pushForce = 5000f;
-
-	[Export]
-	private Vector2 _direction = Vector2.Zero;
-
-	[Export]
-	private bool _useRayCast = true;
+	[Export] private float _speed = 1000f;
+	[Export] private float _pushForce = 5000f;
+	[Export] private Vector2 _direction = Vector2.Zero;
+	[Export] private bool _useRayCast = true;
 
 	private Node2D _rayCastsLeft = null;
 	private Node2D _rayCastsRight = null;
-
 
 	public override void _Ready()
 	{
@@ -32,14 +24,22 @@ public partial class Car : CharacterBody2D
 		Vector2 positionBefore = GlobalPosition;
 		KinematicCollision2D collision = MoveAndCollide(_direction * _speed * (float)delta);
 		GodotObject collider = collision?.GetCollider();
-		if (collider is RigidBody2D rb)
+		if (collider is PhysicsGarbage garbage)
 		{
-			if (GarbageManager.IsGarbage(rb))
-			{
-				Vector2 force = _pushForce * -collision.GetNormal() * (float)delta;
-				Vector2 pos = collision.GetPosition() - rb.GlobalPosition;
-				rb.ApplyForce(force, pos);
-			}
+			// push psysics garbage
+			garbage.Push(collision, _pushForce * (float)delta);
+		}
+		else if (collider is Robot robot)
+		{
+			// if car is moving and touches the robot,
+			// so the robot is captured by the car
+			robot.CaptureByEnemy(this);
+		}
+		else if (collider is StaticBody2D)
+		{
+			// if car is moving and touches the wall,
+			// or other static body objects, then stop the car
+			_direction = Vector2.Zero;
 		}
 
 		if (positionBefore.IsEqualApprox(GlobalPosition))

@@ -74,18 +74,13 @@ public partial class Robot : CharacterBody2D
 		}
 		MoveAndSlide();
 
-		// push objects
+		// push physics garbage
 		for (int i = 0; i < GetSlideCollisionCount(); i++)
 		{
 			KinematicCollision2D kinematicCollision = GetSlideCollision(i);
-			if (kinematicCollision.GetCollider() is RigidBody2D rb)
+			if (kinematicCollision.GetCollider() is PhysicsGarbage garbage)
 			{
-				if (GarbageManager.IsGarbage(rb))
-				{
-					Vector2 force = _pushForce * -kinematicCollision.GetNormal() * (float)delta;
-					Vector2 pos = kinematicCollision.GetPosition() - rb.GlobalPosition;
-					rb.ApplyForce(force, pos);
-				}
+				garbage.Push(kinematicCollision, _pushForce * (float)delta);
 			}
 		}
 	}
