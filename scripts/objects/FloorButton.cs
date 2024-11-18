@@ -4,11 +4,8 @@ namespace RobotVacuum.Scripts.Objects;
 
 public partial class FloorButton : Area2D
 {
-	[Signal]
-	public delegate void ButtonPressedEventHandler();
-
-	[Signal]
-	public delegate void ButtonReleasedEventHandler();
+	[Signal] public delegate void ButtonPressedEventHandler();
+	[Signal] public delegate void ButtonReleasedEventHandler();
 
 	// several obejcts can press the button at the same time
 	// so we need to keep track of how many objects are pressing the button

@@ -4,8 +4,7 @@ namespace RobotVacuum.Scripts.Enemies;
 
 public partial class Cat : Node2D
 {
-	[Export]
-	private float _move_speed = 400f;
+	[Export] private float _move_speed = 400f;
 
 	private Area2D _robot_capture_area;
 	private Sprite2D _sprite;

@@ -5,23 +5,15 @@ namespace RobotVacuum.Scripts;
 
 public partial class Robot : CharacterBody2D
 {
-	[Export]
-	private float _moveSpeed = 1f;
 
-	[Export]
-	private float _rotationSpeedRadian = 1f;
+	[Export] private float _moveSpeed = 1f;
+	[Export] private float _rotationSpeedRadian = 1f;
+	[Export] private float _pushForce = 5000f;
 
-	[Export]
-	private float _pushForce = 5000f;
-
-	[Signal]
-	public delegate void CapturedByEnemyEventHandler();
-
-	[Signal]
-	public delegate void CanBeCapturedByEnemyChangedEventHandler(bool changed);
+	[Signal] public delegate void CapturedByEnemyEventHandler();
+	[Signal] public delegate void CanBeCapturedByEnemyChangedEventHandler(bool changed);
 
 	private bool _canBeCapturedByEnemy = false;
-
 	public bool CanBeCapturedByEnemy
 	{
 		get

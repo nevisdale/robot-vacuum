@@ -5,8 +5,7 @@ namespace RobotVacuum.Scripts.Objects;
 
 public partial class Charger : Area2D
 {
-	[Signal]
-	public delegate void RoomIsCleanEventHandler();
+	[Signal] public delegate void RoomIsCleanEventHandler();
 
 	public override void _Ready()
 	{
