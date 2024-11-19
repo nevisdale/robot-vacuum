@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://m0cs4wssg0hf" path="res://scenes/levels/level_6.tscn" id="2_chkqe"]
 [ext_resource type="Texture2D" uid="uid://dx054k8m75m8t" path="res://assets/objects/carpet.png" id="3_iofsk"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_lkxxh"]
-[ext_resource type="PackedScene" uid="uid://is5wx7gomf1e" path="res://scenes/garbage/baby_bottle.tscn" id="5_1p124"]
+[ext_resource type="PackedScene" path="res://scenes/garbage/baby_bottle.tscn" id="5_1p124"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_isrfn"]
 [ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="6_pmcps"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="7_v3cw1"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="9_q4cpu"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="10_kh2m0"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="11_deuvq"]
-[ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="13_2c8pi"]
+[ext_resource type="PackedScene" path="res://scenes/objects/tv.tscn" id="13_2c8pi"]
 
 [sub_resource type="Curve2D" id="Curve2D_c8epa"]
 _data = {
