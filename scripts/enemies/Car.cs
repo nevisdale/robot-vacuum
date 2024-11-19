@@ -1,4 +1,3 @@
-using System;
 using Godot;
 using RobotVacuum.Scripts.Garbage;
 
