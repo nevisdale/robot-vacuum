@@ -6,7 +6,7 @@ namespace RobotVacuum.Scripts;
 public partial class Robot : CharacterBody2D
 {
 	private const float LIGHT_ENERGY_MIN = 1f;
-	private const float LIGHT_ENERGY_MAX = 10f;
+	private const float LIGHT_ENERGY_MAX = 15f;
 
 	[Export] private float _moveSpeed = 1f;
 	[Export] private float _rotationSpeedRadian = 1f;
@@ -127,18 +127,8 @@ public partial class Robot : CharacterBody2D
 		_rotationSpeedRadian = 0f;
 	}
 
-	public void OutDanderAreaForce()
-	{
-		_dangerCount = 0;
-		OutDangerAreaTweenAnimation();
-	}
-
 	public void InDangerArea()
 	{
-		if (!CanBeCapturedByEnemy)
-		{
-			return;
-		}
 		_dangerCount += 1;
 		if (_dangerCount == 1)
 		{
@@ -148,10 +138,6 @@ public partial class Robot : CharacterBody2D
 
 	public void OutDangerArea()
 	{
-		if (_dangerCount == 0)
-		{
-			return;
-		}
 		_dangerCount -= 1;
 		if (_dangerCount == 0)
 		{
