@@ -27,7 +27,6 @@ public partial class Table : StaticBody2D
 		if (body is Robot robot)
 		{
 			robot.CanBeCapturedByEnemy = false;
-			robot.OutDanderAreaForce();
 			SetTableVisibility(false);
 		}
 	}
