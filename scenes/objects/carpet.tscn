@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ucdaw3twln6u"]
+
+[ext_resource type="Texture2D" uid="uid://dx054k8m75m8t" path="res://assets/objects/carpet.png" id="1_85x64"]
+
+[node name="Carpet" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_85x64")
