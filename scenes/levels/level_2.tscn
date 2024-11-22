@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://6ls2xag8nwcq"]
+[gd_scene load_steps=12 format=4 uid="uid://6ls2xag8nwcq"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ipeqd"]
 [ext_resource type="PackedScene" uid="uid://bh8xclapgtyp4" path="res://scenes/levels/level_3.tscn" id="2_forfv"]
@@ -7,11 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="3_22u6l"]
 [ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="5_byxkr"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="6_2dk5l"]
-[ext_resource type="Texture2D" uid="uid://dvpsodocvxpwv" path="res://assets/objects/sofa_empty.png" id="7_6qwxn"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="7_po50x"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_gnj3k"]
-[ext_resource type="Texture2D" uid="uid://bhxxogx80f4is" path="res://assets/objects/chair.png" id="10_4o5y2"]
-[ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="11_qmfnb"]
+[ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="10_gadb4"]
+[ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_3vmva"]
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
 _nextLevelScene = ExtResource("2_forfv")
@@ -79,16 +78,6 @@ limit_bottom = 1100
 [node name="Bin" parent="." index="6" instance=ExtResource("2_utxut")]
 position = Vector2(140, 1)
 
-[node name="Chair" type="Sprite2D" parent="." index="7"]
-position = Vector2(-1208, -754)
-scale = Vector2(2.1, 2.1)
-texture = ExtResource("10_4o5y2")
-
-[node name="ComputerTable" type="Sprite2D" parent="." index="8"]
-position = Vector2(-1211, -957)
-scale = Vector2(2.06731, 2)
-texture = ExtResource("11_qmfnb")
-
 [node name="BoxVerticalOpen" parent="Env" index="0" instance=ExtResource("5_byxkr")]
 position = Vector2(-1469, 451)
 rotation = 0.142483
@@ -107,13 +96,12 @@ rotation = -0.107935
 
 [node name="Sofa" parent="Env" index="4" instance=ExtResource("7_po50x")]
 position = Vector2(237, -1053)
-scale = Vector2(1.6, 1.6)
 
-[node name="SofaEmpty" type="Sprite2D" parent="Env" index="5"]
-visible = false
-position = Vector2(113, -223)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("7_6qwxn")
-
-[node name="BoxAngleOpen" parent="Env" index="6" instance=ExtResource("8_gnj3k")]
+[node name="BoxAngleOpen" parent="Env" index="5" instance=ExtResource("8_gnj3k")]
 position = Vector2(1451, -995)
+
+[node name="Chair" parent="Env" index="6" instance=ExtResource("10_gadb4")]
+position = Vector2(-1291, -744)
+
+[node name="ComputerTable" parent="Env" index="7" instance=ExtResource("11_3vmva")]
+position = Vector2(-1288, -956)
