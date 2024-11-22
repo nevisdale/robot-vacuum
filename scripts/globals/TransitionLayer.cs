@@ -44,9 +44,9 @@ public partial class TransitionLayer : CanvasLayer
         GD.Print($"{Name}. reloaded scene {currentScene.Name}");
     }
 
-    public async void ChangeSceneTo(PackedScene scene)
+    public async void ChangeSceneTo(string sceneFileName)
     {
-        if (scene == null)
+        if (sceneFileName == null || sceneFileName.Length == 0)
         {
             GD.PrintErr($"{Name}. scene is null. do nothing");
             return;
@@ -56,13 +56,13 @@ public partial class TransitionLayer : CanvasLayer
         await ToSignal(_animationPlayer, "animation_finished");
         _animationPlayer.CallDeferred("play_backwards", ANIM_NAME);
 
-        Error err = GetTree().ChangeSceneToPacked(scene);
+        Error err = GetTree().ChangeSceneToFile(sceneFileName);
         if (err != Error.Ok)
         {
             GD.PrintErr($"{Name}. changing scene: {err}");
             return;
         }
 
-        GD.Print($"{Name}. changed scene to {scene.ResourcePath}");
+        GD.Print($"{Name}. changed scene to {sceneFileName}");
     }
 }

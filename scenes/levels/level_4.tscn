@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://cpie2p6k607ni"]
+[gd_scene load_steps=15 format=4 uid="uid://cpie2p6k607ni"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ndio2"]
-[ext_resource type="PackedScene" uid="uid://hquxq7e0y1ri" path="res://scenes/levels/level_5.tscn" id="2_d6k3o"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="3_gbxrl"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_ltoqd"]
 [ext_resource type="Texture2D" uid="uid://dx054k8m75m8t" path="res://assets/objects/carpet.png" id="3_rpk8e"]
@@ -22,7 +21,7 @@ _data = {
 point_count = 5
 
 [node name="Level4" instance=ExtResource("1_ndio2")]
-_nextLevelScene = ExtResource("2_d6k3o")
+_nextLevelScene = "res://scenes/levels/level_5.tscn"
 
 [node name="Floor" parent="FloorWall" index="0"]
 rotation = 0.00973467

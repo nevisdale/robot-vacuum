@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=4 uid="uid://dyxi00rlk01hp"]
+[gd_scene load_steps=14 format=4 uid="uid://dyxi00rlk01hp"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ayjuo"]
-[ext_resource type="PackedScene" uid="uid://dpf4ylywabsxs" path="res://scenes/levels/level_11.tscn" id="2_o67vn"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_7au6t"]
 [ext_resource type="PackedScene" uid="uid://ucdaw3twln6u" path="res://scenes/objects/carpet.tscn" id="3_pyqyb"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="4_7nymm"]
@@ -16,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_6bkis"]
 
 [node name="Level10" instance=ExtResource("1_ayjuo")]
-_nextLevelScene = ExtResource("2_o67vn")
+_nextLevelScene = "res://scenes/levels/level_11.tscn"
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
@@ -60,7 +59,6 @@ position = Vector2(-1144, 262)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_4h2yc")]
 position = Vector2(-791, 255)
-_pushForce = 4000.0
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_kli22")]
 position = Vector2(36, -901)

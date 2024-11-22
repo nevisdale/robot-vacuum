@@ -8,7 +8,8 @@ namespace RobotVacuum.Scripts.Levels;
 
 public partial class LevelTemplate : Node2D
 {
-	[Export] private PackedScene _nextLevelScene = null;
+	[Export(PropertyHint.File)]
+	private string _nextLevelScene = null;
 
 	private Robot _robot = null;
 	private Node2D _garbageContainer = null;

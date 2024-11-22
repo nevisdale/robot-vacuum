@@ -1,7 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://dpf4ylywabsxs"]
+[gd_scene load_steps=16 format=4 uid="uid://dpf4ylywabsxs"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_2ufss"]
-[ext_resource type="PackedScene" uid="uid://bmmjij1w0pkce" path="res://scenes/levels/level_12.tscn" id="2_0hgic"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_mc32c"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_ihoky"]
 [ext_resource type="PackedScene" uid="uid://ucdaw3twln6u" path="res://scenes/objects/carpet.tscn" id="3_uftfv"]
@@ -19,7 +18,7 @@
 
 [node name="Level11" instance=ExtResource("1_2ufss")]
 position = Vector2(337, 76)
-_nextLevelScene = ExtResource("2_0hgic")
+_nextLevelScene = "res://scenes/levels/level_12.tscn"
 
 [node name="Floor" parent="FloorWall" index="0"]
 tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD+//3/AAAAAAAAAAD9//3/AAAAAAAAAAA=")
