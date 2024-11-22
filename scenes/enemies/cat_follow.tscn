@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://br4utgoe330x0"]
+
+[ext_resource type="PackedScene" uid="uid://cgg5o80f7xh4r" path="res://scenes/enemies/cat.tscn" id="1_jy18i"]
+
+[node name="CatFollow" type="PathFollow2D"]
+rotates = false
+
+[node name="Cat" parent="." instance=ExtResource("1_jy18i")]

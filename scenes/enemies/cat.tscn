@@ -7,7 +7,7 @@
 radius = 243.296
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_woaju"]
-radius = 352.001
+radius = 482.084
 
 [node name="Cat" type="Node2D"]
 script = ExtResource("1_8u83f")
