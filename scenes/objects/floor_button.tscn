@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://duecpajqo1ax3" path="res://assets/objects/floor_button_arrow.png" id="2_nxwtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tej4p"]
-size = Vector2(218, 198)
+size = Vector2(166, 158)
 
 [node name="FloorButton" type="Area2D"]
 collision_layer = 4

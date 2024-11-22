@@ -1,31 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn2othlmshkow"]
+[gd_scene load_steps=3 format=3 uid="uid://bn2othlmshkow"]
 
 [ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="1_lg5ec"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_wladq"]
-a = Vector2(-115, 13)
-b = Vector2(-163, 107)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_7jpej"]
-a = Vector2(118, 9)
-b = Vector2(169, 105)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgms5"]
-size = Vector2(310, 198)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfumr"]
+size = Vector2(736, 478)
 
 [node name="ComputerTable" type="StaticBody2D"]
 collision_layer = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 24)
+scale = Vector2(2, 2)
 texture = ExtResource("1_lg5ec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-shape = SubResource("SegmentShape2D_wladq")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_7jpej")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -34)
-shape = SubResource("RectangleShape2D_fgms5")
+shape = SubResource("RectangleShape2D_mfumr")

@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://b1l5vesh164o3" path="res://assets/objects/cosmetic_table.png" id="1_ds4yt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6wwa1"]
-radius = 20.0
-height = 88.0
+radius = 40.0
+height = 194.0
 
 [node name="CosmeticTable" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -68)
+position = Vector2(13, -152)
+scale = Vector2(2.2, 2.2)
 texture = ExtResource("1_ds4yt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
