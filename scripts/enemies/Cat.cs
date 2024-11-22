@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 namespace RobotVacuum.Scripts.Enemies;
@@ -50,7 +51,8 @@ public partial class Cat : Node2D
 
 			// flip the Sprite2D in x axis
 			// if the Cat is moving to the left
-			_sprite.FlipH = _prev_global_position.X > GlobalPosition.X;
+			const float EPSILON = 1f;
+			_sprite.FlipH = _prev_global_position.X > GlobalPosition.X + EPSILON;
 		}
 		_prev_global_position = GlobalPosition;
 	}

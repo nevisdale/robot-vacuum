@@ -33,11 +33,16 @@ public partial class Car : CharacterBody2D
 		{
 			// push psysics garbage
 			garbage.Push(collision, _pushForce * (float)delta);
+			if (_direction != Vector2.Zero)
+			{
+				garbage.TouchedByCar();
+			}
 		}
 		else if (collider is Robot robot)
 		{
 			// if car is moving and touches the robot,
 			// so the robot is captured by the car
+			robot.MakeNotMovable();
 			robot.CaptureByEnemy(this);
 		}
 		else if (collider is StaticBody2D)
@@ -64,21 +69,34 @@ public partial class Car : CharacterBody2D
 	// it could be if car is stuck between a wall and a can
 	private void TryPushGarbage(double delta)
 	{
-		if (!_useRayCast || _direction == Vector2.Zero)
+		if (!_useRayCast)
 		{
 			return;
 		}
 
-		Node2D rayCastGroup = _rayCastsLeft;
-		if (_direction == Vector2.Right)
+		if (_direction == Vector2.Left)
 		{
-			rayCastGroup = _rayCastsRight;
+			TryPushGarbageFrom(_rayCastsLeft, Vector2.Left, delta);
 		}
+		else if (_direction == Vector2.Right)
+		{
+			TryPushGarbageFrom(_rayCastsRight, Vector2.Right, delta);
+		}
+		else
+		{
+			// means the car is not moving
+			// so push every garbage in all directions
+			TryPushGarbageFrom(_rayCastsLeft, Vector2.Left, delta);
+			TryPushGarbageFrom(_rayCastsRight, Vector2.Right, delta);
+		}
+	}
 
-		int rayCastCount = rayCastGroup.GetChildCount();
+	private void TryPushGarbageFrom(Node2D group, Vector2 forceDirection, double delta)
+	{
+		int rayCastCount = group.GetChildCount();
 		for (int i = 0; i < rayCastCount; i++)
 		{
-			RayCast2D rayCast = rayCastGroup.GetChild<RayCast2D>(i);
+			RayCast2D rayCast = group.GetChild<RayCast2D>(i);
 			rayCast.ForceRaycastUpdate();
 			if (!rayCast.IsColliding())
 			{
@@ -90,7 +108,9 @@ public partial class Car : CharacterBody2D
 			{
 				continue;
 			}
-			Vector2 force = _pushForce * _direction * (float)delta;
+			// push the garbage not so hard
+			const float pushKoef = 0.1f;
+			Vector2 force = _pushForce * pushKoef * forceDirection * (float)delta;
 			garbage.ApplyCentralForce(force);
 			GD.Print($"{garbage.Name} has been pushed by {Name}");
 			break;
@@ -99,10 +119,6 @@ public partial class Car : CharacterBody2D
 
 	private void DangerArea_OnBodyEntered(Node2D body)
 	{
-		if (_direction == Vector2.Zero)
-		{
-			return;
-		}
 		if (body is Robot robot)
 		{
 			robot.InDangerArea();
@@ -111,10 +127,6 @@ public partial class Car : CharacterBody2D
 
 	private void DangerArea_OnBodyExited(Node2D body)
 	{
-		if (_direction == Vector2.Zero)
-		{
-			return;
-		}
 		if (body is Robot robot)
 		{
 			robot.OutDangerArea();

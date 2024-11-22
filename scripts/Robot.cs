@@ -85,6 +85,13 @@ public partial class Robot : CharacterBody2D
 			KinematicCollision2D kinematicCollision = GetSlideCollision(i);
 			if (kinematicCollision.GetCollider() is PhysicsGarbage garbage)
 			{
+				if (garbage.IsMovingByCar())
+				{
+					// physics garbage is moving by car,
+					// so the robot is captured by the garbage
+					CaptureByEnemy(garbage);
+					return;
+				}
 				garbage.Push(kinematicCollision, _pushForce * (float)delta);
 			}
 		}

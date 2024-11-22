@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 namespace RobotVacuum.Scripts.Garbage;
@@ -5,6 +6,8 @@ namespace RobotVacuum.Scripts.Garbage;
 public partial class PhysicsGarbage : RigidBody2D, IGarbage
 {
     private record _dampData(float LinearDamp, float AngularDamp);
+
+    private long _touchedByCarLastTime = 0;
 
     private const float TWEEN_DURATION = 0.3f;
     private const float TWEEN_SCALE_FACTOR = 0.2f;
@@ -70,5 +73,16 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
 
         LinearDamp = applyDampData.LinearDamp;
         AngularDamp = applyDampData.AngularDamp;
+    }
+
+    public void TouchedByCar()
+    {
+        _touchedByCarLastTime = DateTime.Now.Ticks;
+    }
+
+    public bool IsMovingByCar()
+    {
+        long epsilon = TimeSpan.FromSeconds(0.5).Ticks;
+        return DateTime.Now.Ticks - _touchedByCarLastTime < epsilon;
     }
 }
