@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=10 format=3 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
@@ -17,13 +17,6 @@ point_count = 7
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
 _nextLevelScene = "res://scenes/levels/level_4.tscn"
-
-[node name="Floor" parent="FloorWall" index="0"]
-tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
-
-[node name="Walls" parent="FloorWall" index="1"]
-position = Vector2(-672, -528)
-tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAIAPv/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAADAAcAAAAAAAAAAAACAAcAAAAAAAAAAAABAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAD//wcAAAAAAAAAAAD+/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAD8/wcAAAAAAAAAAAD7/wcAAAAAAAAAAAD5/wcAAAAAAAAAAAD6/wcAAAAAAAAAAAD5/wYAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAD6//v/AAAAAAAAAAD7//v/AAAAAAAAAAA=")
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(-23, 1087)
@@ -63,16 +56,16 @@ curve = SubResource("Curve2D_ri2uf")
 position = Vector2(-628, 32.2877)
 
 [node name="CosmeticTable" parent="Env" index="0" instance=ExtResource("4_q7p07")]
-position = Vector2(1283, -515)
+position = Vector2(1731, -377)
 
 [node name="Sofa" parent="Env" index="1" instance=ExtResource("6_blyqv")]
-position = Vector2(374, -1302)
+position = Vector2(665, -1269)
 
 [node name="Chair" parent="Env" index="2" instance=ExtResource("6_4b18y")]
-position = Vector2(-1689, -1042)
+position = Vector2(-1153, -1030)
 
 [node name="ComputerTable" parent="Env" index="3" instance=ExtResource("7_4e4o3")]
-position = Vector2(-1686, -1226)
+position = Vector2(-1150, -1214)
 
 [node name="Flower" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
-position = Vector2(1356, -1276)
+position = Vector2(1772, -1164)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dyxi00rlk01hp"]
+[gd_scene load_steps=15 format=3 uid="uid://dyxi00rlk01hp"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ayjuo"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_7au6t"]
@@ -13,25 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="10_c4mme"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="11_2tehe"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_6bkis"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="14_qlxdi"]
 
 [node name="Level10" instance=ExtResource("1_ayjuo")]
 _nextLevelScene = "res://scenes/levels/level_11.tscn"
-
-[node name="Floor" parent="FloorWall" index="0"]
-tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
-
-[node name="Walls" parent="FloorWall" index="1"]
-tile_map_data = PackedByteArray("AAD5/wMAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//v/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAD//wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD8/wUAAAAAAAAAAAD7/wUAAAAAAAAAAAD6/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wQAAAAAAAAAAAA=")
 
 [node name="Carpet" parent="." index="1" instance=ExtResource("3_pyqyb")]
 position = Vector2(310, 48)
 
 [node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("3_7au6t")]
-position = Vector2(-899, -35)
+position = Vector2(-1142, -191)
 rotation = 3.14159
-
-[node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("3_7au6t")]
-position = Vector2(857, -42)
 
 [node name="Charger" parent="." index="4"]
 position = Vector2(-780, 1125)
@@ -39,74 +31,80 @@ position = Vector2(-780, 1125)
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_7nymm")]
 position = Vector2(617, -253)
 
-[node name="Can4" parent="Garbage" index="1" instance=ExtResource("4_7nymm")]
-position = Vector2(-507, -509)
+[node name="Can2" parent="Garbage" index="1" instance=ExtResource("4_7nymm")]
+position = Vector2(377, 416)
 
-[node name="Can3" parent="Garbage" index="2" instance=ExtResource("4_7nymm")]
-position = Vector2(-976, -370)
+[node name="Can4" parent="Garbage" index="2" instance=ExtResource("4_7nymm")]
+position = Vector2(-759, -700)
 
-[node name="SeedSet" parent="Garbage" index="3" instance=ExtResource("5_h6bty")]
-position = Vector2(-317, -1061)
+[node name="Can3" parent="Garbage" index="3" instance=ExtResource("4_7nymm")]
+position = Vector2(-1219, -526)
 
-[node name="SeedSet2" parent="Garbage" index="4" instance=ExtResource("5_h6bty")]
-position = Vector2(-1252, -420)
+[node name="SeedSet" parent="Garbage" index="4" instance=ExtResource("5_h6bty")]
+position = Vector2(-560, -1217)
+
+[node name="SeedSet2" parent="Garbage" index="5" instance=ExtResource("5_h6bty")]
+position = Vector2(-1495, -576)
 
 [node name="Robot" parent="." index="6"]
 position = Vector2(-779, 1044)
 
 [node name="Bin" parent="." index="7" instance=ExtResource("8_l7v3h")]
-position = Vector2(-1144, 262)
+position = Vector2(-1442, 110)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_4h2yc")]
-position = Vector2(-791, 255)
+position = Vector2(1219, 78)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_kli22")]
-position = Vector2(36, -901)
+position = Vector2(-207, -1057)
 
 [node name="Flower2" parent="Env" index="1" instance=ExtResource("7_kli22")]
-position = Vector2(30, -674)
+position = Vector2(-213, -830)
 
 [node name="Flower3" parent="Env" index="2" instance=ExtResource("7_kli22")]
-position = Vector2(24, -447)
+position = Vector2(-219, -603)
 
 [node name="Flower4" parent="Env" index="3" instance=ExtResource("7_kli22")]
-position = Vector2(21, -236)
+position = Vector2(-222, -392)
 
 [node name="Flower5" parent="Env" index="4" instance=ExtResource("7_kli22")]
-position = Vector2(11, -16)
+position = Vector2(-232, -172)
 
 [node name="Flower12" parent="Env" index="5" instance=ExtResource("7_kli22")]
-position = Vector2(-203, -16)
+position = Vector2(-446, -172)
 
 [node name="Flower9" parent="Env" index="6" instance=ExtResource("7_kli22")]
-position = Vector2(36, -1142)
+position = Vector2(-207, -1298)
 
 [node name="Flower6" parent="Env" index="7" instance=ExtResource("7_kli22")]
-position = Vector2(-429, -29)
+position = Vector2(-672, -185)
 
 [node name="Flower11" parent="Env" index="8" instance=ExtResource("7_kli22")]
-position = Vector2(-630, -19)
+position = Vector2(-873, -175)
 
 [node name="Flower7" parent="Env" index="9" instance=ExtResource("7_kli22")]
-position = Vector2(-1364, 3)
+position = Vector2(-1607, -153)
 
 [node name="Flower8" parent="Env" index="10" instance=ExtResource("7_kli22")]
-position = Vector2(-1147, -19)
+position = Vector2(-1390, -175)
 
 [node name="Flower10" parent="Env" index="11" instance=ExtResource("7_kli22")]
-position = Vector2(-1144, 472)
+position = Vector2(-1387, 316)
 
 [node name="Sofa" parent="Env" index="12" instance=ExtResource("9_wdbry")]
-position = Vector2(981, -1020)
+position = Vector2(1042, -1250)
 
 [node name="CosmeticTable" parent="Env" index="13" instance=ExtResource("10_c4mme")]
 position = Vector2(1820, -398)
 
 [node name="Tv" parent="Env" index="14" instance=ExtResource("11_2tehe")]
-position = Vector2(1020, 1053)
+position = Vector2(1028, 1289)
 
 [node name="Chair" parent="Env" index="15" instance=ExtResource("10_22d6n")]
-position = Vector2(-1059, -789)
+position = Vector2(-1241, -1025)
 
 [node name="ComputerTable" parent="Env" index="16" instance=ExtResource("11_6bkis")]
-position = Vector2(-1036, -969)
+position = Vector2(-1218, -1205)
+
+[node name="BoxVertical" parent="Env" index="17" instance=ExtResource("14_qlxdi")]
+position = Vector2(1501, 114)

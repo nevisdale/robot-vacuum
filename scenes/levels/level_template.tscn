@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://beto5bgm5v55j"]
+[gd_scene load_steps=6 format=4 uid="uid://beto5bgm5v55j"]
 
 [ext_resource type="Script" path="res://scripts/levels/LevelTemplate.cs" id="1_sdfn2"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
@@ -9,14 +9,16 @@
 [node name="LevelTemplate" type="Node2D"]
 script = ExtResource("1_sdfn2")
 
-[node name="FloorWall" type="Node2D" parent="."]
+[node name="Room" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Floor" type="TileMapLayer" parent="FloorWall"]
+[node name="Floor" type="TileMapLayer" parent="Room"]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAD+//7/AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAA=")
 tile_set = ExtResource("2_syuls")
 
-[node name="Walls" type="TileMapLayer" parent="FloorWall"]
+[node name="Walls" type="TileMapLayer" parent="Room"]
+tile_map_data = PackedByteArray("AAAAAPn/AAAAAAAAAAAAAAYAAAAAAAAAAAD//wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD9/wYAAAAAAAAAAAD8/wYAAAAAAAAAAAD7/wYAAAAAAAAAAAD6/wYAAAAAAAAAAAD5/wYAAAAAAAAAAAD4/wYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAP//AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPr/AAAAAAAAAAAIAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAADAPn/AAAAAAAAAAACAPn/AAAAAAAAAAABAPn/AAAAAAAAAAD///n/AAAAAAAAAAD+//n/AAAAAAAAAAD9//n/AAAAAAAAAAD8//n/AAAAAAAAAAD7//n/AAAAAAAAAAD6//n/AAAAAAAAAAD5//n/AAAAAAAAAAD4/wUAAAAAAAAAAAD4/wQAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wAAAAAAAAAAAAD4////AAAAAAAAAAD4//7/AAAAAAAAAAD4//3/AAAAAAAAAAD4//z/AAAAAAAAAAD4//v/AAAAAAAAAAD4//r/AAAAAAAAAAD4//n/AAAAAAAAAAA=")
 tile_set = ExtResource("2_totiq")
 
 [node name="WetSpots" type="Node2D" parent="."]
@@ -42,6 +44,8 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.55, 0.55)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 metadata/_edit_lock_ = true
 
 [node name="Enemies" type="Node2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dpf4ylywabsxs"]
+[gd_scene load_steps=16 format=3 uid="uid://dpf4ylywabsxs"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_2ufss"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_mc32c"]
@@ -20,136 +20,130 @@
 position = Vector2(337, 76)
 _nextLevelScene = "res://scenes/levels/level_12.tscn"
 
-[node name="Floor" parent="FloorWall" index="0"]
-tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD+//3/AAAAAAAAAAD9//3/AAAAAAAAAAA=")
-
-[node name="Walls" parent="FloorWall" index="1"]
-tile_map_data = PackedByteArray("AAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAD4//v/AAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAD//wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD8/wUAAAAAAAAAAAD7/wUAAAAAAAAAAAD6/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAD4/wUAAAAAAAAAAAD4/wQAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAQAAAAAAAAAAAD4//j/AAAAAAAAAAD5//j/AAAAAAAAAAD6//j/AAAAAAAAAAD7//j/AAAAAAAAAAD8//j/AAAAAAAAAAD9//j/AAAAAAAAAAD+//j/AAAAAAAAAAD///j/AAAAAAAAAAAAAPj/AAAAAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAADAPj/AAAAAAAAAAAEAPj/AAAAAAAAAAAFAPj/AAAAAAAAAAAGAPj/AAAAAAAAAAAHAPj/AAAAAAAAAAD4//r/AAAAAAAAAAD4//n/AAAAAAAAAAAIAPj/AAAAAAAAAAAIAPn/AAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAP//AAAAAAAAAAA=")
-
 [node name="Carpet" parent="." index="1" instance=ExtResource("3_uftfv")]
-position = Vector2(-85, -137)
+position = Vector2(24, 107)
 
 [node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_mc32c")]
-position = Vector2(1466, -329)
+position = Vector2(1575, -85)
 
 [node name="WetSpot2" parent="WetSpots" index="1" instance=ExtResource("2_mc32c")]
-position = Vector2(-165, -465)
+position = Vector2(-56, -221)
 scale = Vector2(1, 2.28)
 
 [node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("3_ihoky")]
-position = Vector2(975, 52)
+position = Vector2(1084, 296)
 rotation = -3.14159
 
 [node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("3_ihoky")]
-position = Vector2(1232, -898)
+position = Vector2(1341, -654)
 
 [node name="Charger" parent="." index="4"]
-position = Vector2(-1144, 1024)
+position = Vector2(-1035, 1268)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_jegh1")]
-position = Vector2(-1078, -917)
+position = Vector2(-969, -673)
 
 [node name="Can2" parent="Garbage" index="1" instance=ExtResource("4_jegh1")]
-position = Vector2(-129, -889)
+position = Vector2(-20, -645)
 
 [node name="Can6" parent="Garbage" index="2" instance=ExtResource("4_jegh1")]
-position = Vector2(-55, 245)
+position = Vector2(54, 489)
 
 [node name="SeedSet" parent="Garbage" index="3" instance=ExtResource("6_cmksb")]
-position = Vector2(231, -911)
+position = Vector2(340, -667)
 
 [node name="SeedSet2" parent="Garbage" index="4" instance=ExtResource("6_cmksb")]
-position = Vector2(629, -1072)
+position = Vector2(738, -828)
 
 [node name="SeedSet3" parent="Garbage" index="5" instance=ExtResource("6_cmksb")]
-position = Vector2(-729, -1181)
+position = Vector2(-620, -937)
 
 [node name="SeedSet4" parent="Garbage" index="6" instance=ExtResource("6_cmksb")]
-position = Vector2(-1440, -909)
+position = Vector2(-1331, -665)
 
 [node name="SeedSet5" parent="Garbage" index="7" instance=ExtResource("6_cmksb")]
-position = Vector2(-779, -893)
+position = Vector2(-670, -649)
 
 [node name="SeedSet6" parent="Garbage" index="8" instance=ExtResource("6_cmksb")]
-position = Vector2(-1173, 358)
+position = Vector2(-1064, 602)
 
 [node name="SeedSet7" parent="Garbage" index="9" instance=ExtResource("6_cmksb")]
-position = Vector2(-322, 362)
+position = Vector2(-213, 606)
 
 [node name="SeedSet8" parent="Garbage" index="10" instance=ExtResource("6_cmksb")]
-position = Vector2(-946, 20)
+position = Vector2(-837, 264)
 
 [node name="Robot" parent="." index="6"]
-position = Vector2(-1145, 941)
+position = Vector2(-1036, 1185)
 
 [node name="Camera2D" parent="Robot" index="5"]
 zoom = Vector2(0.4, 0.4)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_sx0k1")]
-position = Vector2(-146, -374)
+position = Vector2(-37, -130)
 
 [node name="Car2" parent="Enemies" index="1" instance=ExtResource("5_sx0k1")]
-position = Vector2(-1541, -333)
+position = Vector2(-1432, -89)
 
 [node name="Flower" parent="Env" index="0" instance=ExtResource("7_8rouc")]
-position = Vector2(-1210, -576)
+position = Vector2(-1101, -332)
 
 [node name="Flower2" parent="Env" index="1" instance=ExtResource("7_8rouc")]
-position = Vector2(-965, -584)
+position = Vector2(-856, -340)
 
 [node name="Flower3" parent="Env" index="2" instance=ExtResource("7_8rouc")]
-position = Vector2(-701, -595)
+position = Vector2(-592, -351)
 
 [node name="Flower4" parent="Env" index="3" instance=ExtResource("7_8rouc")]
-position = Vector2(-420, -1434)
+position = Vector2(-311, -1190)
 
 [node name="Flower5" parent="Env" index="4" instance=ExtResource("7_8rouc")]
-position = Vector2(-416, -865)
+position = Vector2(-307, -621)
 
 [node name="Flower11" parent="Env" index="5" instance=ExtResource("7_8rouc")]
-position = Vector2(-422, -602)
+position = Vector2(-313, -358)
 
 [node name="Flower12" parent="Env" index="6" instance=ExtResource("7_8rouc")]
-position = Vector2(-428, -359)
+position = Vector2(-319, -115)
 
 [node name="Flower6" parent="Env" index="7" instance=ExtResource("7_8rouc")]
-position = Vector2(30, -591)
+position = Vector2(139, -347)
 
 [node name="Flower7" parent="Env" index="8" instance=ExtResource("7_8rouc")]
-position = Vector2(226, -595)
+position = Vector2(335, -351)
 
 [node name="Flower8" parent="Env" index="9" instance=ExtResource("7_8rouc")]
-position = Vector2(433, -597)
+position = Vector2(542, -353)
 
 [node name="Flower9" parent="Env" index="10" instance=ExtResource("7_8rouc")]
-position = Vector2(643, -598)
+position = Vector2(752, -354)
 
 [node name="Flower13" parent="Env" index="11" instance=ExtResource("7_8rouc")]
-position = Vector2(849, -604)
+position = Vector2(958, -360)
 
 [node name="Flower14" parent="Env" index="12" instance=ExtResource("7_8rouc")]
-position = Vector2(1041, -607)
+position = Vector2(1150, -363)
 
 [node name="BoxVertical" parent="Env" index="13" instance=ExtResource("8_au7kh")]
-position = Vector2(1548, -598)
+position = Vector2(1657, -354)
 
 [node name="Sofa" parent="Env" index="14" instance=ExtResource("10_xr7u5")]
-position = Vector2(724, -1515)
+position = Vector2(833, -1271)
 
 [node name="Chair" parent="Env" index="15" instance=ExtResource("11_qvpr5")]
-position = Vector2(-1399, -1250)
+position = Vector2(-1290, -1006)
 
 [node name="ComputerTable" parent="Env" index="16" instance=ExtResource("12_pfuq5")]
-position = Vector2(-1345, -1463)
+position = Vector2(-1236, -1219)
 
 [node name="Tv" parent="Env" index="17" instance=ExtResource("13_np3y3")]
-position = Vector2(1013, 1047)
+position = Vector2(1122, 1291)
 
 [node name="CosmeticTable" parent="Env" index="18" instance=ExtResource("14_4sgdo")]
-position = Vector2(1734, -942)
+position = Vector2(1843, -698)
 
 [node name="Flower10" parent="Env" index="19" instance=ExtResource("7_8rouc")]
-position = Vector2(-408, -1168)
+position = Vector2(-299, -924)
 
 [node name="Bin" parent="." index="9" instance=ExtResource("6_kmqfk")]
-position = Vector2(1247, 558)
+position = Vector2(1356, 802)
