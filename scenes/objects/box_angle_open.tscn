@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2u1mu6smetqe"]
 
-[ext_resource type="Texture2D" uid="uid://b7jc1pqjidcn1" path="res://assets/objects/box_angle_open.png" id="1_eu1pj"]
+[ext_resource type="Texture2D" uid="uid://f8sefflpwiqv" path="res://assets/objects/box_angle_open.png" id="1_eu1pj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk5t8"]
 size = Vector2(320.554, 321.996)
@@ -11,7 +11,6 @@ collision_mask = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(19, -32)
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_eu1pj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

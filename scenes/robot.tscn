@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ykv6f55ab02i"]
 
-[ext_resource type="Texture2D" uid="uid://dq08pwnfmv0pl" path="res://assets/robot/robot.png" id="1_20euf"]
+[ext_resource type="Texture2D" uid="uid://cie0c35yk6sor" path="res://assets/robot/robot.png" id="1_20euf"]
 [ext_resource type="Script" path="res://scripts/Robot.cs" id="1_ctbai"]
 [ext_resource type="Texture2D" uid="uid://djil48q11t72" path="res://assets/light/circle.png" id="3_nyjvg"]
 
@@ -21,7 +21,6 @@ _pushForce = 10000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 3.14159
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_20euf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cna5b0cu8gvw1"]
 
 [ext_resource type="Script" path="res://scripts/objects/Charger.cs" id="1_4luet"]
-[ext_resource type="Texture2D" uid="uid://b7acy8jsm70aq" path="res://assets/objects/station.png" id="2_7g7m7"]
+[ext_resource type="Texture2D" uid="uid://cltj587de4pfp" path="res://assets/objects/station.png" id="2_7g7m7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws661"]
 radius = 31.257
@@ -16,7 +16,6 @@ script = ExtResource("1_4luet")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708
-scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_7g7m7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
