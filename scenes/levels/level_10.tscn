@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyxi00rlk01hp"]
+[gd_scene load_steps=16 format=3 uid="uid://dyxi00rlk01hp"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ayjuo"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_7au6t"]
 [ext_resource type="PackedScene" uid="uid://ucdaw3twln6u" path="res://scenes/objects/carpet.tscn" id="3_pyqyb"]
-[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can.tscn" id="4_7nymm"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_7nymm"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_h6bty"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="6_4h2yc"]
 [ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="7_kli22"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="11_2tehe"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_6bkis"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="14_qlxdi"]
+[ext_resource type="PackedScene" uid="uid://bmndn4iq00llf" path="res://scenes/garbage/can_beer.tscn" id="15_ylahi"]
 
 [node name="Level10" instance=ExtResource("1_ayjuo")]
 _nextLevelScene = "res://scenes/levels/level_11.tscn"
@@ -108,3 +109,6 @@ position = Vector2(-1218, -1205)
 
 [node name="BoxVertical" parent="Env" index="17" instance=ExtResource("14_qlxdi")]
 position = Vector2(1501, 114)
+
+[node name="CanBeer" parent="." index="10" instance=ExtResource("15_ylahi")]
+position = Vector2(-416, 280)
