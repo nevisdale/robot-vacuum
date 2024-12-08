@@ -37,6 +37,7 @@ public partial class Robot : CharacterBody2D
 	private Area2D _garbage_capture_area = null;
 	private PointLight2D _pointLightGreen = null;
 	private PointLight2D _pointLightRed = null;
+	private Area2D _internalArea = null;
 
 	private int _dangerCount = 0;
 	private Tween _tweenInDanger = null;
@@ -46,8 +47,13 @@ public partial class Robot : CharacterBody2D
 		_garbage_capture_area = GetNode<Area2D>("GarbageCaptureArea");
 		_pointLightGreen = GetNode<PointLight2D>("PointLightGreen");
 		_pointLightRed = GetNode<PointLight2D>("PointLightRed");
+		_internalArea = GetNode<Area2D>("InternalArea");
 
 		_garbage_capture_area.AreaEntered += GarbageCaptureArea_OnAreaEntered;
+
+		// capturable by robot garbage can be visible after capturing
+		// this internal area makes sure that the garbage is not visible
+		_internalArea.AreaExited += InternalArea_OnAreaExited;
 
 		_canBeCapturedByEnemy = true;
 
@@ -120,6 +126,15 @@ public partial class Robot : CharacterBody2D
 		}
 
 		GD.Print($"{Name}. GarbageCaptureArea_OnAreaEntered: body={area.Name}, IsGarbage={isGarbage}, Captured={captured}");
+	}
+
+	private void InternalArea_OnAreaExited(Area2D area)
+	{
+		IGarbage garbage = GarbageManager.GetGarbageOrNull(area);
+		if (garbage != null && garbage.CanBeCapturedByRobot())
+		{
+			area.Visible = false;
+		}
 	}
 
 	public void CaptureByEnemy(Node2D enemy)
