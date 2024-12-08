@@ -21,6 +21,8 @@ public partial class LevelTemplate : Node2D
 	private List<Car> _cars = new();
 	private Camera2D _camera = null;
 
+	private bool _isFullscreen = false;
+
 	// needs to reload current scene only once
 	private bool _robot_captured = false;
 
@@ -66,6 +68,11 @@ public partial class LevelTemplate : Node2D
 		{
 			TransitionLayer.Instance.ReloadCurrentScene();
 		}
+
+		if (Input.IsActionJustPressed("fullscreen"))
+		{
+			ToggleWindowMode();
+		}
 	}
 
 	private void Robot_OnCapturedByEnemy()
@@ -103,5 +110,23 @@ public partial class LevelTemplate : Node2D
 			}
 		}
 		return children;
+	}
+
+	private void ToggleWindowMode()
+	{
+		DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.Fullscreen;
+		DisplayServer.MouseMode mouseMode = DisplayServer.MouseMode.Hidden;
+		if (_isFullscreen)
+		{
+			windowMode = DisplayServer.WindowMode.Windowed;
+			mouseMode = DisplayServer.MouseMode.Visible;
+			_isFullscreen = false;
+		}
+		else
+		{
+			_isFullscreen = true;
+		}
+		DisplayServer.WindowSetMode(windowMode);
+		DisplayServer.MouseSetMode(mouseMode);
 	}
 }
