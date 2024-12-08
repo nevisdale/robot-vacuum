@@ -62,10 +62,10 @@ position = Vector2(1731, -377)
 position = Vector2(665, -1269)
 
 [node name="Chair" parent="Env" index="2" instance=ExtResource("6_4b18y")]
-position = Vector2(-1153, -1030)
+position = Vector2(-1211, -958)
 
 [node name="ComputerTable" parent="Env" index="3" instance=ExtResource("7_4e4o3")]
-position = Vector2(-1150, -1214)
+position = Vector2(-1199, -1271)
 
 [node name="Flower" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
 position = Vector2(1772, -1164)

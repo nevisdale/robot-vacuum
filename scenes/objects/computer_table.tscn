@@ -1,17 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn2othlmshkow"]
+[gd_scene load_steps=7 format=3 uid="uid://bn2othlmshkow"]
 
-[ext_resource type="Texture2D" uid="uid://dy31rg6v6odcs" path="res://assets/objects/computer_table.png" id="1_lg5ec"]
+[ext_resource type="Texture2D" uid="uid://dg18qdmldt6lf" path="res://assets/objects/computer_table.png" id="1_3pjqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfumr"]
-size = Vector2(736, 478)
+size = Vector2(736, 446)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mq1en"]
+a = Vector2(420, 273)
+b = Vector2(373, 179)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0dgk3"]
+a = Vector2(-270, 125)
+b = Vector2(-330, 275)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jumv8"]
+a = Vector2(-323, 236)
+b = Vector2(-376, 337)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_000kd"]
+a = Vector2(310, 150)
+b = Vector2(376, 333)
 
 [node name="ComputerTable" type="StaticBody2D"]
 collision_layer = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5, 24)
-scale = Vector2(2, 2)
-texture = ExtResource("1_lg5ec")
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_3pjqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 45)
 shape = SubResource("RectangleShape2D_mfumr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-51, 60)
+shape = SubResource("SegmentShape2D_mq1en")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-51, 60)
+shape = SubResource("SegmentShape2D_0dgk3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_jumv8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_000kd")
