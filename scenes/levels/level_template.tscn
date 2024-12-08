@@ -40,10 +40,16 @@ position = Vector2(562, 308)
 metadata/_edit_lock_ = true
 
 [node name="Robot" parent="." instance=ExtResource("1_yyibw")]
+position = Vector2(-521, 1119)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.55, 0.55)
+limit_left = -1750
+limit_top = -1500
+limit_right = 2000
+limit_bottom = 1500
+limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 metadata/_edit_lock_ = true

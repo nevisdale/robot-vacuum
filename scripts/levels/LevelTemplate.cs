@@ -8,6 +8,7 @@ namespace RobotVacuum.Scripts.Levels;
 
 public partial class LevelTemplate : Node2D
 {
+	private const int CAMERA_LIMIT_OFFSET = 30;
 	[Export(PropertyHint.File)]
 	private string _nextLevelScene = null;
 
@@ -18,6 +19,7 @@ public partial class LevelTemplate : Node2D
 	private Node2D _rightButtonsGroup = null;
 	private Node2D _enemyGroup = null;
 	private List<Car> _cars = new();
+	private Camera2D _camera = null;
 
 	// needs to reload current scene only once
 	private bool _robot_captured = false;
@@ -25,6 +27,7 @@ public partial class LevelTemplate : Node2D
 	public override void _Ready()
 	{
 		_robot = GetNode<Robot>("Robot");
+		_camera = GetNode<Camera2D>("Robot/Camera2D");
 		_garbageContainer = GetNode<Node2D>("Garbage");
 		_charger = GetNodeOrNull<Charger>("Charger");
 		_leftButtonsGroup = GetNode<Node2D>("Buttons/Left");
@@ -46,6 +49,14 @@ public partial class LevelTemplate : Node2D
 		State.Instance.GarbageLeft = _garbageContainer.GetChildCount();
 		_robot.CapturedByEnemy += Robot_OnCapturedByEnemy;
 		_charger.RoomIsClean += Charger_OnRoomIsClean;
+
+		_camera.LimitLeft -= CAMERA_LIMIT_OFFSET;
+		_camera.LimitRight += CAMERA_LIMIT_OFFSET;
+		_camera.LimitTop -= CAMERA_LIMIT_OFFSET;
+		_camera.LimitBottom += CAMERA_LIMIT_OFFSET;
+		// force update camera position
+		// in order to avoid animation on start
+		_camera.ResetSmoothing();
 	}
 
 	public override void _Process(double delta)
