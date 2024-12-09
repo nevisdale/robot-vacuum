@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmndn4iq00llf"]
 
 [ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_tyokw"]
-[ext_resource type="Texture2D" uid="uid://fiaxcjukrf2r" path="res://assets/garbage/can_beer.png" id="2_7lmad"]
+[ext_resource type="Texture2D" uid="uid://dj07ni6bursmw" path="res://assets/garbage/can_beer.png" id="2_7lmad"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
 radius = 26.0
