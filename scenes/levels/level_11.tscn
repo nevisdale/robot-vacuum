@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="14_4sgdo"]
 
 [node name="Level11" instance=ExtResource("1_2ufss")]
-position = Vector2(337, 76)
 _nextLevelScene = "res://scenes/levels/level_12.tscn"
 
 [node name="Carpet" parent="." index="1" instance=ExtResource("3_uftfv")]
@@ -75,9 +74,6 @@ position = Vector2(-837, 264)
 
 [node name="Robot" parent="." index="6"]
 position = Vector2(-1036, 1185)
-
-[node name="Camera2D" parent="Robot" index="5"]
-zoom = Vector2(0.4, 0.4)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_sx0k1")]
 position = Vector2(-37, -130)
