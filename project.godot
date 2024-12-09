@@ -36,10 +36,6 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="robot-vacuum"
 
-[editor]
-
-movie_writer/disable_vsync=true
-
 [filesystem]
 
 import/blender/enabled=false
