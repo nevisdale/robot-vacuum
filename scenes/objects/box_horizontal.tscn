@@ -1,18 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://52khmyn6hrlx"]
+[gd_scene load_steps=2 format=3 uid="uid://52khmyn6hrlx"]
 
 [ext_resource type="Texture2D" uid="uid://c6inn8d0odqw0" path="res://assets/objects/box_horizontal.png" id="1_jr1fe"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5umv6"]
-size = Vector2(318, 308)
 
 [node name="BoxHorizontal" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(18, 26)
 texture = ExtResource("1_jr1fe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_5umv6")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(127, 198, 143, 153, 145, -96, -147, -96, -146, 154, -128, 198)

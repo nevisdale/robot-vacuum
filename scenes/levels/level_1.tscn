@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://djw2miqcpjv1m"]
+[gd_scene load_steps=8 format=3 uid="uid://djw2miqcpjv1m"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_7pyra"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_o15sh"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="4_ucb5x"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="5_6ue3q"]
 [ext_resource type="PackedScene" uid="uid://drw1jqmt8sljb" path="res://scenes/objects/box_angle.tscn" id="7_sqmmq"]
+[ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="7_vbh6a"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_2dk55"]
 
 [node name="Level1" instance=ExtResource("1_7pyra")]
@@ -70,7 +71,7 @@ position = Vector2(1085, -1092)
 rotation = -0.0650302
 
 [node name="BoxHorizontal3" parent="Env" index="2" instance=ExtResource("4_ucb5x")]
-position = Vector2(-272, -1171)
+position = Vector2(-401, -511)
 rotation = -0.0836353
 
 [node name="BoxVertical" parent="Env" index="3" instance=ExtResource("5_6ue3q")]
@@ -90,7 +91,7 @@ position = Vector2(1741, -382)
 rotation = 0.0430354
 
 [node name="BoxAngle" parent="Env" index="7" instance=ExtResource("7_sqmmq")]
-position = Vector2(-1439, -1176)
+position = Vector2(-176, 273)
 
 [node name="BoxAngle2" parent="Env" index="8" instance=ExtResource("7_sqmmq")]
 position = Vector2(1756, -1139)
@@ -99,3 +100,6 @@ rotation = -0.12373
 [node name="BoxAngleOpen" parent="Env" index="9" instance=ExtResource("8_2dk55")]
 position = Vector2(386, -819)
 rotation = -0.0144057
+
+[node name="BoxVerticalOpen" parent="Env" index="10" instance=ExtResource("7_vbh6a")]
+position = Vector2(771, 348)

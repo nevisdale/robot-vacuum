@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://24xlbclkg2nt"]
+[gd_scene load_steps=2 format=3 uid="uid://24xlbclkg2nt"]
 
 [ext_resource type="Texture2D" uid="uid://sekpdyhc3fdf" path="res://assets/objects/box_vertical_open.png" id="1_md10o"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_exjmf"]
-size = Vector2(280, 318)
 
 [node name="BoxVerticalOpen" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(0, 25)
 texture = ExtResource("1_md10o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_exjmf")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(139, 158, -124, 158, -124, -158, 138, -158)

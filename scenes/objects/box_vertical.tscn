@@ -7,8 +7,10 @@ collision_layer = 4
 collision_mask = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(-5, 3)
 texture = ExtResource("1_jku67")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(132, -6, 132, 134, 103, 177, -100, 177, -129, 134, -129, -168, 132, -168)
+polygon = PackedVector2Array(117, 3, 118, 136, 104, 177, -100, 177, -113, 135, -113, -167, 115, -168)

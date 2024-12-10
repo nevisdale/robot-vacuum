@@ -1,18 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://drw1jqmt8sljb"]
+[gd_scene load_steps=2 format=3 uid="uid://drw1jqmt8sljb"]
 
 [ext_resource type="Texture2D" uid="uid://b2lcpm66f8ydm" path="res://assets/objects/box_angle.png" id="1_wqcnf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4opj1"]
-size = Vector2(354.986, 322.272)
 
 [node name="BoxAngle" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(14, -28)
 texture = ExtResource("1_wqcnf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 0.590449
-shape = SubResource("RectangleShape2D_4opj1")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(191, 25, 66, 231, -178, 89, -195, 15, -49, -191, 190, -50)
