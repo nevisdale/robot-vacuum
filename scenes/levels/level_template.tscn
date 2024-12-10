@@ -44,7 +44,7 @@ position = Vector2(-521, 1119)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
-zoom = Vector2(0.55, 0.55)
+zoom = Vector2(0.52, 0.52)
 limit_left = -1750
 limit_top = -1500
 limit_right = 2000
