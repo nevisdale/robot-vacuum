@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=14 format=3 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="6_4b18y"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="6_blyqv"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="7_4e4o3"]
+[ext_resource type="PackedScene" uid="uid://drw1jqmt8sljb" path="res://scenes/objects/box_angle.tscn" id="9_28dw6"]
+[ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="11_rgt0e"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="12_edilw"]
+[ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="13_42fmg"]
 
 [sub_resource type="Curve2D" id="Curve2D_ri2uf"]
 _data = {
@@ -19,7 +23,7 @@ point_count = 7
 _nextLevelScene = "res://scenes/levels/level_4.tscn"
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-23, 1087)
+position = Vector2(58, 1325)
 
 [node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
 position = Vector2(-20, 203)
@@ -36,11 +40,26 @@ position = Vector2(1078, 220)
 [node name="SeedSet7" parent="Garbage" index="4" instance=ExtResource("2_7ydgx")]
 position = Vector2(610, -136)
 
-[node name="SeedSet8" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
+[node name="SeedSet9" parent="Garbage" index="5" instance=ExtResource("2_7ydgx")]
+position = Vector2(313, 769)
+
+[node name="SeedSet10" parent="Garbage" index="6" instance=ExtResource("2_7ydgx")]
+position = Vector2(1113, 824)
+
+[node name="SeedSet11" parent="Garbage" index="7" instance=ExtResource("2_7ydgx")]
+position = Vector2(-612, 672)
+
+[node name="SeedSet12" parent="Garbage" index="8" instance=ExtResource("2_7ydgx")]
+position = Vector2(614, 328)
+
+[node name="SeedSet13" parent="Garbage" index="9" instance=ExtResource("2_7ydgx")]
+position = Vector2(1290, -278)
+
+[node name="SeedSet8" parent="Garbage" index="10" instance=ExtResource("2_7ydgx")]
 position = Vector2(-1129, 35)
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-19, 958)
+position = Vector2(64, 1226)
 
 [node name="Enemies" parent="." index="6"]
 position = Vector2(-606, -564)
@@ -48,7 +67,7 @@ position = Vector2(-606, -564)
 [node name="Cat" type="Node2D" parent="Enemies" index="0"]
 
 [node name="Path2D" type="Path2D" parent="Enemies/Cat" index="0"]
-position = Vector2(102, 108)
+position = Vector2(281, 584)
 scale = Vector2(0.99455, 0.992865)
 curve = SubResource("Curve2D_ri2uf")
 
@@ -56,16 +75,30 @@ curve = SubResource("Curve2D_ri2uf")
 position = Vector2(-628, 32.2877)
 
 [node name="CosmeticTable" parent="Env" index="0" instance=ExtResource("4_q7p07")]
-position = Vector2(1731, -377)
+position = Vector2(1672, 132)
 
 [node name="Sofa" parent="Env" index="1" instance=ExtResource("6_blyqv")]
-position = Vector2(665, -1269)
+position = Vector2(852, -735)
 
 [node name="Chair" parent="Env" index="2" instance=ExtResource("6_4b18y")]
-position = Vector2(-1211, -958)
+position = Vector2(-1242, -364)
+rotation = 0.261799
 
 [node name="ComputerTable" parent="Env" index="3" instance=ExtResource("7_4e4o3")]
-position = Vector2(-1199, -1271)
+position = Vector2(-1196, -727)
 
 [node name="Flower" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
-position = Vector2(1772, -1164)
+position = Vector2(1797, -797)
+
+[node name="BoxAngle" parent="Env" index="5" instance=ExtResource("9_28dw6")]
+position = Vector2(1534, 428)
+
+[node name="BoxAngleOpen" parent="Env" index="6" instance=ExtResource("11_rgt0e")]
+position = Vector2(-963, 1210)
+
+[node name="BoxHorizontal" parent="Env" index="7" instance=ExtResource("12_edilw")]
+position = Vector2(-1339, 626)
+
+[node name="BoxVerticalOpen" parent="Env" index="8" instance=ExtResource("13_42fmg")]
+position = Vector2(1504, 1209)
+rotation = -0.523598

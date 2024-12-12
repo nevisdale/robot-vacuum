@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://d14b0v56ibbga"]
+[gd_scene load_steps=13 format=3 uid="uid://d14b0v56ibbga"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l6gs"]
+[ext_resource type="PackedScene" uid="uid://mq4g4jsqjbrq" path="res://scenes/garbage/green_bottle.tscn" id="3_83fss"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="3_j7vvq"]
-[ext_resource type="PackedScene" uid="uid://bmndn4iq00llf" path="res://scenes/garbage/can_beer.tscn" id="3_r4ubu"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="3_upred"]
+[ext_resource type="PackedScene" uid="uid://bkh5pgbnu85d0" path="res://scenes/garbage/red_bottle.tscn" id="4_m1kuk"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="6_yo8as"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="8_g107f"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="8_q2fhq"]
@@ -21,70 +22,89 @@ point_count = 4
 _nextLevelScene = "res://scenes/levels/level_7.tscn"
 
 [node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("3_upred")]
-position = Vector2(-419, 92)
+position = Vector2(-648, 1202)
 
 [node name="WetSpot7" parent="WetSpots" index="1" instance=ExtResource("3_upred")]
-position = Vector2(1433, 445)
+position = Vector2(303, -336)
 
 [node name="WetSpot8" parent="WetSpots" index="2" instance=ExtResource("3_upred")]
 position = Vector2(398, 53)
 
 [node name="WetSpot9" parent="WetSpots" index="3" instance=ExtResource("3_upred")]
-position = Vector2(-74, -894)
+position = Vector2(-113, -397)
 scale = Vector2(1, 2.72)
 
-[node name="WetSpot2" parent="WetSpots" index="4" instance=ExtResource("3_upred")]
-position = Vector2(809, -414)
-
-[node name="WetSpot3" parent="WetSpots" index="5" instance=ExtResource("3_upred")]
+[node name="WetSpot3" parent="WetSpots" index="4" instance=ExtResource("3_upred")]
 position = Vector2(787, 577)
 
-[node name="WetSpot4" parent="WetSpots" index="6" instance=ExtResource("3_upred")]
+[node name="WetSpot4" parent="WetSpots" index="5" instance=ExtResource("3_upred")]
 position = Vector2(-1149, 501)
 
-[node name="WetSpot5" parent="WetSpots" index="7" instance=ExtResource("3_upred")]
-position = Vector2(-962, -392)
+[node name="WetSpot5" parent="WetSpots" index="6" instance=ExtResource("3_upred")]
+position = Vector2(-1018, -61)
 
-[node name="WetSpot6" parent="WetSpots" index="8" instance=ExtResource("3_upred")]
-position = Vector2(59, 820)
+[node name="WetSpot6" parent="WetSpots" index="7" instance=ExtResource("3_upred")]
+position = Vector2(205, 840)
+
+[node name="WetSpot10" parent="WetSpots" index="8" instance=ExtResource("3_upred")]
+position = Vector2(-325, 751)
+
+[node name="WetSpot11" parent="WetSpots" index="9" instance=ExtResource("3_upred")]
+position = Vector2(-481, 247)
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(-1224, 1379)
 
-[node name="CanBeer" parent="Garbage" index="0" instance=ExtResource("3_r4ubu")]
-position = Vector2(-264, 447)
+[node name="GreenBottle" parent="Garbage" index="0" instance=ExtResource("3_83fss")]
+position = Vector2(403, 438)
 
-[node name="CanBeer2" parent="Garbage" index="1" instance=ExtResource("3_r4ubu")]
-position = Vector2(324, 528)
+[node name="GreenBottle2" parent="Garbage" index="1" instance=ExtResource("3_83fss")]
+position = Vector2(-1136, 746)
+rotation = 0.785397
 
-[node name="CanBeer3" parent="Garbage" index="2" instance=ExtResource("3_r4ubu")]
-position = Vector2(-388, 825)
+[node name="GreenBottle3" parent="Garbage" index="2" instance=ExtResource("3_83fss")]
+position = Vector2(709, 33)
+rotation = 1.0472
+
+[node name="RedBottle" parent="Garbage" index="3" instance=ExtResource("4_m1kuk")]
+position = Vector2(-76, 229)
+rotation = -1.0472
+
+[node name="RedBottle2" parent="Garbage" index="4" instance=ExtResource("4_m1kuk")]
+position = Vector2(-604, 737)
+rotation = 0.785397
+
+[node name="RedBottle3" parent="Garbage" index="5" instance=ExtResource("4_m1kuk")]
+position = Vector2(-66, 1145)
+rotation = -0.785397
 
 [node name="Robot" parent="." index="5"]
 position = Vector2(-1227, 1299)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("8_g107f")]
-position = Vector2(-84, -1226)
+position = Vector2(-123, -729)
 
 [node name="Cat" type="Node2D" parent="Enemies" index="0"]
 
 [node name="Path2D" type="Path2D" parent="Enemies/Cat" index="0"]
+position = Vector2(-39, 497)
 curve = SubResource("Curve2D_irr01")
 
 [node name="CatFollow" parent="Enemies/Cat/Path2D" index="0" instance=ExtResource("6_yo8as")]
 position = Vector2(-320, -1086)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("8_q2fhq")]
-position = Vector2(1012, -1266)
+position = Vector2(1044, -762)
 
 [node name="Chair" parent="Env" index="1" instance=ExtResource("3_j7vvq")]
-position = Vector2(-1064, -982)
+position = Vector2(-1234, -410)
+rotation = 0.785397
 
 [node name="ComputerTable" parent="Env" index="2" instance=ExtResource("9_wo8oh")]
-position = Vector2(-1069, -1214)
+position = Vector2(-1218, -727)
 
 [node name="Tv" parent="Env" index="3" instance=ExtResource("10_3b57g")]
-position = Vector2(1247, 1295)
+position = Vector2(1180, 1275)
 
 [node name="CosmeticTable" parent="Env" index="4" instance=ExtResource("11_ed2kq")]
-position = Vector2(1652, -193)
+position = Vector2(1698, 33)

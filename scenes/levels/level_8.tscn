@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_on4bn"]
 [ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_m3xuw"]
-[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="3_o5ru5"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_8jfmb"]
+[ext_resource type="PackedScene" uid="uid://is5wx7gomf1e" path="res://scenes/garbage/baby_bottle.tscn" id="4_t6gf8"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_bymtk"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="6_j4adr"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="8_2dei1"]
@@ -25,39 +25,55 @@ point_count = 4
 _nextLevelScene = "res://scenes/levels/level_9.tscn"
 
 [node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("2_m3xuw")]
-position = Vector2(604, 626)
+position = Vector2(-55, 1019)
 rotation = 3.14159
 
 [node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("2_m3xuw")]
-position = Vector2(1699, -253)
+position = Vector2(1619, 236)
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(-619, 1376)
 
-[node name="Can" parent="Garbage" index="0" instance=ExtResource("3_o5ru5")]
-position = Vector2(-634, 392)
-rotation = 1.55469
+[node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_8jfmb")]
+position = Vector2(-311, 356)
 
-[node name="Can2" parent="Garbage" index="1" instance=ExtResource("3_o5ru5")]
-position = Vector2(-294, 279)
-rotation = 1.55469
+[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("4_8jfmb")]
+position = Vector2(397, -277)
 
-[node name="SeedSet" parent="Garbage" index="2" instance=ExtResource("4_8jfmb")]
-position = Vector2(-274, -120)
+[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("4_8jfmb")]
+position = Vector2(376, 789)
+
+[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("4_8jfmb")]
+position = Vector2(-330, -703)
+
+[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("4_8jfmb")]
+position = Vector2(1628, 801)
+
+[node name="BabyBottle" parent="Garbage" index="5" instance=ExtResource("4_t6gf8")]
+position = Vector2(-300, -54)
+rotation = -1.0472
+
+[node name="BabyBottle2" parent="Garbage" index="6" instance=ExtResource("4_t6gf8")]
+position = Vector2(-566, 725)
+rotation = 0.523598
+
+[node name="BabyBottle3" parent="Garbage" index="7" instance=ExtResource("4_t6gf8")]
+position = Vector2(908, -74)
+rotation = 1.0472
 
 [node name="Robot" parent="." index="5"]
 position = Vector2(-622, 1295)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("5_bymtk")]
-position = Vector2(-1340, -97)
+position = Vector2(-1507, 382)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_j4adr")]
-position = Vector2(812, -92)
+position = Vector2(775, 384)
 _speed = 500.0
 _pushForce = 8000.0
 
 [node name="Cat" type="Node2D" parent="Enemies" index="1"]
-position = Vector2(895, 487)
+position = Vector2(728, 966)
 
 [node name="Path2D" type="Path2D" parent="Enemies/Cat" index="0"]
 position = Vector2(23, -27)
@@ -66,29 +82,27 @@ curve = SubResource("Curve2D_6mi83")
 [node name="CatFollow" parent="Enemies/Cat/Path2D" index="0" instance=ExtResource("8_2dei1")]
 position = Vector2(-2010, -639)
 
-[node name="Flower" parent="Env" index="0" instance=ExtResource("8_sf5h3")]
-position = Vector2(-736, -657)
+[node name="Sofa" parent="Env" index="0" instance=ExtResource("9_wncp3")]
+position = Vector2(796, -771)
 
-[node name="Sofa" parent="Env" index="1" instance=ExtResource("9_wncp3")]
-position = Vector2(833, -1247)
+[node name="Chair" parent="Env" index="1" instance=ExtResource("10_hoj0j")]
+position = Vector2(-1232, -389)
+rotation = 0.261799
 
-[node name="Chair" parent="Env" index="2" instance=ExtResource("10_hoj0j")]
-position = Vector2(-1148, -961)
+[node name="ComputerTable" parent="Env" index="2" instance=ExtResource("11_a44ps")]
+position = Vector2(-1174, -725)
 
-[node name="ComputerTable" parent="Env" index="3" instance=ExtResource("11_a44ps")]
-position = Vector2(-1137, -1201)
-
-[node name="Tv" parent="Env" index="4" instance=ExtResource("12_6ohs6")]
+[node name="Tv" parent="Env" index="3" instance=ExtResource("12_6ohs6")]
 position = Vector2(1142, 1289)
 
-[node name="CosmeticTable" parent="Env" index="5" instance=ExtResource("13_xbemq")]
-position = Vector2(1792, -688)
+[node name="CosmeticTable" parent="Env" index="4" instance=ExtResource("13_xbemq")]
+position = Vector2(1755, -212)
 
-[node name="BoxVertical" parent="Env" index="6" instance=ExtResource("14_5tv1r")]
-position = Vector2(1123, -62)
+[node name="BoxVertical" parent="Env" index="5" instance=ExtResource("14_5tv1r")]
+position = Vector2(1086, 414)
 
-[node name="Flower2" parent="Env" index="7" instance=ExtResource("8_sf5h3")]
-position = Vector2(-1396, 199)
+[node name="Flower2" parent="Env" index="6" instance=ExtResource("8_sf5h3")]
+position = Vector2(-1576, 955)
 
-[node name="Flower3" parent="Env" index="8" instance=ExtResource("8_sf5h3")]
-position = Vector2(-1407, -492)
+[node name="Flower3" parent="Env" index="7" instance=ExtResource("8_sf5h3")]
+position = Vector2(-1610, -159)

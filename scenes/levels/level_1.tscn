@@ -12,94 +12,83 @@
 _nextLevelScene = "res://scenes/levels/level_2.tscn"
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(463, 1385)
+position = Vector2(221, 596)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_o15sh")]
 position = Vector2(-124, -247)
 
-[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("2_o15sh")]
-position = Vector2(-262, -763)
-
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("2_o15sh")]
+[node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("2_o15sh")]
 position = Vector2(614, -305)
 
-[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("2_o15sh")]
+[node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("2_o15sh")]
 position = Vector2(389, 180)
 
-[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("2_o15sh")]
+[node name="SeedSet5" parent="Garbage" index="3" instance=ExtResource("2_o15sh")]
 position = Vector2(1215, -502)
 
-[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("2_o15sh")]
+[node name="SeedSet6" parent="Garbage" index="4" instance=ExtResource("2_o15sh")]
 position = Vector2(-862, -530)
 
-[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("2_o15sh")]
+[node name="SeedSet7" parent="Garbage" index="5" instance=ExtResource("2_o15sh")]
 position = Vector2(-904, -15)
 
-[node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("2_o15sh")]
-position = Vector2(-450, 229)
+[node name="SeedSet8" parent="Garbage" index="6" instance=ExtResource("2_o15sh")]
+position = Vector2(-1374, 1206)
 
-[node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("2_o15sh")]
+[node name="SeedSet9" parent="Garbage" index="7" instance=ExtResource("2_o15sh")]
 position = Vector2(1140, -64)
 
-[node name="SeedSet10" parent="Garbage" index="9" instance=ExtResource("2_o15sh")]
+[node name="SeedSet10" parent="Garbage" index="8" instance=ExtResource("2_o15sh")]
 position = Vector2(594, 675)
 
-[node name="SeedSet11" parent="Garbage" index="10" instance=ExtResource("2_o15sh")]
+[node name="SeedSet11" parent="Garbage" index="9" instance=ExtResource("2_o15sh")]
 position = Vector2(1112, 451)
 
-[node name="SeedSet12" parent="Garbage" index="11" instance=ExtResource("2_o15sh")]
+[node name="SeedSet12" parent="Garbage" index="10" instance=ExtResource("2_o15sh")]
 position = Vector2(-1324, -497)
 
-[node name="SeedSet13" parent="Garbage" index="12" instance=ExtResource("2_o15sh")]
+[node name="SeedSet13" parent="Garbage" index="11" instance=ExtResource("2_o15sh")]
 position = Vector2(-102, 845)
 
-[node name="SeedSet14" parent="Garbage" index="13" instance=ExtResource("2_o15sh")]
+[node name="SeedSet14" parent="Garbage" index="12" instance=ExtResource("2_o15sh")]
 position = Vector2(-949, 565)
 
-[node name="SeedSet15" parent="Garbage" index="14" instance=ExtResource("2_o15sh")]
+[node name="SeedSet15" parent="Garbage" index="13" instance=ExtResource("2_o15sh")]
 position = Vector2(1695, 683)
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(458, 1296)
+position = Vector2(224, 506)
 
-[node name="BoxHorizontal" parent="Env" index="0" instance=ExtResource("4_ucb5x")]
-position = Vector2(-849, -1198)
-rotation = 0.035296
-
-[node name="BoxHorizontal2" parent="Env" index="1" instance=ExtResource("4_ucb5x")]
-position = Vector2(1085, -1092)
+[node name="BoxHorizontal2" parent="Env" index="0" instance=ExtResource("4_ucb5x")]
+position = Vector2(747, -784)
 rotation = -0.0650302
 
-[node name="BoxHorizontal3" parent="Env" index="2" instance=ExtResource("4_ucb5x")]
-position = Vector2(-401, -511)
+[node name="BoxHorizontal3" parent="Env" index="1" instance=ExtResource("4_ucb5x")]
+position = Vector2(-902, 1131)
 rotation = -0.0836353
 
-[node name="BoxVertical" parent="Env" index="3" instance=ExtResource("5_6ue3q")]
+[node name="BoxVertical" parent="Env" index="2" instance=ExtResource("5_6ue3q")]
 position = Vector2(-1379, 573)
 rotation = 0.042585
 
-[node name="BoxVertical4" parent="Env" index="4" instance=ExtResource("5_6ue3q")]
+[node name="BoxVertical4" parent="Env" index="3" instance=ExtResource("5_6ue3q")]
 position = Vector2(1524, 207)
 rotation = -0.0698288
 
-[node name="BoxVertical2" parent="Env" index="5" instance=ExtResource("5_6ue3q")]
+[node name="BoxVertical2" parent="Env" index="4" instance=ExtResource("5_6ue3q")]
 position = Vector2(-1536, -155)
 rotation = -0.0723788
 
-[node name="BoxVertical3" parent="Env" index="6" instance=ExtResource("5_6ue3q")]
+[node name="BoxVertical3" parent="Env" index="5" instance=ExtResource("5_6ue3q")]
 position = Vector2(1741, -382)
 rotation = 0.0430354
 
-[node name="BoxAngle" parent="Env" index="7" instance=ExtResource("7_sqmmq")]
-position = Vector2(-176, 273)
+[node name="BoxAngle" parent="Env" index="6" instance=ExtResource("7_sqmmq")]
+position = Vector2(-382, -740)
 
-[node name="BoxAngle2" parent="Env" index="8" instance=ExtResource("7_sqmmq")]
-position = Vector2(1756, -1139)
-rotation = -0.12373
-
-[node name="BoxAngleOpen" parent="Env" index="9" instance=ExtResource("8_2dk55")]
-position = Vector2(386, -819)
+[node name="BoxAngleOpen" parent="Env" index="7" instance=ExtResource("8_2dk55")]
+position = Vector2(-384, 406)
 rotation = -0.0144057
 
-[node name="BoxVerticalOpen" parent="Env" index="10" instance=ExtResource("7_vbh6a")]
-position = Vector2(771, 348)
+[node name="BoxVerticalOpen" parent="Env" index="8" instance=ExtResource("7_vbh6a")]
+position = Vector2(1195, 1057)
