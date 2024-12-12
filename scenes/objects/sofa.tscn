@@ -6,9 +6,11 @@
 size = Vector2(1422, 404)
 
 [node name="Sofa" type="StaticBody2D"]
-collision_layer = 7
+collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(-188, 786)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("1_42ckx")
