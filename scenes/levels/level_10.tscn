@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyxi00rlk01hp"]
+[gd_scene load_steps=16 format=3 uid="uid://dyxi00rlk01hp"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ayjuo"]
-[ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="3_7au6t"]
+[ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="2_bukvg"]
+[ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="3_r06po"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_7nymm"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_h6bty"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="6_4h2yc"]
@@ -18,12 +19,11 @@
 [node name="Level10" instance=ExtResource("1_ayjuo")]
 _nextLevelScene = "res://scenes/levels/level_11.tscn"
 
-[node name="CarGoToLeftButton" parent="Buttons/Left" index="0" instance=ExtResource("3_7au6t")]
-position = Vector2(-1125, 301)
-rotation = 3.14159
+[node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_bukvg")]
+position = Vector2(-1100, 307)
 
-[node name="FloorButton" parent="Buttons/Right" index="0" instance=ExtResource("3_7au6t")]
-position = Vector2(1164, -213)
+[node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("3_r06po")]
+position = Vector2(1230, -215)
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(-780, 1125)

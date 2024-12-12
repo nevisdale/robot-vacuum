@@ -1,11 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bmmjij1w0pkce"]
+[gd_scene load_steps=19 format=3 uid="uid://bmmjij1w0pkce"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_my1kp"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_c2v8l"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_prse3"]
-[ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_wewp2"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="3_aongh"]
+[ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="3_py8kh"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_7b0hl"]
+[ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="4_vvfkk"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="6_ayvto"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="7_a38pe"]
 [ext_resource type="PackedScene" uid="uid://dwjmicc7dj7op" path="res://scenes/objects/table.tscn" id="8_sg202"]
@@ -33,12 +34,11 @@ scale = Vector2(0.983917, 1.04568)
 position = Vector2(-1051, 737)
 scale = Vector2(1.23372, 4.28949)
 
-[node name="FloorButton2" parent="Buttons/Left" index="0" instance=ExtResource("2_wewp2")]
-position = Vector2(192, 586)
-rotation = 3.14159
+[node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_py8kh")]
+position = Vector2(199, 507)
 
-[node name="FloorButton" parent="Buttons/Right" index="0" instance=ExtResource("2_wewp2")]
-position = Vector2(1714, -34)
+[node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("4_vvfkk")]
+position = Vector2(1716, -56)
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(60, 1372)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dml7e66e4rtxd"]
+
+[ext_resource type="Texture2D" uid="uid://bp1bkaf6vffuh" path="res://assets/objects/button_right.png" id="1_goluk"]
+[ext_resource type="Script" path="res://scripts/objects/FloorButton.cs" id="1_kl1qp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex715"]
+size = Vector2(212, 218)
+
+[node name="ButtonRight" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_kl1qp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_goluk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ex715")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://m0cs4wssg0hf"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_45l2g"]
-[ext_resource type="PackedScene" uid="uid://bcermr314lpi4" path="res://scenes/objects/floor_button.tscn" id="2_ee6kn"]
+[ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="2_i840d"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_oorho"]
 [ext_resource type="PackedScene" uid="uid://is5wx7gomf1e" path="res://scenes/garbage/baby_bottle.tscn" id="4_wd4ho"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="5_dswgr"]
@@ -17,8 +17,8 @@
 [node name="Level7" instance=ExtResource("1_45l2g")]
 _nextLevelScene = "res://scenes/levels/level_8.tscn"
 
-[node name="CarGoToRightButton" parent="Buttons/Right" index="0" instance=ExtResource("2_ee6kn")]
-position = Vector2(834, -101)
+[node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("2_i840d")]
+position = Vector2(928, -108)
 
 [node name="Charger" parent="." index="3"]
 position = Vector2(-920, 1373)
