@@ -43,7 +43,7 @@ public partial class Cat : Node2D
 		_danger_area.BodyExited += DangerArea_OnBodyExited;
 	}
 
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		if (_path_follow != null)
 		{
