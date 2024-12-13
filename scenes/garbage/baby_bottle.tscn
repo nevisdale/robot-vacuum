@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://is5wx7gomf1e"]
 
 [ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_ackfq"]
-[ext_resource type="Texture2D" uid="uid://otuat4sd4v61" path="res://assets/garbage/baby_bottle.png" id="2_w3r3e"]
+[ext_resource type="Texture2D" uid="uid://c3kqkyr0ql20j" path="res://assets/garbage/baby_bottle.png" id="2_u0ic3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
 radius = 26.0
@@ -19,8 +19,7 @@ script = ExtResource("1_ackfq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-13.3424, 0.719569)
 rotation = 4.71239
-scale = Vector2(0.304787, 0.304787)
-texture = ExtResource("2_w3r3e")
+texture = ExtResource("2_u0ic3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12, 0)
