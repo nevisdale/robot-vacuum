@@ -82,7 +82,8 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
 
     public bool IsMovingByCar()
     {
-        long epsilon = TimeSpan.FromSeconds(0.5).Ticks;
+        // must be enough small to be sure that the garbage is moving by car
+        long epsilon = TimeSpan.FromSeconds(0.01).Ticks;
         return DateTime.Now.Ticks - _touchedByCarLastTime < epsilon;
     }
 }
