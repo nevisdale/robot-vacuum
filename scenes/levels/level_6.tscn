@@ -53,7 +53,7 @@ position = Vector2(-325, 751)
 position = Vector2(-481, 247)
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-1224, 1379)
+position = Vector2(-1221, 1354)
 
 [node name="GreenBottle" parent="Garbage" index="0" instance=ExtResource("3_83fss")]
 position = Vector2(403, 438)
@@ -79,7 +79,7 @@ position = Vector2(-66, 1145)
 rotation = -0.785397
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-1227, 1299)
+position = Vector2(-1224, 1274)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("8_g107f")]
 position = Vector2(-123, -729)

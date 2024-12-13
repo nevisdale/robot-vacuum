@@ -50,7 +50,7 @@ position = Vector2(183, -133)
 position = Vector2(-1071, -84)
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(65, 1268)
+position = Vector2(63, 1274)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("2_prse3")]
 position = Vector2(943, 301)

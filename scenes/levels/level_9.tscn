@@ -29,7 +29,7 @@ position = Vector2(1335, 433)
 position = Vector2(-1228, 207)
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-85, 1340)
+position = Vector2(-354, 1346)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("5_pbt6x")]
 position = Vector2(-43, -609)
@@ -65,7 +65,7 @@ position = Vector2(895, 884)
 rotation = 0.261799
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-86, 1207)
+position = Vector2(-355, 1245)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_q88wr")]
 position = Vector2(-104, 332)

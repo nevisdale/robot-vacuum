@@ -33,7 +33,7 @@ position = Vector2(127, 1275)
 position = Vector2(1251, -80)
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-1035, 1268)
+position = Vector2(-1020, 1363)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_jegh1")]
 position = Vector2(-1006, -35)
@@ -69,7 +69,7 @@ position = Vector2(899, 881)
 position = Vector2(-813, 786)
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-1036, 1185)
+position = Vector2(-1021, 1280)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_sx0k1")]
 position = Vector2(-8, 355)

@@ -16,7 +16,7 @@
 _nextLevelScene = "res://scenes/levels/level_3.tscn"
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-4, 1378)
+position = Vector2(-6, 1366)
 
 [node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_vrmf7")]
 position = Vector2(-288, 219)
@@ -67,7 +67,7 @@ position = Vector2(-408, 713)
 position = Vector2(1153, 408)
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-5, 1293)
+position = Vector2(-7, 1281)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("2_utxut")]
 position = Vector2(140, 1)

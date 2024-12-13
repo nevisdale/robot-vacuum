@@ -32,7 +32,7 @@ position = Vector2(0, 948)
 position = Vector2(1640, 233)
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-619, 1376)
+position = Vector2(-625, 1348)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_8jfmb")]
 position = Vector2(-311, 356)
@@ -62,7 +62,7 @@ position = Vector2(908, -74)
 rotation = 1.0472
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-622, 1295)
+position = Vector2(-628, 1267)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("5_bymtk")]
 position = Vector2(-1507, 382)

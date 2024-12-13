@@ -8,7 +8,7 @@ namespace RobotVacuum.Scripts.Levels;
 
 public partial class LevelTemplate : Node2D
 {
-	private const int CAMERA_LIMIT_OFFSET = 30;
+	private const int CAMERA_LIMIT_OFFSET = 64;
 	[Export(PropertyHint.File)]
 	private string _nextLevelScene = null;
 

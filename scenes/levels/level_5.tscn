@@ -29,7 +29,7 @@ point_count = 7
 _nextLevelScene = "res://scenes/levels/level_6.tscn"
 
 [node name="Charger" parent="." index="3"]
-position = Vector2(-673, 1388)
+position = Vector2(-673, 1347)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
 position = Vector2(1060, 677)
@@ -88,7 +88,7 @@ position = Vector2(922, 17)
 rotation = 2.09439
 
 [node name="Robot" parent="." index="5"]
-position = Vector2(-682, 1300)
+position = Vector2(-682, 1259)
 
 [node name="Cat1" type="Node2D" parent="Enemies" index="0"]
 position = Vector2(-137, 803)
