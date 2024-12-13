@@ -26,6 +26,13 @@ public partial class Car : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		// if the car is not moving, then do nothing
+		// otherwise, robot can move a car using physics garbage
+		if (_direction == Vector2.Zero)
+		{
+			return;
+		}
+
 		Vector2 positionBefore = GlobalPosition;
 		KinematicCollision2D collision = MoveAndCollide(_direction * _speed * (float)delta);
 		GodotObject collider = collision?.GetCollider();
@@ -45,7 +52,10 @@ public partial class Car : CharacterBody2D
 			robot.MakeNotMovable();
 			robot.CaptureByEnemy(this);
 		}
-		else if (collider is StaticBody2D)
+
+		// TODO: add Wall object
+		// now only Walls might be detected TileMapLayer
+		else if (collider is StaticBody2D || collider is TileMapLayer)
 		{
 			// if car is moving and touches the wall,
 			// or other static body objects, then stop the car
