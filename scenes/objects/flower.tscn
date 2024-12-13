@@ -1,16 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://csjq7dyt83yfo"]
 
-[ext_resource type="Texture2D" uid="uid://wm02w86qif23" path="res://assets/objects/flower2.png" id="1_ucd51"]
+[ext_resource type="Texture2D" uid="uid://ckexglnyu26jr" path="res://assets/objects/flower_green.png" id="1_l2532"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gqiv5"]
-radius = 94.0053
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aky1h"]
+size = Vector2(146, 151)
 
 [node name="Flower" type="StaticBody2D"]
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -21)
-texture = ExtResource("1_ucd51")
+texture = ExtResource("1_l2532")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_gqiv5")
+position = Vector2(6, -17.5)
+shape = SubResource("RectangleShape2D_aky1h")
