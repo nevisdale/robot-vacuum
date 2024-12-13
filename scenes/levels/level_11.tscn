@@ -39,7 +39,7 @@ position = Vector2(-1020, 1363)
 position = Vector2(-1006, -35)
 
 [node name="Can2" parent="Garbage" index="1" instance=ExtResource("4_jegh1")]
-position = Vector2(9, -160)
+position = Vector2(-50, -131)
 
 [node name="Can6" parent="Garbage" index="2" instance=ExtResource("4_jegh1")]
 position = Vector2(320, 902)
@@ -105,10 +105,10 @@ position = Vector2(-284, 127)
 position = Vector2(-290, 370)
 
 [node name="Flower6" parent="Env" index="9" instance=ExtResource("7_8rouc")]
-position = Vector2(168, 138)
+position = Vector2(124, 126)
 
 [node name="Flower7" parent="Env" index="10" instance=ExtResource("7_8rouc")]
-position = Vector2(364, 134)
+position = Vector2(361, 119)
 
 [node name="Flower8" parent="Env" index="11" instance=ExtResource("7_8rouc")]
 position = Vector2(571, 132)
