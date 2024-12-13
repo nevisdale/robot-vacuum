@@ -30,6 +30,7 @@ public partial class Car : CharacterBody2D
 		// otherwise, robot can move a car using physics garbage
 		if (_direction == Vector2.Zero)
 		{
+			TryPushGarbage(delta);
 			return;
 		}
 
@@ -119,7 +120,7 @@ public partial class Car : CharacterBody2D
 				continue;
 			}
 			// push the garbage not so hard
-			const float pushKoef = 0.1f;
+			const float pushKoef = 0.01f;
 			Vector2 force = _pushForce * pushKoef * forceDirection * (float)delta;
 			garbage.ApplyCentralForce(force);
 			GD.Print($"{garbage.Name} has been pushed by {Name}");
