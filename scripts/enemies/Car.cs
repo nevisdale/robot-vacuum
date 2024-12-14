@@ -60,6 +60,8 @@ public partial class Car : CharacterBody2D
 		{
 			// if car is moving and touches the robot,
 			// so the robot is captured by the car
+			_direction = Vector2.Zero;
+			_wheelSpeed = 0;
 			robot.MakeNotMovable();
 			robot.CaptureByEnemy(this);
 		}
