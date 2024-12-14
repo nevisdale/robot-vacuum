@@ -46,6 +46,9 @@ position = Vector2(-543, -725)
 [node name="SeedSet2" parent="Garbage" index="5" instance=ExtResource("5_h6bty")]
 position = Vector2(-1478, -84)
 
+[node name="CanBeer" parent="Garbage" index="6" instance=ExtResource("15_ylahi")]
+position = Vector2(-399, 772)
+
 [node name="Robot" parent="." index="5"]
 position = Vector2(-799, 1227)
 
@@ -108,6 +111,3 @@ position = Vector2(-1201, -713)
 
 [node name="BoxVertical" parent="Env" index="17" instance=ExtResource("14_qlxdi")]
 position = Vector2(1518, 606)
-
-[node name="CanBeer" parent="." index="9" instance=ExtResource("15_ylahi")]
-position = Vector2(-399, 772)
