@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c023elr5r7s6u"]
+
+[ext_resource type="Texture2D" uid="uid://ckexglnyu26jr" path="res://assets/objects/flower_green.png" id="1_glpo7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvux8"]
+size = Vector2(145, 158)
+
+[node name="FlowerGreen" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 14)
+texture = ExtResource("1_glpo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, 15)
+shape = SubResource("RectangleShape2D_xvux8")

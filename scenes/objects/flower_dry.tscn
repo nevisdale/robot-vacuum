@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlr7u24giikc6"]
+
+[ext_resource type="Texture2D" uid="uid://3ublpykgx0p1" path="res://assets/objects/flower_dry.png" id="1_h0q2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvux8"]
+size = Vector2(145, 158)
+
+[node name="FlowerDry" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 14)
+texture = ExtResource("1_h0q2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, 15)
+shape = SubResource("RectangleShape2D_xvux8")

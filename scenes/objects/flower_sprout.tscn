@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1s2jsj8qbkf3"]
+
+[ext_resource type="Texture2D" uid="uid://1hlph7fysaun" path="res://assets/objects/flower_sprout.png" id="1_xlh1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvux8"]
+size = Vector2(145, 158)
+
+[node name="FlowerSprout" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 14)
+texture = ExtResource("1_xlh1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, 15)
+shape = SubResource("RectangleShape2D_xvux8")
