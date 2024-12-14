@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Godot;
 using RobotVacuum.Scripts.Garbage;
 
@@ -9,16 +10,25 @@ public partial class Car : CharacterBody2D
 	[Export] private float _pushForce = 5000f;
 	[Export] private Vector2 _direction = Vector2.Zero;
 	[Export] private bool _useRayCast = true;
+	[Export] private float _wheelRotationSpeed = 1f;
 
 	private Node2D _rayCastsLeft = null;
 	private Node2D _rayCastsRight = null;
 	private Area2D _dangerArea = null;
+	private readonly List<Sprite2D> _wheels = new();
+	private float _wheelSpeed = 0.5f;
 
 	public override void _Ready()
 	{
 		_rayCastsLeft = GetNode<Node2D>("RayCastLeft");
 		_rayCastsRight = GetNode<Node2D>("RayCastRight");
 		_dangerArea = GetNode<Area2D>("DangerArea");
+
+		Node2D _wheelNode = GetNode<Node2D>("Wheels");
+		for (int i = 0; i < _wheelNode.GetChildCount(); i++)
+		{
+			_wheels.Add(_wheelNode.GetChild<Sprite2D>(i));
+		}
 
 		_dangerArea.BodyEntered += DangerArea_OnBodyEntered;
 		_dangerArea.BodyExited += DangerArea_OnBodyExited;
@@ -61,6 +71,7 @@ public partial class Car : CharacterBody2D
 			// if car is moving and touches the wall,
 			// or other static body objects, then stop the car
 			_direction = Vector2.Zero;
+			_wheelSpeed = 0;
 		}
 
 		if (positionBefore.IsEqualApprox(GlobalPosition))
@@ -69,11 +80,25 @@ public partial class Car : CharacterBody2D
 			// try to push the garbage in order to move the car
 			TryPushGarbage(delta);
 		}
+
+		// rotate wheels
+		foreach (Sprite2D wheel in _wheels)
+		{
+			wheel.Rotation += _wheelSpeed * (float)delta;
+		}
 	}
 
 	public void SetDirectionTo(Vector2 target)
 	{
 		_direction = target.Normalized();
+		if (_direction == Vector2.Left)
+		{
+			_wheelSpeed = -_wheelRotationSpeed;
+		}
+		else if (_direction == Vector2.Right)
+		{
+			_wheelSpeed = _wheelRotationSpeed;
+		}
 	}
 
 	// if the car stuck, try to push the can

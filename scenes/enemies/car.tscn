@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://e02uf0quyt07"]
+[gd_scene load_steps=6 format=3 uid="uid://e02uf0quyt07"]
 
 [ext_resource type="Script" path="res://scripts/enemies/Car.cs" id="1_q1vg6"]
-[ext_resource type="Texture2D" uid="uid://dku8i0gbjtb4" path="res://assets/objects/car_whole.png" id="2_y1joq"]
+[ext_resource type="Texture2D" uid="uid://cwm7nmpopjtig" path="res://assets/objects/car_without_wheels.png" id="2_yp2dh"]
+[ext_resource type="Texture2D" uid="uid://dloubsdbo6a8b" path="res://assets/objects/wheel.png" id="3_o7p8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8j7"]
-size = Vector2(292, 212)
+size = Vector2(289, 233)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jivnu"]
 radius = 325.075
@@ -19,19 +20,31 @@ platform_on_leave = 2
 script = ExtResource("1_q1vg6")
 _speed = 800.0
 _pushForce = 4000.0
+_wheelRotationSpeed = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-12, 18)
-texture = ExtResource("2_y1joq")
+texture = ExtResource("2_yp2dh")
 flip_h = true
 metadata/_edit_lock_ = true
 
+[node name="Wheels" type="Node2D" parent="."]
+
+[node name="Wheel1" type="Sprite2D" parent="Wheels"]
+position = Vector2(-89, 97)
+texture = ExtResource("3_o7p8f")
+
+[node name="Wheel2" type="Sprite2D" parent="Wheels"]
+position = Vector2(66, 97)
+texture = ExtResource("3_o7p8f")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 26)
+position = Vector2(-11.5, 29.5)
 shape = SubResource("RectangleShape2D_7u8j7")
 metadata/_edit_lock_ = true
 
 [node name="RayCastLeft" type="Node2D" parent="."]
+position = Vector2(-5, 0)
 
 [node name="RayCast2D1" type="RayCast2D" parent="RayCastLeft"]
 position = Vector2(-147, 0)
@@ -87,7 +100,26 @@ rotation = 1.5708
 target_position = Vector2(0, 10)
 collision_mask = 4
 
+[node name="RayCast2D10" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 102)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D11" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 143)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D12" type="RayCast2D" parent="RayCastLeft"]
+position = Vector2(-147, 122)
+rotation = 1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
 [node name="RayCastRight" type="Node2D" parent="."]
+position = Vector2(-18, 0)
 
 [node name="RayCast2D1" type="RayCast2D" parent="RayCastRight"]
 position = Vector2(147, 22)
@@ -133,6 +165,24 @@ collision_mask = 4
 
 [node name="RayCast2D5" type="RayCast2D" parent="RayCastRight"]
 position = Vector2(148, 88)
+rotation = -1.5708
+target_position = Vector2(-3.05176e-05, 9)
+collision_mask = 4
+
+[node name="RayCast2D9" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(147, 108)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D10" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(147, 130)
+rotation = -1.5708
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="RayCast2D11" type="RayCast2D" parent="RayCastRight"]
+position = Vector2(147, 143)
 rotation = -1.5708
 target_position = Vector2(0, 10)
 collision_mask = 4
