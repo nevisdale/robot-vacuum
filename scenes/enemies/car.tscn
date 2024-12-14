@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://e02uf0quyt07"]
 
-[ext_resource type="Texture2D" uid="uid://c8jys4jljs7kb" path="res://assets/objects/car.png" id="1_jks55"]
 [ext_resource type="Script" path="res://scripts/enemies/Car.cs" id="1_q1vg6"]
+[ext_resource type="Texture2D" uid="uid://dku8i0gbjtb4" path="res://assets/objects/car_whole.png" id="2_y1joq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8j7"]
-size = Vector2(302, 172)
+size = Vector2(292, 212)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jivnu"]
 radius = 325.075
@@ -22,11 +22,12 @@ _pushForce = 4000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-12, 18)
-texture = ExtResource("1_jks55")
+texture = ExtResource("2_y1joq")
+flip_h = true
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(-10, 26)
 shape = SubResource("RectangleShape2D_7u8j7")
 metadata/_edit_lock_ = true
 
