@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6ls2xag8nwcq"]
+[gd_scene load_steps=13 format=3 uid="uid://6ls2xag8nwcq"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ipeqd"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="2_utxut"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_gnj3k"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="10_gadb4"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_3vmva"]
+[ext_resource type="PackedScene" uid="uid://ccq3npin00ne" path="res://scenes/objects/flower_pot.tscn" id="12_jwkcf"]
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
 _nextLevelScene = "res://scenes/levels/level_3.tscn"
@@ -22,7 +23,7 @@ position = Vector2(-6, 1366)
 position = Vector2(-288, 219)
 
 [node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("2_vrmf7")]
-position = Vector2(-173, -648)
+position = Vector2(-207, -379)
 
 [node name="SeedSet4" parent="Garbage" index="2" instance=ExtResource("2_vrmf7")]
 position = Vector2(1022, -271)
@@ -100,3 +101,18 @@ rotation = 0.261799
 
 [node name="ComputerTable" parent="Env" index="7" instance=ExtResource("11_3vmva")]
 position = Vector2(-1160, -735)
+
+[node name="FlowerPot" parent="Env" index="8" instance=ExtResource("12_jwkcf")]
+position = Vector2(-580, -815)
+
+[node name="FlowerPot2" parent="Env" index="9" instance=ExtResource("12_jwkcf")]
+position = Vector2(-415, -815)
+
+[node name="FlowerPot3" parent="Env" index="10" instance=ExtResource("12_jwkcf")]
+position = Vector2(-250, -815)
+
+[node name="FlowerPot4" parent="Env" index="11" instance=ExtResource("12_jwkcf")]
+position = Vector2(-85, -815)
+
+[node name="FlowerPot5" parent="Env" index="12" instance=ExtResource("12_jwkcf")]
+position = Vector2(80, -815)

@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="10_prhlw"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_j7w1s"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="12_4kcy5"]
+[ext_resource type="PackedScene" uid="uid://d1s2jsj8qbkf3" path="res://scenes/objects/flower_sprout.tscn" id="12_fclfq"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="13_l0vxi"]
-[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="14_ibj53"]
 
 [sub_resource type="Curve2D" id="Curve2D_8rdje"]
 _data = {
@@ -123,10 +123,22 @@ rotation = -0.523598
 position = Vector2(-1206, -741)
 
 [node name="Sofa" parent="Env" index="3" instance=ExtResource("12_4kcy5")]
-position = Vector2(904, -748)
+position = Vector2(1160, -753)
 
 [node name="Tv" parent="Env" index="4" instance=ExtResource("13_l0vxi")]
 position = Vector2(1134, 1287)
 
-[node name="Flower20" parent="Env" index="5" instance=ExtResource("14_ibj53")]
-position = Vector2(1843, -549)
+[node name="FlowerSprout" parent="Env" index="5" instance=ExtResource("12_fclfq")]
+position = Vector2(-561, -827)
+
+[node name="FlowerSprout2" parent="Env" index="6" instance=ExtResource("12_fclfq")]
+position = Vector2(-396, -827)
+
+[node name="FlowerSprout3" parent="Env" index="7" instance=ExtResource("12_fclfq")]
+position = Vector2(-231, -827)
+
+[node name="FlowerSprout4" parent="Env" index="8" instance=ExtResource("12_fclfq")]
+position = Vector2(-66, -827)
+
+[node name="FlowerSprout5" parent="Env" index="9" instance=ExtResource("12_fclfq")]
+position = Vector2(99, -827)

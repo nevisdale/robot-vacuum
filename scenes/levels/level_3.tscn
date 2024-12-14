@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="4_mvxsd"]
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="4_q7p07"]
-[ext_resource type="PackedScene" uid="uid://csjq7dyt83yfo" path="res://scenes/objects/flower.tscn" id="4_yjrwq"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="6_4b18y"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="6_blyqv"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="7_4e4o3"]
 [ext_resource type="PackedScene" uid="uid://drw1jqmt8sljb" path="res://scenes/objects/box_angle.tscn" id="9_28dw6"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="11_rgt0e"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="12_edilw"]
+[ext_resource type="PackedScene" uid="uid://ccq3npin00ne" path="res://scenes/objects/flower_pot.tscn" id="12_emjrc"]
 [ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="13_42fmg"]
 
 [sub_resource type="Curve2D" id="Curve2D_ri2uf"]
@@ -78,7 +78,7 @@ position = Vector2(-628, 32.2877)
 position = Vector2(1672, 132)
 
 [node name="Sofa" parent="Env" index="1" instance=ExtResource("6_blyqv")]
-position = Vector2(852, -735)
+position = Vector2(1070, -759)
 
 [node name="Chair" parent="Env" index="2" instance=ExtResource("6_4b18y")]
 position = Vector2(-1242, -364)
@@ -87,18 +87,30 @@ rotation = 0.261799
 [node name="ComputerTable" parent="Env" index="3" instance=ExtResource("7_4e4o3")]
 position = Vector2(-1196, -727)
 
-[node name="Flower" parent="Env" index="4" instance=ExtResource("4_yjrwq")]
-position = Vector2(1797, -797)
-
-[node name="BoxAngle" parent="Env" index="5" instance=ExtResource("9_28dw6")]
+[node name="BoxAngle" parent="Env" index="4" instance=ExtResource("9_28dw6")]
 position = Vector2(1534, 428)
 
-[node name="BoxAngleOpen" parent="Env" index="6" instance=ExtResource("11_rgt0e")]
+[node name="BoxAngleOpen" parent="Env" index="5" instance=ExtResource("11_rgt0e")]
 position = Vector2(-963, 1210)
 
-[node name="BoxHorizontal" parent="Env" index="7" instance=ExtResource("12_edilw")]
+[node name="BoxHorizontal" parent="Env" index="6" instance=ExtResource("12_edilw")]
 position = Vector2(-1339, 626)
 
-[node name="BoxVerticalOpen" parent="Env" index="8" instance=ExtResource("13_42fmg")]
+[node name="BoxVerticalOpen" parent="Env" index="7" instance=ExtResource("13_42fmg")]
 position = Vector2(1504, 1209)
 rotation = -0.523598
+
+[node name="FlowerPot" parent="Env" index="8" instance=ExtResource("12_emjrc")]
+position = Vector2(-580, -815)
+
+[node name="FlowerPot2" parent="Env" index="9" instance=ExtResource("12_emjrc")]
+position = Vector2(-415, -815)
+
+[node name="FlowerPot3" parent="Env" index="10" instance=ExtResource("12_emjrc")]
+position = Vector2(-250, -815)
+
+[node name="FlowerPot4" parent="Env" index="11" instance=ExtResource("12_emjrc")]
+position = Vector2(-85, -815)
+
+[node name="FlowerPot5" parent="Env" index="12" instance=ExtResource("12_emjrc")]
+position = Vector2(80, -815)
