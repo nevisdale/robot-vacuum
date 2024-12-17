@@ -1,4 +1,6 @@
 using Godot;
+using RobotVacuum.Scripts.Audio;
+using RobotVacuum.Scripts.Enemies;
 using RobotVacuum.Scripts.Garbage;
 
 namespace RobotVacuum.Scripts;
@@ -98,6 +100,7 @@ public partial class Robot : CharacterBody2D
 					CaptureByEnemy(garbage);
 					return;
 				}
+				AudioManager.Instance.PlaySoundPushGarbage();
 				garbage.Push(kinematicCollision, _pushForce * (float)delta);
 			}
 		}
@@ -107,6 +110,7 @@ public partial class Robot : CharacterBody2D
 	{
 		if (garbage.CanBeCapturedByRobot())
 		{
+			AudioManager.Instance.PlaySoundCaptureGarbage();
 			garbage.Capture(this);
 			return true;
 		}
@@ -139,6 +143,16 @@ public partial class Robot : CharacterBody2D
 
 	public void CaptureByEnemy(Node2D enemy)
 	{
+		switch (enemy)
+		{
+			case Cat:
+				AudioManager.Instance.PlaySoundCatCapture();
+				break;
+			case Car:
+				AudioManager.Instance.PlaySoundCarCapture();
+				break;
+		}
+
 		GD.Print($"{Name} is captured by {enemy.Name}");
 		EmitSignal(SignalName.CapturedByEnemy);
 	}
