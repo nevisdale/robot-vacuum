@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 TransitionLayer="*res://scenes/globals/transition_layer.tscn"
 State="*res://scripts/globals/State.cs"
+AudioManager="*res://scenes/globals/audio_manager.tscn"
 
 [debug]
 
