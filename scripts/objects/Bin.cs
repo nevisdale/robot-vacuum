@@ -1,5 +1,6 @@
 using Godot;
 using RobotVacuum.Scripts.Garbage;
+using RobotVacuum.Scripts.Audio;
 
 namespace RobotVacuum.Scripts.Objects;
 
@@ -17,6 +18,7 @@ public partial class Bin : StaticBody2D
     {
         if (garbage.CanBeCapturedByBin())
         {
+            AudioManager.Instance.PlaySoundCaptureGarbage();
             garbage.Capture(this);
             return true;
         }
