@@ -15,7 +15,6 @@ script = ExtResource("1_8u83f")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_bndmw")
 
 [node name="RobotCaptureArea" type="Area2D" parent="."]
