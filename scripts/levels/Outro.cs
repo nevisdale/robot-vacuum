@@ -35,12 +35,9 @@ public partial class Outro : Node2D
         tween.TweenProperty(_directionalLight2D, "color:a", 1, 15);
         tween.Finished += () =>
         {
-            _robot.MakeNotMovable();
-            _camera2D.LimitLeft = -1000000;
-            _camera2D.LimitRight = 1000000;
-            _camera2D.LimitTop = -1000000;
-            _camera2D.LimitBottom = 1000000;
-
+            // this box can overlap robot lights.
+            // red light must be visible in this scene
+            GetNode("Env/BoxAngleOpen").QueueFree();
 
             tween = CreateTween();
             tween.TweenProperty(_camera2D, "zoom", new Vector2(1f, 1f), 5);
@@ -59,6 +56,7 @@ public partial class Outro : Node2D
                     tween.TweenProperty(_camera2D, "zoom", new Vector2(1f, 1f), 4);
                     tween.Finished += () =>
                     {
+                        _robot.MakeNotMovable();
                         _robot.DisableLight();
                     };
                 };
