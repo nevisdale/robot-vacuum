@@ -15,14 +15,26 @@ public partial class AudioManager : AudioStreamPlayer
     [Export]
     private AudioStreamPlayer _carCaptureSoundPlayer = null;
 
+    private bool _muted = true;
+
     public override void _Ready()
     {
         Stop();
         Instance = this;
     }
 
+    public void ToggleMute()
+    {
+        _muted = !_muted;
+    }
+
     public void PlaySoundBackground()
     {
+        if (_muted)
+        {
+            return;
+        }
+
         if (!Playing)
         {
             Play();
@@ -62,6 +74,11 @@ public partial class AudioManager : AudioStreamPlayer
 
     private async void PlaySound(AudioStreamPlayer audioStreamPlayer, float startFrom = 0f)
     {
+        if (_muted)
+        {
+            return;
+        }
+
         if (!audioStreamPlayer.Playing)
         {
             audioStreamPlayer.Stop();

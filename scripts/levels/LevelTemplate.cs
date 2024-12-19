@@ -81,6 +81,11 @@ public partial class LevelTemplate : Node2D
 		{
 			TransitionLayer.Instance.ChangeSceneTo(_nextLevelScene);
 		}
+
+		if (Input.IsActionJustPressed("mute"))
+		{
+			AudioManager.Instance.ToggleMute();
+		}
 	}
 
 	private void Robot_OnCapturedByEnemy()
