@@ -9,6 +9,8 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
 
     private long _touchedByCarLastTime = 0;
 
+    public long TouchedByRobotLastTime { get; set; }
+
     private const float TWEEN_DURATION = 0.3f;
     private const float TWEEN_SCALE_FACTOR = 0.2f;
 
