@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://bmmjij1w0pkce"]
+[gd_scene load_steps=20 format=3 uid="uid://bmmjij1w0pkce"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_my1kp"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_c2v8l"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_prse3"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="3_aongh"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="3_py8kh"]
+[ext_resource type="PackedScene" uid="uid://ckfv5qxwsjkpw" path="res://scenes/objects/wet_spot_big.tscn" id="3_x4mp3"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_7b0hl"]
 [ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="4_vvfkk"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="6_ayvto"]
@@ -30,9 +31,9 @@ point_count = 5
 position = Vector2(188, 152)
 scale = Vector2(0.983917, 1.04568)
 
-[node name="WetSpot2" parent="WetSpots" index="1" instance=ExtResource("2_c2v8l")]
-position = Vector2(-1051, 737)
-scale = Vector2(1.23372, 4.28949)
+[node name="WetSpotBig" parent="WetSpots" index="1" instance=ExtResource("3_x4mp3")]
+position = Vector2(-1062, 729)
+scale = Vector2(1.06714, 1.47654)
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_py8kh")]
 position = Vector2(199, 507)

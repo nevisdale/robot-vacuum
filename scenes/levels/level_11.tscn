@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dpf4ylywabsxs"]
+[gd_scene load_steps=17 format=3 uid="uid://dpf4ylywabsxs"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_2ufss"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_mc32c"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="3_o5v4h"]
+[ext_resource type="PackedScene" uid="uid://ckfv5qxwsjkpw" path="res://scenes/objects/wet_spot_big.tscn" id="3_p7awf"]
 [ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="4_360ji"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_jegh1"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="5_sx0k1"]
@@ -22,9 +23,9 @@ _nextLevelScene = "res://scenes/levels/level_12.tscn"
 [node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_mc32c")]
 position = Vector2(1468, 378)
 
-[node name="WetSpot2" parent="WetSpots" index="1" instance=ExtResource("2_mc32c")]
-position = Vector2(-115, 330)
-scale = Vector2(1, 2.28)
+[node name="WetSpotBig" parent="WetSpots" index="1" instance=ExtResource("3_p7awf")]
+position = Vector2(-86.9999, 322)
+scale = Vector2(0.94825, 0.865295)
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_o5v4h")]
 position = Vector2(127, 1275)

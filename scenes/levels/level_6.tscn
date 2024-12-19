@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://d14b0v56ibbga"]
+[gd_scene load_steps=15 format=3 uid="uid://d14b0v56ibbga"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l6gs"]
 [ext_resource type="PackedScene" uid="uid://mq4g4jsqjbrq" path="res://scenes/garbage/green_bottle.tscn" id="3_83fss"]
+[ext_resource type="PackedScene" uid="uid://ckfv5qxwsjkpw" path="res://scenes/objects/wet_spot_big.tscn" id="3_j4rfn"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="3_j7vvq"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="3_upred"]
 [ext_resource type="PackedScene" uid="uid://bkh5pgbnu85d0" path="res://scenes/garbage/red_bottle.tscn" id="4_m1kuk"]
@@ -31,9 +32,9 @@ position = Vector2(303, -336)
 [node name="WetSpot8" parent="WetSpots" index="2" instance=ExtResource("3_upred")]
 position = Vector2(398, 53)
 
-[node name="WetSpot9" parent="WetSpots" index="3" instance=ExtResource("3_upred")]
-position = Vector2(-110, -157)
-scale = Vector2(1, 2.72)
+[node name="WetSpotBig" parent="WetSpots" index="3" instance=ExtResource("3_j4rfn")]
+position = Vector2(-96, -228)
+scale = Vector2(0.8, 0.8)
 
 [node name="WetSpot3" parent="WetSpots" index="4" instance=ExtResource("3_upred")]
 position = Vector2(787, 577)
