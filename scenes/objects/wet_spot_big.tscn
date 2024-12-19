@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://fqkux0wlx007" path="res://assets/objects/wet_spot_big.png" id="2_p1t8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4p5v"]
-size = Vector2(386, 698)
+size = Vector2(344, 732)
 
 [node name="WetSpotBig" type="Area2D"]
 collision_layer = 4
@@ -12,9 +12,7 @@ collision_mask = 6
 script = ExtResource("1_job6f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 0.908)
 texture = ExtResource("2_p1t8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -6)
 shape = SubResource("RectangleShape2D_i4p5v")
