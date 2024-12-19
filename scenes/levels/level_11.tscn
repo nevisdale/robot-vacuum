@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_2ufss"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_mc32c"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="3_o5v4h"]
-[ext_resource type="PackedScene" uid="uid://ckfv5qxwsjkpw" path="res://scenes/objects/wet_spot_big.tscn" id="3_p7awf"]
+[ext_resource type="PackedScene" uid="uid://c3na3lj8jr5gj" path="res://scenes/objects/wet_spot_big.tscn" id="3_p7awf"]
 [ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="4_360ji"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="4_jegh1"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="5_sx0k1"]
@@ -20,21 +20,21 @@
 [node name="Level11" instance=ExtResource("1_2ufss")]
 _nextLevelScene = "res://scenes/levels/level_12.tscn"
 
-[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_mc32c")]
-position = Vector2(1468, 378)
-
-[node name="WetSpotBig" parent="WetSpots" index="1" instance=ExtResource("3_p7awf")]
-position = Vector2(-86.9999, 322)
-scale = Vector2(0.94825, 0.865295)
-
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_o5v4h")]
 position = Vector2(127, 1275)
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("4_360ji")]
 position = Vector2(1257, 9)
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(-1020, 1363)
+
+[node name="WetSpot" parent="." index="3" instance=ExtResource("2_mc32c")]
+position = Vector2(1468, 378)
+
+[node name="WetSpotBig" parent="." index="4" instance=ExtResource("3_p7awf")]
+position = Vector2(-86.9999, 322)
+scale = Vector2(0.94825, 0.865295)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_jegh1")]
 position = Vector2(-1024, -77)
@@ -71,7 +71,7 @@ position = Vector2(899, 881)
 [node name="SeedSet8" parent="Garbage" index="10" instance=ExtResource("6_cmksb")]
 position = Vector2(-813, 786)
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="6"]
 position = Vector2(-1021, 1280)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_sx0k1")]
@@ -171,5 +171,5 @@ position = Vector2(-1155, 243)
 [node name="FlowerDry22" parent="Env" index="29" instance=ExtResource("15_itqvb")]
 position = Vector2(-1320, 243)
 
-[node name="Bin" parent="." index="8" instance=ExtResource("6_kmqfk")]
+[node name="Bin" parent="." index="9" instance=ExtResource("6_kmqfk")]
 position = Vector2(-576, -700)

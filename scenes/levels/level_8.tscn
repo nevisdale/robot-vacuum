@@ -31,7 +31,7 @@ position = Vector2(0, 948)
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("3_eooiq")]
 position = Vector2(1276, -159)
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(-625, 1348)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_8jfmb")]
@@ -61,11 +61,8 @@ rotation = 0.523598
 position = Vector2(793, -66)
 rotation = 1.0472
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(-628, 1267)
-
-[node name="Bin" parent="." index="6" instance=ExtResource("5_bymtk")]
-position = Vector2(-1252, 404)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_j4adr")]
 position = Vector2(775, 384)
@@ -79,6 +76,9 @@ curve = SubResource("Curve2D_6mi83")
 
 [node name="CatFollow" parent="Enemies/Cat/Path2D" index="0" instance=ExtResource("8_2dei1")]
 position = Vector2(-2010, -639)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("5_bymtk")]
+position = Vector2(-1252, 404)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("9_wncp3")]
 position = Vector2(1025, -737)

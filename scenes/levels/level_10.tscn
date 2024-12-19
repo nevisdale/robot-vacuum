@@ -25,7 +25,7 @@ position = Vector2(-1214, 249)
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("3_r06po")]
 position = Vector2(1230, -215)
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(-802, 1330)
 
 [node name="Can" parent="Garbage" index="0" instance=ExtResource("4_7nymm")]
@@ -54,14 +54,14 @@ position = Vector2(-1478, -84)
 position = Vector2(-399, 772)
 rotation = 0.523599
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(-799, 1227)
-
-[node name="Bin" parent="." index="6" instance=ExtResource("8_l7v3h")]
-position = Vector2(-1513, 641)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_4h2yc")]
 position = Vector2(1231, 570)
+
+[node name="Bin" parent="." index="6" instance=ExtResource("8_l7v3h")]
+position = Vector2(-1513, 641)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("9_wdbry")]
 position = Vector2(1059, -758)

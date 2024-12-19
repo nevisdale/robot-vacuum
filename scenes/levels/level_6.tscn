@@ -23,42 +23,42 @@ point_count = 4
 [node name="Level6" instance=ExtResource("1_0l6gs")]
 _nextLevelScene = "res://scenes/levels/level_7.tscn"
 
-[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("3_upred")]
+[node name="Charger" parent="." index="2"]
+position = Vector2(-1221, 1354)
+
+[node name="WetSpot" parent="." index="3" instance=ExtResource("3_upred")]
 position = Vector2(-648, 1202)
 
-[node name="WetSpot7" parent="WetSpots" index="1" instance=ExtResource("3_upred")]
+[node name="WetSpot7" parent="." index="4" instance=ExtResource("3_upred")]
 position = Vector2(303, -336)
 
-[node name="WetSpot8" parent="WetSpots" index="2" instance=ExtResource("3_upred")]
+[node name="WetSpot8" parent="." index="5" instance=ExtResource("3_upred")]
 position = Vector2(398, 53)
 
-[node name="WetSpotBig" parent="WetSpots" index="3" instance=ExtResource("3_j4rfn")]
+[node name="WetSpotBig" parent="." index="6" instance=ExtResource("3_j4rfn")]
 position = Vector2(-96, -228)
 scale = Vector2(0.8, 0.8)
 
-[node name="WetSpot3" parent="WetSpots" index="4" instance=ExtResource("3_upred")]
+[node name="WetSpot3" parent="." index="7" instance=ExtResource("3_upred")]
 position = Vector2(787, 577)
 
-[node name="WetSpot12" parent="WetSpots" index="5" instance=ExtResource("3_upred")]
+[node name="WetSpot12" parent="." index="8" instance=ExtResource("3_upred")]
 position = Vector2(-523, -376)
 
-[node name="WetSpot4" parent="WetSpots" index="6" instance=ExtResource("3_upred")]
+[node name="WetSpot4" parent="." index="9" instance=ExtResource("3_upred")]
 position = Vector2(-1149, 501)
 
-[node name="WetSpot5" parent="WetSpots" index="7" instance=ExtResource("3_upred")]
+[node name="WetSpot5" parent="." index="10" instance=ExtResource("3_upred")]
 position = Vector2(-1018, -61)
 
-[node name="WetSpot6" parent="WetSpots" index="8" instance=ExtResource("3_upred")]
+[node name="WetSpot6" parent="." index="11" instance=ExtResource("3_upred")]
 position = Vector2(205, 840)
 
-[node name="WetSpot10" parent="WetSpots" index="9" instance=ExtResource("3_upred")]
+[node name="WetSpot10" parent="." index="12" instance=ExtResource("3_upred")]
 position = Vector2(-325, 751)
 
-[node name="WetSpot11" parent="WetSpots" index="10" instance=ExtResource("3_upred")]
+[node name="WetSpot11" parent="." index="13" instance=ExtResource("3_upred")]
 position = Vector2(-481, 247)
-
-[node name="Charger" parent="." index="3"]
-position = Vector2(-1221, 1354)
 
 [node name="GreenBottle" parent="Garbage" index="0" instance=ExtResource("3_83fss")]
 position = Vector2(403, 438)
@@ -83,11 +83,8 @@ rotation = 0.785397
 position = Vector2(-66, 1145)
 rotation = -0.785397
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="15"]
 position = Vector2(-1224, 1274)
-
-[node name="Bin" parent="." index="6" instance=ExtResource("8_g107f")]
-position = Vector2(-115, -502)
 
 [node name="Cat" type="Node2D" parent="Enemies" index="0"]
 position = Vector2(-24, 242)
@@ -98,6 +95,9 @@ curve = SubResource("Curve2D_irr01")
 
 [node name="CatFollow" parent="Enemies/Cat/Path2D" index="0" instance=ExtResource("6_yo8as")]
 position = Vector2(-320, -1086)
+
+[node name="Bin" parent="." index="17" instance=ExtResource("8_g107f")]
+position = Vector2(-115, -502)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("8_q2fhq")]
 position = Vector2(1097, -765)

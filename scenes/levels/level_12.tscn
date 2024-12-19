@@ -28,22 +28,22 @@ point_count = 5
 [node name="Level12" instance=ExtResource("1_my1kp")]
 _nextLevelScene = "res://scenes/levels/outro.tscn"
 
-[node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_c2v8l")]
-position = Vector2(188, 152)
-scale = Vector2(0.983917, 1.04568)
-
-[node name="WetSpotBig" parent="WetSpots" index="1" instance=ExtResource("3_x4mp3")]
-position = Vector2(-1062, 729)
-scale = Vector2(1.06714, 1.47654)
-
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_py8kh")]
 position = Vector2(199, 507)
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("4_vvfkk")]
 position = Vector2(1805, -60)
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(60, 1372)
+
+[node name="WetSpot" parent="." index="3" instance=ExtResource("2_c2v8l")]
+position = Vector2(188, 152)
+scale = Vector2(0.983917, 1.04568)
+
+[node name="WetSpotBig" parent="." index="4" instance=ExtResource("3_x4mp3")]
+position = Vector2(-1062, 729)
+scale = Vector2(1.06714, 1.47654)
 
 [node name="Can2" parent="Garbage" index="0" instance=ExtResource("4_7b0hl")]
 position = Vector2(220, -205)
@@ -52,7 +52,7 @@ rotation = 0.261799
 [node name="Can3" parent="Garbage" index="1" instance=ExtResource("4_7b0hl")]
 position = Vector2(-1071, -84)
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="6"]
 position = Vector2(63, 1274)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("2_prse3")]
@@ -156,7 +156,7 @@ position = Vector2(1320, 0)
 [node name="FlowerDry16" parent="Env" index="26" instance=ExtResource("17_jmkt5")]
 position = Vector2(1485, 0)
 
-[node name="Bin4" parent="." index="8" instance=ExtResource("6_ayvto")]
+[node name="Bin4" parent="." index="9" instance=ExtResource("6_ayvto")]
 position = Vector2(-1052, 1389)
 
 [editable path="Enemies/Cats/Path2D/CatFollow"]
