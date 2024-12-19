@@ -196,6 +196,12 @@ public partial class Robot : CharacterBody2D
 		}
 	}
 
+	public void DisableLight()
+	{
+		_pointLightGreen.Visible = false;
+		_pointLightRed.Visible = false;
+	}
+
 	private void InDangerAreaTweenAnimation()
 	{
 		Tween tween = CreateTween();
