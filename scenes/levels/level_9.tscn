@@ -68,7 +68,7 @@ rotation = 0.261799
 position = Vector2(-355, 1245)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_q88wr")]
-position = Vector2(-45, 394)
+position = Vector2(-45, 466)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("10_tttqv")]
 position = Vector2(891, -756)

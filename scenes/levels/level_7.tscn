@@ -59,7 +59,7 @@ rotation = 0.785397
 position = Vector2(-931, 1263)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_dswgr")]
-position = Vector2(-1394, 535)
+position = Vector2(-1396, 597)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("7_bh1m7")]
 position = Vector2(-280, -574)

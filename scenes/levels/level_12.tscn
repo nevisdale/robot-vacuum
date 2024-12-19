@@ -56,7 +56,7 @@ position = Vector2(-1071, -84)
 position = Vector2(63, 1274)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("2_prse3")]
-position = Vector2(901, 284)
+position = Vector2(901, 289)
 
 [node name="Cats" type="Node2D" parent="Enemies" index="1"]
 position = Vector2(144, 249)

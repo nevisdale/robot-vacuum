@@ -30,7 +30,7 @@ position = Vector2(1257, 9)
 position = Vector2(-1020, 1363)
 
 [node name="WetSpot" parent="." index="3" instance=ExtResource("2_mc32c")]
-position = Vector2(1468, 378)
+position = Vector2(1478, 419)
 
 [node name="WetSpotBig" parent="." index="4" instance=ExtResource("3_p7awf")]
 position = Vector2(-86.9999, 322)
@@ -75,13 +75,13 @@ position = Vector2(-813, 786)
 position = Vector2(-1021, 1280)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("5_sx0k1")]
-position = Vector2(-47, 302)
+position = Vector2(-69, 389)
 
 [node name="Car2" parent="Enemies" index="1" instance=ExtResource("5_sx0k1")]
-position = Vector2(-1603, 455)
+position = Vector2(-1603, 499)
 
 [node name="BoxVertical" parent="Env" index="0" instance=ExtResource("8_au7kh")]
-position = Vector2(1531, 123)
+position = Vector2(1529, 183)
 
 [node name="Sofa" parent="Env" index="1" instance=ExtResource("10_xr7u5")]
 position = Vector2(1013, -766)
