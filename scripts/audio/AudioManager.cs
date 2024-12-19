@@ -17,7 +17,27 @@ public partial class AudioManager : AudioStreamPlayer
 
     public override void _Ready()
     {
+        Stop();
         Instance = this;
+    }
+
+    public void PlaySoundBackground()
+    {
+        if (!Playing)
+        {
+            Play();
+        }
+    }
+
+    public void StopSoundBackground()
+    {
+        if (!Playing)
+        {
+            return;
+        }
+
+        Tween tween = CreateTween();
+        tween.TweenProperty(this, "volume_db", -80, 5);
     }
 
     public void PlaySoundPushGarbage()

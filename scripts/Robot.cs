@@ -2,6 +2,7 @@ using Godot;
 using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Enemies;
 using RobotVacuum.Scripts.Garbage;
+using System;
 
 namespace RobotVacuum.Scripts;
 
@@ -10,9 +11,14 @@ public partial class Robot : CharacterBody2D
 	private const float LIGHT_ENERGY_MIN = 1f;
 	private const float LIGHT_ENERGY_MAX = 15f;
 
-	[Export] private float _moveSpeed = 1f;
-	[Export] private float _rotationSpeedRadian = 1f;
-	[Export] private float _pushForce = 5000f;
+	[Export]
+	private float _moveSpeed = 1f;
+	[Export]
+	private float _rotationSpeedRadian = 1f;
+	[Export]
+	private float _pushForce = 5000f;
+	[Export]
+	private float _playSoundPhysicsGarbageDelay = 0.2f;
 
 	[Signal] public delegate void CapturedByEnemyEventHandler();
 	[Signal] public delegate void CanBeCapturedByEnemyChangedEventHandler(bool changed);
@@ -100,7 +106,16 @@ public partial class Robot : CharacterBody2D
 					CaptureByEnemy(garbage);
 					return;
 				}
-				AudioManager.Instance.PlaySoundPushGarbage();
+
+				// avoid playing sound when a robot is pushing the garbage continuously
+				long now = DateTime.Now.Ticks;
+				long delay = TimeSpan.FromSeconds(_playSoundPhysicsGarbageDelay).Ticks;
+				if (now - garbage.TouchedByRobotLastTime >= delay)
+				{
+					AudioManager.Instance.PlaySoundPushGarbage();
+				}
+				garbage.TouchedByRobotLastTime = now;
+
 				garbage.Push(kinematicCollision, _pushForce * (float)delta);
 			}
 		}
@@ -179,6 +194,12 @@ public partial class Robot : CharacterBody2D
 		{
 			OutDangerAreaTweenAnimation();
 		}
+	}
+
+	public void DisableLight()
+	{
+		_pointLightGreen.Visible = false;
+		_pointLightRed.Visible = false;
 	}
 
 	private void InDangerAreaTweenAnimation()
