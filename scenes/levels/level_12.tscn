@@ -25,6 +25,7 @@ _data = {
 point_count = 5
 
 [node name="Level12" instance=ExtResource("1_my1kp")]
+_nextLevelScene = "res://scenes/levels/outro.tscn"
 
 [node name="WetSpot" parent="WetSpots" index="0" instance=ExtResource("2_c2v8l")]
 position = Vector2(188, 152)
