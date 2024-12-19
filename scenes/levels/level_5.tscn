@@ -28,7 +28,7 @@ point_count = 7
 [node name="Level5" instance=ExtResource("1_87kf8")]
 _nextLevelScene = "res://scenes/levels/level_6.tscn"
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(-673, 1347)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("2_hvk5q")]
@@ -87,7 +87,7 @@ rotation = 0.785397
 position = Vector2(922, 17)
 rotation = 2.09439
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(-682, 1259)
 
 [node name="Cat1" type="Node2D" parent="Enemies" index="0"]
@@ -108,9 +108,6 @@ curve = SubResource("Curve2D_gb6w8")
 [node name="CatFollow" parent="Enemies/Cat2/Path2D" index="0" instance=ExtResource("6_kn30j")]
 position = Vector2(-1071.55, -429.767)
 progress = 2434.78
-
-[node name="Bin" parent="." index="7" instance=ExtResource("5_imycx")]
-position = Vector2(220, 443)
 
 [node name="CosmeticTable" parent="Env" index="0" instance=ExtResource("9_k5vl6")]
 position = Vector2(-1393, 1349)
@@ -142,3 +139,6 @@ position = Vector2(-66, -827)
 
 [node name="FlowerSprout5" parent="Env" index="9" instance=ExtResource("12_fclfq")]
 position = Vector2(99, -827)
+
+[node name="Bin" parent="." index="7" instance=ExtResource("5_imycx")]
+position = Vector2(220, 443)

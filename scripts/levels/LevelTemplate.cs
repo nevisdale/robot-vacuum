@@ -29,6 +29,7 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
+		Input.UseAccumulatedInput = false;
 		AudioManager.Instance.PlaySoundBackground();
 
 		_robot = GetNode<Robot>("Robot");
