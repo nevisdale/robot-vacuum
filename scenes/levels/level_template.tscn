@@ -44,6 +44,7 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
 zoom = Vector2(0.5, 0.5)
+process_callback = 0
 limit_left = -1792
 limit_top = -1024
 limit_right = 2048

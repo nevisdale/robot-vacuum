@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckfv5qxwsjkpw"]
+[gd_scene load_steps=4 format=3 uid="uid://c3na3lj8jr5gj"]
 
 [ext_resource type="Script" path="res://scripts/objects/WetSpot.cs" id="1_job6f"]
 [ext_resource type="Texture2D" uid="uid://fqkux0wlx007" path="res://assets/objects/wet_spot_big.png" id="2_p1t8t"]
