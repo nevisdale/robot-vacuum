@@ -76,6 +76,11 @@ public partial class LevelTemplate : Node2D
 		{
 			ToggleWindowMode();
 		}
+
+		if (Input.IsActionJustPressed("next_level"))
+		{
+			TransitionLayer.Instance.ChangeSceneTo(_nextLevelScene);
+		}
 	}
 
 	private void Robot_OnCapturedByEnemy()
