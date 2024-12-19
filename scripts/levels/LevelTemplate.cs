@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Godot;
+using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Enemies;
 using RobotVacuum.Scripts.Globals;
 using RobotVacuum.Scripts.Objects;
@@ -28,6 +29,8 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
+		AudioManager.Instance.PlaySoundBackground();
+
 		_robot = GetNode<Robot>("Robot");
 		_camera = GetNode<Camera2D>("Robot/Camera2D");
 		_garbageContainer = GetNode<Node2D>("Garbage");

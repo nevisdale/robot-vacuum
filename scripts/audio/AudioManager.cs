@@ -17,7 +17,16 @@ public partial class AudioManager : AudioStreamPlayer
 
     public override void _Ready()
     {
+        Stop();
         Instance = this;
+    }
+
+    public void PlaySoundBackground()
+    {
+        if (!Playing)
+        {
+            Play();
+        }
     }
 
     public void PlaySoundPushGarbage()
