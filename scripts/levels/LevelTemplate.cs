@@ -29,7 +29,6 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
-		Input.UseAccumulatedInput = false;
 		AudioManager.Instance.PlaySoundBackground();
 
 		_robot = GetNode<Robot>("Robot");
@@ -128,7 +127,7 @@ public partial class LevelTemplate : Node2D
 
 	private void ToggleWindowMode()
 	{
-		DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.Fullscreen;
+		DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.ExclusiveFullscreen;
 		DisplayServer.MouseMode mouseMode = DisplayServer.MouseMode.Hidden;
 		if (_isFullscreen)
 		{
