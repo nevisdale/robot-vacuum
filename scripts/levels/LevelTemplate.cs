@@ -29,6 +29,8 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
+		SaveManager.SaveGame(GetTree());
+
 		AudioManager.Instance.PlaySoundBackground();
 
 		_robot = GetNode<Robot>("Robot");
