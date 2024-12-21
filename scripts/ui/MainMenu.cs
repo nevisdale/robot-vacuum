@@ -14,6 +14,8 @@ public partial class MainMenu : CanvasLayer
 
     public override void _Ready()
     {
+        DisplayServer.MouseSetMode(DisplayServer.MouseMode.Visible);
+
         _play = GetNode<Button>("%Play");
         _continue = GetNode<Button>("%Continue");
         _exit = GetNode<Button>("%Exit");
@@ -42,6 +44,7 @@ public partial class MainMenu : CanvasLayer
 
     private void GoToScene(string scenePath)
     {
+        DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
         // remove all ui because transition layer does not cover it
         GetNode("Control").QueueFree();
         TransitionLayer.Instance.ChangeSceneTo(scenePath);

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bed4fidap1kpd"]
+[gd_scene load_steps=5 format=3 uid="uid://bed4fidap1kpd"]
 
 [ext_resource type="Script" path="res://scripts/levels/Intro.cs" id="1_kiqub"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_x87a6"]
 [ext_resource type="AudioStream" uid="uid://dx335y2rjnjf7" path="res://assets/sound/first_scene.wav" id="2_wm3w1"]
+[ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="4_1jtti"]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_kiqub")
@@ -37,3 +38,5 @@ offset_top = -63.0
 offset_right = 105.0
 offset_bottom = 75.0
 color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_1jtti")]

@@ -22,7 +22,7 @@ point_count = 7
 [node name="Level3" instance=ExtResource("1_q34xd")]
 _nextLevelScene = "res://scenes/levels/level_4.tscn"
 
-[node name="Charger" parent="." index="3"]
+[node name="Charger" parent="." index="2"]
 position = Vector2(58, 1325)
 
 [node name="SeedSet2" parent="Garbage" index="0" instance=ExtResource("2_7ydgx")]
@@ -58,10 +58,10 @@ position = Vector2(1290, -278)
 [node name="SeedSet8" parent="Garbage" index="10" instance=ExtResource("2_7ydgx")]
 position = Vector2(-1129, 35)
 
-[node name="Robot" parent="." index="5"]
+[node name="Robot" parent="." index="4"]
 position = Vector2(64, 1226)
 
-[node name="Enemies" parent="." index="6"]
+[node name="Enemies" parent="." index="5"]
 position = Vector2(-606, -564)
 
 [node name="Cat" type="Node2D" parent="Enemies" index="0"]

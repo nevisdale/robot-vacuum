@@ -22,12 +22,16 @@ public partial class Intro : Node2D
 
     public override void _Ready()
     {
+        DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
+
         _audioStreamPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
         _robot = GetNode<Robot>("Robot");
         _startAudioTimer = GetNode<Timer>("StartAudioTimer");
         _blackColorRect = GetNode<ColorRect>("BlackColorRect");
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
 
+
+        // TODO: it looks ugly, animation player is might be better for this
         _robot.MakeNotMovable();
         _startAudioTimer.Timeout += () =>
         {

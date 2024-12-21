@@ -29,6 +29,8 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
+		DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
+
 		SaveManager.SaveGame(GetTree());
 
 		AudioManager.Instance.PlaySoundBackground();
@@ -130,11 +132,9 @@ public partial class LevelTemplate : Node2D
 	private void ToggleWindowMode()
 	{
 		DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.ExclusiveFullscreen;
-		DisplayServer.MouseMode mouseMode = DisplayServer.MouseMode.Hidden;
 		if (_isFullscreen)
 		{
 			windowMode = DisplayServer.WindowMode.Windowed;
-			mouseMode = DisplayServer.MouseMode.Visible;
 			_isFullscreen = false;
 		}
 		else
@@ -142,6 +142,5 @@ public partial class LevelTemplate : Node2D
 			_isFullscreen = true;
 		}
 		DisplayServer.WindowSetMode(windowMode);
-		DisplayServer.MouseSetMode(mouseMode);
 	}
 }

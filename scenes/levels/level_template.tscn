@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://beto5bgm5v55j"]
+[gd_scene load_steps=6 format=4 uid="uid://beto5bgm5v55j"]
 
 [ext_resource type="Script" path="res://scripts/levels/LevelTemplate.cs" id="1_sdfn2"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_da5dw"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_7e6ij"]
+[ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="5_swxyc"]
 
 [node name="LevelTemplate" type="Node2D"]
 script = ExtResource("1_sdfn2")
@@ -56,3 +57,5 @@ metadata/_edit_lock_ = true
 
 [node name="Env" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_swxyc")]
