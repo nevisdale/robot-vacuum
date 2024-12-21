@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bubj2i7uqj21f"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_yg0bx"]
+[ext_resource type="Script" path="res://scripts/ui/MainMenu.cs" id="1_c862v"]
 
 [node name="MainMenu" type="CanvasLayer"]
-script = ExtResource("1_yg0bx")
+script = ExtResource("1_c862v")
 _startScene = "res://scenes/levels/intro.tscn"
 
 [node name="Control" type="Control" parent="."]

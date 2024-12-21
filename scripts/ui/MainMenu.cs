@@ -1,7 +1,7 @@
 using Godot;
 using RobotVacuum.Scripts.Globals;
 
-namespace RobotVacuum.Scripts;
+namespace RobotVacuum.Scripts.UI;
 
 public partial class MainMenu : CanvasLayer
 {
