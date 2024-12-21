@@ -22,7 +22,7 @@ public partial class Outro : Node2D
     public override void _Ready()
     {
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
-
+        SaveManager.SaveGame(GetTree());
         AudioManager.Instance.StopSoundBackgroundSmooth();
 
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
