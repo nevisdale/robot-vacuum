@@ -23,7 +23,7 @@ public partial class Outro : Node2D
     {
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
 
-        AudioManager.Instance.StopSoundBackground();
+        AudioManager.Instance.StopSoundBackgroundSmooth();
 
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
         _directionalLight2D = GetNode<DirectionalLight2D>("DirectionalLight2D");

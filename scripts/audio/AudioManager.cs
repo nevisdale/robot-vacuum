@@ -16,10 +16,12 @@ public partial class AudioManager : AudioStreamPlayer
     private AudioStreamPlayer _carCaptureSoundPlayer = null;
 
     private bool _muted = true;
+    private float _initVolumeDb = 0;
 
     public override void _Ready()
     {
         Stop();
+        _initVolumeDb = VolumeDb;
         Instance = this;
     }
 
@@ -51,6 +53,11 @@ public partial class AudioManager : AudioStreamPlayer
 
     public void StopSoundBackground()
     {
+        Stop();
+    }
+
+    public async void StopSoundBackgroundSmooth()
+    {
         if (!Playing)
         {
             return;
@@ -58,6 +65,12 @@ public partial class AudioManager : AudioStreamPlayer
 
         Tween tween = CreateTween();
         tween.TweenProperty(this, "volume_db", -80, 5);
+        tween.Finished += () =>
+        {
+            Stop();
+        };
+        await ToSignal(tween, "finished");
+        VolumeDb = _initVolumeDb;
     }
 
     public void PlaySoundPushGarbage()

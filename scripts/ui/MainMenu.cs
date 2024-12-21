@@ -1,4 +1,5 @@
 using Godot;
+using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Globals;
 
 namespace RobotVacuum.Scripts.UI;
@@ -14,6 +15,7 @@ public partial class MainMenu : CanvasLayer
 
     public override void _Ready()
     {
+        AudioManager.Instance.StopSoundBackground();
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Visible);
 
         _play = GetNode<Button>("%Play");
