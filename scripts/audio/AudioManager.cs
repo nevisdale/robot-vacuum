@@ -26,6 +26,14 @@ public partial class AudioManager : AudioStreamPlayer
     public void ToggleMute()
     {
         _muted = !_muted;
+        if (_muted)
+        {
+            Stop();
+        }
+        else
+        {
+            Play();
+        }
     }
 
     public void PlaySoundBackground()
