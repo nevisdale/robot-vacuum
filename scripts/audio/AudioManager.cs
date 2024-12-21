@@ -25,6 +25,15 @@ public partial class AudioManager : AudioStreamPlayer
         Instance = this;
     }
 
+    public void ForceStop()
+    {
+        Stop();
+        _pushGarbageSoundPlayer.Stop();
+        _captureGarbageSoundPlayer.Stop();
+        _catCaptureSoundPlayer.Stop();
+        _carCaptureSoundPlayer.Stop();
+    }
+
     public void ToggleMute()
     {
         _muted = !_muted;

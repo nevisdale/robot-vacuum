@@ -1,4 +1,5 @@
 using Godot;
+using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Globals;
 
 namespace RobotVacuum.Scripts.UI;
@@ -23,6 +24,8 @@ public partial class PauseMenu : CanvasLayer
         _resume.Pressed += () => HidePauseMenu();
         _mainMenu.Pressed += () =>
         {
+            // there is a little chance to play sound before going to main menu
+            AudioManager.Instance.ForceStop();
             HidePauseMenu();
             GoToScene(_mainMenuScene);
         };
