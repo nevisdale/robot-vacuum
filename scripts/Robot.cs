@@ -47,7 +47,7 @@ public partial class Robot : CharacterBody2D
 	private PointLight2D _pointLightRed = null;
 
 	private int _dangerCount = 0;
-	private Tween _tweenInDanger = null;
+	private Tween _tweenLight = null;
 
 	public override void _Ready()
 	{
@@ -166,7 +166,7 @@ public partial class Robot : CharacterBody2D
 	public void InDangerArea()
 	{
 		_dangerCount += 1;
-		if (_dangerCount == 1)
+		if (_dangerCount > 0)
 		{
 			InDangerAreaTweenAnimation();
 		}
@@ -189,27 +189,25 @@ public partial class Robot : CharacterBody2D
 
 	private void InDangerAreaTweenAnimation()
 	{
-		Tween tween = CreateTween();
-		tween.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MIN, 0.5);
+		_tweenLight?.Stop();
+
+		_tweenLight = CreateTween();
+		_tweenLight.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MIN, 0.5);
 
 		// run this tween little bit faster,
 		// it shows that the robot is in danger area
-		_tweenInDanger = CreateTween();
-		_tweenInDanger.SetLoops();
-		_tweenInDanger.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MAX, 0.2);
-		_tweenInDanger.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MIN, 0.2);
+		_tweenLight = CreateTween();
+		_tweenLight.SetLoops();
+		_tweenLight.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MAX, 0.2);
+		_tweenLight.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MIN, 0.2);
 	}
 
-	private async void OutDangerAreaTweenAnimation()
+	private void OutDangerAreaTweenAnimation()
 	{
-		if (_tweenInDanger != null)
-		{
-			await ToSignal(_tweenInDanger, "loop_finished");
-			_tweenInDanger.Stop();
-			_tweenInDanger = null;
-		}
+		_tweenLight?.Stop();
 
-		Tween tween = CreateTween();
-		tween.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MAX, 0.5);
+		_tweenLight = CreateTween();
+		_tweenLight.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MIN, 0.5);
+		_tweenLight.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MAX, 0.5);
 	}
 }
