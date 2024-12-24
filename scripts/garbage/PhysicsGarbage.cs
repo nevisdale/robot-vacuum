@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using Godot;
 
 namespace RobotVacuum.Scripts.Garbage;
@@ -34,7 +35,12 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
     {
         Tween tween = CreateTween();
         tween.SetParallel(true);
-        tween.Finished += QueueFree;
+        tween.Finished += () =>
+        {
+            Node parent = GetParent();
+            Debug.Assert(parent != null, $"{Name} must have a parent");
+            parent.QueueFree();
+        };
         tween.TweenProperty(this, "global_position", capturer.GlobalPosition, TWEEN_DURATION);
         tween.TweenProperty(this, "scale", Scale * TWEEN_SCALE_FACTOR, TWEEN_DURATION);
 

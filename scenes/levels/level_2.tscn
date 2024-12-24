@@ -49,15 +49,15 @@ position = Vector2(1075, 787)
 [node name="SeedSet11" parent="Garbage" index="9" instance=ExtResource("2_vrmf7")]
 position = Vector2(-815, 666)
 
-[node name="SeedSet12" parent="Garbage" index="10" instance=ExtResource("3_22u6l")]
+[node name="CanCoke2" parent="Garbage" index="10" instance=ExtResource("3_22u6l")]
 position = Vector2(804, -91)
 rotation = -2.00232
 
-[node name="SeedSet13" parent="Garbage" index="11" instance=ExtResource("3_22u6l")]
+[node name="CanCoke3" parent="Garbage" index="11" instance=ExtResource("3_22u6l")]
 position = Vector2(-494, -58)
 rotation = -0.658543
 
-[node name="SeedSet14" parent="Garbage" index="12" instance=ExtResource("3_22u6l")]
+[node name="CanCoke" parent="Garbage" index="12" instance=ExtResource("3_22u6l")]
 position = Vector2(146, 537)
 rotation = -1.26904
 
