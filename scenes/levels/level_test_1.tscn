@@ -13,10 +13,10 @@
 [node name="LevelTemplate" instance=ExtResource("1_71ppx")]
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_7rrkr")]
-position = Vector2(-523, -219)
+position = Vector2(-350, -213)
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("2_x3dx8")]
-position = Vector2(699, -215)
+position = Vector2(1175, -215)
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-1406, 1275)
@@ -25,7 +25,11 @@ position = Vector2(-1406, 1275)
 position = Vector2(444, -254)
 rotation = -1.5708
 
-[node name="WetSpotBig3" parent="." index="4" instance=ExtResource("6_u1tb6")]
+[node name="WetSpotBig2" parent="." index="4" instance=ExtResource("6_u1tb6")]
+position = Vector2(990, -254)
+rotation = -1.5708
+
+[node name="WetSpotBig3" parent="." index="5" instance=ExtResource("6_u1tb6")]
 position = Vector2(-290, -254)
 rotation = -1.5708
 
@@ -47,7 +51,7 @@ position = Vector2(1218, -566)
 position = Vector2(1710, -127)
 
 [node name="SeedSet4" parent="Garbage" index="5" instance=ExtResource("6_0dyir")]
-position = Vector2(1141, 39)
+position = Vector2(1705, 435)
 
 [node name="SeedSet5" parent="Garbage" index="6" instance=ExtResource("6_0dyir")]
 position = Vector2(1642, 1290)
@@ -62,10 +66,7 @@ position = Vector2(-1444, 839)
 position = Vector2(1272, 789)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("2_1keyb")]
-position = Vector2(-830, 546)
-
-[node name="Car2" parent="Enemies" index="1" instance=ExtResource("2_1keyb")]
-position = Vector2(-223, 546)
+position = Vector2(-1283, 546)
 
 [node name="FlowerGreen" parent="Env" index="0" instance=ExtResource("3_u4l6j")]
 position = Vector2(-520, -402)
@@ -79,98 +80,104 @@ position = Vector2(-520, 133)
 [node name="FlowerGreen6" parent="Env" index="3" instance=ExtResource("3_u4l6j")]
 position = Vector2(-520, 298)
 
-[node name="FlowerGreen33" parent="Env" index="4" instance=ExtResource("3_u4l6j")]
-position = Vector2(-520, 462)
+[node name="FlowerGreen12" parent="Env" index="4" instance=ExtResource("3_u4l6j")]
+position = Vector2(1232, 133)
 
-[node name="FlowerGreen34" parent="Env" index="5" instance=ExtResource("3_u4l6j")]
-position = Vector2(-520, 623)
+[node name="FlowerGreen17" parent="Env" index="5" instance=ExtResource("3_u4l6j")]
+position = Vector2(1232, 298)
 
 [node name="FlowerGreen7" parent="Env" index="6" instance=ExtResource("3_u4l6j")]
-position = Vector2(-1192, 298)
+position = Vector2(-684, 298)
 
 [node name="FlowerGreen8" parent="Env" index="7" instance=ExtResource("3_u4l6j")]
-position = Vector2(-1365, 298)
+position = Vector2(-857, 298)
 
 [node name="FlowerGreen9" parent="Env" index="8" instance=ExtResource("3_u4l6j")]
-position = Vector2(-1521, 298)
+position = Vector2(-1013, 298)
 
 [node name="FlowerGreen10" parent="Env" index="9" instance=ExtResource("3_u4l6j")]
-position = Vector2(-1695, 298)
+position = Vector2(-1552, 298)
 
-[node name="FlowerGreen11" parent="Env" index="10" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen15" parent="Env" index="10" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1552, 455)
+
+[node name="FlowerGreen16" parent="Env" index="11" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1552, 621)
+
+[node name="FlowerGreen37" parent="Env" index="12" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1710, 298)
+
+[node name="FlowerGreen11" parent="Env" index="13" instance=ExtResource("3_u4l6j")]
 position = Vector2(711, -404)
 
-[node name="FlowerGreen12" parent="Env" index="11" instance=ExtResource("3_u4l6j")]
-position = Vector2(713, -577)
+[node name="FlowerGreen40" parent="Env" index="14" instance=ExtResource("3_u4l6j")]
+position = Vector2(-515, -751)
 
-[node name="FlowerGreen13" parent="Env" index="12" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen41" parent="Env" index="15" instance=ExtResource("3_u4l6j")]
+position = Vector2(-515, -927)
+
+[node name="FlowerGreen13" parent="Env" index="16" instance=ExtResource("3_u4l6j")]
 position = Vector2(-514, -577)
 
-[node name="FlowerGreen14" parent="Env" index="13" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen14" parent="Env" index="17" instance=ExtResource("3_u4l6j")]
 position = Vector2(711, -34)
 
-[node name="FlowerGreen15" parent="Env" index="14" instance=ExtResource("3_u4l6j")]
-position = Vector2(711, 131)
-
-[node name="FlowerGreen16" parent="Env" index="15" instance=ExtResource("3_u4l6j")]
-position = Vector2(711, 296)
-
-[node name="FlowerGreen17" parent="Env" index="16" instance=ExtResource("3_u4l6j")]
-position = Vector2(1885, 299)
-
-[node name="FlowerGreen18" parent="Env" index="17" instance=ExtResource("3_u4l6j")]
-position = Vector2(1722, 299)
-
-[node name="FlowerGreen35" parent="Env" index="18" instance=ExtResource("3_u4l6j")]
-position = Vector2(1722, 467)
-
-[node name="FlowerGreen36" parent="Env" index="19" instance=ExtResource("3_u4l6j")]
-position = Vector2(1722, 618)
-
-[node name="FlowerGreen19" parent="Env" index="20" instance=ExtResource("3_u4l6j")]
-position = Vector2(1035, 299)
-
-[node name="FlowerGreen20" parent="Env" index="21" instance=ExtResource("3_u4l6j")]
-position = Vector2(870, 299)
-
-[node name="FlowerGreen21" parent="Env" index="22" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen21" parent="Env" index="18" instance=ExtResource("3_u4l6j")]
 position = Vector2(-354, -33)
 
-[node name="FlowerGreen22" parent="Env" index="23" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen22" parent="Env" index="19" instance=ExtResource("3_u4l6j")]
 position = Vector2(300, -30)
 
-[node name="FlowerGreen23" parent="Env" index="24" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen23" parent="Env" index="20" instance=ExtResource("3_u4l6j")]
 position = Vector2(135, -30)
 
-[node name="FlowerGreen24" parent="Env" index="25" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen24" parent="Env" index="21" instance=ExtResource("3_u4l6j")]
 position = Vector2(-30, -30)
 
-[node name="FlowerGreen25" parent="Env" index="26" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen25" parent="Env" index="22" instance=ExtResource("3_u4l6j")]
 position = Vector2(-195, -30)
 
-[node name="FlowerGreen26" parent="Env" index="27" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen26" parent="Env" index="23" instance=ExtResource("3_u4l6j")]
 position = Vector2(-356, -411)
 
-[node name="FlowerGreen27" parent="Env" index="28" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen27" parent="Env" index="24" instance=ExtResource("3_u4l6j")]
 position = Vector2(298, -408)
 
-[node name="FlowerGreen31" parent="Env" index="29" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen31" parent="Env" index="25" instance=ExtResource("3_u4l6j")]
 position = Vector2(499, -404)
 
-[node name="FlowerGreen32" parent="Env" index="30" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen32" parent="Env" index="26" instance=ExtResource("3_u4l6j")]
 position = Vector2(489, -24)
 
-[node name="FlowerGreen28" parent="Env" index="31" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen35" parent="Env" index="27" instance=ExtResource("3_u4l6j")]
+position = Vector2(1041, -30)
+
+[node name="FlowerGreen36" parent="Env" index="28" instance=ExtResource("3_u4l6j")]
+position = Vector2(876, -30)
+
+[node name="FlowerGreen38" parent="Env" index="29" instance=ExtResource("3_u4l6j")]
+position = Vector2(1230, -24)
+
+[node name="FlowerGreen43" parent="Env" index="30" instance=ExtResource("3_u4l6j")]
+position = Vector2(1041, -400)
+
+[node name="FlowerGreen44" parent="Env" index="31" instance=ExtResource("3_u4l6j")]
+position = Vector2(876, -400)
+
+[node name="FlowerGreen45" parent="Env" index="32" instance=ExtResource("3_u4l6j")]
+position = Vector2(1230, -394)
+
+[node name="FlowerGreen28" parent="Env" index="33" instance=ExtResource("3_u4l6j")]
 position = Vector2(133, -408)
 
-[node name="FlowerGreen29" parent="Env" index="32" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen29" parent="Env" index="34" instance=ExtResource("3_u4l6j")]
 position = Vector2(-32, -408)
 
-[node name="FlowerGreen30" parent="Env" index="33" instance=ExtResource("3_u4l6j")]
+[node name="FlowerGreen30" parent="Env" index="35" instance=ExtResource("3_u4l6j")]
 position = Vector2(-197, -408)
 
-[node name="PauseMenu" parent="." index="9"]
+[node name="PauseMenu" parent="." index="10"]
 visible = false
 
-[node name="Bin" parent="." index="10" instance=ExtResource("5_03i0w")]
+[node name="Bin" parent="." index="11" instance=ExtResource("5_03i0w")]
 position = Vector2(-1323, -403)
