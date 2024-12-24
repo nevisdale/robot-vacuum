@@ -16,7 +16,7 @@
 position = Vector2(-350, -213)
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("2_x3dx8")]
-position = Vector2(1175, -215)
+position = Vector2(1088, -215)
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-1406, 1275)
