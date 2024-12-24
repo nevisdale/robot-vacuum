@@ -1,0 +1,176 @@
+[gd_scene load_steps=10 format=3 uid="uid://cmcpdhcm20ihr"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_71ppx"]
+[ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_1keyb"]
+[ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="2_7rrkr"]
+[ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="2_x3dx8"]
+[ext_resource type="PackedScene" uid="uid://c023elr5r7s6u" path="res://scenes/objects/flower_green.tscn" id="3_u4l6j"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_03i0w"]
+[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="5_mc4e8"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="6_0dyir"]
+[ext_resource type="PackedScene" uid="uid://c3na3lj8jr5gj" path="res://scenes/objects/wet_spot_big.tscn" id="6_u1tb6"]
+
+[node name="LevelTemplate" instance=ExtResource("1_71ppx")]
+
+[node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_7rrkr")]
+position = Vector2(-523, -219)
+
+[node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("2_x3dx8")]
+position = Vector2(699, -215)
+
+[node name="Charger" parent="." index="2"]
+position = Vector2(-1406, 1275)
+
+[node name="WetSpotBig" parent="." index="3" instance=ExtResource("6_u1tb6")]
+position = Vector2(444, -254)
+rotation = -1.5708
+
+[node name="WetSpotBig3" parent="." index="4" instance=ExtResource("6_u1tb6")]
+position = Vector2(-290, -254)
+rotation = -1.5708
+
+[node name="CanCoke" parent="Garbage" index="0" instance=ExtResource("5_mc4e8")]
+position = Vector2(910, 916)
+rotation = 0.523598
+
+[node name="CanCoke2" parent="Garbage" index="1" instance=ExtResource("5_mc4e8")]
+position = Vector2(372, 1025)
+rotation = -0.785397
+
+[node name="SeedSet" parent="Garbage" index="2" instance=ExtResource("6_0dyir")]
+position = Vector2(-1020, -95)
+
+[node name="SeedSet2" parent="Garbage" index="3" instance=ExtResource("6_0dyir")]
+position = Vector2(1218, -566)
+
+[node name="SeedSet3" parent="Garbage" index="4" instance=ExtResource("6_0dyir")]
+position = Vector2(1710, -127)
+
+[node name="SeedSet4" parent="Garbage" index="5" instance=ExtResource("6_0dyir")]
+position = Vector2(1141, 39)
+
+[node name="SeedSet5" parent="Garbage" index="6" instance=ExtResource("6_0dyir")]
+position = Vector2(1642, 1290)
+
+[node name="SeedSet6" parent="Garbage" index="7" instance=ExtResource("6_0dyir")]
+position = Vector2(441, 442)
+
+[node name="SeedSet7" parent="Garbage" index="8" instance=ExtResource("6_0dyir")]
+position = Vector2(-1444, 839)
+
+[node name="SeedSet8" parent="Garbage" index="9" instance=ExtResource("6_0dyir")]
+position = Vector2(1272, 789)
+
+[node name="Car" parent="Enemies" index="0" instance=ExtResource("2_1keyb")]
+position = Vector2(-830, 546)
+
+[node name="Car2" parent="Enemies" index="1" instance=ExtResource("2_1keyb")]
+position = Vector2(-223, 546)
+
+[node name="FlowerGreen" parent="Env" index="0" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, -402)
+
+[node name="FlowerGreen4" parent="Env" index="1" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, -32)
+
+[node name="FlowerGreen5" parent="Env" index="2" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, 133)
+
+[node name="FlowerGreen6" parent="Env" index="3" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, 298)
+
+[node name="FlowerGreen33" parent="Env" index="4" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, 462)
+
+[node name="FlowerGreen34" parent="Env" index="5" instance=ExtResource("3_u4l6j")]
+position = Vector2(-520, 623)
+
+[node name="FlowerGreen7" parent="Env" index="6" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1192, 298)
+
+[node name="FlowerGreen8" parent="Env" index="7" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1365, 298)
+
+[node name="FlowerGreen9" parent="Env" index="8" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1521, 298)
+
+[node name="FlowerGreen10" parent="Env" index="9" instance=ExtResource("3_u4l6j")]
+position = Vector2(-1695, 298)
+
+[node name="FlowerGreen11" parent="Env" index="10" instance=ExtResource("3_u4l6j")]
+position = Vector2(711, -404)
+
+[node name="FlowerGreen12" parent="Env" index="11" instance=ExtResource("3_u4l6j")]
+position = Vector2(713, -577)
+
+[node name="FlowerGreen13" parent="Env" index="12" instance=ExtResource("3_u4l6j")]
+position = Vector2(-514, -577)
+
+[node name="FlowerGreen14" parent="Env" index="13" instance=ExtResource("3_u4l6j")]
+position = Vector2(711, -34)
+
+[node name="FlowerGreen15" parent="Env" index="14" instance=ExtResource("3_u4l6j")]
+position = Vector2(711, 131)
+
+[node name="FlowerGreen16" parent="Env" index="15" instance=ExtResource("3_u4l6j")]
+position = Vector2(711, 296)
+
+[node name="FlowerGreen17" parent="Env" index="16" instance=ExtResource("3_u4l6j")]
+position = Vector2(1885, 299)
+
+[node name="FlowerGreen18" parent="Env" index="17" instance=ExtResource("3_u4l6j")]
+position = Vector2(1722, 299)
+
+[node name="FlowerGreen35" parent="Env" index="18" instance=ExtResource("3_u4l6j")]
+position = Vector2(1722, 467)
+
+[node name="FlowerGreen36" parent="Env" index="19" instance=ExtResource("3_u4l6j")]
+position = Vector2(1722, 618)
+
+[node name="FlowerGreen19" parent="Env" index="20" instance=ExtResource("3_u4l6j")]
+position = Vector2(1035, 299)
+
+[node name="FlowerGreen20" parent="Env" index="21" instance=ExtResource("3_u4l6j")]
+position = Vector2(870, 299)
+
+[node name="FlowerGreen21" parent="Env" index="22" instance=ExtResource("3_u4l6j")]
+position = Vector2(-354, -33)
+
+[node name="FlowerGreen22" parent="Env" index="23" instance=ExtResource("3_u4l6j")]
+position = Vector2(300, -30)
+
+[node name="FlowerGreen23" parent="Env" index="24" instance=ExtResource("3_u4l6j")]
+position = Vector2(135, -30)
+
+[node name="FlowerGreen24" parent="Env" index="25" instance=ExtResource("3_u4l6j")]
+position = Vector2(-30, -30)
+
+[node name="FlowerGreen25" parent="Env" index="26" instance=ExtResource("3_u4l6j")]
+position = Vector2(-195, -30)
+
+[node name="FlowerGreen26" parent="Env" index="27" instance=ExtResource("3_u4l6j")]
+position = Vector2(-356, -411)
+
+[node name="FlowerGreen27" parent="Env" index="28" instance=ExtResource("3_u4l6j")]
+position = Vector2(298, -408)
+
+[node name="FlowerGreen31" parent="Env" index="29" instance=ExtResource("3_u4l6j")]
+position = Vector2(499, -404)
+
+[node name="FlowerGreen32" parent="Env" index="30" instance=ExtResource("3_u4l6j")]
+position = Vector2(489, -24)
+
+[node name="FlowerGreen28" parent="Env" index="31" instance=ExtResource("3_u4l6j")]
+position = Vector2(133, -408)
+
+[node name="FlowerGreen29" parent="Env" index="32" instance=ExtResource("3_u4l6j")]
+position = Vector2(-32, -408)
+
+[node name="FlowerGreen30" parent="Env" index="33" instance=ExtResource("3_u4l6j")]
+position = Vector2(-197, -408)
+
+[node name="PauseMenu" parent="." index="9"]
+visible = false
+
+[node name="Bin" parent="." index="10" instance=ExtResource("5_03i0w")]
+position = Vector2(-1323, -403)
