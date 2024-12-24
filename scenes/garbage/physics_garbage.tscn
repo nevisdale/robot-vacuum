@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://xx4rn4r5bkd2"]
+
+[ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_4gji8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5lpvb"]
+friction = 0.0
+
+[node name="PhysicsGarbage" type="RigidBody2D" groups=["is_garbage"]]
+collision_layer = 4
+collision_mask = 7
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_5lpvb")
+gravity_scale = 0.0
+linear_damp = 3.0
+angular_damp = 3.0
+script = ExtResource("1_4gji8")

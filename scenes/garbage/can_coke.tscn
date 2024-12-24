@@ -1,26 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://c526jsececbsr"]
 
-[ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_5nrvy"]
+[ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="2_eau4i"]
 [ext_resource type="Texture2D" uid="uid://cuvkdkd1k3p61" path="res://assets/garbage/can_coke.png" id="2_hs417"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
 radius = 26.0
 height = 104.0
 
-[node name="CanCoke" type="RigidBody2D" groups=["is_garbage"]]
-collision_layer = 4
-collision_mask = 7
-mass = 0.1
-gravity_scale = 0.0
-linear_damp = 3.0
-angular_damp = 3.0
-script = ExtResource("1_5nrvy")
+[node name="CanCoke" type="Node2D" groups=["is_garbage"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PhysicsGarbage" parent="." instance=ExtResource("2_eau4i")]
+
+[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
 position = Vector2(-13, 1)
 rotation = -1.57102
 texture = ExtResource("2_hs417")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbage"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3ci8u")

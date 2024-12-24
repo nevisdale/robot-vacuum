@@ -1,27 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://is5wx7gomf1e"]
 
-[ext_resource type="Script" path="res://scripts/garbage/PhysicsGarbage.cs" id="1_ackfq"]
+[ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="2_ir5q5"]
 [ext_resource type="Texture2D" uid="uid://c3kqkyr0ql20j" path="res://assets/garbage/baby_bottle.png" id="2_u0ic3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
 radius = 26.0
 height = 130.0
 
-[node name="BabyBottle" type="RigidBody2D" groups=["is_garbage"]]
-collision_layer = 4
-collision_mask = 7
-mass = 0.1
-gravity_scale = 0.0
-linear_damp = 3.0
-angular_damp = 3.0
-script = ExtResource("1_ackfq")
+[node name="BabyBottle" type="Node2D" groups=["is_garbage"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PhysicsGarbage" parent="." instance=ExtResource("2_ir5q5")]
+
+[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
 position = Vector2(-13.3424, 0.719569)
-rotation = 4.71239
+rotation = -1.5708
 texture = ExtResource("2_u0ic3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbage"]
 position = Vector2(-12, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3ci8u")
