@@ -6,6 +6,9 @@ namespace RobotVacuum.Scripts.Garbage;
 
 public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceiver
 {
+    [Export]
+    private bool _canReceiveElectricity = false;
+
     private record _dampData(float LinearDamp, float AngularDamp);
 
     private long _touchedByCarLastTime = 0;
@@ -143,7 +146,10 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
 
     public void ReceiveElectricity()
     {
-        HasElectricity = true;
+        if (_canReceiveElectricity)
+        {
+            HasElectricity = true;
+        }
     }
 
     private void ApplyElectricityVisual()
