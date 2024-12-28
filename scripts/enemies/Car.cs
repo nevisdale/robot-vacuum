@@ -123,6 +123,7 @@ public partial class Car : CharacterBody2D, IElectricityReceiver
 			target = -target;
 		}
 		_direction = target;
+		ApplyDirection();
 	}
 
 	// if the car stuck, try to push the can
