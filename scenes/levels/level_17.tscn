@@ -116,7 +116,7 @@ curve = SubResource("Curve2D_yt7fm")
 position = Vector2(-720, -380)
 
 [node name="CatFollow2" parent="Enemies/Cats/Path2D" index="1" instance=ExtResource("4_53k0r")]
-position = Vector2(779.307, 523.215)
+position = Vector2(779.307, 523.212)
 progress = 2404.21
 
 [node name="Tv" parent="Env" index="0" instance=ExtResource("2_bfvjh")]

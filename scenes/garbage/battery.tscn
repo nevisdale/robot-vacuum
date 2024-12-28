@@ -10,6 +10,7 @@ height = 104.0
 [node name="Battery" type="Node2D" groups=["is_garbage"]]
 
 [node name="PhysicsGarbage" parent="." instance=ExtResource("1_dr6rb")]
+_canReceiveElectricity = true
 
 [node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
 position = Vector2(-9.53674e-07, 0)
