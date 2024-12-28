@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw2wan8l2ef16"]
+
+[ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="1_4lsv5"]
+[ext_resource type="Texture2D" uid="uid://crd1quncgejan" path="res://assets/garbage/bottle_green_broken.png" id="2_lnspk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
+radius = 24.0
+height = 128.0
+
+[node name="GreenBottle" type="Node2D" groups=["is_garbage"]]
+
+[node name="PhysicsGarbage" parent="." instance=ExtResource("1_4lsv5")]
+position = Vector2(0, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
+position = Vector2(-7, 2.98023e-08)
+rotation = -1.5708
+texture = ExtResource("2_lnspk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbage"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3ci8u")
