@@ -135,6 +135,12 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
         long electricityDelay = TimeSpan.FromSeconds(0.05).Ticks;
         bool canSendElectricity = DateTime.Now.Ticks - _hasElectricityLastTime >= electricityDelay;
 
+        if (receiver is PhysicsGarbage)
+        {
+            // dont send electricity to the same garbage
+            return false;
+        }
+
         if (HasElectricity && canSendElectricity)
         {
             receiver.ReceiveElectricity();
