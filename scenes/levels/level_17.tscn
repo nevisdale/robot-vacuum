@@ -81,24 +81,27 @@ position = Vector2(227, 247)
 position = Vector2(-201, 207)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("3_on1d0")]
-position = Vector2(-114, -105)
+position = Vector2(74, -195)
 
-[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("3_on1d0")]
-position = Vector2(382, -76)
+[node name="SeedSet8" parent="Garbage" index="1" instance=ExtResource("3_on1d0")]
+position = Vector2(-287, -143)
 
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("3_on1d0")]
-position = Vector2(539, 208)
+[node name="SeedSet2" parent="Garbage" index="2" instance=ExtResource("3_on1d0")]
+position = Vector2(448, -137)
 
-[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("3_on1d0")]
-position = Vector2(-416, 156)
+[node name="SeedSet3" parent="Garbage" index="3" instance=ExtResource("3_on1d0")]
+position = Vector2(619, 199)
 
-[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("3_on1d0")]
+[node name="SeedSet4" parent="Garbage" index="4" instance=ExtResource("3_on1d0")]
+position = Vector2(-490, 181)
+
+[node name="SeedSet5" parent="Garbage" index="5" instance=ExtResource("3_on1d0")]
 position = Vector2(30, 448)
 
-[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("3_on1d0")]
+[node name="SeedSet6" parent="Garbage" index="6" instance=ExtResource("3_on1d0")]
 position = Vector2(-60, 704)
 
-[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("3_on1d0")]
+[node name="SeedSet7" parent="Garbage" index="7" instance=ExtResource("3_on1d0")]
 position = Vector2(27, 964)
 
 [node name="Robot" parent="." index="23"]
