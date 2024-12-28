@@ -29,7 +29,7 @@ public partial class PauseMenu : CanvasLayer
             HidePauseMenu();
             GoToScene(_mainMenuScene);
         };
-        _exit.Pressed += () => GetTree().Quit();
+        _exit.Pressed += () => TransitionLayer.Instance.Exit();
 
         HidePauseMenu();
     }

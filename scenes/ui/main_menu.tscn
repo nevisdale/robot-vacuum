@@ -5,6 +5,7 @@
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_c862v")
 _startScene = "res://scenes/levels/intro.tscn"
+_selectScene = "res://scenes/ui/select_level_menu.tscn"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -49,6 +50,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 80
 text = "Continue"
+
+[node name="Select" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 80
+text = "Select"
 
 [node name="Exit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

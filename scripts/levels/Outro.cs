@@ -22,7 +22,10 @@ public partial class Outro : Node2D
     public override void _Ready()
     {
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
-        SaveManager.SaveGame(GetTree());
+
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
+
         AudioManager.Instance.StopSoundBackgroundSmooth();
 
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
@@ -56,9 +59,11 @@ public partial class Outro : Node2D
                 _audioStreamPlayer.Finished += () =>
                 {
                     // wait a few seconds
-                    Timer timer = new Timer();
-                    timer.WaitTime = 3;
-                    timer.OneShot = true;
+                    Timer timer = new Timer
+                    {
+                        WaitTime = 3,
+                        OneShot = true
+                    };
                     AddChild(timer);
                     timer.Start();
                     timer.Timeout += () =>

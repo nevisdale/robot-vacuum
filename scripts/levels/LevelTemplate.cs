@@ -31,7 +31,8 @@ public partial class LevelTemplate : Node2D
 	{
 		DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
 
-		SaveManager.SaveGame(GetTree());
+		SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+		gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
 
 		AudioManager.Instance.PlaySoundBackground();
 

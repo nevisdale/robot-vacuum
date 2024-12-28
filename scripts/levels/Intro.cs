@@ -23,7 +23,9 @@ public partial class Intro : Node2D
     public override void _Ready()
     {
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
-        SaveManager.SaveGame(GetTree());
+
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
 
         _audioStreamPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
         _robot = GetNode<Robot>("Robot");

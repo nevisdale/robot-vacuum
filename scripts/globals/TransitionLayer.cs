@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 namespace RobotVacuum.Scripts.Globals;
@@ -64,5 +65,29 @@ public partial class TransitionLayer : CanvasLayer
         }
 
         GD.Print($"{Name}. changed scene to {sceneFileName}");
+    }
+
+    public void ChangeSceneToFast(string sceneFileName)
+    {
+        if (sceneFileName == null || sceneFileName.Length == 0)
+        {
+            GD.PrintErr($"{Name}. scene is null. do nothing");
+            return;
+        }
+
+        Error err = GetTree().ChangeSceneToFile(sceneFileName);
+        if (err != Error.Ok)
+        {
+            GD.PrintErr($"{Name}. changing scene: {err}");
+            return;
+        }
+
+        GD.Print($"{Name}. changed scene to {sceneFileName}");
+    }
+
+    public void Exit()
+    {
+        SaveManager.Instance.SaveGameState();
+        GetTree().Quit();
     }
 }
