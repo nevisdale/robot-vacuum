@@ -4,7 +4,7 @@ using Godot;
 
 namespace RobotVacuum.Scripts.Garbage;
 
-public partial class PhysicsGarbage : RigidBody2D, IGarbage
+public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceiver
 {
     private record _dampData(float LinearDamp, float AngularDamp);
 
@@ -22,10 +22,42 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
     private _dampData _initialDampData;
     private readonly _dampData _onWetSpotDampData = new(0f, 0f);
 
+    // prevent sending electricity 2 times from the same garbage pair
+    private long _hasElectricityLastTime = 0;
+    private bool _hasElectricity = false;
+    public bool HasElectricity
+    {
+        get => _hasElectricity;
+        set
+        {
+            _hasElectricity = value;
+            if (_hasElectricity)
+            {
+                _hasElectricityLastTime = DateTime.Now.Ticks;
+            }
+            ApplyElectricityVisual();
+        }
+    }
+
+    private string _name;
+
     public override void _Ready()
     {
         _collisionShape = GetNode<CollisionShape2D>("CollisionShape2D");
         _initialDampData = new _dampData(LinearDamp, AngularDamp);
+
+        _name = GetParent().Name;
+
+        BodyEntered += PhysicsGarbage_BodyEntered;
+    }
+
+    private void PhysicsGarbage_BodyEntered(Node body)
+    {
+        IElectricityReceiver receiver = body as IElectricityReceiver;
+        if (receiver != null)
+        {
+            SendElectricityIfPossible(receiver);
+        }
     }
 
     public bool CanBeCapturedByBin() => true;
@@ -93,5 +125,36 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage
         // must be enough small to be sure that the garbage is moving by car
         long epsilon = TimeSpan.FromSeconds(0.01).Ticks;
         return DateTime.Now.Ticks - _touchedByCarLastTime < epsilon;
+    }
+
+    public bool SendElectricityIfPossible(IElectricityReceiver receiver)
+    {
+        long electricityDelay = TimeSpan.FromSeconds(0.05).Ticks;
+        bool canSendElectricity = DateTime.Now.Ticks - _hasElectricityLastTime >= electricityDelay;
+
+        if (HasElectricity && canSendElectricity)
+        {
+            receiver.ReceiveElectricity();
+            HasElectricity = false;
+            return true;
+        }
+        return false;
+    }
+
+    public void ReceiveElectricity()
+    {
+        HasElectricity = true;
+    }
+
+    private void ApplyElectricityVisual()
+    {
+        if (_hasElectricity)
+        {
+            Modulate = new Color(1, 1, 1, 0.5f);
+        }
+        else
+        {
+            Modulate = new Color(1, 1, 1, 1);
+        }
     }
 }

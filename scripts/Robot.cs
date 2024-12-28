@@ -6,7 +6,7 @@ using System;
 
 namespace RobotVacuum.Scripts;
 
-public partial class Robot : CharacterBody2D
+public partial class Robot : CharacterBody2D, IElectricityReceiver
 {
 	private const float LIGHT_ENERGY_MIN = 1f;
 	private const float LIGHT_ENERGY_MAX = 15f;
@@ -62,15 +62,45 @@ public partial class Robot : CharacterBody2D
 		OutDangerAreaTweenAnimation();
 	}
 
+	private string _rotateLeftAction = "rotate_left";
+	private string _rotateRightAction = "rotate_right";
+	private string _moveForwardAction = "move_forward";
+	private string[] _allActions = new string[] { "rotate_left", "rotate_right", "move_forward" };
+
+
+	private static void ShuffleArray(string[] array)
+	{
+		Random random = new Random();
+		for (int i = array.Length - 1; i > 0; i--)
+		{
+			int j = random.Next(0, i + 1);
+			(array[j], array[i]) = (array[i], array[j]);
+		}
+
+		// make sure that new robot control will be different from the starting control
+		if (array[2] == "move_forward")
+		{
+			(array[0], array[2]) = (array[2], array[0]);
+		}
+	}
+
+	private void ChangeControl()
+	{
+		ShuffleArray(_allActions);
+		_rotateLeftAction = _allActions[0];
+		_rotateRightAction = _allActions[1];
+		_moveForwardAction = _allActions[2];
+	}
+
 	public override void _PhysicsProcess(double delta)
 	{
 		// rotate the robot
 		float rotateDir = 0f;
-		if (Input.IsActionPressed("rotate_left"))
+		if (Input.IsActionPressed(_rotateLeftAction))
 		{
 			rotateDir = -1f;
 		}
-		else if (Input.IsActionPressed("rotate_right"))
+		else if (Input.IsActionPressed(_rotateRightAction))
 		{
 			rotateDir = 1f;
 		}
@@ -81,7 +111,7 @@ public partial class Robot : CharacterBody2D
 
 		// move the robot
 		Velocity = Vector2.Zero;
-		if (Input.IsActionPressed("move_forward"))
+		if (Input.IsActionPressed(_moveForwardAction))
 		{
 			Velocity = Vector2.Up.Rotated(Rotation) * _moveSpeed;
 		}
@@ -111,6 +141,7 @@ public partial class Robot : CharacterBody2D
 				garbage.TouchedByRobotLastTime = now;
 
 				garbage.Push(kinematicCollision, _pushForce * (float)delta);
+				garbage.SendElectricityIfPossible(this);
 			}
 		}
 	}
@@ -209,5 +240,10 @@ public partial class Robot : CharacterBody2D
 		_tweenLight = CreateTween();
 		_tweenLight.TweenProperty(_pointLightRed, "energy", LIGHT_ENERGY_MIN, 0.5);
 		_tweenLight.TweenProperty(_pointLightGreen, "energy", LIGHT_ENERGY_MAX, 0.5);
+	}
+
+	public void ReceiveElectricity()
+	{
+		ChangeControl();
 	}
 }

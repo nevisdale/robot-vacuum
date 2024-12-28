@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx0yv6ktaof73"]
+
+[ext_resource type="Script" path="res://scripts/objects/Electricity.cs" id="1_hpk3e"]
+[ext_resource type="Texture2D" uid="uid://dnla23ayo2mep" path="res://icon.svg" id="1_o1suq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3quv"]
+size = Vector2(128, 124)
+
+[node name="Electricity" type="Area2D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_hpk3e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(1.29688, 1.29688)
+texture = ExtResource("1_o1suq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l3quv")

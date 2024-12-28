@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://de1lseeix3n7n"]
+
+[ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_h7yur"]
+[ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="2_2yoi3"]
+[ext_resource type="PackedScene" uid="uid://is5wx7gomf1e" path="res://scenes/garbage/baby_bottle.tscn" id="3_c5rc5"]
+[ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="4_nrvv1"]
+[ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_s815l"]
+
+[node name="Level14" instance=ExtResource("1_h7yur")]
+_nextLevelScene = "res://scenes/levels/level_15.tscn"
+
+[node name="ZapSpot" parent="." index="2" instance=ExtResource("2_2yoi3")]
+position = Vector2(199, 556)
+
+[node name="ZapSpot2" parent="." index="3" instance=ExtResource("2_2yoi3")]
+position = Vector2(199, 556)
+
+[node name="Charger" parent="." index="4"]
+position = Vector2(689, 1372)
+
+[node name="BabyBottle" parent="Garbage" index="0" instance=ExtResource("3_c5rc5")]
+rotation = -1.309
+
+[node name="BabyBottle2" parent="Garbage" index="1" instance=ExtResource("3_c5rc5")]
+position = Vector2(204, 499)
+rotation = -2.35619
+
+[node name="BabyBottle3" parent="Garbage" index="2" instance=ExtResource("3_c5rc5")]
+position = Vector2(-1059, 471)
+rotation = 0.785397
+
+[node name="SeedSet" parent="Garbage" index="3" instance=ExtResource("4_nrvv1")]
+position = Vector2(-494, 696)
+
+[node name="SeedSet2" parent="Garbage" index="4" instance=ExtResource("4_nrvv1")]
+position = Vector2(-571, -67)
+
+[node name="SeedSet3" parent="Garbage" index="5" instance=ExtResource("4_nrvv1")]
+position = Vector2(815, 447)
+
+[node name="SeedSet4" parent="Garbage" index="6" instance=ExtResource("4_nrvv1")]
+position = Vector2(359, -361)
+
+[node name="Robot" parent="." index="6"]
+position = Vector2(691, 1274)
+
+[node name="Bin" parent="." index="10" instance=ExtResource("5_s815l")]
+position = Vector2(-703, -528)

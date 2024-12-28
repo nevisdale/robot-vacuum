@@ -4,7 +4,7 @@ using RobotVacuum.Scripts.Garbage;
 
 namespace RobotVacuum.Scripts.Enemies;
 
-public partial class Car : CharacterBody2D
+public partial class Car : CharacterBody2D, IElectricityReceiver
 {
 	[Export] private float _speed = 1000f;
 	[Export] private float _pushForce = 5000f;
@@ -17,6 +17,7 @@ public partial class Car : CharacterBody2D
 	private Area2D _dangerArea = null;
 	private readonly List<Sprite2D> _wheels = new();
 	private float _wheelSpeed = 0.5f;
+	private bool _hasElectricity = false;
 
 	public override void _Ready()
 	{
@@ -51,6 +52,7 @@ public partial class Car : CharacterBody2D
 		{
 			// push psysics garbage
 			garbage.Push(collision, _pushForce * (float)delta);
+			garbage.SendElectricityIfPossible(this);
 			if (_direction != Vector2.Zero)
 			{
 				garbage.TouchedByCar();
@@ -90,9 +92,16 @@ public partial class Car : CharacterBody2D
 		}
 	}
 
-	public void SetDirectionTo(Vector2 target)
+	private void ChangeDirection()
 	{
-		_direction = target.Normalized();
+		_hasElectricity = !_hasElectricity;
+		_direction = -_direction;
+		ApplyDirection();
+	}
+
+	private void ApplyDirection()
+	{
+
 		if (_direction == Vector2.Left)
 		{
 			_wheelSpeed = -_wheelRotationSpeed;
@@ -101,6 +110,19 @@ public partial class Car : CharacterBody2D
 		{
 			_wheelSpeed = _wheelRotationSpeed;
 		}
+		else
+		{
+			_wheelSpeed = 0;
+		}
+	}
+
+	public void SetDirectionTo(Vector2 target)
+	{
+		if (_hasElectricity)
+		{
+			target = -target;
+		}
+		_direction = target;
 	}
 
 	// if the car stuck, try to push the can
@@ -168,6 +190,27 @@ public partial class Car : CharacterBody2D
 		if (body is Robot robot)
 		{
 			robot.OutDangerArea();
+		}
+	}
+
+	public void ReceiveElectricity()
+	{
+		GD.Print($"{Name} received electricity");
+		ChangeDirection();
+		ApplyElectricityVisual();
+	}
+
+	private void ApplyElectricityVisual()
+	{
+		if (_hasElectricity)
+		{
+			// set transpareny 0.5
+			Modulate = new Color(1, 1, 1, 0.5f);
+		}
+		else
+		{
+			// set transpareny 1
+			Modulate = new Color(1, 1, 1, 1);
 		}
 	}
 }
