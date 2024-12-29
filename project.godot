@@ -101,3 +101,7 @@ pause={
 2d_physics/layer_2="Robot"
 2d_physics/layer_3="Objects"
 2d_physics/layer_4="Enemy"
+
+[rendering]
+
+anti_aliasing/quality/msaa_2d=3
