@@ -122,6 +122,11 @@ layout_mode = 2
 _title = "17"
 _scenePath = "res://scenes/levels/level_17.tscn"
 
+[node name="LevelButton18" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
+layout_mode = 2
+_title = "18"
+_scenePath = "res://scenes/levels/level_18.tscn"
+
 [node name="MarginContainer2" type="MarginContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 3
