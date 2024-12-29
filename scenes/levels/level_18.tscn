@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="13_aom5g"]
 
 [node name="Level18" instance=ExtResource("1_0l720")]
-_nextLevelScene = "res://scenes/levels/outro.tscn"
+_nextLevelScene = "res://scenes/levels/level_19.tscn"
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_v10l8")]
 position = Vector2(-1491, 1279)
