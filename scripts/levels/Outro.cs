@@ -17,8 +17,6 @@ public partial class Outro : Node2D
     private AudioStreamPlayer _audioStreamPlayer = null;
 
 
-    private bool _isFullscreen = false;
-
     public override void _Ready()
     {
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
@@ -89,31 +87,5 @@ public partial class Outro : Node2D
             };
         };
 
-    }
-
-    public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("fullscreen"))
-        {
-            ToggleWindowMode();
-        }
-    }
-
-    private void ToggleWindowMode()
-    {
-        DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.Fullscreen;
-        DisplayServer.MouseMode mouseMode = DisplayServer.MouseMode.Hidden;
-        if (_isFullscreen)
-        {
-            windowMode = DisplayServer.WindowMode.Windowed;
-            mouseMode = DisplayServer.MouseMode.Visible;
-            _isFullscreen = false;
-        }
-        else
-        {
-            _isFullscreen = true;
-        }
-        DisplayServer.WindowSetMode(windowMode);
-        DisplayServer.MouseSetMode(mouseMode);
     }
 }

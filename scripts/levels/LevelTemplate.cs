@@ -10,8 +10,11 @@ namespace RobotVacuum.Scripts.Levels;
 public partial class LevelTemplate : Node2D
 {
 	private const int CAMERA_LIMIT_OFFSET = 64;
+
 	[Export(PropertyHint.File)]
 	private string _nextLevelScene = null;
+	[Export]
+	private AudioManager.BackgroundSound _backgroundSoundType = AudioManager.BackgroundSound.Alone;
 
 	private Robot _robot = null;
 	private Node2D _garbageContainer = null;
@@ -22,19 +25,22 @@ public partial class LevelTemplate : Node2D
 	private List<Car> _cars = new();
 	private Camera2D _camera = null;
 
-	private bool _isFullscreen = false;
-
 	// needs to reload current scene only once
 	private bool _robot_captured = false;
 
 	public override void _Ready()
 	{
+#if DEBUG
+		// usefull for testing
+		DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
+#endif
+
 		DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
 
 		SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
 		gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
 
-		AudioManager.Instance.PlaySoundBackground();
+		AudioManager.Instance.PlaySoundBackgroundType(_backgroundSoundType);
 
 		_robot = GetNode<Robot>("Robot");
 		_camera = GetNode<Camera2D>("Robot/Camera2D");
@@ -77,20 +83,13 @@ public partial class LevelTemplate : Node2D
 			TransitionLayer.Instance.ReloadCurrentScene();
 		}
 
-		if (Input.IsActionJustPressed("fullscreen"))
-		{
-			ToggleWindowMode();
-		}
 
+#if DEBUG
 		if (Input.IsActionJustPressed("next_level"))
 		{
 			TransitionLayer.Instance.ChangeSceneTo(_nextLevelScene);
 		}
-
-		if (Input.IsActionJustPressed("mute"))
-		{
-			AudioManager.Instance.ToggleMute();
-		}
+#endif
 	}
 
 	private void Robot_OnCapturedByEnemy()
@@ -128,20 +127,5 @@ public partial class LevelTemplate : Node2D
 			}
 		}
 		return children;
-	}
-
-	private void ToggleWindowMode()
-	{
-		DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.ExclusiveFullscreen;
-		if (_isFullscreen)
-		{
-			windowMode = DisplayServer.WindowMode.Windowed;
-			_isFullscreen = false;
-		}
-		else
-		{
-			_isFullscreen = true;
-		}
-		DisplayServer.WindowSetMode(windowMode);
 	}
 }

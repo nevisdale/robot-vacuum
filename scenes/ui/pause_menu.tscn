@@ -7,6 +7,14 @@ process_mode = 3
 script = ExtResource("1_82up0")
 _mainMenuScene = "res://scenes/ui/main_menu.tscn"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.329412, 0.329412, 0.329412, 0.913725)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 13
@@ -36,6 +44,138 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Continue"
+
+[node name="MusicVolume" type="Control" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/MusicVolume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_right = 110
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/MusicVolume/MarginContainer"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="MusicLabel" type="Label" parent="Control/VBoxContainer/MusicVolume/MarginContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Music:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicLess" type="Button" parent="Control/VBoxContainer/MusicVolume"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "<"
+
+[node name="MusicMore" type="Button" parent="Control/VBoxContainer/MusicVolume"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = ">"
+
+[node name="SoundVolume" type="Control" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/SoundVolume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_right = 110
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/SoundVolume/MarginContainer"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="SoundLabel" type="Label" parent="Control/VBoxContainer/SoundVolume/MarginContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Sound:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundLess" type="Button" parent="Control/VBoxContainer/SoundVolume"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "<"
+
+[node name="SoundMore" type="Button" parent="Control/VBoxContainer/SoundVolume"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = ">"
+
+[node name="WindowMode" type="Button" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Fullscreen"
 
 [node name="ExitToMainMenu" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true

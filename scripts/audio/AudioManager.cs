@@ -1,11 +1,51 @@
 using Godot;
+using Godot.Collections;
+using RobotVacuum.Scripts.Globals;
 
 namespace RobotVacuum.Scripts.Audio;
 
 public partial class AudioManager : AudioStreamPlayer
 {
+    public enum BackgroundSound
+    {
+        Unknown = -1,
+        Alone = 0,
+        Couple = 1,
+        Family = 2,
+        Divorce = 3,
+    }
+
     public static AudioManager Instance { get; private set; }
 
+    public int MusicVolume
+    {
+        get
+        {
+            SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+            return gameState.MusicVolume;
+        }
+    }
+
+    public int SoundVolume
+    {
+        get
+        {
+            SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+            return gameState.SoundVolume;
+        }
+    }
+
+    // background sounds
+    [Export]
+    private AudioStream _aloneBackgroundSound = null;
+    [Export]
+    private AudioStream _coupleBackgroundSound = null;
+    [Export]
+    private AudioStream _familyBackgroundSound = null;
+    [Export]
+    private AudioStream _divorceBackgroundSound = null;
+
+    // sfxs
     [Export]
     private AudioStreamPlayer _pushGarbageSoundPlayer = null;
     [Export]
@@ -15,13 +55,25 @@ public partial class AudioManager : AudioStreamPlayer
     [Export]
     private AudioStreamPlayer _carCaptureSoundPlayer = null;
 
-    private bool _muted = true;
-    private float _initVolumeDb = 0;
+
+    private Dictionary<BackgroundSound, AudioStream> _backgroundSounds = null;
+    private BackgroundSound _currentBackgroundSound = BackgroundSound.Unknown;
 
     public override void _Ready()
     {
         Stop();
-        _initVolumeDb = VolumeDb;
+
+        ApplyVolume();
+
+        _backgroundSounds = new Dictionary<BackgroundSound, AudioStream>
+        {
+            { BackgroundSound.Alone, _aloneBackgroundSound },
+            { BackgroundSound.Couple, _coupleBackgroundSound },
+            { BackgroundSound.Family, _familyBackgroundSound },
+            { BackgroundSound.Divorce, _divorceBackgroundSound }
+        };
+        Stream = _backgroundSounds[BackgroundSound.Alone];
+
         Instance = this;
     }
 
@@ -32,28 +84,24 @@ public partial class AudioManager : AudioStreamPlayer
         _captureGarbageSoundPlayer.Stop();
         _catCaptureSoundPlayer.Stop();
         _carCaptureSoundPlayer.Stop();
+        _currentBackgroundSound = BackgroundSound.Unknown;
     }
 
-    public void ToggleMute()
+    public void PlaySoundBackgroundType(BackgroundSound backgroundSoundType)
     {
-        _muted = !_muted;
-        if (_muted)
-        {
-            Stop();
-        }
-        else
-        {
-            Play();
-        }
-    }
-
-    public void PlaySoundBackground()
-    {
-        if (_muted)
+        if (_currentBackgroundSound == backgroundSoundType)
         {
             return;
         }
 
+        StopSoundBackground();
+        _currentBackgroundSound = backgroundSoundType;
+        Stream = _backgroundSounds[_currentBackgroundSound];
+        PlaySoundBackground();
+    }
+
+    public void PlaySoundBackground()
+    {
         if (!Playing)
         {
             Play();
@@ -63,6 +111,7 @@ public partial class AudioManager : AudioStreamPlayer
     public void StopSoundBackground()
     {
         Stop();
+        _currentBackgroundSound = BackgroundSound.Unknown;
     }
 
     public async void StopSoundBackgroundSmooth()
@@ -79,7 +128,10 @@ public partial class AudioManager : AudioStreamPlayer
             Stop();
         };
         await ToSignal(tween, "finished");
-        VolumeDb = _initVolumeDb;
+
+        // restore volume
+        ApplyVolume();
+        _currentBackgroundSound = BackgroundSound.Unknown;
     }
 
     public void PlaySoundPushGarbage()
@@ -104,16 +156,51 @@ public partial class AudioManager : AudioStreamPlayer
 
     private async void PlaySound(AudioStreamPlayer audioStreamPlayer, float startFrom = 0f)
     {
-        if (_muted)
-        {
-            return;
-        }
-
         if (!audioStreamPlayer.Playing)
         {
             audioStreamPlayer.Stop();
             audioStreamPlayer.Play(startFrom);
             await ToSignal(audioStreamPlayer, "finished");
         }
+    }
+
+    private void ApplyVolume()
+    {
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        VolumeDb = gameState.MusicVolumeDb();
+
+        float soundVolumeDb = gameState.SoundVolumeDb();
+        _pushGarbageSoundPlayer.VolumeDb = soundVolumeDb;
+        _captureGarbageSoundPlayer.VolumeDb = soundVolumeDb;
+        _catCaptureSoundPlayer.VolumeDb = soundVolumeDb;
+        _carCaptureSoundPlayer.VolumeDb = soundVolumeDb;
+    }
+
+    public void MusicVolumeUp()
+    {
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.MusicVolumeUp();
+        ApplyVolume();
+    }
+
+    public void MusicVolumeDown()
+    {
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.MusicVolumeDown();
+        ApplyVolume();
+    }
+
+    public void SoundVolumeUp()
+    {
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.SoundVolumeUp();
+        ApplyVolume();
+    }
+
+    public void SoundVolumeDown()
+    {
+        SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+        gameState.SoundVolumeDown();
+        ApplyVolume();
     }
 }

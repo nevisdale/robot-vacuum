@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TransitionLayer="*res://scenes/globals/transition_layer.tscn"
-State="*res://scripts/globals/State.cs"
-AudioManager="*res://scenes/globals/audio_manager.tscn"
 SaveManager="*res://scripts/globals/SaveManager.cs"
+State="*res://scripts/globals/State.cs"
+TransitionLayer="*res://scenes/globals/transition_layer.tscn"
+AudioManager="*res://scenes/globals/audio_manager.tscn"
 
 [debug]
 

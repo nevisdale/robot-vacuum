@@ -15,6 +15,7 @@ public partial class MainMenu : CanvasLayer
     private Button _play = null;
     private Button _continue = null;
     private Button _select = null;
+    private Button _windowMode = null;
     private Button _exit = null;
 
     public override void _Ready()
@@ -25,10 +26,12 @@ public partial class MainMenu : CanvasLayer
         _play = GetNode<Button>("%Play");
         _continue = GetNode<Button>("%Continue");
         _select = GetNode<Button>("%Select");
+        _windowMode = GetNode<Button>("%WindowMode");
         _exit = GetNode<Button>("%Exit");
 
         _play.Pressed += () => { GoToScene(_startScene); };
         _select.Pressed += () => { GoToSceneFast(_selectScene); };
+        _windowMode.Pressed += ToggleWindowMode;
         _exit.Pressed += () => TransitionLayer.Instance.Exit();
 
         TryGetSavedData();
@@ -60,7 +63,26 @@ public partial class MainMenu : CanvasLayer
 
     private void GoToSceneFast(string scenePath)
     {
-        // DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
         TransitionLayer.Instance.ChangeSceneToFast(scenePath);
+    }
+
+    private void ToggleWindowMode()
+    {
+        DisplayServer.WindowMode windowMode = DisplayServer.WindowMode.ExclusiveFullscreen;
+        if (IsFullscreen())
+        {
+            windowMode = DisplayServer.WindowMode.Windowed;
+            _windowMode.Text = "Fullscreen";
+        }
+        else
+        {
+            _windowMode.Text = "Windowed";
+        }
+        DisplayServer.WindowSetMode(windowMode);
+    }
+
+    private bool IsFullscreen()
+    {
+        return DisplayServer.WindowGetMode() == DisplayServer.WindowMode.ExclusiveFullscreen;
     }
 }

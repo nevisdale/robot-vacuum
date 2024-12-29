@@ -10,9 +10,53 @@ public partial class SaveManager : Node2D
     // keys for saving/loading game state
     private const string KEY_CURRENT_LEVEL = "current_level";
     private const string KEY_AVAILABLE_LEVEL = "available_level";
+    private const string KEY_MUSIC_VOLUME = "music_volume";
+    private const string KEY_SOUND_VOLUME = "sound_volume";
 
     public class GameState
     {
+        public int MusicVolume;
+        public int SoundVolume;
+
+        private static float IntToDb(int value)
+        {
+            return value switch
+            {
+                0 => -80,
+                1 => -60,
+                2 => -40,
+                3 => -30,
+                4 => -20,
+                5 => -15,
+                6 => -10,
+                7 => -5,
+                8 => -3,
+                9 => -1,
+                10 => 0,
+                _ => (float)0,
+            };
+        }
+
+        private void AddMusicVolume(int value)
+        {
+            MusicVolume += value;
+            Normalize();
+        }
+
+        private void AddSoundVolume(int value)
+        {
+            SoundVolume += value;
+            Normalize();
+        }
+
+        public float MusicVolumeDb() => IntToDb(MusicVolume);
+        public void MusicVolumeUp() => AddMusicVolume(1);
+        public void MusicVolumeDown() => AddMusicVolume(-1);
+
+        public float SoundVolumeDb() => IntToDb(SoundVolume);
+        public void SoundVolumeUp() => AddSoundVolume(1);
+        public void SoundVolumeDown() => AddSoundVolume(-1);
+
         // from which level to continue the game
         public string CurrentLevelScene;
 
@@ -25,6 +69,27 @@ public partial class SaveManager : Node2D
             CurrentLevelScene = currentScenePath;
             AvailableLevelScenes.Add(currentScenePath);
         }
+
+        public void Normalize()
+        {
+            if (MusicVolume < 0)
+            {
+                MusicVolume = 0;
+            }
+            else if (MusicVolume > 10)
+            {
+                MusicVolume = 10;
+            }
+
+            if (SoundVolume < 0)
+            {
+                SoundVolume = 0;
+            }
+            else if (SoundVolume > 10)
+            {
+                SoundVolume = 10;
+            }
+        }
     }
 
     private GameState _gameState;
@@ -35,6 +100,8 @@ public partial class SaveManager : Node2D
     {
         _gameState = new()
         {
+            MusicVolume = 5,
+            SoundVolume = 5,
             CurrentLevelScene = "",
             AvailableLevelScenes = new HashSet<string>()
         };
@@ -71,9 +138,16 @@ public partial class SaveManager : Node2D
                 case KEY_AVAILABLE_LEVEL:
                     _gameState.AvailableLevelScenes.Add(value);
                     break;
+                case KEY_MUSIC_VOLUME:
+                    _ = int.TryParse(value, out _gameState.MusicVolume);
+                    break;
+                case KEY_SOUND_VOLUME:
+                    _ = int.TryParse(value, out _gameState.SoundVolume);
+                    break;
             }
         }
         saveFile.GetLine();
+        _gameState.Normalize();
     }
 
     public void SaveGameState()
@@ -85,6 +159,8 @@ public partial class SaveManager : Node2D
         {
             saveFile.StoreLine($"{KEY_AVAILABLE_LEVEL}={levelScene}");
         }
+        saveFile.StoreLine($"{KEY_MUSIC_VOLUME}={_gameState.MusicVolume}");
+        saveFile.StoreLine($"{KEY_SOUND_VOLUME}={_gameState.SoundVolume}");
     }
 
     public GameState GetGameState()

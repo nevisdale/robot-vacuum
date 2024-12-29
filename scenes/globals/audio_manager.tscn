@@ -1,18 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwb50xgo8cb3m"]
+[gd_scene load_steps=10 format=3 uid="uid://cwb50xgo8cb3m"]
 
-[ext_resource type="AudioStream" uid="uid://laic7crlva0k" path="res://assets/sound/back8bit_test.mp3" id="1_a4g47"]
 [ext_resource type="Script" path="res://scripts/audio/AudioManager.cs" id="2_w8mny"]
 [ext_resource type="AudioStream" uid="uid://r8qfp8yvewn0" path="res://assets/sound/hitcan8bit_test.mp3" id="3_7yy7l"]
+[ext_resource type="AudioStream" uid="uid://d4mkqd53usobh" path="res://assets/sound/bg_alone.wav" id="3_we33e"]
+[ext_resource type="AudioStream" uid="uid://c7v1xd6rmhvy7" path="res://assets/sound/bg_couple.wav" id="4_bo7si"]
 [ext_resource type="AudioStream" uid="uid://j7f6qblfhcep" path="res://assets/sound/capture_garbage_test.mp3" id="4_saue1"]
+[ext_resource type="AudioStream" uid="uid://7v4gfhilf78b" path="res://assets/sound/bg_family.wav" id="5_bibqw"]
 [ext_resource type="AudioStream" uid="uid://c7f8yanf1frjm" path="res://assets/sound/meow.mp3" id="5_v3vsu"]
+[ext_resource type="AudioStream" uid="uid://l5ocnw0023je" path="res://assets/sound/bg_divorce.wav" id="6_mnrr0"]
 [ext_resource type="AudioStream" uid="uid://nepikcgfugph" path="res://assets/sound/car_crash_test.mp3" id="6_pug43"]
 
 [node name="AudioManager" type="AudioStreamPlayer" node_paths=PackedStringArray("_pushGarbageSoundPlayer", "_captureGarbageSoundPlayer", "_catCaptureSoundPlayer", "_carCaptureSoundPlayer")]
-stream = ExtResource("1_a4g47")
-volume_db = -20.0
-autoplay = true
-parameters/looping = true
 script = ExtResource("2_w8mny")
+_aloneBackgroundSound = ExtResource("3_we33e")
+_coupleBackgroundSound = ExtResource("4_bo7si")
+_familyBackgroundSound = ExtResource("5_bibqw")
+_divorceBackgroundSound = ExtResource("6_mnrr0")
 _pushGarbageSoundPlayer = NodePath("PushGarbagePlayer")
 _captureGarbageSoundPlayer = NodePath("CaptureGarbagePlayer")
 _catCaptureSoundPlayer = NodePath("CatCapturePlayer")
