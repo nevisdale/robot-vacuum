@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c4hf5du4k4dg7"]
+[gd_scene load_steps=20 format=3 uid="uid://c4hf5du4k4dg7"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_lsonx"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_8mpko"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="14_aomcp"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="15_q1pwk"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="16_ym7jb"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="18_m5ytc"]
 
 [node name="Level19" instance=ExtResource("1_lsonx")]
 _nextLevelScene = "res://scenes/levels/outro.tscn"
@@ -55,7 +56,7 @@ position = Vector2(-928, -65)
 rotation = -1.0472
 
 [node name="SeedSet" parent="Garbage" index="3" instance=ExtResource("3_2hfxi")]
-position = Vector2(-469, -715)
+position = Vector2(-519, -595)
 
 [node name="SeedSet2" parent="Garbage" index="4" instance=ExtResource("3_2hfxi")]
 position = Vector2(-313, -126)
@@ -97,7 +98,7 @@ position = Vector2(-1525, 1077)
 position = Vector2(-532, -292)
 
 [node name="Dust2" parent="Garbage" index="17" instance=ExtResource("10_smofu")]
-position = Vector2(-278, -589)
+position = Vector2(-275, -463)
 
 [node name="Dust3" parent="Garbage" index="18" instance=ExtResource("10_smofu")]
 position = Vector2(-580, 51)
@@ -270,6 +271,10 @@ position = Vector2(1724, -814)
 
 [node name="BoxVertical" parent="Env" index="33" instance=ExtResource("16_ym7jb")]
 position = Vector2(652, -783)
+
+[node name="SlippersBlue" parent="Env" index="34" instance=ExtResource("18_m5ytc")]
+position = Vector2(-228, -840)
+rotation = -3.14159
 
 [node name="Bin" parent="." index="12" instance=ExtResource("14_aomcp")]
 position = Vector2(1845, -52)

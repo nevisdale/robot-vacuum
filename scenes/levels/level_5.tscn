@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://hquxq7e0y1ri"]
+[gd_scene load_steps=18 format=3 uid="uid://hquxq7e0y1ri"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_87kf8"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_hvk5q"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ccq3npin00ne" path="res://scenes/objects/flower_pot.tscn" id="10_lo1yn"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="10_prhlw"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="11_j7w1s"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="14_y0i2t"]
 
 [sub_resource type="Curve2D" id="Curve2D_8rdje"]
 _data = {
@@ -204,6 +205,10 @@ position = Vector2(1514, 1091)
 
 [node name="BoxHorizontal" parent="Env" index="11" instance=ExtResource("10_0npyh")]
 position = Vector2(-1418, 3)
+
+[node name="SlippersBlue" parent="Env" index="12" instance=ExtResource("14_y0i2t")]
+position = Vector2(443, -852)
+rotation = 3.40339
 
 [node name="Bin" parent="." index="7" instance=ExtResource("5_imycx")]
 position = Vector2(220, 443)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://djw2miqcpjv1m"]
+[gd_scene load_steps=10 format=3 uid="uid://djw2miqcpjv1m"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_7pyra"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_o15sh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://drw1jqmt8sljb" path="res://scenes/objects/box_angle.tscn" id="7_sqmmq"]
 [ext_resource type="PackedScene" uid="uid://24xlbclkg2nt" path="res://scenes/objects/box_vertical_open.tscn" id="7_vbh6a"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="8_2dk55"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="9_ehugw"]
 
 [node name="Level1" instance=ExtResource("1_7pyra")]
 _nextLevelScene = "res://scenes/levels/level_2.tscn"
@@ -94,7 +95,7 @@ position = Vector2(763, 394)
 position = Vector2(259, 1043)
 
 [node name="Dust7" parent="Garbage" index="26" instance=ExtResource("3_k5vjk")]
-position = Vector2(631, 1135)
+position = Vector2(657, 856)
 
 [node name="Dust8" parent="Garbage" index="27" instance=ExtResource("3_k5vjk")]
 position = Vector2(1359, 693)
@@ -162,3 +163,7 @@ rotation = -0.0144057
 
 [node name="BoxVerticalOpen" parent="Env" index="8" instance=ExtResource("7_vbh6a")]
 position = Vector2(1195, 1057)
+
+[node name="SlippersBlue" parent="Env" index="9" instance=ExtResource("9_ehugw")]
+position = Vector2(803, 1393)
+rotation = -0.261799

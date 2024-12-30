@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bi30mxhbpthfe"]
+[gd_scene load_steps=17 format=3 uid="uid://bi30mxhbpthfe"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_fhm6c"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="4_d0tde"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="10_tttqv"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="13_ah8bk"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="14_hupf8"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="14_rff3a"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="15_edoew"]
 
 [node name="Level9" instance=ExtResource("1_fhm6c")]
 _nextLevelScene = "res://scenes/levels/level_10.tscn"
@@ -45,7 +47,7 @@ position = Vector2(909, -159)
 position = Vector2(267, -155)
 
 [node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("5_pbt6x")]
-position = Vector2(-1503, 236)
+position = Vector2(317, 632)
 
 [node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("5_pbt6x")]
 position = Vector2(-726, 358)
@@ -221,6 +223,14 @@ position = Vector2(1815, 495)
 
 [node name="FlowerSprout24" parent="Env" index="26" instance=ExtResource("10_8t02m")]
 position = Vector2(1815, 660)
+
+[node name="SlippersBlue" parent="Env" index="27" instance=ExtResource("14_rff3a")]
+position = Vector2(-1665, -130)
+rotation = 1.309
+
+[node name="SlippersRed" parent="Env" index="28" instance=ExtResource("15_edoew")]
+position = Vector2(-1655, 94)
+rotation = 1.0472
 
 [node name="Bin" parent="." index="8" instance=ExtResource("8_s3u1l")]
 position = Vector2(1653, 489)
