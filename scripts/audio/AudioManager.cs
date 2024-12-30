@@ -209,7 +209,6 @@ public partial class AudioManager : AudioStreamPlayer
         _binCaptureGarbageSoundPlayer.VolumeDb = soundVolumeDb;
         _nextLevelOkSoundPlayer.VolumeDb = soundVolumeDb;
         _nextLevelErrorSoundPlayer.VolumeDb = soundVolumeDb;
-
     }
 
     public AudioStreamPlayer GetIntroTheme()
