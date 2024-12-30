@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Godot;
+using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Garbage;
 
 namespace RobotVacuum.Scripts.Enemies;
@@ -201,6 +202,7 @@ public partial class Car : CharacterBody2D, IElectricityReceiver
 	public void ReceiveElectricity()
 	{
 		GD.Print($"{Name} received electricity");
+		AudioManager.Instance.PlaySound_GetElectricity();
 		ChangeDirection();
 		ApplyElectricityVisual();
 	}

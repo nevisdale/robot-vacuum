@@ -38,6 +38,15 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="robot-vacuum"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "purple",
+"res://resources/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "blue"
+}
+
 [filesystem]
 
 import/blender/enabled=false

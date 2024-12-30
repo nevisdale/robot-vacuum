@@ -58,6 +58,18 @@ public partial class AudioManager : AudioStreamPlayer
     private AudioStreamPlayer _catCaptureSoundPlayer = null;
     [Export]
     private AudioStreamPlayer _carCaptureSoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _activateButtonSoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _getElectrricitySoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _wetSpotSoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _binCaptureGarbageSoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _nextLevelOkSoundPlayer = null;
+    [Export]
+    private AudioStreamPlayer _nextLevelErrorSoundPlayer = null;
 
 
     private Dictionary<BackgroundSound, AudioStream> _backgroundSounds = null;
@@ -138,25 +150,35 @@ public partial class AudioManager : AudioStreamPlayer
         _currentBackgroundSound = BackgroundSound.Unknown;
     }
 
-    public void PlaySoundPushGarbage()
-    {
-        PlaySound(_pushGarbageSoundPlayer);
-    }
+    // Robot captures garbage
+    public void PlaySound_RobotCaptureGarbage() => PlaySound(_captureGarbageSoundPlayer, startFrom: 0.2f);
 
-    public void PlaySoundCaptureGarbage()
-    {
-        PlaySound(_captureGarbageSoundPlayer, startFrom: 0.2f);
-    }
+    // Robot pushes garbage
+    public void PlaySound_RobotPushGarbage() => PlaySound(_pushGarbageSoundPlayer);
 
-    public void PlaySoundCatCapture()
-    {
-        PlaySound(_catCaptureSoundPlayer, 0.2f);
-    }
+    // Cat captures robot
+    public void PlaySound_CatCaptureRobot() => PlaySound(_catCaptureSoundPlayer);
 
-    public void PlaySoundCarCapture()
-    {
-        PlaySound(_carCaptureSoundPlayer, 0.1f);
-    }
+    // Car captures robot
+    public void PlaySound_CarCaptureRobot() => PlaySound(_carCaptureSoundPlayer, 0.1f);
+
+    // Activate button
+    public void PlaySound_ActivateButton() => PlaySound(_activateButtonSoundPlayer);
+
+    // Receive electricity
+    public void PlaySound_GetElectricity() => PlaySound(_getElectrricitySoundPlayer);
+
+    // On wet spot
+    public void PlaySound_WetSpot() => PlaySound(_wetSpotSoundPlayer);
+
+    // Bin captures garbage
+    public void PlaySound_BinCaptureGarbage() => PlaySound(_binCaptureGarbageSoundPlayer);
+
+    // Next level ok
+    public void PlaySound_NextLevelOk() => PlaySound(_nextLevelOkSoundPlayer);
+
+    // Next level error
+    public void PlaySound_NextLevelError() => PlaySound(_nextLevelErrorSoundPlayer);
 
     private async void PlaySound(AudioStreamPlayer audioStreamPlayer, float startFrom = 0f)
     {

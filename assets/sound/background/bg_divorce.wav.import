@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://l5ocnw0023je"
-path="res://.godot/imported/bg_divorce.wav-62f15375313a327147c96d775a7056cc.sample"
+path="res://.godot/imported/bg_divorce.wav-bed1f1a14786dfca69bacd7ab831e146.sample"
 
 [deps]
 
-source_file="res://assets/sound/bg_divorce.wav"
-dest_files=["res://.godot/imported/bg_divorce.wav-62f15375313a327147c96d775a7056cc.sample"]
+source_file="res://assets/sound/background/bg_divorce.wav"
+dest_files=["res://.godot/imported/bg_divorce.wav-bed1f1a14786dfca69bacd7ab831e146.sample"]
 
 [params]
 

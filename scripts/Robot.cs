@@ -136,7 +136,7 @@ public partial class Robot : CharacterBody2D, IElectricityReceiver
 				long delay = TimeSpan.FromSeconds(_playSoundPhysicsGarbageDelay).Ticks;
 				if (now - garbage.TouchedByRobotLastTime >= delay)
 				{
-					AudioManager.Instance.PlaySoundPushGarbage();
+					AudioManager.Instance.PlaySound_RobotPushGarbage();
 				}
 				garbage.TouchedByRobotLastTime = now;
 
@@ -150,7 +150,7 @@ public partial class Robot : CharacterBody2D, IElectricityReceiver
 	{
 		if (garbage.CanBeCapturedByRobot())
 		{
-			AudioManager.Instance.PlaySoundCaptureGarbage();
+			AudioManager.Instance.PlaySound_RobotCaptureGarbage();
 			garbage.Capture(this);
 			return true;
 		}
@@ -177,10 +177,10 @@ public partial class Robot : CharacterBody2D, IElectricityReceiver
 		switch (enemy)
 		{
 			case Cat:
-				AudioManager.Instance.PlaySoundCatCapture();
+				AudioManager.Instance.PlaySound_CatCaptureRobot();
 				break;
 			case Car:
-				AudioManager.Instance.PlaySoundCarCapture();
+				AudioManager.Instance.PlaySound_CarCaptureRobot();
 				break;
 		}
 
@@ -244,6 +244,7 @@ public partial class Robot : CharacterBody2D, IElectricityReceiver
 
 	public void ReceiveElectricity()
 	{
+		AudioManager.Instance.PlaySound_GetElectricity();
 		ChangeControl();
 	}
 }

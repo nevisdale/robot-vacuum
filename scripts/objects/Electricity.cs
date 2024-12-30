@@ -1,4 +1,5 @@
 using Godot;
+using RobotVacuum.Scripts.Audio;
 using RobotVacuum.Scripts.Garbage;
 
 namespace RobotVacuum.Scripts.Objects;

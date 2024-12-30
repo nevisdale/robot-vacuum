@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using Godot;
+using RobotVacuum.Scripts.Audio;
 
 namespace RobotVacuum.Scripts.Garbage;
 
@@ -119,6 +120,11 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
             applyDampData = _initialDampData;
         }
 
+        if (_wetSpotCount == 1)
+        {
+            AudioManager.Instance.PlaySound_WetSpot();
+        }
+
         LinearDamp = applyDampData.LinearDamp;
         AngularDamp = applyDampData.AngularDamp;
     }
@@ -159,6 +165,7 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
     {
         if (_canReceiveElectricity)
         {
+            AudioManager.Instance.PlaySound_GetElectricity();
             HasElectricity = true;
         }
     }

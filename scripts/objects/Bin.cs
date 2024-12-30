@@ -18,7 +18,7 @@ public partial class Bin : StaticBody2D
     {
         if (garbage.CanBeCapturedByBin())
         {
-            AudioManager.Instance.PlaySoundCaptureGarbage();
+            AudioManager.Instance.PlaySound_BinCaptureGarbage();
             garbage.Capture(this);
             return true;
         }
