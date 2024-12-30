@@ -10,57 +10,76 @@ script = ExtResource("1_3msh1")
 
 [node name="Seed1" parent="." instance=ExtResource("1_jlv3w")]
 position = Vector2(-24, -8)
+scale = Vector2(1, 1)
 
 [node name="Seed4" parent="." instance=ExtResource("1_jlv3w")]
 position = Vector2(40, -82)
+scale = Vector2(1, 1)
 
 [node name="Seed17" parent="." instance=ExtResource("1_jlv3w")]
 position = Vector2(53, 14)
+scale = Vector2(1, 1)
 
 [node name="Seed5" parent="." instance=ExtResource("1_jlv3w")]
 position = Vector2(56, 82)
+scale = Vector2(1, 1)
 
 [node name="Seed6" parent="." instance=ExtResource("1_jlv3w")]
 position = Vector2(-93, 61)
+scale = Vector2(1, 1)
 
 [node name="Seed2" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(37, -26)
+scale = Vector2(1, 1)
 
 [node name="Seed11" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(-34, -41)
+scale = Vector2(1, 1)
 
 [node name="Seed12" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(-42, 62)
+scale = Vector2(1, 1)
 
 [node name="Seed13" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(-8, -73)
+scale = Vector2(1, 1)
 
 [node name="Seed14" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(-151, 34)
+scale = Vector2(1, 1)
 
 [node name="Seed15" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(-150, -17)
+scale = Vector2(1, 1)
 
 [node name="Seed16" parent="." instance=ExtResource("2_ouyyl")]
 position = Vector2(82, 40)
+scale = Vector2(1, 1)
 
 [node name="Seed3" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-0.999992, 40)
+scale = Vector2(1, 1)
 
 [node name="Seed7" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-112, -49)
+scale = Vector2(1, 1)
 
 [node name="Seed8" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-47, -101)
+scale = Vector2(1, 1)
 
 [node name="Seed18" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-107, -88)
+scale = Vector2(1, 1)
 
 [node name="Seed19" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(88, -26)
+scale = Vector2(1, 1)
 
 [node name="Seed9" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-97, 11)
+scale = Vector2(1, 1)
 
 [node name="Seed10" parent="." instance=ExtResource("3_kl6pr")]
 position = Vector2(-23, 104)
+scale = Vector2(1, 1)
