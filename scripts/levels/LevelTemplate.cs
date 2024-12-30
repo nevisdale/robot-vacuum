@@ -30,11 +30,6 @@ public partial class LevelTemplate : Node2D
 
 	public override void _Ready()
 	{
-#if DEBUG
-		// usefull for testing
-		DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
-#endif
-
 		DisplayServer.MouseSetMode(DisplayServer.MouseMode.Hidden);
 
 		SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
