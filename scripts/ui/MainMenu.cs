@@ -34,6 +34,7 @@ public partial class MainMenu : CanvasLayer
         _windowMode.Pressed += ToggleWindowMode;
         _exit.Pressed += () => TransitionLayer.Instance.Exit();
 
+        UpdateVisual();
         TryGetSavedData();
     }
 
@@ -72,17 +73,25 @@ public partial class MainMenu : CanvasLayer
         if (IsFullscreen())
         {
             windowMode = DisplayServer.WindowMode.Windowed;
-            _windowMode.Text = "Fullscreen";
-        }
-        else
-        {
-            _windowMode.Text = "Windowed";
         }
         DisplayServer.WindowSetMode(windowMode);
+        UpdateVisual();
     }
 
     private bool IsFullscreen()
     {
         return DisplayServer.WindowGetMode() == DisplayServer.WindowMode.ExclusiveFullscreen;
+    }
+
+    private void UpdateVisual()
+    {
+        if (IsFullscreen())
+        {
+            _windowMode.Text = "Windowed";
+        }
+        else
+        {
+            _windowMode.Text = "Fullscreen";
+        }
     }
 }
