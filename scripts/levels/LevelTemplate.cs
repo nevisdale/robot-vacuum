@@ -74,13 +74,12 @@ public partial class LevelTemplate : Node2D
 	public override void _Process(double delta)
 	{
 		State.Instance.GarbageLeft = _garbageContainer.GetChildCount();
+
+#if DEBUG
 		if (Input.IsActionJustPressed("restart"))
 		{
 			TransitionLayer.Instance.ReloadCurrentScene();
 		}
-
-
-#if DEBUG
 		if (Input.IsActionJustPressed("next_level"))
 		{
 			TransitionLayer.Instance.ChangeSceneTo(_nextLevelScene);

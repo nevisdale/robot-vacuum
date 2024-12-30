@@ -13,6 +13,7 @@ public partial class PauseMenu : CanvasLayer
 
     // game buttons
     private Button _resume = null;
+    private Button _restart = null;
     private Button _mainMenu = null;
     private Button _exit = null;
 
@@ -30,6 +31,7 @@ public partial class PauseMenu : CanvasLayer
     public override void _Ready()
     {
         _resume = GetNode<Button>("%Resume");
+        _restart = GetNode<Button>("%Restart");
         _mainMenu = GetNode<Button>("%ExitToMainMenu");
         _exit = GetNode<Button>("%ExitToDesktop");
 
@@ -44,6 +46,14 @@ public partial class PauseMenu : CanvasLayer
         _windowMode = GetNode<Button>("%WindowMode");
 
         _resume.Pressed += () => HidePauseMenu();
+        _restart.Pressed += () =>
+        {
+            // there is a little chance to play sound before restarting
+            AudioManager.Instance.ForceStop();
+            HidePauseMenu();
+            SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+            GoToScene(gameState.CurrentLevelScene);
+        };
         _mainMenu.Pressed += () =>
         {
             // there is a little chance to play sound before going to main menu
