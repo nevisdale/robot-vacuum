@@ -15,7 +15,6 @@
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
 _nextLevelScene = "res://scenes/levels/level_3.tscn"
-_backgroundSoundType = 1
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-6, 1366)

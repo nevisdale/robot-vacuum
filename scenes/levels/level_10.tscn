@@ -17,6 +17,7 @@
 
 [node name="Level10" instance=ExtResource("1_ayjuo")]
 _nextLevelScene = "res://scenes/levels/level_11.tscn"
+_backgroundSoundType = 1
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_bukvg")]
 position = Vector2(-350, 19)

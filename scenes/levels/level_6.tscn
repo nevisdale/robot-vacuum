@@ -22,6 +22,7 @@ point_count = 4
 
 [node name="Level6" instance=ExtResource("1_0l6gs")]
 _nextLevelScene = "res://scenes/levels/level_7.tscn"
+_backgroundSoundType = 1
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-1221, 1354)

@@ -24,6 +24,7 @@ point_count = 4
 
 [node name="Level8" instance=ExtResource("1_on4bn")]
 _nextLevelScene = "res://scenes/levels/level_9.tscn"
+_backgroundSoundType = 1
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("2_4fds5")]
 position = Vector2(0, 948)
