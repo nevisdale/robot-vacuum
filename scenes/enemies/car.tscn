@@ -1,14 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://e02uf0quyt07"]
+[gd_scene load_steps=10 format=3 uid="uid://e02uf0quyt07"]
 
 [ext_resource type="Script" path="res://scripts/enemies/Car.cs" id="1_q1vg6"]
 [ext_resource type="Texture2D" uid="uid://cwm7nmpopjtig" path="res://assets/objects/car_without_wheels.png" id="2_yp2dh"]
 [ext_resource type="Texture2D" uid="uid://dloubsdbo6a8b" path="res://assets/objects/wheel.png" id="3_o7p8f"]
+[ext_resource type="Texture2D" uid="uid://bph5dly0qotjs" path="res://assets/objects/car_electro_1.png" id="4_mqq84"]
+[ext_resource type="Texture2D" uid="uid://dhus8ygjklltk" path="res://assets/objects/car_electro_2.png" id="5_chibw"]
+[ext_resource type="Texture2D" uid="uid://p4aaiv4xhtj0" path="res://assets/objects/car_electro_3.png" id="6_b32xe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8j7"]
 size = Vector2(289, 233)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jivnu"]
 radius = 325.075
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1s22"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mqq84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_chibw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b32xe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Car" type="CharacterBody2D"]
 disable_mode = 1
@@ -193,3 +213,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DangerArea"]
 shape = SubResource("CircleShape2D_jivnu")
+
+[node name="ElectricityVisual" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f1s22")
+frame_progress = 0.391388

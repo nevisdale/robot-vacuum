@@ -15,6 +15,7 @@ public partial class Car : CharacterBody2D, IElectricityReceiver
 	private Node2D _rayCastsLeft = null;
 	private Node2D _rayCastsRight = null;
 	private Area2D _dangerArea = null;
+	private AnimatedSprite2D _electricityVisual = null;
 	private readonly List<Sprite2D> _wheels = new();
 	private float _wheelSpeed = 0.5f;
 	private bool _hasElectricity = false;
@@ -24,6 +25,9 @@ public partial class Car : CharacterBody2D, IElectricityReceiver
 		_rayCastsLeft = GetNode<Node2D>("RayCastLeft");
 		_rayCastsRight = GetNode<Node2D>("RayCastRight");
 		_dangerArea = GetNode<Area2D>("DangerArea");
+		_electricityVisual = GetNode<AnimatedSprite2D>("ElectricityVisual");
+
+		_electricityVisual.Hide();
 
 		Node2D _wheelNode = GetNode<Node2D>("Wheels");
 		for (int i = 0; i < _wheelNode.GetChildCount(); i++)
@@ -205,13 +209,13 @@ public partial class Car : CharacterBody2D, IElectricityReceiver
 	{
 		if (_hasElectricity)
 		{
-			// set transpareny 0.5
-			Modulate = new Color(1, 1, 1, 0.5f);
+			_electricityVisual.Show();
+			_electricityVisual.Play();
 		}
 		else
 		{
-			// set transpareny 1
-			Modulate = new Color(1, 1, 1, 1);
+			_electricityVisual.Hide();
+			_electricityVisual.Stop();
 		}
 	}
 }
