@@ -203,6 +203,13 @@ public partial class AudioManager : AudioStreamPlayer
         _captureGarbageSoundPlayer.VolumeDb = soundVolumeDb;
         _catCaptureSoundPlayer.VolumeDb = soundVolumeDb;
         _carCaptureSoundPlayer.VolumeDb = soundVolumeDb;
+        _activateButtonSoundPlayer.VolumeDb = soundVolumeDb;
+        _getElectrricitySoundPlayer.VolumeDb = soundVolumeDb;
+        _wetSpotSoundPlayer.VolumeDb = soundVolumeDb;
+        _binCaptureGarbageSoundPlayer.VolumeDb = soundVolumeDb;
+        _nextLevelOkSoundPlayer.VolumeDb = soundVolumeDb;
+        _nextLevelErrorSoundPlayer.VolumeDb = soundVolumeDb;
+
     }
 
     public AudioStreamPlayer GetIntroTheme()
