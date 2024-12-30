@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://blhiww3e10vdc"]
+
+[ext_resource type="Texture2D" uid="uid://vyw5bijopwpf" path="res://assets/objects/slippers_male.png" id="1_ax8vf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aok72"]
+size = Vector2(186, 196)
+
+[node name="SlippersBlue" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aok72")
+
+[node name="SlippersMale" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_ax8vf")
