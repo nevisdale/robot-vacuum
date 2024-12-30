@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dfja4mu7uhkfm"]
+[gd_scene load_steps=22 format=4 uid="uid://dfja4mu7uhkfm"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l720"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_a6anv"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c3na3lj8jr5gj" path="res://scenes/objects/wet_spot_big.tscn" id="3_hwmyy"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="3_tkrm2"]
 [ext_resource type="PackedScene" uid="uid://c0jysbs03ffxn" path="res://scenes/garbage/battery.tscn" id="4_j7xko"]
-[ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="5_uvixx"]
+[ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="5_6cxfk"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="6_46475"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="6_uidqk"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="7_r0ws1"]
@@ -15,8 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="9_atrjg"]
 [ext_resource type="PackedScene" uid="uid://dbgiiv38v36be" path="res://scenes/garbage/dust.tscn" id="9_xjg8w"]
 [ext_resource type="PackedScene" uid="uid://dlr7u24giikc6" path="res://scenes/objects/flower_dry.tscn" id="10_hescx"]
+[ext_resource type="PackedScene" path="res://scenes/garbage/green_bottle_broken.tscn" id="10_hjkuc"]
+[ext_resource type="PackedScene" path="res://scenes/garbage/red_bottle_broken.tscn" id="11_t7eg0"]
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="13_1fk83"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="13_aom5g"]
+[ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="18_hoats"]
+[ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="19_4gk4w"]
 
 [node name="Level18" instance=ExtResource("1_0l720")]
 _nextLevelScene = "res://scenes/levels/level_19.tscn"
@@ -40,74 +44,101 @@ position = Vector2(-726, 806)
 [node name="WetSpotBig" parent="." index="6" instance=ExtResource("3_hwmyy")]
 position = Vector2(677, 287)
 
-[node name="Electricity" parent="." index="7" instance=ExtResource("3_tkrm2")]
-position = Vector2(676, 192)
+[node name="Cables" type="TileMapLayer" parent="." index="7"]
+tile_map_data = PackedByteArray("AAAGAAEABAAAAAAAAAAHAAEABAAAAAAAAAAIAAEABAAAAAAAAAAJAAEABAAAAAAAAAAKAAEABAAAAAAAAAALAAEABAAAAAAAAAAMAAEABAAAAAAAAAANAAEABAAAAAAAAAAOAAEABAAAAAAAAAAPAAEABAAAAAAAAAAFAAEABwAAAAAAAAA=")
+tile_set = ExtResource("5_6cxfk")
+
+[node name="Electricity" parent="." index="8" instance=ExtResource("3_tkrm2")]
+position = Vector2(681, 183)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("8_8tuhc")]
 position = Vector2(1426, 6)
 
 [node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("8_8tuhc")]
-position = Vector2(-1518, 614)
+position = Vector2(-491, 1283)
 
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("8_8tuhc")]
+[node name="SeedSet8" parent="Garbage" index="2" instance=ExtResource("8_8tuhc")]
+position = Vector2(-1030, 1233)
+
+[node name="SeedSet3" parent="Garbage" index="3" instance=ExtResource("8_8tuhc")]
 position = Vector2(-1310, -83)
 
-[node name="SeedSet5" parent="Garbage" index="3" instance=ExtResource("8_8tuhc")]
+[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("8_8tuhc")]
 position = Vector2(-597, -305)
 
-[node name="SeedSet4" parent="Garbage" index="4" instance=ExtResource("8_8tuhc")]
-position = Vector2(1743, 875)
+[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("8_8tuhc")]
+position = Vector2(-527, -754)
 
-[node name="Dust" parent="Garbage" index="5" instance=ExtResource("9_xjg8w")]
-position = Vector2(1789, -139)
+[node name="SeedSet4" parent="Garbage" index="6" instance=ExtResource("8_8tuhc")]
+position = Vector2(1396, 752)
 
-[node name="Dust2" parent="Garbage" index="6" instance=ExtResource("9_xjg8w")]
-position = Vector2(1055, -231)
+[node name="SeedSet7" parent="Garbage" index="7" instance=ExtResource("8_8tuhc")]
+position = Vector2(233, 299)
 
-[node name="Dust3" parent="Garbage" index="7" instance=ExtResource("9_xjg8w")]
-position = Vector2(800, 878)
+[node name="Dust" parent="Garbage" index="8" instance=ExtResource("9_xjg8w")]
+position = Vector2(1636, 84)
 
-[node name="Dust4" parent="Garbage" index="8" instance=ExtResource("9_xjg8w")]
-position = Vector2(-438, -54)
+[node name="Dust2" parent="Garbage" index="9" instance=ExtResource("9_xjg8w")]
+position = Vector2(1167, 964)
 
-[node name="Dust5" parent="Garbage" index="9" instance=ExtResource("9_xjg8w")]
-position = Vector2(-772, -25)
+[node name="Dust3" parent="Garbage" index="10" instance=ExtResource("9_xjg8w")]
+position = Vector2(904, 839)
 
-[node name="Dust9" parent="Garbage" index="10" instance=ExtResource("9_xjg8w")]
-position = Vector2(-658, -698)
+[node name="Dust13" parent="Garbage" index="11" instance=ExtResource("9_xjg8w")]
+position = Vector2(24.0001, 434)
 
-[node name="Dust10" parent="Garbage" index="11" instance=ExtResource("9_xjg8w")]
-position = Vector2(-470, -529)
+[node name="Dust14" parent="Garbage" index="12" instance=ExtResource("9_xjg8w")]
+position = Vector2(376, 141)
 
-[node name="Dust11" parent="Garbage" index="12" instance=ExtResource("9_xjg8w")]
-position = Vector2(-430, -730)
+[node name="Dust4" parent="Garbage" index="13" instance=ExtResource("9_xjg8w")]
+position = Vector2(-401, -54)
 
-[node name="Dust6" parent="Garbage" index="13" instance=ExtResource("9_xjg8w")]
-position = Vector2(-1055, 1281)
+[node name="Dust5" parent="Garbage" index="14" instance=ExtResource("9_xjg8w")]
+position = Vector2(-1582, 27)
 
-[node name="Dust7" parent="Garbage" index="14" instance=ExtResource("9_xjg8w")]
-position = Vector2(-951, 1346)
+[node name="Dust12" parent="Garbage" index="15" instance=ExtResource("9_xjg8w")]
+position = Vector2(-1054, -133)
 
-[node name="Dust8" parent="Garbage" index="15" instance=ExtResource("9_xjg8w")]
-position = Vector2(-812, 1239)
+[node name="Dust9" parent="Garbage" index="16" instance=ExtResource("9_xjg8w")]
+position = Vector2(-421, -912)
 
-[node name="Battery" parent="Garbage" index="16" instance=ExtResource("4_j7xko")]
-position = Vector2(717, -201)
-rotation = 0.523599
+[node name="Dust10" parent="Garbage" index="17" instance=ExtResource("9_xjg8w")]
+position = Vector2(-712, -517)
 
-[node name="CanCoke" parent="Garbage" index="17" instance=ExtResource("5_uvixx")]
-position = Vector2(1183, 689)
-rotation = 1.309
+[node name="Dust11" parent="Garbage" index="18" instance=ExtResource("9_xjg8w")]
+position = Vector2(-408, -416)
 
-[node name="CanCoke2" parent="Garbage" index="18" instance=ExtResource("5_uvixx")]
-position = Vector2(-1118, 844)
-rotation = 1.309
+[node name="Dust6" parent="Garbage" index="19" instance=ExtResource("9_xjg8w")]
+position = Vector2(1403, -265)
 
-[node name="CanCoke3" parent="Garbage" index="19" instance=ExtResource("5_uvixx")]
-position = Vector2(1247, 232)
-rotation = 1.0472
+[node name="Dust7" parent="Garbage" index="20" instance=ExtResource("9_xjg8w")]
+position = Vector2(-398, 1077)
 
-[node name="Robot" parent="." index="9"]
+[node name="Dust15" parent="Garbage" index="21" instance=ExtResource("9_xjg8w")]
+position = Vector2(-899, 1400)
+
+[node name="Dust16" parent="Garbage" index="22" instance=ExtResource("9_xjg8w")]
+position = Vector2(-1272, 1063)
+
+[node name="Dust17" parent="Garbage" index="23" instance=ExtResource("9_xjg8w")]
+position = Vector2(-874, 1103)
+
+[node name="Dust8" parent="Garbage" index="24" instance=ExtResource("9_xjg8w")]
+position = Vector2(1287, 492)
+
+[node name="Battery" parent="Garbage" index="25" instance=ExtResource("4_j7xko")]
+position = Vector2(779, -246)
+rotation = 0.785397
+
+[node name="GreenBottle" parent="Garbage" index="26" instance=ExtResource("10_hjkuc")]
+position = Vector2(189, 87)
+rotation = -0.523598
+
+[node name="RedBottle" parent="Garbage" index="27" instance=ExtResource("11_t7eg0")]
+position = Vector2(1077, 631)
+rotation = 0.523598
+
+[node name="Robot" parent="." index="10"]
 position = Vector2(-160, 1292)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_46475")]
@@ -180,5 +211,14 @@ position = Vector2(-1155, 545)
 [node name="CosmeticTable" parent="Env" index="21" instance=ExtResource("13_1fk83")]
 position = Vector2(202, -481)
 
-[node name="Bin" parent="." index="13" instance=ExtResource("13_aom5g")]
-position = Vector2(1854, 484)
+[node name="BoxVertical" parent="Env" index="22" instance=ExtResource("18_hoats")]
+position = Vector2(1718, 814)
+
+[node name="BoxHorizontal" parent="Env" index="23" instance=ExtResource("19_4gk4w")]
+position = Vector2(-1502, 676)
+
+[node name="BoxHorizontal2" parent="Env" index="24" instance=ExtResource("19_4gk4w")]
+position = Vector2(1737, -287)
+
+[node name="Bin" parent="." index="14" instance=ExtResource("13_aom5g")]
+position = Vector2(1832, 361)
