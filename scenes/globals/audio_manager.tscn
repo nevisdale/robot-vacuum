@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwb50xgo8cb3m"]
+[gd_scene load_steps=11 format=3 uid="uid://cwb50xgo8cb3m"]
 
 [ext_resource type="Script" path="res://scripts/audio/AudioManager.cs" id="2_w8mny"]
 [ext_resource type="AudioStream" uid="uid://r8qfp8yvewn0" path="res://assets/sound/hitcan8bit_test.mp3" id="3_7yy7l"]
@@ -9,9 +9,11 @@
 [ext_resource type="AudioStream" uid="uid://c7f8yanf1frjm" path="res://assets/sound/meow.mp3" id="5_v3vsu"]
 [ext_resource type="AudioStream" uid="uid://l5ocnw0023je" path="res://assets/sound/bg_divorce.wav" id="6_mnrr0"]
 [ext_resource type="AudioStream" uid="uid://nepikcgfugph" path="res://assets/sound/car_crash_test.mp3" id="6_pug43"]
+[ext_resource type="AudioStream" uid="uid://dx335y2rjnjf7" path="res://assets/sound/first_scene.wav" id="10_3emqk"]
 
-[node name="AudioManager" type="AudioStreamPlayer" node_paths=PackedStringArray("_pushGarbageSoundPlayer", "_captureGarbageSoundPlayer", "_catCaptureSoundPlayer", "_carCaptureSoundPlayer")]
+[node name="AudioManager" type="AudioStreamPlayer" node_paths=PackedStringArray("_introTheme", "_pushGarbageSoundPlayer", "_captureGarbageSoundPlayer", "_catCaptureSoundPlayer", "_carCaptureSoundPlayer")]
 script = ExtResource("2_w8mny")
+_introTheme = NodePath("IntroThemePlayer")
 _aloneBackgroundSound = ExtResource("3_we33e")
 _coupleBackgroundSound = ExtResource("4_bo7si")
 _familyBackgroundSound = ExtResource("5_bibqw")
@@ -36,3 +38,6 @@ volume_db = -20.0
 [node name="CarCapturePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_pug43")
 volume_db = -20.0
+
+[node name="IntroThemePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_3emqk")

@@ -14,7 +14,7 @@ public partial class Outro : Node2D
     private Camera2D _camera2D = null;
     private DirectionalLight2D _directionalLight2D = null;
     private Robot _robot = null;
-    private AudioStreamPlayer _audioStreamPlayer = null;
+
 
 
     public override void _Ready()
@@ -29,7 +29,6 @@ public partial class Outro : Node2D
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
         _directionalLight2D = GetNode<DirectionalLight2D>("DirectionalLight2D");
         _robot = GetNode<Robot>("Robot");
-        _audioStreamPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 
 
         _camera2D.LimitLeft -= CAMERA_LIMIT_OFFSET;
@@ -53,8 +52,10 @@ public partial class Outro : Node2D
 
             tween.Finished += () =>
             {
-                _audioStreamPlayer.Play();
-                _audioStreamPlayer.Finished += () =>
+                // intro and outro theme are the same
+                AudioStreamPlayer outroTheme = AudioManager.Instance.GetIntroTheme();
+                outroTheme.Play();
+                outroTheme.Finished += () =>
                 {
                     // wait a few seconds
                     Timer timer = new Timer

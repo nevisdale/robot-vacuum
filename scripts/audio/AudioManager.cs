@@ -35,6 +35,10 @@ public partial class AudioManager : AudioStreamPlayer
         }
     }
 
+    // main intro outro theme
+    [Export]
+    private AudioStreamPlayer _introTheme = null;
+
     // background sounds
     [Export]
     private AudioStream _aloneBackgroundSound = null;
@@ -167,13 +171,21 @@ public partial class AudioManager : AudioStreamPlayer
     private void ApplyVolume()
     {
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
-        VolumeDb = gameState.MusicVolumeDb();
+
+        float musicVolumeDb = gameState.MusicVolumeDb();
+        VolumeDb = musicVolumeDb;
+        _introTheme.VolumeDb = musicVolumeDb;
 
         float soundVolumeDb = gameState.SoundVolumeDb();
         _pushGarbageSoundPlayer.VolumeDb = soundVolumeDb;
         _captureGarbageSoundPlayer.VolumeDb = soundVolumeDb;
         _catCaptureSoundPlayer.VolumeDb = soundVolumeDb;
         _carCaptureSoundPlayer.VolumeDb = soundVolumeDb;
+    }
+
+    public AudioStreamPlayer GetIntroTheme()
+    {
+        return _introTheme;
     }
 
     public void MusicVolumeUp()

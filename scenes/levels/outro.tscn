@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dv8gvl3u1h7jo"]
+[gd_scene load_steps=7 format=4 uid="uid://dv8gvl3u1h7jo"]
 
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="1_1r51g"]
 [ext_resource type="Script" path="res://scripts/levels/Outro.cs" id="1_jf5t8"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="2_gxm6m"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_6ggfr"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="4_j21tk"]
-[ext_resource type="AudioStream" uid="uid://dx335y2rjnjf7" path="res://assets/sound/first_scene.wav" id="6_5qitn"]
 [ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="7_0jhxn"]
 
 [node name="Outro" type="Node2D"]
@@ -58,9 +57,6 @@ position = Vector2(-776, 512)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(1, 1, 1, 0)
 blend_mode = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_5qitn")
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_0jhxn")]
 visible = false
