@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dpf4ylywabsxs"]
+[gd_scene load_steps=17 format=3 uid="uid://dpf4ylywabsxs"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_1i5vn"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="2_lajh1"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="11_fo256"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="12_4ewpt"]
 [ext_resource type="PackedScene" uid="uid://c023elr5r7s6u" path="res://scenes/objects/flower_green.tscn" id="14_6fhcw"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="14_y4tfe"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="15_qfqyf"]
+[ext_resource type="PackedScene" uid="uid://xoa3f53dq4f6" path="res://scenes/objects/slippers_baby.tscn" id="16_f4xpd"]
 
 [node name="Level11" instance=ExtResource("1_1i5vn")]
 _nextLevelScene = "res://scenes/levels/level_12.tscn"
@@ -22,7 +25,7 @@ _backgroundSoundType = 2
 position = Vector2(-1214, 249)
 
 [node name="Charger" parent="." index="2"]
-position = Vector2(-802, 1330)
+position = Vector2(-393, 1406)
 
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("4_etr51")]
 position = Vector2(-388, -245)
@@ -46,7 +49,7 @@ position = Vector2(897, -108)
 position = Vector2(31, 1199)
 
 [node name="SeedSet9" parent="Garbage" index="7" instance=ExtResource("4_etr51")]
-position = Vector2(-1442, 1101)
+position = Vector2(-289, 623)
 
 [node name="SeedSet10" parent="Garbage" index="8" instance=ExtResource("4_etr51")]
 position = Vector2(-997, 771)
@@ -76,10 +79,10 @@ position = Vector2(-445, 118)
 position = Vector2(-1275, 981)
 
 [node name="Dust10" parent="Garbage" index="17" instance=ExtResource("4_cddwi")]
-position = Vector2(-1337, 1328)
+position = Vector2(-568, 603)
 
 [node name="Dust11" parent="Garbage" index="18" instance=ExtResource("4_cddwi")]
-position = Vector2(-1115, 1224)
+position = Vector2(-158, 768)
 
 [node name="Dust12" parent="Garbage" index="19" instance=ExtResource("4_cddwi")]
 position = Vector2(323, 666)
@@ -118,7 +121,7 @@ position = Vector2(-655, 831)
 rotation = 1.57079
 
 [node name="Robot" parent="." index="4"]
-position = Vector2(-795, 1239)
+position = Vector2(-386, 1315)
 
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_34qv0")]
 position = Vector2(1280, 553)
@@ -221,3 +224,14 @@ position = Vector2(-1650, 660)
 
 [node name="FlowerGreen27" parent="Env" index="31" instance=ExtResource("14_6fhcw")]
 position = Vector2(-1650, 825)
+
+[node name="SlippersBlue" parent="Env" index="32" instance=ExtResource("14_y4tfe")]
+position = Vector2(-1590, 1401)
+rotation = -0.261799
+
+[node name="SlippersRed" parent="Env" index="33" instance=ExtResource("15_qfqyf")]
+position = Vector2(-1368, 1415)
+
+[node name="SlippersBaby" parent="Env" index="34" instance=ExtResource("16_f4xpd")]
+position = Vector2(-1175, 1432)
+rotation = 1.0472

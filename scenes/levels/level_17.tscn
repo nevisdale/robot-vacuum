@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://onigbm6iodsm"]
+[gd_scene load_steps=20 format=4 uid="uid://onigbm6iodsm"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_aa7sb"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_067mw"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="12_scaw3"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="13_alxu0"]
 [ext_resource type="PackedScene" uid="uid://dlr7u24giikc6" path="res://scenes/objects/flower_dry.tscn" id="16_cd4tt"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="17_4nqvi"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="18_tv104"]
 
 [sub_resource type="Curve2D" id="Curve2D_yt7fm"]
 _data = {
@@ -194,3 +196,11 @@ position = Vector2(-253, -854)
 
 [node name="FlowerDry4" parent="Env" index="15" instance=ExtResource("16_cd4tt")]
 position = Vector2(-88, -854)
+
+[node name="SlippersBlue" parent="Env" index="16" instance=ExtResource("17_4nqvi")]
+position = Vector2(-1630, -232)
+rotation = 1.83259
+
+[node name="SlippersRed" parent="Env" index="17" instance=ExtResource("18_tv104")]
+position = Vector2(1875, -60)
+rotation = -1.83259

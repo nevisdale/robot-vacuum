@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://de1lseeix3n7n"]
+[gd_scene load_steps=19 format=4 uid="uid://de1lseeix3n7n"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_h7yur"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="2_2yoi3"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" path="res://scenes/garbage/green_bottle_broken.tscn" id="6_ys12q"]
 [ext_resource type="PackedScene" path="res://scenes/garbage/red_bottle_broken.tscn" id="7_g0i5x"]
 [ext_resource type="PackedScene" uid="uid://dlr7u24giikc6" path="res://scenes/objects/flower_dry.tscn" id="13_lit33"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="15_jgavd"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="16_8drhi"]
+[ext_resource type="PackedScene" uid="uid://xoa3f53dq4f6" path="res://scenes/objects/slippers_baby.tscn" id="17_3ph8x"]
 
 [node name="Level14" instance=ExtResource("1_h7yur")]
 _nextLevelScene = "res://scenes/levels/level_15.tscn"
@@ -56,7 +59,7 @@ position = Vector2(-428, -118)
 position = Vector2(-1416, 747)
 
 [node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("4_nrvv1")]
-position = Vector2(1479, 780)
+position = Vector2(1218, 498)
 
 [node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("4_nrvv1")]
 position = Vector2(1243, -285)
@@ -107,10 +110,10 @@ position = Vector2(985, -369)
 position = Vector2(1451, -103)
 
 [node name="Dust16" parent="Garbage" index="23" instance=ExtResource("5_7lren")]
-position = Vector2(1345, 529)
+position = Vector2(1359, 339)
 
 [node name="Dust17" parent="Garbage" index="24" instance=ExtResource("5_7lren")]
-position = Vector2(1718, 775)
+position = Vector2(1161, 722)
 
 [node name="Dust18" parent="Garbage" index="25" instance=ExtResource("5_7lren")]
 position = Vector2(1149, 1005)
@@ -185,6 +188,18 @@ position = Vector2(-204, -894)
 
 [node name="FlowerDry4" parent="Env" index="9" instance=ExtResource("13_lit33")]
 position = Vector2(-39, -894)
+
+[node name="SlippersBlue" parent="Env" index="10" instance=ExtResource("15_jgavd")]
+position = Vector2(-1657, -190)
+rotation = 1.57079
+
+[node name="SlippersRed" parent="Env" index="11" instance=ExtResource("16_8drhi")]
+position = Vector2(1707, 1002)
+rotation = -0.261799
+
+[node name="SlippersBaby" parent="Env" index="12" instance=ExtResource("17_3ph8x")]
+position = Vector2(1931, 1020)
+rotation = 0.523598
 
 [node name="Bin" parent="." index="12" instance=ExtResource("5_s815l")]
 position = Vector2(3, 254)

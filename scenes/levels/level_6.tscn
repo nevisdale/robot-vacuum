@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d14b0v56ibbga"]
+[gd_scene load_steps=17 format=3 uid="uid://d14b0v56ibbga"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l6gs"]
 [ext_resource type="PackedScene" uid="uid://mq4g4jsqjbrq" path="res://scenes/garbage/green_bottle.tscn" id="3_83fss"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="8_q2fhq"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="9_wo8oh"]
 [ext_resource type="PackedScene" uid="uid://d1s2jsj8qbkf3" path="res://scenes/objects/flower_sprout.tscn" id="12_p063o"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="13_2hd6w"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="14_h483h"]
 
 [sub_resource type="Curve2D" id="Curve2D_irr01"]
 _data = {
@@ -184,6 +186,12 @@ position = Vector2(-81, -818)
 
 [node name="FlowerSprout5" parent="Env" index="7" instance=ExtResource("12_p063o")]
 position = Vector2(84, -818)
+
+[node name="SlippersBlue" parent="Env" index="8" instance=ExtResource("13_2hd6w")]
+position = Vector2(633, 1406)
+
+[node name="SlippersRed" parent="Env" index="9" instance=ExtResource("14_h483h")]
+position = Vector2(836, 1401)
 
 [node name="Bin" parent="." index="22" instance=ExtResource("8_g107f")]
 position = Vector2(-115, -502)

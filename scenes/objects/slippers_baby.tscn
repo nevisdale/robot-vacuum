@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xoa3f53dq4f6"]
+
+[ext_resource type="Texture2D" uid="uid://c1p7v3qxkmw7v" path="res://assets/objects/baby_shoes.png" id="1_edh5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajri6"]
+size = Vector2(144, 134)
+
+[node name="SlippersBaby" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ajri6")
+
+[node name="BabyShoes" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_edh5j")

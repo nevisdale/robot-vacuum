@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dpf4ylywabsxs"]
+[gd_scene load_steps=20 format=3 uid="uid://dpf4ylywabsxs"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_2ufss"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_mc32c"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="13_np3y3"]
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="14_4sgdo"]
 [ext_resource type="PackedScene" uid="uid://c023elr5r7s6u" path="res://scenes/objects/flower_green.tscn" id="14_052lm"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="16_n3id6"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="17_hb0c6"]
+[ext_resource type="PackedScene" uid="uid://xoa3f53dq4f6" path="res://scenes/objects/slippers_baby.tscn" id="18_yo3ny"]
 
 [node name="Level12" instance=ExtResource("1_2ufss")]
 _nextLevelScene = "res://scenes/levels/level_13.tscn"
@@ -143,7 +146,7 @@ position = Vector2(-69, 305)
 position = Vector2(-1378, 447)
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("10_xr7u5")]
-position = Vector2(1013, -766)
+position = Vector2(1223, -766)
 
 [node name="Chair" parent="Env" index="1" instance=ExtResource("11_qvpr5")]
 position = Vector2(-1341, -423)
@@ -238,6 +241,18 @@ position = Vector2(1485, 50)
 
 [node name="FlowerGreen25" parent="Env" index="31" instance=ExtResource("14_052lm")]
 position = Vector2(1485, 215)
+
+[node name="SlippersBlue" parent="Env" index="32" instance=ExtResource("16_n3id6")]
+position = Vector2(-96, -873)
+rotation = -2.87979
+
+[node name="SlippersRed" parent="Env" index="33" instance=ExtResource("17_hb0c6")]
+position = Vector2(299, -863)
+rotation = -3.14159
+
+[node name="SlippersBaby" parent="Env" index="34" instance=ExtResource("18_yo3ny")]
+position = Vector2(106, -867)
+rotation = 2.87979
 
 [node name="Bin2" parent="." index="9" instance=ExtResource("6_kmqfk")]
 position = Vector2(-1530, 1311)

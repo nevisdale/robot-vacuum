@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5qtxie7xv15x"]
+
+[ext_resource type="Texture2D" uid="uid://cirotxjjq82p7" path="res://assets/objects/slippers_female.png" id="1_hd1lr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnac4"]
+size = Vector2(186, 198)
+
+[node name="SlippersRed" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xnac4")
+
+[node name="SlippersFemale" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_hd1lr")

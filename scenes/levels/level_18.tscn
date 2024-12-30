@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dfja4mu7uhkfm"]
+[gd_scene load_steps=24 format=4 uid="uid://dfja4mu7uhkfm"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_0l720"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_a6anv"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="13_aom5g"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="18_hoats"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="19_4gk4w"]
+[ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="21_p05hk"]
+[ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="22_60lt0"]
 
 [node name="Level18" instance=ExtResource("1_0l720")]
 _nextLevelScene = "res://scenes/levels/level_19.tscn"
@@ -219,6 +221,14 @@ position = Vector2(-1502, 676)
 
 [node name="BoxHorizontal2" parent="Env" index="24" instance=ExtResource("19_4gk4w")]
 position = Vector2(1737, -287)
+
+[node name="SlippersBlue" parent="Env" index="25" instance=ExtResource("21_p05hk")]
+position = Vector2(-1647, -243)
+rotation = 1.83259
+
+[node name="SlippersRed" parent="Env" index="26" instance=ExtResource("22_60lt0")]
+position = Vector2(313, 1371)
+rotation = 0.261799
 
 [node name="Bin" parent="." index="14" instance=ExtResource("13_aom5g")]
 position = Vector2(1832, 361)
