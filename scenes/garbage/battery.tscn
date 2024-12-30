@@ -1,7 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0jysbs03ffxn"]
+[gd_scene load_steps=8 format=3 uid="uid://c0jysbs03ffxn"]
 
 [ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="1_dr6rb"]
 [ext_resource type="Texture2D" uid="uid://booh8q2wh1fmb" path="res://assets/garbage/battery.png" id="2_fkw6g"]
+[ext_resource type="Texture2D" uid="uid://emri7svsglyh" path="res://assets/garbage/battery_electro_1.png" id="3_xc54l"]
+[ext_resource type="Texture2D" uid="uid://b2dfb6hx4dwa" path="res://assets/garbage/battery_electro_2.png" id="4_toseb"]
+[ext_resource type="Texture2D" uid="uid://c5dmj6ugh0m0j" path="res://assets/garbage/battery_electro_3.png" id="5_x2muf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cyoon"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xc54l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_toseb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x2muf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
 radius = 26.0
@@ -9,8 +29,14 @@ height = 104.0
 
 [node name="Battery" type="Node2D" groups=["is_garbage"]]
 
-[node name="PhysicsGarbage" parent="." instance=ExtResource("1_dr6rb")]
+[node name="PhysicsGarbage" parent="." node_paths=PackedStringArray("_electricityVisual") instance=ExtResource("1_dr6rb")]
 _canReceiveElectricity = true
+_electricityVisual = NodePath("ElectricityVisual")
+
+[node name="ElectricityVisual" type="AnimatedSprite2D" parent="PhysicsGarbage"]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_cyoon")
+frame_progress = 0.286553
 
 [node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
 position = Vector2(-9.53674e-07, 0)

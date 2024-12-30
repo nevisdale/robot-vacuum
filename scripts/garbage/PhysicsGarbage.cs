@@ -9,6 +9,9 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
     [Export]
     private bool _canReceiveElectricity = false;
 
+    [Export]
+    private AnimatedSprite2D _electricityVisual = null;
+
     private record _dampData(float LinearDamp, float AngularDamp);
 
     private long _touchedByCarLastTime = 0;
@@ -50,6 +53,8 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
         _initialDampData = new _dampData(LinearDamp, AngularDamp);
 
         _name = GetParent().Name;
+
+        _electricityVisual?.Hide();
 
         BodyEntered += PhysicsGarbage_BodyEntered;
     }
@@ -162,11 +167,13 @@ public partial class PhysicsGarbage : RigidBody2D, IGarbage, IElectricityReceive
     {
         if (_hasElectricity)
         {
-            Modulate = new Color(1, 1, 1, 0.5f);
+            _electricityVisual?.Show();
+            _electricityVisual?.Play();
         }
         else
         {
-            Modulate = new Color(1, 1, 1, 1);
+            _electricityVisual?.Hide();
+            _electricityVisual?.Stop();
         }
     }
 }
