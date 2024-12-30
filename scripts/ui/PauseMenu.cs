@@ -91,6 +91,7 @@ public partial class PauseMenu : CanvasLayer
         _isPaused = true;
         DisplayServer.MouseSetMode(DisplayServer.MouseMode.Visible);
         Show();
+        UpdateVisuals();
         GetTree().Paused = true;
     }
 
