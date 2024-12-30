@@ -36,7 +36,6 @@ _electricityVisual = NodePath("ElectricityVisual")
 [node name="ElectricityVisual" type="AnimatedSprite2D" parent="PhysicsGarbage"]
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_cyoon")
-frame_progress = 0.286553
 
 [node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
 position = Vector2(-9.53674e-07, 0)
