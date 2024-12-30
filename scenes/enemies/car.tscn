@@ -215,5 +215,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_jivnu")
 
 [node name="ElectricityVisual" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, 34)
 sprite_frames = SubResource("SpriteFrames_f1s22")
 frame_progress = 0.391388
+flip_h = true
