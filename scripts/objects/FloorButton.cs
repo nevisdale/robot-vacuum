@@ -37,7 +37,6 @@ public partial class FloorButton : Area2D
 		{
 			GD.Print($"{Name} released by {body.Name}");
 			EmitSignal(SignalName.ButtonReleased);
-			AudioManager.Instance.PlaySound_ActivateButton();
 		}
 	}
 }
