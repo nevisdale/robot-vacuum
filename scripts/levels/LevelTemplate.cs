@@ -39,6 +39,7 @@ public partial class LevelTemplate : Node2D
 
 		SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
 		gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
+		SaveManager.Instance.SaveGameState();
 
 		AudioManager.Instance.PlaySoundBackgroundType(_backgroundSoundType);
 

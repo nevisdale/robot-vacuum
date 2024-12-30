@@ -192,6 +192,7 @@ public partial class AudioManager : AudioStreamPlayer
     {
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.MusicVolumeUp();
+        SaveManager.Instance.SaveGameState();
         ApplyVolume();
     }
 
@@ -199,6 +200,7 @@ public partial class AudioManager : AudioStreamPlayer
     {
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.MusicVolumeDown();
+        SaveManager.Instance.SaveGameState();
         ApplyVolume();
     }
 
@@ -206,6 +208,7 @@ public partial class AudioManager : AudioStreamPlayer
     {
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.SoundVolumeUp();
+        SaveManager.Instance.SaveGameState();
         ApplyVolume();
     }
 
@@ -213,6 +216,7 @@ public partial class AudioManager : AudioStreamPlayer
     {
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.SoundVolumeDown();
+        SaveManager.Instance.SaveGameState();
         ApplyVolume();
     }
 }

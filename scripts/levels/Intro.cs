@@ -21,6 +21,7 @@ public partial class Intro : Node2D
 
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
+        SaveManager.Instance.SaveGameState();
 
         _robot = GetNode<Robot>("Robot");
         _startAudioTimer = GetNode<Timer>("StartAudioTimer");

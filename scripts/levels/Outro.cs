@@ -23,6 +23,7 @@ public partial class Outro : Node2D
 
         SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
         gameState.UpdateCurrentSceneAndAddToAvailable(GetTree());
+        SaveManager.Instance.SaveGameState();
 
         AudioManager.Instance.StopSoundBackgroundSmooth();
 
