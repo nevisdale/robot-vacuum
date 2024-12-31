@@ -95,12 +95,18 @@ public partial class AudioManager : AudioStreamPlayer
 
     public void ForceStop()
     {
+        // background sound
         Stop();
-        _pushGarbageSoundPlayer.Stop();
-        _captureGarbageSoundPlayer.Stop();
-        _catCaptureSoundPlayer.Stop();
-        _carCaptureSoundPlayer.Stop();
+
+        // sfx
+        _pushGarbageSoundPlayer?.Stop();
+        _captureGarbageSoundPlayer?.Stop();
+        _catCaptureSoundPlayer?.Stop();
+        _carCaptureSoundPlayer?.Stop();
         _currentBackgroundSound = BackgroundSound.Unknown;
+
+        // intro theme
+        _introTheme?.Stop();
     }
 
     public void PlaySoundBackgroundType(BackgroundSound backgroundSoundType)
