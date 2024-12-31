@@ -90,4 +90,13 @@ public partial class Outro : Node2D
         };
 
     }
+
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("restart"))
+        {
+            AudioManager.Instance.GetIntroTheme().Stop();
+            TransitionLayer.Instance.ReloadCurrentScene();
+        }
+    }
 }

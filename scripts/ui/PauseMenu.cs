@@ -48,8 +48,14 @@ public partial class PauseMenu : CanvasLayer
         _resume.Pressed += () => HidePauseMenu();
         _restart.Pressed += () =>
         {
-            HidePauseMenu();
+
             SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
+            if (gameState.CurrentLevelScene.Contains("intro") || gameState.CurrentLevelScene.Contains("outro"))
+            {
+                // stop playing intro or outro theme
+                AudioManager.Instance.ForceStop();
+            }
+            HidePauseMenu();
             GoToScene(gameState.CurrentLevelScene);
         };
         _mainMenu.Pressed += () =>

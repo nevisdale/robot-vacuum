@@ -54,13 +54,13 @@ theme_override_constants/separation = 10
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
-text = "Continue"
+text = "Continue [ESC]"
 
 [node name="Restart" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
-text = "Restart"
+text = "Restart [R]"
 
 [node name="MusicVolume" type="Control" parent="Control/VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)

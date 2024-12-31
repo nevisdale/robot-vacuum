@@ -46,4 +46,13 @@ public partial class Intro : Node2D
 
         TransitionLayer.Instance.ChangeSceneTo(_nextLevelScene);
     }
+
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("restart"))
+        {
+            AudioManager.Instance.GetIntroTheme().Stop();
+            TransitionLayer.Instance.ReloadCurrentScene();
+        }
+    }
 }
