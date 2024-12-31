@@ -36,7 +36,7 @@ position = Vector2(267, 443)
 _doNotPlaySoundForce = true
 
 [node name="Robot" parent="." instance=ExtResource("4_j21tk")]
-position = Vector2(258, 371)
+position = Vector2(267, 355)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Robot"]
