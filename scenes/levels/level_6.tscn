@@ -63,93 +63,65 @@ position = Vector2(-481, 247)
 [node name="SeedSet" parent="Garbage" index="0" instance=ExtResource("6_sk2cf")]
 position = Vector2(1081, -186)
 
-[node name="SeedSet2" parent="Garbage" index="1" instance=ExtResource("6_sk2cf")]
-position = Vector2(1570, 1182)
+[node name="SeedSet3" parent="Garbage" index="1" instance=ExtResource("6_sk2cf")]
+position = Vector2(612, 211)
 
-[node name="SeedSet3" parent="Garbage" index="2" instance=ExtResource("6_sk2cf")]
-position = Vector2(1750, 224)
-
-[node name="SeedSet4" parent="Garbage" index="3" instance=ExtResource("6_sk2cf")]
-position = Vector2(-1464, 866)
-
-[node name="SeedSet5" parent="Garbage" index="4" instance=ExtResource("6_sk2cf")]
+[node name="SeedSet5" parent="Garbage" index="2" instance=ExtResource("6_sk2cf")]
 position = Vector2(-1437, 111)
 
-[node name="SeedSet6" parent="Garbage" index="5" instance=ExtResource("6_sk2cf")]
+[node name="SeedSet6" parent="Garbage" index="3" instance=ExtResource("6_sk2cf")]
 position = Vector2(-735, 773)
 
-[node name="SeedSet7" parent="Garbage" index="6" instance=ExtResource("6_sk2cf")]
+[node name="SeedSet7" parent="Garbage" index="4" instance=ExtResource("6_sk2cf")]
 position = Vector2(-66, 1249)
 
-[node name="SeedSet8" parent="Garbage" index="7" instance=ExtResource("6_sk2cf")]
+[node name="SeedSet8" parent="Garbage" index="5" instance=ExtResource("6_sk2cf")]
 position = Vector2(906, 953)
 
-[node name="SeedSet9" parent="Garbage" index="8" instance=ExtResource("6_sk2cf")]
+[node name="SeedSet9" parent="Garbage" index="6" instance=ExtResource("6_sk2cf")]
 position = Vector2(1342, 577)
 
-[node name="Dust" parent="Garbage" index="9" instance=ExtResource("7_0657k")]
+[node name="Dust" parent="Garbage" index="7" instance=ExtResource("7_0657k")]
 position = Vector2(-146, 386)
 
-[node name="Dust2" parent="Garbage" index="10" instance=ExtResource("7_0657k")]
+[node name="Dust2" parent="Garbage" index="8" instance=ExtResource("7_0657k")]
 position = Vector2(-6.00003, 952)
 
-[node name="Dust3" parent="Garbage" index="11" instance=ExtResource("7_0657k")]
+[node name="Dust3" parent="Garbage" index="9" instance=ExtResource("7_0657k")]
 position = Vector2(1155, 1291)
 
-[node name="Dust4" parent="Garbage" index="12" instance=ExtResource("7_0657k")]
+[node name="Dust4" parent="Garbage" index="10" instance=ExtResource("7_0657k")]
 position = Vector2(1248, 343)
 
-[node name="Dust5" parent="Garbage" index="13" instance=ExtResource("7_0657k")]
-position = Vector2(1677, -60)
-
-[node name="Dust6" parent="Garbage" index="14" instance=ExtResource("7_0657k")]
+[node name="Dust6" parent="Garbage" index="11" instance=ExtResource("7_0657k")]
 position = Vector2(759, -263)
 
-[node name="Dust7" parent="Garbage" index="15" instance=ExtResource("7_0657k")]
+[node name="Dust7" parent="Garbage" index="12" instance=ExtResource("7_0657k")]
 position = Vector2(-1361, -113)
 
-[node name="Dust8" parent="Garbage" index="16" instance=ExtResource("7_0657k")]
-position = Vector2(-1634, 1102)
-
-[node name="Dust9" parent="Garbage" index="17" instance=ExtResource("7_0657k")]
+[node name="Dust9" parent="Garbage" index="13" instance=ExtResource("7_0657k")]
 position = Vector2(-1514, 616)
 
-[node name="Dust10" parent="Garbage" index="18" instance=ExtResource("7_0657k")]
+[node name="Dust10" parent="Garbage" index="14" instance=ExtResource("7_0657k")]
 position = Vector2(-839, 413)
-
-[node name="Dust11" parent="Garbage" index="19" instance=ExtResource("7_0657k")]
-position = Vector2(143, 1315)
-
-[node name="Dust12" parent="Garbage" index="20" instance=ExtResource("7_0657k")]
-position = Vector2(1727, 919)
-
-[node name="Dust13" parent="Garbage" index="21" instance=ExtResource("7_0657k")]
-position = Vector2(1584, 543)
-
-[node name="Dust14" parent="Garbage" index="22" instance=ExtResource("7_0657k")]
-position = Vector2(1867, 533)
 
 [node name="GreenBottle2" parent="." index="14" instance=ExtResource("3_83fss")]
 position = Vector2(-1199, 822)
 rotation = 0.785397
 
 [node name="GreenBottle3" parent="." index="15" instance=ExtResource("3_83fss")]
-position = Vector2(709, 33)
+position = Vector2(855, 113)
 rotation = 1.83259
 
-[node name="GreenBottle4" parent="." index="16" instance=ExtResource("3_83fss")]
-position = Vector2(353, 632)
-rotation = 2.61799
-
-[node name="RedBottle2" parent="." index="17" instance=ExtResource("4_m1kuk")]
-position = Vector2(1446, -171)
+[node name="RedBottle2" parent="." index="16" instance=ExtResource("4_m1kuk")]
+position = Vector2(1416, 152)
 rotation = 0.261799
 
-[node name="RedBottle3" parent="." index="18" instance=ExtResource("4_m1kuk")]
+[node name="RedBottle3" parent="." index="17" instance=ExtResource("4_m1kuk")]
 position = Vector2(-630, 554)
 rotation = -0.261799
 
-[node name="Robot" parent="." index="19"]
+[node name="Robot" parent="." index="18"]
 position = Vector2(-1224, 1274)
 
 [node name="Cat" type="Node2D" parent="Enemies" index="0"]
@@ -193,5 +165,5 @@ position = Vector2(633, 1406)
 [node name="SlippersRed" parent="Env" index="9" instance=ExtResource("14_h483h")]
 position = Vector2(836, 1401)
 
-[node name="Bin" parent="." index="22" instance=ExtResource("8_g107f")]
+[node name="Bin" parent="." index="21" instance=ExtResource("8_g107f")]
 position = Vector2(-115, -502)
