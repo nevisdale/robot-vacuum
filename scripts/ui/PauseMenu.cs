@@ -48,8 +48,6 @@ public partial class PauseMenu : CanvasLayer
         _resume.Pressed += () => HidePauseMenu();
         _restart.Pressed += () =>
         {
-            // there is a little chance to play sound before restarting
-            AudioManager.Instance.ForceStop();
             HidePauseMenu();
             SaveManager.GameState gameState = SaveManager.Instance.GetGameState();
             GoToScene(gameState.CurrentLevelScene);
