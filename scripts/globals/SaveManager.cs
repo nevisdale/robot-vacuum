@@ -98,10 +98,12 @@ public partial class SaveManager : Node2D
 
     public override void _Ready()
     {
+
+        // default game state
         _gameState = new()
         {
-            MusicVolume = 10,
-            SoundVolume = 10,
+            MusicVolume = 8,
+            SoundVolume = 8,
             CurrentLevelScene = "",
             AvailableLevelScenes = new HashSet<string>()
         };
