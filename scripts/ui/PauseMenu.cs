@@ -59,7 +59,7 @@ public partial class PauseMenu : CanvasLayer
             // there is a little chance to play sound before going to main menu
             AudioManager.Instance.ForceStop();
             HidePauseMenu();
-            GoToScene(_mainMenuScene);
+            GoToSceneFast(_mainMenuScene);
         };
         _exit.Pressed += () => TransitionLayer.Instance.Exit();
 
@@ -72,6 +72,13 @@ public partial class PauseMenu : CanvasLayer
 
         UpdateVisuals();
         HidePauseMenu();
+    }
+
+    public void GoToSceneFast(string scenePath)
+    {
+        // remove all ui because transition layer does not cover it
+        GetNode("Control").QueueFree();
+        TransitionLayer.Instance.ChangeSceneToFast(scenePath);
     }
 
     public void GoToScene(string scenePath)

@@ -1,13 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://qbhqvqkbs31j"]
+[gd_scene load_steps=3 format=3 uid="uid://qbhqvqkbs31j"]
 
 [ext_resource type="Script" path="res://scripts/ui/PauseMenu.cs" id="1_82up0"]
+[ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_8f7c4"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_82up0")
 _mainMenuScene = "res://scenes/ui/main_menu.tscn"
 
+[node name="Background" type="TextureRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8f7c4")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

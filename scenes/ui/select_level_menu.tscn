@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bywgt7rou0lp"]
+[gd_scene load_steps=4 format=3 uid="uid://bywgt7rou0lp"]
 
 [ext_resource type="PackedScene" uid="uid://dkcgymeeexi7t" path="res://scenes/ui/level_button.tscn" id="1_dqac7"]
 [ext_resource type="Script" path="res://scripts/ui/SelectLevelMenu.cs" id="1_v23he"]
+[ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_yri3f"]
 
 [node name="SelectLevelMenu" type="CanvasLayer"]
 script = ExtResource("1_v23he")
@@ -17,6 +18,16 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="Background" type="TextureRect" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yri3f")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
