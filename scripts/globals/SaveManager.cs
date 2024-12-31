@@ -100,8 +100,8 @@ public partial class SaveManager : Node2D
     {
         _gameState = new()
         {
-            MusicVolume = 5,
-            SoundVolume = 5,
+            MusicVolume = 10,
+            SoundVolume = 10,
             CurrentLevelScene = "",
             AvailableLevelScenes = new HashSet<string>()
         };
