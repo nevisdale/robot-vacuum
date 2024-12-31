@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bubj2i7uqj21f"]
+[gd_scene load_steps=18 format=3 uid="uid://bubj2i7uqj21f"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainMenu.cs" id="1_c862v"]
 [ext_resource type="Texture2D" uid="uid://c0pob43ou4r4u" path="res://assets/robot/robot.png" id="2_2ow5a"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://ckn2hltj5thdj" path="res://assets/objects/baby_shoe.png" id="13_5cg26"]
 [ext_resource type="Texture2D" uid="uid://c8gbna8o7xrid" path="res://assets/objects/slipper_female.png" id="14_hno4g"]
 [ext_resource type="Texture2D" uid="uid://xlmgku6lxv5y" path="res://assets/objects/slipper_male.png" id="15_axh2i"]
+[ext_resource type="Texture2D" uid="uid://crd1quncgejan" path="res://assets/garbage/bottle_green_broken.png" id="16_6f6gc"]
+[ext_resource type="Texture2D" uid="uid://fc6jkt7dnly1" path="res://assets/garbage/bottle_red_broken.png" id="17_jn6aw"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_c862v")
@@ -45,369 +47,249 @@ offset_bottom = 40.0
 
 [node name="Robot" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1531.0
-offset_top = 177.0
-offset_right = 1832.0
-offset_bottom = 478.0
+offset_left = 1547.0
+offset_top = 172.0
+offset_right = 1848.0
+offset_bottom = 473.0
 rotation = 0.523598
 texture = ExtResource("2_2ow5a")
 
-[node name="Seeds19" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1357.74
-offset_top = 433.904
-offset_right = 1658.74
-offset_bottom = 734.904
-rotation = 0.523598
-texture = ExtResource("4_8set2")
-stretch_mode = 2
-
-[node name="Seeds20" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1376.74
-offset_top = 497.904
-offset_right = 1677.74
-offset_bottom = 798.904
-rotation = 1.309
-texture = ExtResource("5_6rnjh")
-stretch_mode = 2
-
-[node name="Seeds3" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1383.74
-offset_top = 489.904
-offset_right = 1684.74
-offset_bottom = 790.904
-rotation = -0.261799
-texture = ExtResource("6_ygr77")
-stretch_mode = 2
-
 [node name="Seeds42" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 773.827
-offset_top = 423.617
-offset_right = 1074.83
-offset_bottom = 724.617
-rotation = -0.689485
+offset_left = 830.0
+offset_top = 961.0
+offset_right = 1131.0
+offset_bottom = 1262.0
+rotation = -1.56642
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds43" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 792.827
-offset_top = 487.617
-offset_right = 1093.83
-offset_bottom = 788.617
-rotation = 0.0959169
+offset_left = 836.0
+offset_top = 959.0
+offset_right = 1137.0
+offset_bottom = 1260.0
+rotation = -0.30539
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds44" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 799.827
-offset_top = 479.617
-offset_right = 1100.83
-offset_bottom = 780.617
-rotation = -1.47488
+offset_left = 846.0
+offset_top = 937.0
+offset_right = 1147.0
+offset_bottom = 1238.0
+rotation = -0.584766
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
-[node name="Seeds21" type="TextureRect" parent="Control/Pics"]
+[node name="Seeds45" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1562.35
-offset_top = 887.0
-offset_right = 1863.35
-offset_bottom = 1188.0
-rotation = 0.975055
+offset_left = 1628.67
+offset_top = 941.864
+offset_right = 1929.67
+offset_bottom = 1242.86
+rotation = -0.0297995
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
-[node name="Seeds22" type="TextureRect" parent="Control/Pics"]
+[node name="Seeds46" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1581.35
-offset_top = 951.0
-offset_right = 1882.35
-offset_bottom = 1252.0
-rotation = 1.76046
+offset_left = 1610.67
+offset_top = 933.864
+offset_right = 1911.67
+offset_bottom = 1234.86
+rotation = 0.712059
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds23" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1588.35
-offset_top = 943.0
-offset_right = 1889.35
-offset_bottom = 1244.0
-rotation = 0.189658
-texture = ExtResource("6_ygr77")
-stretch_mode = 2
-
-[node name="Seeds29" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1168.35
-offset_top = 205.0
-offset_right = 1469.35
-offset_bottom = 506.0
-rotation = 0.975055
-texture = ExtResource("4_8set2")
-stretch_mode = 2
-
-[node name="Seeds30" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1187.35
-offset_top = 269.0
-offset_right = 1488.35
-offset_bottom = 570.0
-rotation = 1.76046
-texture = ExtResource("5_6rnjh")
-stretch_mode = 2
-
-[node name="Seeds31" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1194.35
-offset_top = 261.0
-offset_right = 1495.35
-offset_bottom = 562.0
-rotation = 0.189658
-texture = ExtResource("6_ygr77")
-stretch_mode = 2
-
-[node name="Seeds27" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1619.0
-offset_top = 531.0
-offset_right = 1920.0
-offset_bottom = 831.998
-rotation = 1.00045
-texture = ExtResource("4_8set2")
-stretch_mode = 2
-
-[node name="Seeds28" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1637.3
-offset_top = 595.23
-offset_right = 1938.3
-offset_bottom = 896.228
-rotation = 1.78584
-texture = ExtResource("5_6rnjh")
-stretch_mode = 2
-
-[node name="Seeds12" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1644.3
-offset_top = 587.23
-offset_right = 1945.3
-offset_bottom = 888.228
-rotation = 0.215051
+offset_left = 1613.67
+offset_top = 940.864
+offset_right = 1914.67
+offset_bottom = 1241.86
+rotation = -0.858743
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
 [node name="Seeds39" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1101.0
-offset_top = 840.0
-offset_right = 1402.0
-offset_bottom = 1141.0
-rotation = 3.48064
+offset_left = 1125.7
+offset_top = 717.111
+offset_right = 1426.7
+offset_bottom = 1018.11
+rotation = 3.33445
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds40" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1110.44
-offset_top = 870.202
-offset_right = 1411.44
-offset_bottom = 1171.2
-rotation = 4.26603
+offset_left = 1110.7
+offset_top = 744.111
+offset_right = 1411.7
+offset_bottom = 1045.11
+rotation = 4.66225
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds38" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1117.44
-offset_top = 862.202
-offset_right = 1418.44
-offset_bottom = 1163.2
-rotation = 2.69524
+offset_left = 1115.7
+offset_top = 735.111
+offset_right = 1416.7
+offset_bottom = 1036.11
+rotation = 3.09146
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
-[node name="Seeds32" type="TextureRect" parent="Control/Pics"]
+[node name="w" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 850.022
-offset_top = 119.317
-offset_right = 1151.02
-offset_bottom = 420.315
-rotation = 3.1005
+offset_left = 1685.0
+offset_top = 841.0
+offset_right = 1986.0
+offset_bottom = 1142.0
+rotation = 5.14036
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
-[node name="Seeds33" type="TextureRect" parent="Control/Pics"]
+[node name="w7" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 867.022
-offset_top = 147.317
-offset_right = 1168.02
-offset_bottom = 448.315
-rotation = 3.88589
+offset_left = 1699.0
+offset_top = 853.0
+offset_right = 2000.0
+offset_bottom = 1154.0
+rotation = 5.7586
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
-[node name="Seeds34" type="TextureRect" parent="Control/Pics"]
+[node name="w3" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 862.318
-offset_top = 137.547
-offset_right = 1163.32
-offset_bottom = 438.545
-rotation = 2.3151
+offset_left = 1718.0
+offset_top = 812.0
+offset_right = 2019.0
+offset_bottom = 1113.0
+rotation = 4.35496
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
-[node name="Seeds13" type="TextureRect" parent="Control/Pics"]
+[node name="w5" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1407.17
-offset_top = 727.045
-offset_right = 1708.17
-offset_bottom = 1028.04
-rotation = 1.99941
+offset_left = 903.0
+offset_top = 547.0
+offset_right = 1204.0
+offset_bottom = 847.998
+rotation = 4.35496
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="w4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 526.0
+offset_right = 1158.0
+offset_bottom = 826.998
+rotation = 5.14036
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
-[node name="Seeds14" type="TextureRect" parent="Control/Pics"]
+[node name="w2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1372.17
-offset_top = 806.045
-offset_right = 1673.17
-offset_bottom = 1107.04
-rotation = 2.78481
+offset_left = 1560.0
+offset_top = 665.0
+offset_right = 1861.0
+offset_bottom = 965.998
+rotation = 5.43955
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
-[node name="Seeds15" type="TextureRect" parent="Control/Pics"]
+[node name="w9" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1402.17
-offset_top = 761.045
-offset_right = 1703.17
-offset_bottom = 1062.04
-rotation = 1.21401
+offset_left = 1738.0
+offset_top = 749.0
+offset_right = 2039.0
+offset_bottom = 1050.0
+rotation = 2.54526
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="w8" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1577.0
+offset_top = 703.0
+offset_right = 1878.0
+offset_bottom = 1004.0
+rotation = 3.79531
 texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="w6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1716.0
+offset_top = 246.0
+offset_right = 2017.0
+offset_bottom = 546.998
+rotation = 7.2343
+texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds16" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1497.61
-offset_top = 212.606
-offset_right = 1798.61
-offset_bottom = 513.606
-rotation = 1.94249
+offset_left = 1447.0
+offset_top = 222.0
+offset_right = 1748.0
+offset_bottom = 523.0
+rotation = 3.40335
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds17" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1441.61
-offset_top = 214.606
-offset_right = 1742.61
-offset_bottom = 515.606
+offset_left = 1441.0
+offset_top = 175.0
+offset_right = 1742.0
+offset_bottom = 476.0
 rotation = 2.72788
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds18" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1429.61
-offset_top = 218.606
-offset_right = 1730.61
-offset_bottom = 519.606
-rotation = 1.15709
-texture = ExtResource("6_ygr77")
-stretch_mode = 2
-
-[node name="Seeds36" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 991.918
-offset_top = 695.523
-offset_right = 1292.92
-offset_bottom = 996.523
-rotation = 2.50589
-texture = ExtResource("4_8set2")
-stretch_mode = 2
-
-[node name="Seeds37" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 935.918
-offset_top = 697.523
-offset_right = 1236.92
-offset_bottom = 998.523
-rotation = 3.29128
-texture = ExtResource("5_6rnjh")
-stretch_mode = 2
-
-[node name="Seeds41" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 923.918
-offset_top = 701.523
-offset_right = 1224.92
-offset_bottom = 1002.52
-rotation = 1.72049
-texture = ExtResource("6_ygr77")
-stretch_mode = 2
-
-[node name="Seeds7" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1748.67
-offset_top = 769.302
-offset_right = 2049.67
-offset_bottom = 1070.3
-rotation = -0.202535
-texture = ExtResource("4_8set2")
-stretch_mode = 2
-
-[node name="Seeds8" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1767.67
-offset_top = 833.302
-offset_right = 2068.67
-offset_bottom = 1134.3
-rotation = 0.582862
-texture = ExtResource("5_6rnjh")
-stretch_mode = 2
-
-[node name="Seeds9" type="TextureRect" parent="Control/Pics"]
-layout_mode = 0
-offset_left = 1774.67
-offset_top = 825.302
-offset_right = 2075.67
-offset_bottom = 1126.3
-rotation = -0.987932
+offset_left = 1435.0
+offset_top = 209.0
+offset_right = 1736.0
+offset_bottom = 510.0
+rotation = 1.75384
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
 [node name="Seeds10" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 985.673
-offset_top = 355.302
-offset_right = 1286.67
-offset_bottom = 656.302
+offset_left = 1043.0
+offset_top = 333.0
+offset_right = 1344.0
+offset_bottom = 634.0
 rotation = -0.202535
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds11" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1004.67
-offset_top = 419.302
-offset_right = 1305.67
-offset_bottom = 720.298
+offset_left = 1059.0
+offset_top = 364.0
+offset_right = 1360.0
+offset_bottom = 664.996
 rotation = 0.582862
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds35" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1011.67
-offset_top = 411.302
-offset_right = 1312.67
-offset_bottom = 712.298
+offset_left = 1061.0
+offset_top = 383.0
+offset_right = 1362.0
+offset_bottom = 683.996
 rotation = -0.987932
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
@@ -425,229 +307,409 @@ stretch_mode = 2
 [node name="Seeds5" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
 offset_left = 1781.0
-offset_top = 139.738
+offset_top = 133.0
 offset_right = 2082.0
-offset_bottom = 440.738
+offset_bottom = 434.0
 rotation = 4.36364
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds6" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1771.9
-offset_top = 164.641
-offset_right = 2072.9
-offset_bottom = 465.641
+offset_left = 1791.0
+offset_top = 141.0
+offset_right = 2092.0
+offset_bottom = 442.0
 rotation = 2.58167
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
 [node name="Seeds24" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1169.8
-offset_top = 607.579
-offset_right = 1470.8
-offset_bottom = 908.579
+offset_left = 1398.0
+offset_top = 537.0
+offset_right = 1699.0
+offset_bottom = 838.0
 rotation = 3.36707
 texture = ExtResource("4_8set2")
 stretch_mode = 2
 
 [node name="Seeds25" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1190.9
-offset_top = 637.903
-offset_right = 1491.9
-offset_bottom = 938.903
+offset_left = 1397.0
+offset_top = 563.0
+offset_right = 1698.0
+offset_bottom = 864.0
 rotation = 4.15247
 texture = ExtResource("5_6rnjh")
 stretch_mode = 2
 
 [node name="Seeds26" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1167.9
-offset_top = 643.903
-offset_right = 1468.9
-offset_bottom = 944.903
+offset_left = 1401.0
+offset_top = 545.0
+offset_right = 1702.0
+offset_bottom = 846.0
 rotation = 2.58167
 texture = ExtResource("6_ygr77")
 stretch_mode = 2
 
 [node name="BottleRed" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1829.0
-offset_top = 719.0
-offset_right = 2130.0
-offset_bottom = 1020.0
+offset_left = 1824.0
+offset_top = 617.0
+offset_right = 2125.0
+offset_bottom = 918.0
 rotation = -3.15373
 texture = ExtResource("7_urulq")
 stretch_mode = 2
 
 [node name="BottleRed3" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1111.0
-offset_top = 568.0
-offset_right = 1412.0
-offset_bottom = 869.0
-rotation = -2.73412
+offset_left = 1235.0
+offset_top = 219.0
+offset_right = 1536.0
+offset_bottom = 520.0
+rotation = -0.799698
 texture = ExtResource("7_urulq")
 stretch_mode = 2
 
 [node name="BottleRed2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1091.0
-offset_top = 784.0
-offset_right = 1392.0
-offset_bottom = 1085.0
-rotation = -1.02495
+offset_left = 1374.0
+offset_top = 996.0
+offset_right = 1675.0
+offset_bottom = 1297.0
+rotation = -1.59614
+texture = ExtResource("7_urulq")
+stretch_mode = 2
+
+[node name="BottleRed4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1106.0
+offset_top = 627.0
+offset_right = 1407.0
+offset_bottom = 928.0
+rotation = -0.24383
 texture = ExtResource("7_urulq")
 stretch_mode = 2
 
 [node name="Dust" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1251.0
-offset_top = 993.0
-offset_right = 2408.0
-offset_bottom = 2193.0
+offset_left = 1313.0
+offset_top = 998.0
+offset_right = 2470.0
+offset_bottom = 2198.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust14" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 922.0
-offset_top = 1016.0
-offset_right = 2079.0
-offset_bottom = 2216.0
+offset_left = 1059.0
+offset_top = 1004.0
+offset_right = 2216.0
+offset_bottom = 2204.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1489.0
-offset_top = 766.0
-offset_right = 2646.0
-offset_bottom = 1966.0
+offset_left = 1643.0
+offset_top = 752.0
+offset_right = 2800.0
+offset_bottom = 1952.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust3" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1764.0
-offset_top = 476.0
-offset_right = 2921.0
-offset_bottom = 1676.0
+offset_left = 1761.0
+offset_top = 409.0
+offset_right = 2918.0
+offset_bottom = 1609.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust13" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1766.0
+offset_top = 717.0
+offset_right = 2923.0
+offset_bottom = 1917.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust31" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1721.0
+offset_top = 618.0
+offset_right = 2878.0
+offset_bottom = 1818.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust17" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1765.0
+offset_top = 920.0
+offset_right = 2922.0
+offset_bottom = 2120.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust4" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1367.0
-offset_top = 170.0
-offset_right = 2524.0
-offset_bottom = 1370.0
+offset_left = 1437.0
+offset_top = 165.0
+offset_right = 2594.0
+offset_bottom = 1365.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust5" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1603.0
-offset_top = 258.0
-offset_right = 2760.0
-offset_bottom = 1458.0
+offset_left = 1559.0
+offset_top = 243.0
+offset_right = 2716.0
+offset_bottom = 1443.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust6" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1210.0
-offset_top = 485.0
-offset_right = 2367.0
-offset_bottom = 1685.0
+offset_left = 1259.0
+offset_top = 484.0
+offset_right = 2416.0
+offset_bottom = 1684.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust18" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1578.0
+offset_top = 664.0
+offset_right = 2735.0
+offset_bottom = 1864.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust9" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1281.0
-offset_top = 288.0
-offset_right = 2438.0
-offset_bottom = 1488.0
+offset_left = 1417.0
+offset_top = 420.0
+offset_right = 2574.0
+offset_bottom = 1620.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust12" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1089.0
-offset_top = 165.0
-offset_right = 2246.0
-offset_bottom = 1365.0
+offset_left = 1183.0
+offset_top = 170.0
+offset_right = 2340.0
+offset_bottom = 1370.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust30" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1345.0
+offset_top = 245.0
+offset_right = 2502.0
+offset_bottom = 1445.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust10" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 914.0
-offset_top = 295.0
-offset_right = 2071.0
-offset_bottom = 1495.0
+offset_left = 1063.0
+offset_top = 251.0
+offset_right = 2220.0
+offset_bottom = 1451.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust22" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 310.0
+offset_right = 2421.0
+offset_bottom = 1510.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust16" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 895.0
-offset_top = 461.0
-offset_right = 2052.0
-offset_bottom = 1661.0
+offset_left = 1052.0
+offset_top = 601.0
+offset_right = 2209.0
+offset_bottom = 1801.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust15" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 808.0
-offset_top = 829.0
-offset_right = 1965.0
-offset_bottom = 2029.0
+offset_left = 841.0
+offset_top = 783.0
+offset_right = 1998.0
+offset_bottom = 1983.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust23" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 783.0
+offset_right = 1998.0
+offset_bottom = 1983.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust28" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 783.0
+offset_right = 1998.0
+offset_bottom = 1983.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust29" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1702.0
+offset_top = 219.0
+offset_right = 2859.0
+offset_bottom = 1419.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust27" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 950.0
+offset_right = 2071.0
+offset_bottom = 2150.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust26" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 621.0
+offset_right = 2059.0
+offset_bottom = 1821.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust25" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 871.0
+offset_right = 2151.0
+offset_bottom = 2071.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust21" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1162.0
+offset_top = 908.0
+offset_right = 2319.0
+offset_bottom = 2108.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust11" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1038.0
-offset_top = 714.0
-offset_right = 2195.0
-offset_bottom = 1914.0
+offset_left = 965.0
+offset_top = 399.0
+offset_right = 2122.0
+offset_bottom = 1599.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust24" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 491.0
+offset_right = 1990.0
+offset_bottom = 1691.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="q" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 250.0
+offset_right = 1987.0
+offset_bottom = 1450.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust20" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1192.0
+offset_top = 577.0
+offset_right = 2349.0
+offset_bottom = 1777.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust19" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1349.0
+offset_top = 835.0
+offset_right = 2506.0
+offset_bottom = 2035.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust7" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1626.0
-offset_top = 902.0
-offset_right = 2783.0
-offset_bottom = 2102.0
+offset_left = 1570.0
+offset_top = 928.0
+offset_right = 2727.0
+offset_bottom = 2128.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
 
 [node name="Dust8" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1228.0
-offset_top = 754.0
-offset_right = 2385.0
-offset_bottom = 1954.0
+offset_left = 1436.0
+offset_top = 619.0
+offset_right = 2593.0
+offset_bottom = 1819.0
 rotation = -2.09439
 scale = Vector2(0.0665505, 0.0665505)
 texture = ExtResource("8_4dkw4")
@@ -661,145 +723,463 @@ offset_bottom = 1036.0
 rotation = 1.55824
 texture = ExtResource("9_u2te3")
 
+[node name="CanGreen7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1036.0
+offset_top = 991.0
+offset_right = 1208.0
+offset_bottom = 1168.0
+rotation = 4.24279
+texture = ExtResource("9_u2te3")
+
+[node name="CanGreen8" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 248.0
+offset_right = 1220.0
+offset_bottom = 425.0
+rotation = 2.55658
+texture = ExtResource("9_u2te3")
+
 [node name="CanGreen4" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1081.0
-offset_top = 551.0
-offset_right = 1253.0
-offset_bottom = 728.0
-rotation = 2.34889
+offset_left = 1226.0
+offset_top = 619.0
+offset_right = 1398.0
+offset_bottom = 796.0
+rotation = 3.06395
+texture = ExtResource("9_u2te3")
+
+[node name="CanGreen5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1313.0
+offset_top = 473.0
+offset_right = 1485.0
+offset_bottom = 650.0
+rotation = -2.37321
+texture = ExtResource("9_u2te3")
+
+[node name="CanGreen9" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = 119.0
+offset_right = 1444.0
+offset_bottom = 296.0
+rotation = -4.70914
+texture = ExtResource("9_u2te3")
+
+[node name="CanGreen6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1327.0
+offset_top = 781.0
+offset_right = 1499.0
+offset_bottom = 958.0
+rotation = -1.03417
 texture = ExtResource("9_u2te3")
 
 [node name="CanRed6" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1004.0
-offset_top = 712.0
-offset_right = 1176.0
-offset_bottom = 889.0
-rotation = -5.08267
+offset_left = 886.0
+offset_top = 476.0
+offset_right = 1058.0
+offset_bottom = 653.0
+rotation = -6.49692
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1578.0
+offset_top = 902.0
+offset_right = 1750.0
+offset_bottom = 1079.0
+rotation = -8.15419
 texture = ExtResource("10_e8bj5")
 
 [node name="CanRed4" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1146.0
-offset_top = 207.0
-offset_right = 1318.0
-offset_bottom = 384.0
+offset_left = 1006.0
+offset_top = 375.0
+offset_right = 1178.0
+offset_bottom = 552.0
 rotation = -1.58528
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed10" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 735.0
+offset_right = 940.0
+offset_bottom = 912.0
+rotation = -0.00845654
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed9" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 797.0
+offset_right = 1332.0
+offset_bottom = 974.0
+rotation = -1.28985
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed8" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1306.0
+offset_top = 447.0
+offset_right = 1478.0
+offset_bottom = 624.0
+rotation = -0.715294
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1524.0
+offset_top = 195.0
+offset_right = 1696.0
+offset_bottom = 372.0
+rotation = -0.757908
 texture = ExtResource("10_e8bj5")
 
 [node name="BottleGreen" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1461.0
-offset_top = 160.0
-offset_right = 1554.0
-offset_bottom = 370.0
+offset_left = 1488.0
+offset_top = 159.0
+offset_right = 1581.0
+offset_bottom = 369.0
 rotation = -1.57623
 texture = ExtResource("11_1q3hl")
 
 [node name="BottleGreen4" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1120.0
-offset_top = 182.0
-offset_right = 1213.0
-offset_bottom = 392.0
-rotation = -4.1198
+offset_left = 803.0
+offset_top = 478.0
+offset_right = 896.0
+offset_bottom = 688.0
+rotation = -0.00645423
+texture = ExtResource("11_1q3hl")
+
+[node name="BottleGreen3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1193.0
+offset_top = 497.0
+offset_right = 1286.0
+offset_bottom = 707.0
+rotation = -0.649507
 texture = ExtResource("11_1q3hl")
 
 [node name="BottleGreen2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1495.0
-offset_top = 782.0
-offset_right = 1588.0
-offset_bottom = 992.0
-rotation = 0.815765
+offset_left = 1585.0
+offset_top = 630.0
+offset_right = 1678.0
+offset_bottom = 840.0
+rotation = 0.495955
 texture = ExtResource("11_1q3hl")
 
 [node name="BabyBottle" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1745.0
-offset_top = 219.0
-offset_right = 1797.0
-offset_bottom = 347.0
+offset_left = 1747.0
+offset_top = 175.0
+offset_right = 1799.0
+offset_bottom = 303.0
+texture = ExtResource("12_enilb")
+
+[node name="BabyBottle6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 176.0
+offset_right = 1036.0
+offset_bottom = 304.0
+texture = ExtResource("12_enilb")
+
+[node name="BabyBottle5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1290.0
+offset_top = 844.0
+offset_right = 1342.0
+offset_bottom = 972.0
+rotation = -0.764828
+texture = ExtResource("12_enilb")
+
+[node name="BabyBottle4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1761.0
+offset_top = 699.0
+offset_right = 1813.0
+offset_bottom = 827.0
+rotation = -3.75341
 texture = ExtResource("12_enilb")
 
 [node name="BabyBottle2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1237.0
-offset_top = 554.0
-offset_right = 1289.0
-offset_bottom = 682.0
-rotation = -0.684688
+offset_left = 1339.0
+offset_top = 367.0
+offset_right = 1391.0
+offset_bottom = 495.0
+rotation = 0.392778
 texture = ExtResource("12_enilb")
 
 [node name="BabyBottle3" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 795.0
-offset_top = 862.0
-offset_right = 847.0
-offset_bottom = 990.0
-rotation = -0.0244404
+offset_left = 901.0
+offset_top = 981.0
+offset_right = 953.0
+offset_bottom = 1109.0
+rotation = -1.58495
+texture = ExtResource("12_enilb")
+
+[node name="BabyBottle7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 590.0
+offset_right = 988.0
+offset_bottom = 718.0
+rotation = 0.536399
 texture = ExtResource("12_enilb")
 
 [node name="e" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 857.0
-offset_top = 348.0
-offset_right = 1071.0
-offset_bottom = 548.0
-rotation = 3.13482
+offset_left = 1056.0
+offset_top = 530.0
+offset_right = 1270.0
+offset_bottom = 730.0
+rotation = 3.93785
+scale = Vector2(0.68263, 0.68263)
+texture = ExtResource("13_5cg26")
+
+[node name="e4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1140.0
+offset_top = 261.0
+offset_right = 1354.0
+offset_bottom = 461.0
+rotation = 5.67126
+scale = Vector2(0.68263, 0.68263)
+texture = ExtResource("13_5cg26")
+
+[node name="e5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1249.0
+offset_top = 765.0
+offset_right = 1463.0
+offset_bottom = 965.0
+rotation = 6.69771
 scale = Vector2(0.68263, 0.68263)
 texture = ExtResource("13_5cg26")
 
 [node name="e2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1488.0
-offset_top = 510.0
-offset_right = 1702.0
-offset_bottom = 710.0
-rotation = 0.662151
+offset_left = 1619.0
+offset_top = 561.0
+offset_right = 1833.0
+offset_bottom = 761.0
+rotation = 2.20486
 scale = Vector2(0.68263, 0.68263)
 texture = ExtResource("13_5cg26")
 
-[node name="TextureRect" type="TextureRect" parent="Control/Pics"]
+[node name="e6" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1485.0
+offset_left = 936.0
+offset_top = 830.0
+offset_right = 1150.0
+offset_bottom = 1030.0
+rotation = 3.87226
+scale = Vector2(0.68263, 0.68263)
+texture = ExtResource("13_5cg26")
+
+[node name="e3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1741.0
+offset_top = 692.0
+offset_right = 1955.0
+offset_bottom = 892.0
+rotation = 0.013097
+scale = Vector2(0.68263, 0.68263)
+texture = ExtResource("13_5cg26")
+
+[node name="SlipperFemale" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1674.0
+offset_top = 701.0
+offset_right = 2125.0
+offset_bottom = 1146.0
+rotation = -2.26948
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperFemale2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1315.0
+offset_top = 911.0
+offset_right = 1766.0
+offset_bottom = 1356.0
+rotation = -1.03328
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperFemale3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1215.0
+offset_top = 245.0
+offset_right = 1665.0
+offset_bottom = 688.0
+rotation = -1.52999
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperFemale5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1339.0
+offset_top = 437.0
+offset_right = 1789.0
+offset_bottom = 880.0
+rotation = -3.62908
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperFemale4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 199.0
+offset_right = 1184.0
+offset_bottom = 642.0
+rotation = 0.124347
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperFemale6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 803.0
+offset_right = 1449.0
+offset_bottom = 1246.0
+rotation = -1.95515
+scale = Vector2(0.573395, 0.573395)
+texture = ExtResource("14_hno4g")
+
+[node name="SlipperMale" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1487.0
+offset_top = 76.0
+offset_right = 1937.0
+offset_bottom = 519.0
+rotation = 0.642613
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 47.0
+offset_right = 1499.0
+offset_bottom = 490.0
+rotation = 1.66341
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1389.0
+offset_top = 547.0
+offset_right = 1839.0
+offset_bottom = 993.0
+rotation = -0.160116
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 1033.0
+offset_right = 1507.0
+offset_bottom = 1476.0
+rotation = -1.48858
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 624.0
+offset_right = 1542.0
+offset_bottom = 1067.0
+rotation = -0.854979
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 624.0
+offset_right = 1542.0
+offset_bottom = 1067.0
+rotation = -0.854979
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="SlipperMale7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 595.0
+offset_right = 1373.0
+offset_bottom = 1038.0
+rotation = -2.17389
+scale = Vector2(0.586632, 0.586632)
+texture = ExtResource("15_axh2i")
+
+[node name="BottleGreenBroken" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1159.0
+offset_top = 73.0
+offset_right = 1252.0
+offset_bottom = 222.0
+rotation = 1.56373
+texture = ExtResource("16_6f6gc")
+
+[node name="BottleGreenBroken2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 981.0
+offset_top = 779.0
+offset_right = 1074.0
+offset_bottom = 928.0
+rotation = -1.11438
+texture = ExtResource("16_6f6gc")
+
+[node name="BottleRedBroken" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1390.0
 offset_top = 740.0
-offset_right = 1935.0
-offset_bottom = 1183.0
-rotation = -0.716491
-scale = Vector2(0.573395, 0.573395)
-texture = ExtResource("14_hno4g")
+offset_right = 1484.0
+offset_bottom = 880.0
+rotation = -2.50546
+texture = ExtResource("17_jn6aw")
 
-[node name="TextureRect4" type="TextureRect" parent="Control/Pics"]
+[node name="BottleRedBroken4" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 698.0
-offset_top = 506.0
-offset_right = 1148.0
-offset_bottom = 949.0
-rotation = 0.0615923
-scale = Vector2(0.573395, 0.573395)
-texture = ExtResource("14_hno4g")
+offset_left = 1755.0
+offset_top = 859.0
+offset_right = 1849.0
+offset_bottom = 999.0
+rotation = -4.3824
+texture = ExtResource("17_jn6aw")
 
-[node name="TextureRect2" type="TextureRect" parent="Control/Pics"]
+[node name="BottleRedBroken3" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 1347.0
-offset_top = 188.0
-offset_right = 1797.0
-offset_bottom = 631.0
-rotation = 0.555444
-scale = Vector2(0.586632, 0.586632)
-texture = ExtResource("15_axh2i")
+offset_left = 1039.0
+offset_top = 863.0
+offset_right = 1133.0
+offset_bottom = 1003.0
+rotation = -4.04809
+texture = ExtResource("17_jn6aw")
 
-[node name="TextureRect3" type="TextureRect" parent="Control/Pics"]
+[node name="BottleRedBroken2" type="TextureRect" parent="Control/Pics"]
 layout_mode = 0
-offset_left = 966.0
-offset_top = 1043.0
-offset_right = 1416.0
-offset_bottom = 1486.0
-rotation = -1.55594
-scale = Vector2(0.586632, 0.586632)
-texture = ExtResource("15_axh2i")
+offset_left = 884.0
+offset_top = 292.0
+offset_right = 978.0
+offset_bottom = 432.0
+rotation = -6.11575
+texture = ExtResource("17_jn6aw")
 
 [node name="Control" type="Control" parent="Control"]
 layout_mode = 3
@@ -825,6 +1205,15 @@ theme_override_constants/margin_bottom = 100
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
+
+[node name="Title" type="Label" parent="Control/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_constants/line_spacing = -7
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 100
+text = "Inside
+The Room"
 
 [node name="Play" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
