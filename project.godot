@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="robot-vacuum"
+config/name="Inside The Room"
 run/main_scene="res://scenes/ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://assets/logo/robot_logo.png"
 
 [autoload]
 
