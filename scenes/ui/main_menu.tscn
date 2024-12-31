@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bubj2i7uqj21f"]
+[gd_scene load_steps=12 format=3 uid="uid://bubj2i7uqj21f"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainMenu.cs" id="1_c862v"]
+[ext_resource type="Texture2D" uid="uid://c0pob43ou4r4u" path="res://assets/robot/robot.png" id="2_2ow5a"]
+[ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_soard"]
+[ext_resource type="Texture2D" uid="uid://ckm2n62dbbqfk" path="res://assets/garbage/seed_1.png" id="4_8set2"]
+[ext_resource type="Texture2D" uid="uid://i6nc8sfj2t4g" path="res://assets/garbage/seed_2.png" id="5_6rnjh"]
+[ext_resource type="Texture2D" uid="uid://i822qdo6borx" path="res://assets/garbage/seed_3.png" id="6_ygr77"]
+[ext_resource type="Texture2D" uid="uid://4826e5o45d0g" path="res://assets/garbage/bottle-red.png" id="7_urulq"]
+[ext_resource type="Texture2D" uid="uid://ceul3r00pfexi" path="res://assets/garbage/dust.png" id="8_4dkw4"]
+[ext_resource type="Texture2D" uid="uid://dj07ni6bursmw" path="res://assets/garbage/can_beer.png" id="9_u2te3"]
+[ext_resource type="Texture2D" uid="uid://cuvkdkd1k3p61" path="res://assets/garbage/can_coke.png" id="10_e8bj5"]
+[ext_resource type="Texture2D" uid="uid://dk8ujl8l6b7dh" path="res://assets/garbage/bottle-green.png" id="11_1q3hl"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_c862v")
@@ -9,12 +19,383 @@ _selectScene = "res://scenes/ui/select_level_menu.tscn"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_soard")
+
+[node name="Pics" type="Control" parent="Control"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="Robot" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1532.0
+offset_top = 160.0
+offset_right = 1833.0
+offset_bottom = 461.0
+rotation = 0.523598
+texture = ExtResource("2_2ow5a")
+
+[node name="Seeds" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1451.74
+offset_top = 499.904
+offset_right = 1752.74
+offset_bottom = 800.904
+rotation = 0.523598
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1470.74
+offset_top = 563.904
+offset_right = 1771.74
+offset_bottom = 864.904
+rotation = 1.309
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1477.74
+offset_top = 555.904
+offset_right = 1778.74
+offset_bottom = 856.904
+rotation = -0.261799
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="Seeds10" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1333.3
+offset_top = 769.232
+offset_right = 1634.3
+offset_bottom = 1070.23
+rotation = 1.00045
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds11" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1352.3
+offset_top = 833.232
+offset_right = 1653.3
+offset_bottom = 1134.23
+rotation = 1.78584
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds12" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1359.3
+offset_top = 825.232
+offset_right = 1660.3
+offset_bottom = 1126.23
+rotation = 0.215051
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="Seeds13" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1244.87
+offset_top = 440.044
+offset_right = 1545.87
+offset_bottom = 741.044
+rotation = 1.99941
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds14" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1263.87
+offset_top = 504.044
+offset_right = 1564.87
+offset_bottom = 805.044
+rotation = 2.78481
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds15" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1270.87
+offset_top = 496.044
+offset_right = 1571.87
+offset_bottom = 797.044
+rotation = 1.21401
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="Seeds16" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1229.0
+offset_top = 193.0
+offset_right = 1530.0
+offset_bottom = 494.0
+rotation = 1.94249
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds17" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 195.0
+offset_right = 1474.0
+offset_bottom = 496.0
+rotation = 2.72788
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds18" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1161.0
+offset_top = 199.0
+offset_right = 1462.0
+offset_bottom = 500.0
+rotation = 1.15709
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="Seeds7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1700.74
+offset_top = 694.904
+offset_right = 2001.74
+offset_bottom = 995.904
+rotation = -0.202535
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds8" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1719.74
+offset_top = 758.904
+offset_right = 2020.74
+offset_bottom = 1059.9
+rotation = 0.582862
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds9" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1726.74
+offset_top = 750.904
+offset_right = 2027.74
+offset_bottom = 1051.9
+rotation = -0.987932
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="Seeds4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1513.9
+offset_top = 166.676
+offset_right = 1814.9
+offset_bottom = 467.676
+rotation = 3.36707
+texture = ExtResource("4_8set2")
+stretch_mode = 2
+
+[node name="Seeds5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1535.0
+offset_top = 197.0
+offset_right = 1836.0
+offset_bottom = 498.0
+rotation = 4.15247
+texture = ExtResource("5_6rnjh")
+stretch_mode = 2
+
+[node name="Seeds6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1512.0
+offset_top = 203.0
+offset_right = 1813.0
+offset_bottom = 504.0
+rotation = 2.58167
+texture = ExtResource("6_ygr77")
+stretch_mode = 2
+
+[node name="BottleRed" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1637.0
+offset_top = 697.0
+offset_right = 1938.0
+offset_bottom = 998.0
+rotation = -2.09439
+texture = ExtResource("7_urulq")
+stretch_mode = 2
+
+[node name="BottleRed2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1197.0
+offset_top = 752.0
+offset_right = 1498.0
+offset_bottom = 1053.0
+rotation = 0.739622
+texture = ExtResource("7_urulq")
+stretch_mode = 2
+
+[node name="Dust" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1361.0
+offset_top = 472.0
+offset_right = 2518.0
+offset_bottom = 1672.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1533.0
+offset_top = 744.0
+offset_right = 2690.0
+offset_bottom = 1944.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1754.0
+offset_top = 500.0
+offset_right = 2911.0
+offset_bottom = 1700.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust4" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1642.0
+offset_top = 223.0
+offset_right = 2799.0
+offset_bottom = 1423.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust5" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1271.0
+offset_top = 189.0
+offset_right = 2428.0
+offset_bottom = 1389.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust6" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 414.0
+offset_right = 2223.0
+offset_bottom = 1614.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust7" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1610.0
+offset_top = 935.0
+offset_right = 2767.0
+offset_bottom = 2135.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="Dust8" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1222.0
+offset_top = 723.0
+offset_right = 2379.0
+offset_bottom = 1923.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_4dkw4")
+
+[node name="CanGreen" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 468.0
+offset_right = 1340.0
+offset_bottom = 645.0
+rotation = 1.18303
+texture = ExtResource("9_u2te3")
+
+[node name="CanGreen2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1828.0
+offset_top = 797.0
+offset_right = 2000.0
+offset_bottom = 974.0
+rotation = 1.49989
+texture = ExtResource("9_u2te3")
+
+[node name="CanRed" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1688.0
+offset_top = 172.0
+offset_right = 1860.0
+offset_bottom = 349.0
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1132.0
+offset_top = 450.0
+offset_right = 1304.0
+offset_bottom = 627.0
+rotation = -1.80316
+texture = ExtResource("10_e8bj5")
+
+[node name="CanRed3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1544.0
+offset_top = 968.0
+offset_right = 1716.0
+offset_bottom = 1145.0
+rotation = -2.85361
+texture = ExtResource("10_e8bj5")
+
+[node name="BottleGreen" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1341.0
+offset_top = 107.0
+offset_right = 1434.0
+offset_bottom = 317.0
+texture = ExtResource("11_1q3hl")
+
+[node name="BottleGreen2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1252.0
+offset_top = 595.0
+offset_right = 1345.0
+offset_bottom = 805.0
+rotation = -0.740577
+texture = ExtResource("11_1q3hl")
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -28,12 +409,12 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 100
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Play" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
@@ -42,7 +423,7 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 80
 text = "New Game"
 
-[node name="Continue" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="Continue" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
@@ -51,7 +432,7 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 80
 text = "Continue"
 
-[node name="Select" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="Select" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
@@ -60,13 +441,13 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 80
 text = "Levels"
 
-[node name="WindowMode" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="WindowMode" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Fullscreen"
 
-[node name="Exit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2

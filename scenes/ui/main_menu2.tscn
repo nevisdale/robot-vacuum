@@ -1,0 +1,191 @@
+[gd_scene load_steps=10 format=3 uid="uid://slgegjjgmivt"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainMenu.cs" id="1_or1a2"]
+[ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_g2y6l"]
+[ext_resource type="Texture2D" uid="uid://c0pob43ou4r4u" path="res://assets/robot/robot.png" id="3_mshiu"]
+[ext_resource type="Texture2D" uid="uid://ckm2n62dbbqfk" path="res://assets/garbage/seed_1.png" id="4_0fkb8"]
+[ext_resource type="Texture2D" uid="uid://i6nc8sfj2t4g" path="res://assets/garbage/seed_2.png" id="5_lnqhj"]
+[ext_resource type="Texture2D" uid="uid://i822qdo6borx" path="res://assets/garbage/seed_3.png" id="6_rd0ll"]
+[ext_resource type="Texture2D" uid="uid://4826e5o45d0g" path="res://assets/garbage/bottle-red.png" id="7_hgp1y"]
+[ext_resource type="Texture2D" uid="uid://ceul3r00pfexi" path="res://assets/garbage/dust.png" id="8_7pffy"]
+[ext_resource type="Texture2D" uid="uid://dj07ni6bursmw" path="res://assets/garbage/can_beer.png" id="9_47mm1"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_or1a2")
+_startScene = "res://scenes/levels/intro.tscn"
+_selectScene = "res://scenes/ui/select_level_menu.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g2y6l")
+
+[node name="Pics" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Robot" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1532.0
+offset_top = 160.0
+offset_right = 1833.0
+offset_bottom = 461.0
+rotation = 0.523598
+texture = ExtResource("3_mshiu")
+
+[node name="Seeds" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1451.74
+offset_top = 499.904
+offset_right = 1752.74
+offset_bottom = 800.904
+rotation = 0.523598
+texture = ExtResource("4_0fkb8")
+stretch_mode = 2
+
+[node name="Seeds2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1470.74
+offset_top = 563.904
+offset_right = 1771.74
+offset_bottom = 864.904
+rotation = 1.309
+texture = ExtResource("5_lnqhj")
+stretch_mode = 2
+
+[node name="Seeds3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1477.74
+offset_top = 555.904
+offset_right = 1778.74
+offset_bottom = 856.904
+rotation = -0.261799
+texture = ExtResource("6_rd0ll")
+stretch_mode = 2
+
+[node name="Bottle" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1637.0
+offset_top = 697.0
+offset_right = 1938.0
+offset_bottom = 998.0
+rotation = -2.09439
+texture = ExtResource("7_hgp1y")
+stretch_mode = 2
+
+[node name="Dust" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1361.0
+offset_top = 472.0
+offset_right = 2518.0
+offset_bottom = 1672.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_7pffy")
+
+[node name="Dust2" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1533.0
+offset_top = 744.0
+offset_right = 2690.0
+offset_bottom = 1944.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_7pffy")
+
+[node name="Dust3" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1754.0
+offset_top = 500.0
+offset_right = 2911.0
+offset_bottom = 1700.0
+rotation = -2.09439
+scale = Vector2(0.0665505, 0.0665505)
+texture = ExtResource("8_7pffy")
+
+[node name="Can" type="TextureRect" parent="Control/Pics"]
+layout_mode = 0
+offset_left = 1359.0
+offset_top = 510.0
+offset_right = 1531.0
+offset_bottom = 687.0
+rotation = 1.49989
+texture = ExtResource("9_47mm1")
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 646.0
+offset_right = 375.0
+offset_bottom = 1040.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Play" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 80
+text = "New Game"
+
+[node name="Continue" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 80
+text = "Continue"
+
+[node name="Select" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 80
+text = "Levels"
+
+[node name="WindowMode" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Fullscreen"
+
+[node name="Exit" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Exit"
