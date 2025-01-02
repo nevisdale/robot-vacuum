@@ -80,17 +80,23 @@ rotation = 1.0472
 [node name="Robot" parent="." index="4"]
 position = Vector2(-628, 1260)
 
+[node name="Enemies" parent="." index="5"]
+y_sort_enabled = true
+
 [node name="Car" parent="Enemies" index="0" instance=ExtResource("6_j4adr")]
 position = Vector2(1119, 384)
 
 [node name="Cat" type="Node2D" parent="Enemies" index="1"]
+y_sort_enabled = true
 position = Vector2(990, 990)
 
 [node name="Path2D" type="Path2D" parent="Enemies/Cat" index="0"]
+y_sort_enabled = true
 position = Vector2(23, -27)
 curve = SubResource("Curve2D_6mi83")
 
 [node name="CatFollow" parent="Enemies/Cat/Path2D" index="0" instance=ExtResource("8_2dei1")]
+y_sort_enabled = true
 position = Vector2(-2010, -639)
 
 [node name="Bin" parent="." index="6" instance=ExtResource("5_bymtk")]

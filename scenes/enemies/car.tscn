@@ -43,6 +43,7 @@ _pushForce = 4000.0
 _wheelRotationSpeed = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(-12, 18)
 texture = ExtResource("2_yp2dh")
 flip_h = true
