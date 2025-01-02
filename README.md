@@ -1,4 +1,5 @@
-# robot-vacuum
+# robot-vacuum (Inside the Room)
+## available on [Itch.io](https://kusindia.itch.io/inside-the-room)
 
 ## setup
 ```sh
