@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dv8gvl3u1h7jo"]
+[gd_scene load_steps=10 format=4 uid="uid://dv8gvl3u1h7jo"]
 
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="1_1r51g"]
 [ext_resource type="Script" path="res://scripts/levels/Outro.cs" id="1_jf5t8"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="4_j21tk"]
 [ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="6_3wc6g"]
 [ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="7_0jhxn"]
+[ext_resource type="Texture2D" uid="uid://dt7kwq10k4sls" path="res://assets/ui/closedeye.png" id="7_6kh5w"]
+[ext_resource type="Texture2D" uid="uid://c8mc8tww2rf83" path="res://assets/ui/ear.png" id="8_vxd5m"]
 
 [node name="Outro" type="Node2D"]
 script = ExtResource("1_jf5t8")
@@ -63,6 +65,45 @@ rotation = -0.261799
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(1, 1, 1, 0)
 blend_mode = 1
+
+[node name="Icons" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="Icons"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Icons/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Icons/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="Icons/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_6kh5w")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="Icons/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_vxd5m")
+stretch_mode = 4
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_0jhxn")]
 visible = false

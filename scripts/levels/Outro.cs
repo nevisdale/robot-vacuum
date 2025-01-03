@@ -14,6 +14,7 @@ public partial class Outro : Node2D
     private Camera2D _camera2D = null;
     private DirectionalLight2D _directionalLight2D = null;
     private Robot _robot = null;
+    private CanvasLayer _icons = null;
 
 
 
@@ -30,6 +31,8 @@ public partial class Outro : Node2D
         _camera2D = GetNode<Camera2D>("Robot/Camera2D");
         _directionalLight2D = GetNode<DirectionalLight2D>("DirectionalLight2D");
         _robot = GetNode<Robot>("Robot");
+        _icons = GetNode<CanvasLayer>("Icons");
+        _icons.Hide();
 
 
         _camera2D.LimitLeft -= CAMERA_LIMIT_OFFSET;
@@ -43,6 +46,7 @@ public partial class Outro : Node2D
         tween.TweenProperty(_directionalLight2D, "color:a", 1, 15);
         tween.Finished += () =>
         {
+            _icons.Show();
             // this box can overlap robot lights.
             // red light must be visible in this scene
             GetNode("Env/BoxAngleOpen").QueueFree();
