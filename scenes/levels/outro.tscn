@@ -96,6 +96,7 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="TextureRect" type="TextureRect" parent="Icons/Control/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("7_6kh5w")
 stretch_mode = 4

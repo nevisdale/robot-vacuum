@@ -66,6 +66,7 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("3_tg21l")
 stretch_mode = 4
