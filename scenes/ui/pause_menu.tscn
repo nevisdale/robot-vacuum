@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://qbhqvqkbs31j"]
+[gd_scene load_steps=4 format=3 uid="uid://qbhqvqkbs31j"]
 
 [ext_resource type="Script" path="res://scripts/ui/PauseMenu.cs" id="1_82up0"]
 [ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_8f7c4"]
+[ext_resource type="Theme" uid="uid://b6rfd8flnk6uh" path="res://resources/ui.tres" id="3_v5m3f"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -53,13 +54,13 @@ theme_override_constants/separation = 10
 [node name="Resume" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("3_v5m3f")
 text = "Continue [ESC]"
 
 [node name="Restart" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("3_v5m3f")
 text = "Restart [R]"
 
 [node name="MusicVolume" type="Control" parent="Control/VBoxContainer"]
@@ -105,7 +106,7 @@ offset_top = -60.0
 offset_right = 100.0
 offset_bottom = 60.0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("3_v5m3f")
 text = "<"
 
 [node name="MusicMore" type="Button" parent="Control/VBoxContainer/MusicVolume"]
@@ -122,6 +123,7 @@ offset_top = -60.0
 offset_bottom = 60.0
 grow_horizontal = 0
 grow_vertical = 2
+theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = ">"
 
@@ -168,7 +170,7 @@ offset_top = -60.0
 offset_right = 100.0
 offset_bottom = 60.0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("3_v5m3f")
 text = "<"
 
 [node name="SoundMore" type="Button" parent="Control/VBoxContainer/SoundVolume"]
@@ -185,23 +187,26 @@ offset_top = -60.0
 offset_bottom = 60.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("3_v5m3f")
 text = ">"
 
 [node name="WindowMode" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = "Fullscreen"
 
 [node name="ExitToMainMenu" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = "Menu"
 
 [node name="ExitToDesktop" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = "Exit"

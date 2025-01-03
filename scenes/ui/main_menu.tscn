@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bubj2i7uqj21f"]
+[gd_scene load_steps=19 format=3 uid="uid://bubj2i7uqj21f"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainMenu.cs" id="1_c862v"]
 [ext_resource type="Texture2D" uid="uid://c0pob43ou4r4u" path="res://assets/robot/robot.png" id="2_2ow5a"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://xlmgku6lxv5y" path="res://assets/objects/slipper_male.png" id="15_axh2i"]
 [ext_resource type="Texture2D" uid="uid://crd1quncgejan" path="res://assets/garbage/bottle_green_broken.png" id="16_6f6gc"]
 [ext_resource type="Texture2D" uid="uid://fc6jkt7dnly1" path="res://assets/garbage/bottle_red_broken.png" id="17_jn6aw"]
+[ext_resource type="Theme" uid="uid://b6rfd8flnk6uh" path="res://resources/ui.tres" id="18_tbgce"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_c862v")
@@ -1221,6 +1222,7 @@ custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("18_tbgce")
 theme_override_font_sizes/font_size = 80
 text = "New Game"
 
@@ -1230,6 +1232,7 @@ custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("18_tbgce")
 theme_override_font_sizes/font_size = 80
 text = "Continue"
 
@@ -1239,12 +1242,14 @@ custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("18_tbgce")
 theme_override_font_sizes/font_size = 80
 text = "Levels"
 
 [node name="WindowMode" type="Button" parent="Control/Control/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("18_tbgce")
 theme_override_font_sizes/font_size = 80
 text = "Fullscreen"
 
@@ -1252,5 +1257,6 @@ text = "Fullscreen"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+theme = ExtResource("18_tbgce")
 theme_override_font_sizes/font_size = 80
 text = "Exit"
