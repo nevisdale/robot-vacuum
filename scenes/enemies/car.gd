@@ -52,14 +52,12 @@ func _physics_process(delta: float) -> void:
 		var robot := collider as Robot
 		if robot != null:
 			_direction = Vector2.ZERO
-			_wheel_rotation_speed = 0
 			robot.make_not_moveable()
 			robot.mark_as_captured_by_enemy(self)
 
 		# walls or other static object, just stop a car
 		if collider is StaticBody2D or collider is TileMapLayer:
 			_direction = Vector2.ZERO
-			_wheel_rotation_speed = 0
 
 		# is car stuck?
 		if global_position_before.is_equal_approx(global_position):
