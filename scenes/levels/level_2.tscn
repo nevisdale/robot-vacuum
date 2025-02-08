@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://6ls2xag8nwcq"]
+[gd_scene load_steps=14 format=3 uid="uid://6ls2xag8nwcq"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_ipeqd"]
+[ext_resource type="Resource" uid="uid://c8tj880auk8ux" path="res://resources/levels/level_02.tres" id="2_casuh"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="2_utxut"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_vrmf7"]
 [ext_resource type="PackedScene" uid="uid://c526jsececbsr" path="res://scenes/garbage/can_coke.tscn" id="3_22u6l"]
@@ -14,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ccq3npin00ne" path="res://scenes/objects/flower_pot.tscn" id="12_jwkcf"]
 
 [node name="Level2" instance=ExtResource("1_ipeqd")]
-_nextLevelScene = "res://scenes/levels/level_3.tscn"
+_level_definition = ExtResource("2_casuh")
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-6, 1366)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bywgt7rou0lp"]
 
 [ext_resource type="PackedScene" uid="uid://dkcgymeeexi7t" path="res://scenes/ui/level_button.tscn" id="1_dqac7"]
-[ext_resource type="Script" path="res://scripts/ui/SelectLevelMenu.cs" id="1_v23he"]
+[ext_resource type="Script" path="res://scenes/ui/select_level_menu.gd" id="1_i37fd"]
 [ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_yri3f"]
 [ext_resource type="Theme" uid="uid://b6rfd8flnk6uh" path="res://resources/ui.tres" id="4_ruhsp"]
 
 [node name="SelectLevelMenu" type="CanvasLayer"]
-script = ExtResource("1_v23he")
-_mainMenuScene = "res://scenes/ui/main_menu.tscn"
+script = ExtResource("1_i37fd")
+_select_level_button = ExtResource("1_dqac7")
 
 [node name="Control" type="Control" parent="."]
 unique_name_in_owner = true
@@ -43,6 +43,7 @@ theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
 [node name="GridContainer" type="GridContainer" parent="Control/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -51,105 +52,9 @@ theme_override_constants/v_separation = 30
 columns = 5
 
 [node name="LevelButton1" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-unique_name_in_owner = true
+visible = false
 layout_mode = 2
-_title = "1"
-_scenePath = "res://scenes/levels/level_1.tscn"
-
-[node name="LevelButton2" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "2"
-_scenePath = "res://scenes/levels/level_2.tscn"
-
-[node name="LevelButton3" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "3"
-_scenePath = "res://scenes/levels/level_3.tscn"
-
-[node name="LevelButton4" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "4"
-_scenePath = "res://scenes/levels/level_4.tscn"
-
-[node name="LevelButton5" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "5"
-_scenePath = "res://scenes/levels/level_5.tscn"
-
-[node name="LevelButton6" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "6"
-_scenePath = "res://scenes/levels/level_6.tscn"
-
-[node name="LevelButton7" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "7"
-_scenePath = "res://scenes/levels/level_7.tscn"
-
-[node name="LevelButton8" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "8"
-_scenePath = "res://scenes/levels/level_8.tscn"
-
-[node name="LevelButton9" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "9"
-_scenePath = "res://scenes/levels/level_9.tscn"
-
-[node name="LevelButton10" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "10"
-_scenePath = "res://scenes/levels/level_10.tscn"
-
-[node name="LevelButton11" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "11"
-_scenePath = "res://scenes/levels/level_11.tscn"
-
-[node name="LevelButton12" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "12"
-_scenePath = "res://scenes/levels/level_12.tscn"
-
-[node name="LevelButton13" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "13"
-_scenePath = "res://scenes/levels/level_13.tscn"
-
-[node name="LevelButton14" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "14"
-_scenePath = "res://scenes/levels/level_14.tscn"
-
-[node name="LevelButton15" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "15"
-_scenePath = "res://scenes/levels/level_15.tscn"
-
-[node name="LevelButton16" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "16"
-_scenePath = "res://scenes/levels/level_16.tscn"
-
-[node name="LevelButton17" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "17"
-_scenePath = "res://scenes/levels/level_17.tscn"
-
-[node name="LevelButton18" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "18"
-_scenePath = "res://scenes/levels/level_18.tscn"
-
-[node name="LevelButton19" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "19"
-_scenePath = "res://scenes/levels/level_19.tscn"
-
-[node name="LevelButton20" parent="Control/MarginContainer/GridContainer" instance=ExtResource("1_dqac7")]
-layout_mode = 2
-_title = "20"
-_scenePath = "res://scenes/levels/outro.tscn"
+text = "12"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control"]
 layout_mode = 1
@@ -165,7 +70,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Back" type="Button" parent="Control/MarginContainer2"]
+[node name="BackButton" type="Button" parent="Control/MarginContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("4_ruhsp")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=24 format=3 uid="uid://4mwfuclmygcy"]
+
+[ext_resource type="Script" path="res://scenes/autoload/level_manager.gd" id="1_vod6x"]
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="2_auwin"]
+[ext_resource type="Resource" uid="uid://cbm32h0g03yre" path="res://resources/levels/level_intro.tres" id="3_78dbf"]
+[ext_resource type="Resource" uid="uid://dt18k6ks4ofyi" path="res://resources/levels/level_01.tres" id="4_1ia6u"]
+[ext_resource type="Resource" uid="uid://c8tj880auk8ux" path="res://resources/levels/level_02.tres" id="5_8yj5b"]
+[ext_resource type="Resource" uid="uid://by411v4v03si3" path="res://resources/levels/level_03.tres" id="5_r28ad"]
+[ext_resource type="Resource" uid="uid://dfq5c2vccqm6d" path="res://resources/levels/level_04.tres" id="6_80yo2"]
+[ext_resource type="Resource" uid="uid://c6ppjbismptkg" path="res://resources/levels/level_05.tres" id="7_yp28q"]
+[ext_resource type="Resource" uid="uid://w0mxxsr6satx" path="res://resources/levels/level_06.tres" id="8_vj1hd"]
+[ext_resource type="Resource" uid="uid://pxbs3vxco2g8" path="res://resources/levels/level_07.tres" id="9_maf44"]
+[ext_resource type="Resource" uid="uid://b8s7tkx5j4t3l" path="res://resources/levels/level_08.tres" id="10_1ktyx"]
+[ext_resource type="Resource" uid="uid://bl7wegwjyvovq" path="res://resources/levels/level_09.tres" id="11_sujef"]
+[ext_resource type="Resource" uid="uid://ovr53w88a4j6" path="res://resources/levels/level_10.tres" id="12_wxyu4"]
+[ext_resource type="Resource" uid="uid://cyc78hch8rwxy" path="res://resources/levels/level_11.tres" id="13_7v2j8"]
+[ext_resource type="Resource" uid="uid://dlnji05m0kw57" path="res://resources/levels/level_12.tres" id="14_pifbc"]
+[ext_resource type="Resource" uid="uid://dhedlm8p4dd45" path="res://resources/levels/level_13.tres" id="15_cbveo"]
+[ext_resource type="Resource" uid="uid://bjlv7gawk5s50" path="res://resources/levels/level_14.tres" id="16_knslk"]
+[ext_resource type="Resource" uid="uid://cihb3dymm4kb" path="res://resources/levels/level_15.tres" id="17_b26ag"]
+[ext_resource type="Resource" uid="uid://rg81k2khim5a" path="res://resources/levels/level_16.tres" id="18_ctk6v"]
+[ext_resource type="Resource" uid="uid://bygaekt111rh4" path="res://resources/levels/level_17.tres" id="19_nldak"]
+[ext_resource type="Resource" uid="uid://br0ts1yi8fd0v" path="res://resources/levels/level_18.tres" id="20_xkny5"]
+[ext_resource type="Resource" uid="uid://ca83nm1uv4crn" path="res://resources/levels/level_19.tres" id="21_q63vg"]
+[ext_resource type="Resource" uid="uid://clnd6jnhggj66" path="res://resources/levels/level_outro.tres" id="22_rrrq3"]
+
+[node name="LevelManager" type="Node"]
+script = ExtResource("1_vod6x")
+_level_definitions = Array[ExtResource("2_auwin")]([ExtResource("3_78dbf"), ExtResource("4_1ia6u"), ExtResource("5_8yj5b"), ExtResource("5_r28ad"), ExtResource("6_80yo2"), ExtResource("7_yp28q"), ExtResource("8_vj1hd"), ExtResource("9_maf44"), ExtResource("10_1ktyx"), ExtResource("11_sujef"), ExtResource("12_wxyu4"), ExtResource("13_7v2j8"), ExtResource("14_pifbc"), ExtResource("15_cbveo"), ExtResource("16_knslk"), ExtResource("17_b26ag"), ExtResource("18_ctk6v"), ExtResource("19_nldak"), ExtResource("20_xkny5"), ExtResource("21_q63vg"), ExtResource("22_rrrq3")])
+_main_menu_scene_path = "res://scenes/ui/main_menu.tscn"
+_select_level_scene_path = "res://scenes/ui/select_level_menu.tscn"
+_intro_definition = ExtResource("3_78dbf")

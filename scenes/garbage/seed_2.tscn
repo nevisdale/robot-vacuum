@@ -1,17 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cylb1x0u4t22m"]
+[gd_scene load_steps=6 format=3 uid="uid://cylb1x0u4t22m"]
 
-[ext_resource type="Script" path="res://scripts/garbage/CollectableGarbage.cs" id="1_tujhl"]
+[ext_resource type="PackedScene" uid="uid://c41tuvtdyxfkc" path="res://scenes/components/init_transform_component.tscn" id="1_q136w"]
+[ext_resource type="PackedScene" uid="uid://dyfqlgcptsd64" path="res://scenes/components/garbage_component.tscn" id="1_s58km"]
+[ext_resource type="PackedScene" uid="uid://datk3s23hhkju" path="res://scenes/components/collectable_garbage_component.tscn" id="2_lrsw5"]
 [ext_resource type="Texture2D" uid="uid://i6nc8sfj2t4g" path="res://assets/garbage/seed_2.png" id="2_v1x7s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t3apx"]
-radius = 10.0
 height = 20.0
 
 [node name="Seed2" type="Area2D" groups=["is_garbage"]]
 scale = Vector2(0.1, 0.1)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_tujhl")
+
+[node name="GarbageComponent" parent="." node_paths=PackedStringArray("_extended_garbage_component") instance=ExtResource("1_s58km")]
+_extended_garbage_component = NodePath("../CollectableGarbageComponent")
+
+[node name="CollectableGarbageComponent" parent="." instance=ExtResource("2_lrsw5")]
+
+[node name="InitTransformComponent" parent="." instance=ExtResource("1_q136w")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.52588e-05, 9.53674e-07)

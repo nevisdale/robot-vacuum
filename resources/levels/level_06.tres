@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://w0mxxsr6satx"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_84d7w"]
+
+[resource]
+script = ExtResource("1_84d7w")
+level_id = "wet_spots_and_no_gravity"
+level_scene_file_path = "res://scenes/levels/level_6.tscn"
+music_theme = 2

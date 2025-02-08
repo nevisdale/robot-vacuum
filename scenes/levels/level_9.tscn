@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://bi30mxhbpthfe"]
+[gd_scene load_steps=18 format=3 uid="uid://bi30mxhbpthfe"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_fhm6c"]
+[ext_resource type="Resource" uid="uid://bl7wegwjyvovq" path="res://resources/levels/level_09.tres" id="2_1ohoo"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="4_d0tde"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="4_w6wkj"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="5_pbt6x"]
@@ -18,8 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="15_edoew"]
 
 [node name="Level9" instance=ExtResource("1_fhm6c")]
-_nextLevelScene = "res://scenes/levels/level_10.tscn"
-_backgroundSoundType = 1
+_level_definition = ExtResource("2_1ohoo")
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("4_d0tde")]
 position = Vector2(1257, 490)

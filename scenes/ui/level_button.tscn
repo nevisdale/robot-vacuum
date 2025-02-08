@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkcgymeeexi7t"]
 
 [ext_resource type="Theme" uid="uid://b6rfd8flnk6uh" path="res://resources/ui.tres" id="1_cfahd"]
-[ext_resource type="Script" path="res://scripts/ui/LevelButton.cs" id="1_ry4r3"]
+[ext_resource type="Script" path="res://scenes/ui/level_button.gd" id="2_ahkmw"]
 
 [node name="LevelButton" type="Button"]
 custom_minimum_size = Vector2(200, 200)
@@ -9,4 +9,4 @@ offset_right = 8.0
 offset_bottom = 8.0
 theme = ExtResource("1_cfahd")
 theme_override_font_sizes/font_size = 80
-script = ExtResource("1_ry4r3")
+script = ExtResource("2_ahkmw")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://djw2miqcpjv1m"]
+[gd_scene load_steps=11 format=3 uid="uid://djw2miqcpjv1m"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_7pyra"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_o15sh"]
+[ext_resource type="Resource" uid="uid://dt18k6ks4ofyi" path="res://resources/levels/level_01.tres" id="2_wwgqs"]
 [ext_resource type="PackedScene" uid="uid://dbgiiv38v36be" path="res://scenes/garbage/dust.tscn" id="3_k5vjk"]
 [ext_resource type="PackedScene" uid="uid://52khmyn6hrlx" path="res://scenes/objects/box_horizontal.tscn" id="4_ucb5x"]
 [ext_resource type="PackedScene" uid="uid://l8tcuptdi2hh" path="res://scenes/objects/box_vertical.tscn" id="5_6ue3q"]
@@ -11,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="9_ehugw"]
 
 [node name="Level1" instance=ExtResource("1_7pyra")]
-_nextLevelScene = "res://scenes/levels/level_2.tscn"
+_level_definition = ExtResource("2_wwgqs")
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(130, 346)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://coskb3egnhhtm"]
+
+[ext_resource type="Script" path="res://scenes/components/physics_garbage_component.gd" id="1_fkmnq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lxgui"]
+friction = 0.0
+
+[node name="PhysicsGarbageComponent" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 7
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_lxgui")
+gravity_scale = 0.0
+can_sleep = false
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 3.0
+angular_damp = 3.0
+script = ExtResource("1_fkmnq")

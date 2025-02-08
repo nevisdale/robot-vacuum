@@ -1,17 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://e02uf0quyt07"]
+[gd_scene load_steps=12 format=3 uid="uid://e02uf0quyt07"]
 
-[ext_resource type="Script" path="res://scripts/enemies/Car.cs" id="1_q1vg6"]
+[ext_resource type="Script" path="res://scenes/enemies/car.gd" id="1_rjjrt"]
+[ext_resource type="PackedScene" uid="uid://bacokghtt53nm" path="res://scenes/components/robot_danger_area_component.tscn" id="2_7b72t"]
+[ext_resource type="PackedScene" uid="uid://dv5le75l015h3" path="res://scenes/components/electricity_receiver_component.tscn" id="2_ih4ot"]
 [ext_resource type="Texture2D" uid="uid://cwm7nmpopjtig" path="res://assets/objects/car_without_wheels.png" id="2_yp2dh"]
 [ext_resource type="Texture2D" uid="uid://dloubsdbo6a8b" path="res://assets/objects/wheel.png" id="3_o7p8f"]
 [ext_resource type="Texture2D" uid="uid://bph5dly0qotjs" path="res://assets/objects/car_electro_1.png" id="4_mqq84"]
 [ext_resource type="Texture2D" uid="uid://dhus8ygjklltk" path="res://assets/objects/car_electro_2.png" id="5_chibw"]
 [ext_resource type="Texture2D" uid="uid://p4aaiv4xhtj0" path="res://assets/objects/car_electro_3.png" id="6_b32xe"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jivnu"]
+radius = 349.023
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8j7"]
 size = Vector2(289, 233)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jivnu"]
-radius = 325.075
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1s22"]
 animations = [{
@@ -37,10 +39,14 @@ collision_mask = 7
 motion_mode = 1
 wall_min_slide_angle = 0.0
 platform_on_leave = 2
-script = ExtResource("1_q1vg6")
-_speed = 800.0
-_pushForce = 4000.0
-_wheelRotationSpeed = 5.0
+script = ExtResource("1_rjjrt")
+
+[node name="ElectricityReceiverComponent" parent="." instance=ExtResource("2_ih4ot")]
+
+[node name="RobotDangerAreaComponent" parent="." instance=ExtResource("2_7b72t")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RobotDangerAreaComponent"]
+shape = SubResource("CircleShape2D_jivnu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -208,15 +214,9 @@ rotation = -1.5708
 target_position = Vector2(0, 10)
 collision_mask = 4
 
-[node name="DangerArea" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerArea"]
-shape = SubResource("CircleShape2D_jivnu")
-
 [node name="ElectricityVisual" type="AnimatedSprite2D" parent="."]
 position = Vector2(-10, 34)
 sprite_frames = SubResource("SpriteFrames_f1s22")
+autoplay = "default"
 frame_progress = 0.391388
 flip_h = true

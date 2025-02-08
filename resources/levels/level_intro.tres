@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://cbm32h0g03yre"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_5lscq"]
+
+[resource]
+script = ExtResource("1_5lscq")
+level_id = "1ntr0oo"
+level_scene_file_path = "res://scenes/levels/intro.tscn"
+music_theme = 0
+is_intro = true

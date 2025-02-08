@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://bl7wegwjyvovq"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_c5e8n"]
+
+[resource]
+script = ExtResource("1_c5e8n")
+level_id = "more_button_for_god_of_buttons"
+level_scene_file_path = "res://scenes/levels/level_9.tscn"
+music_theme = 2

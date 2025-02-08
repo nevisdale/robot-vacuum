@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bacokghtt53nm"]
+
+[ext_resource type="Script" path="res://scenes/components/robot_danger_area_component.gd" id="1_bax4a"]
+
+[node name="RobotDangerAreaComponent" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_bax4a")

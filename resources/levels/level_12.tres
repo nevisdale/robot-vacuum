@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://dlnji05m0kw57"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_clut3"]
+
+[resource]
+script = ExtResource("1_clut3")
+level_id = "two_cars_are_not_joke_lol"
+level_scene_file_path = "res://scenes/levels/level_12.tscn"
+music_theme = 3

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyfqlgcptsd64"]
+
+[ext_resource type="Script" path="res://scenes/components/garbage_component.gd" id="1_181gs"]
+
+[node name="GarbageComponent" type="Node"]
+script = ExtResource("1_181gs")

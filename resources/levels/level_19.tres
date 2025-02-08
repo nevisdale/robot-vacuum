@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://ca83nm1uv4crn"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_k8rd8"]
+
+[resource]
+script = ExtResource("1_k8rd8")
+level_id = "best_level_for_you"
+level_scene_file_path = "res://scenes/levels/level_19.tscn"
+music_theme = 4

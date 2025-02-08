@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0jysbs03ffxn"]
+[gd_scene load_steps=13 format=3 uid="uid://c0jysbs03ffxn"]
 
-[ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="1_dr6rb"]
+[ext_resource type="Script" path="res://scenes/garbage/battery.gd" id="1_rs5ik"]
+[ext_resource type="PackedScene" uid="uid://dyfqlgcptsd64" path="res://scenes/components/garbage_component.tscn" id="1_x34wb"]
 [ext_resource type="Texture2D" uid="uid://booh8q2wh1fmb" path="res://assets/garbage/battery.png" id="2_fkw6g"]
+[ext_resource type="PackedScene" uid="uid://coskb3egnhhtm" path="res://scenes/components/physics_garbage_component.tscn" id="2_k53jd"]
+[ext_resource type="PackedScene" uid="uid://dv5le75l015h3" path="res://scenes/components/electricity_receiver_component.tscn" id="2_tgqb1"]
 [ext_resource type="Texture2D" uid="uid://emri7svsglyh" path="res://assets/garbage/battery_electro_1.png" id="3_xc54l"]
+[ext_resource type="PackedScene" uid="uid://jsxdoo2tvuot" path="res://scenes/components/electricity_sender_component.tscn" id="4_1m65w"]
 [ext_resource type="Texture2D" uid="uid://b2dfb6hx4dwa" path="res://assets/garbage/battery_electro_2.png" id="4_toseb"]
 [ext_resource type="Texture2D" uid="uid://c5dmj6ugh0m0j" path="res://assets/garbage/battery_electro_3.png" id="5_x2muf"]
 
@@ -24,24 +28,49 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
-radius = 26.0
+radius = 29.0
 height = 104.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c5yyr"]
+radius = 31.0
+height = 108.0
+
 [node name="Battery" type="Node2D" groups=["is_garbage"]]
+script = ExtResource("1_rs5ik")
 
-[node name="PhysicsGarbage" parent="." node_paths=PackedStringArray("_electricityVisual") instance=ExtResource("1_dr6rb")]
-_canReceiveElectricity = true
-_electricityVisual = NodePath("ElectricityVisual")
+[node name="GarbageComponent" parent="." node_paths=PackedStringArray("_extended_garbage_component") instance=ExtResource("1_x34wb")]
+_extended_garbage_component = NodePath("../PhysicsGarbageComponent")
 
-[node name="ElectricityVisual" type="AnimatedSprite2D" parent="PhysicsGarbage"]
+[node name="PhysicsGarbageComponent" parent="." instance=ExtResource("2_k53jd")]
+
+[node name="ElectricityReceiverComponent" parent="PhysicsGarbageComponent" instance=ExtResource("2_tgqb1")]
+unique_name_in_owner = true
+
+[node name="ElectricityVisual" type="AnimatedSprite2D" parent="PhysicsGarbageComponent"]
+unique_name_in_owner = true
+position = Vector2(0, 1.00032)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_cyoon")
+autoplay = "default"
+frame_progress = 0.703418
 
-[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
-position = Vector2(-9.53674e-07, 0)
+[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbageComponent"]
+position = Vector2(-9.53674e-07, 1.00032)
 rotation = -1.57102
 texture = ExtResource("2_fkw6g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbage"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbageComponent"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3ci8u")
+
+[node name="ElectricitySenderComponent" parent="PhysicsGarbageComponent" node_paths=PackedStringArray("_area2d") instance=ExtResource("4_1m65w")]
+unique_name_in_owner = true
+_area2d = NodePath("../ElectricityArea2D")
+
+[node name="ElectricityArea2D" type="Area2D" parent="PhysicsGarbageComponent"]
+rotation = 1.5708
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbageComponent/ElectricityArea2D"]
+shape = SubResource("CapsuleShape2D_c5yyr")

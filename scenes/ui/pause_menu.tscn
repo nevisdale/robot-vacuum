@@ -1,13 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://qbhqvqkbs31j"]
 
-[ext_resource type="Script" path="res://scripts/ui/PauseMenu.cs" id="1_82up0"]
+[ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="1_j5iof"]
 [ext_resource type="Texture2D" uid="uid://bj5tbxkbdy5c6" path="res://assets/room/floor_tile.png" id="2_8f7c4"]
 [ext_resource type="Theme" uid="uid://b6rfd8flnk6uh" path="res://resources/ui.tres" id="3_v5m3f"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_82up0")
-_mainMenuScene = "res://scenes/ui/main_menu.tscn"
+script = ExtResource("1_j5iof")
 
 [node name="Background" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -51,13 +50,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Resume" type="Button" parent="Control/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_constants/line_spacing = -7
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 100
+text = "Level 12"
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_v5m3f")
-text = "Continue [ESC]"
+text = "Continue [ESC/P]"
 
-[node name="Restart" type="Button" parent="Control/VBoxContainer"]
+[node name="RestartButton" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_v5m3f")
@@ -95,7 +104,7 @@ text = "Music:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MusicLess" type="Button" parent="Control/VBoxContainer/MusicVolume"]
+[node name="MusicLessButton" type="Button" parent="Control/VBoxContainer/MusicVolume"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
@@ -109,7 +118,7 @@ grow_vertical = 2
 theme = ExtResource("3_v5m3f")
 text = "<"
 
-[node name="MusicMore" type="Button" parent="Control/VBoxContainer/MusicVolume"]
+[node name="MusicMoreButton" type="Button" parent="Control/VBoxContainer/MusicVolume"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
@@ -159,7 +168,7 @@ text = "Sound:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SoundLess" type="Button" parent="Control/VBoxContainer/SoundVolume"]
+[node name="SoundLessButton" type="Button" parent="Control/VBoxContainer/SoundVolume"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
@@ -173,7 +182,7 @@ grow_vertical = 2
 theme = ExtResource("3_v5m3f")
 text = "<"
 
-[node name="SoundMore" type="Button" parent="Control/VBoxContainer/SoundVolume"]
+[node name="SoundMoreButton" type="Button" parent="Control/VBoxContainer/SoundVolume"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
@@ -190,21 +199,21 @@ grow_vertical = 2
 theme = ExtResource("3_v5m3f")
 text = ">"
 
-[node name="WindowMode" type="Button" parent="Control/VBoxContainer"]
+[node name="WindowModeButton" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = "Fullscreen"
 
-[node name="ExitToMainMenu" type="Button" parent="Control/VBoxContainer"]
+[node name="MenuButton" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_v5m3f")
 theme_override_font_sizes/font_size = 80
 text = "Menu"
 
-[node name="ExitToDesktop" type="Button" parent="Control/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_v5m3f")

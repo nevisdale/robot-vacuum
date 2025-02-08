@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://by411v4v03si3"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_r7hot"]
+
+[resource]
+script = ExtResource("1_r7hot")
+level_id = "cat_is_my_best_friend"
+level_scene_file_path = "res://scenes/levels/level_3.tscn"
+music_theme = 1

@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=4 uid="uid://beto5bgm5v55j"]
+[gd_scene load_steps=7 format=4 uid="uid://beto5bgm5v55j"]
 
-[ext_resource type="Script" path="res://scripts/levels/LevelTemplate.cs" id="1_sdfn2"]
+[ext_resource type="Script" path="res://scenes/levels/level_template.gd" id="1_50xfs"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_yyibw"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_da5dw"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_7e6ij"]
 [ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="5_swxyc"]
+[ext_resource type="PackedScene" uid="uid://dkk0isei6ttad" path="res://scenes/game_camera.tscn" id="5_wrr31"]
 
-[node name="LevelTemplate" type="Node2D"]
-script = ExtResource("1_sdfn2")
+[node name="LevelTemplate" type="Node"]
+script = ExtResource("1_50xfs")
 
 [node name="Room" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -40,17 +41,17 @@ metadata/_edit_lock_ = true
 position = Vector2(-521, 1119)
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="Robot"]
-zoom = Vector2(0.5, 0.5)
+[node name="GameCamera" parent="Robot" instance=ExtResource("5_wrr31")]
+unique_name_in_owner = true
+zoom = Vector2(0.55, 0.55)
 process_callback = 0
-limit_left = -1792
-limit_top = -1024
-limit_right = 2048
-limit_bottom = 1536
+limit_left = -1888
+limit_top = -1129
+limit_right = 2144
+limit_bottom = 1640
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 3.0
-metadata/_edit_lock_ = true
+editor_draw_limits = true
 
 [node name="Enemies" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -60,3 +61,9 @@ metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_swxyc")]
 visible = false
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(1, 1, 1, 0.117647)
+blend_mode = 1
+shadow_color = Color(0, 0, 0, 0.72549)
+height = 1.0

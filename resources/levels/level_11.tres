@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://cyc78hch8rwxy"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_yfnyy"]
+
+[resource]
+script = ExtResource("1_yfnyy")
+level_id = "baby_bottle_vs_car_hehe"
+level_scene_file_path = "res://scenes/levels/level_11.tscn"
+music_theme = 3

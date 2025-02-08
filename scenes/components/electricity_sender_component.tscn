@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jsxdoo2tvuot"]
+
+[ext_resource type="Script" path="res://scenes/components/electricity_sender_component.gd" id="1_fl0wx"]
+
+[node name="ElectricitySenderComponent" type="Node"]
+script = ExtResource("1_fl0wx")

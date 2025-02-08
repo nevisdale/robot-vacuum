@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://bmmjij1w0pkce"]
+[gd_scene load_steps=24 format=3 uid="uid://bmmjij1w0pkce"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_my1kp"]
+[ext_resource type="Resource" uid="uid://dhedlm8p4dd45" path="res://resources/levels/level_13.tres" id="2_5rhji"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_c2v8l"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_prse3"]
 [ext_resource type="PackedScene" uid="uid://d2x1rrijmhh2j" path="res://scenes/objects/button_left.tscn" id="3_py8kh"]
@@ -29,8 +30,7 @@ _data = {
 point_count = 5
 
 [node name="Level13" instance=ExtResource("1_my1kp")]
-_nextLevelScene = "res://scenes/levels/level_14.tscn"
-_backgroundSoundType = 2
+_level_definition = ExtResource("2_5rhji")
 
 [node name="ButtonLeft" parent="Buttons/Left" index="0" instance=ExtResource("3_py8kh")]
 position = Vector2(199, 556)
@@ -98,13 +98,6 @@ curve = SubResource("Curve2D_ihucs")
 
 [node name="CatFollow" parent="Enemies/Cats/Path2D" index="0" instance=ExtResource("7_a38pe")]
 position = Vector2(-637, 105)
-
-[node name="CatFollow3" parent="Enemies/Cats/Path2D" index="1" instance=ExtResource("7_a38pe")]
-position = Vector2(-1757.97, 819.108)
-progress = 1839.03
-
-[node name="Cat" parent="Enemies/Cats/Path2D/CatFollow3" index="0"]
-_move_speed = -400.0
 
 [node name="Sofa" parent="Env" index="0" instance=ExtResource("11_5hcnt")]
 position = Vector2(786, -766)
@@ -225,4 +218,3 @@ position = Vector2(-1061, 1372)
 position = Vector2(1877, 965)
 
 [editable path="Enemies/Cats/Path2D/CatFollow"]
-[editable path="Enemies/Cats/Path2D/CatFollow3"]

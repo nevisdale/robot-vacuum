@@ -1,18 +1,20 @@
-[gd_scene load_steps=10 format=4 uid="uid://dv8gvl3u1h7jo"]
+[gd_scene load_steps=12 format=4 uid="uid://dv8gvl3u1h7jo"]
 
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="1_1r51g"]
-[ext_resource type="Script" path="res://scripts/levels/Outro.cs" id="1_jf5t8"]
+[ext_resource type="Script" path="res://scenes/levels/outro.gd" id="1_wchtm"]
+[ext_resource type="Resource" uid="uid://clnd6jnhggj66" path="res://resources/levels/level_outro.tres" id="2_g2o13"]
 [ext_resource type="PackedScene" uid="uid://2u1mu6smetqe" path="res://scenes/objects/box_angle_open.tscn" id="2_gxm6m"]
 [ext_resource type="PackedScene" uid="uid://cna5b0cu8gvw1" path="res://scenes/objects/charger.tscn" id="3_6ggfr"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="4_j21tk"]
+[ext_resource type="PackedScene" uid="uid://dkk0isei6ttad" path="res://scenes/game_camera.tscn" id="5_80b03"]
 [ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="6_3wc6g"]
 [ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="7_0jhxn"]
 [ext_resource type="Texture2D" uid="uid://dt7kwq10k4sls" path="res://assets/ui/closedeye.png" id="7_6kh5w"]
 [ext_resource type="Texture2D" uid="uid://c8mc8tww2rf83" path="res://assets/ui/ear.png" id="8_vxd5m"]
 
 [node name="Outro" type="Node2D"]
-script = ExtResource("1_jf5t8")
-_mainMenuScene = "res://scenes/ui/main_menu.tscn"
+script = ExtResource("1_wchtm")
+_level_definition = ExtResource("2_g2o13")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -7783.0
@@ -35,22 +37,22 @@ tile_set = ExtResource("1_1r51g")
 
 [node name="Charger" parent="." instance=ExtResource("3_6ggfr")]
 position = Vector2(267, 443)
-_doNotPlaySoundForce = true
 
 [node name="Robot" parent="." instance=ExtResource("4_j21tk")]
 position = Vector2(267, 355)
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="Robot"]
-zoom = Vector2(0.5, 0.5)
+[node name="GameCamera" parent="Robot" instance=ExtResource("5_80b03")]
+unique_name_in_owner = true
+zoom = Vector2(0.55, 0.55)
 process_callback = 0
-limit_left = -1792
-limit_top = -1024
-limit_right = 2048
-limit_bottom = 1536
+limit_left = -1888
+limit_top = -1129
+limit_right = 2144
+limit_bottom = 1640
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 3.0
+editor_draw_limits = true
 metadata/_edit_lock_ = true
 
 [node name="Env" type="Node2D" parent="."]
@@ -63,8 +65,10 @@ position = Vector2(1510, 995)
 rotation = -0.261799
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-color = Color(1, 1, 1, 0)
+color = Color(1, 1, 1, 0.117647)
 blend_mode = 1
+shadow_color = Color(0, 0, 0, 0.72549)
+height = 1.0
 
 [node name="Icons" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -76,6 +80,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Icons/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.5
+offset_top = -87.0
+offset_right = 531.5
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="ThankYouForPlayingLabel" type="Label" parent="Icons/Control/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "THANK YOU FOR PLAYING"
+horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Icons/Control"]
 layout_mode = 1
@@ -101,7 +131,8 @@ layout_mode = 2
 texture = ExtResource("7_6kh5w")
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="Icons/Control/MarginContainer/HBoxContainer"]
+[node name="EarIconTextureRect" type="TextureRect" parent="Icons/Control/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("8_vxd5m")
 stretch_mode = 4

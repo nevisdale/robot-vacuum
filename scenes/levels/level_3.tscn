@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bh8xclapgtyp4"]
+[gd_scene load_steps=15 format=3 uid="uid://bh8xclapgtyp4"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_q34xd"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="2_7ydgx"]
+[ext_resource type="Resource" uid="uid://by411v4v03si3" path="res://resources/levels/level_03.tres" id="2_ipcnn"]
 [ext_resource type="PackedScene" uid="uid://dbgiiv38v36be" path="res://scenes/garbage/dust.tscn" id="3_natw0"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="4_mvxsd"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="6_4b18y"]
@@ -20,7 +21,7 @@ _data = {
 point_count = 7
 
 [node name="Level3" instance=ExtResource("1_q34xd")]
-_nextLevelScene = "res://scenes/levels/level_4.tscn"
+_level_definition = ExtResource("2_ipcnn")
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(58, 1325)

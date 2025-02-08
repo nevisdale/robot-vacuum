@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://is5wx7gomf1e"]
+[gd_scene load_steps=5 format=3 uid="uid://is5wx7gomf1e"]
 
-[ext_resource type="PackedScene" uid="uid://xx4rn4r5bkd2" path="res://scenes/garbage/physics_garbage.tscn" id="2_ir5q5"]
+[ext_resource type="PackedScene" uid="uid://dyfqlgcptsd64" path="res://scenes/components/garbage_component.tscn" id="1_sx1c3"]
+[ext_resource type="PackedScene" uid="uid://coskb3egnhhtm" path="res://scenes/components/physics_garbage_component.tscn" id="2_3ur7g"]
 [ext_resource type="Texture2D" uid="uid://c3kqkyr0ql20j" path="res://assets/garbage/baby_bottle.png" id="2_u0ic3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ci8u"]
@@ -9,14 +10,17 @@ height = 130.0
 
 [node name="BabyBottle" type="Node2D" groups=["is_garbage"]]
 
-[node name="PhysicsGarbage" parent="." instance=ExtResource("2_ir5q5")]
+[node name="GarbageComponent" parent="." node_paths=PackedStringArray("_extended_garbage_component") instance=ExtResource("1_sx1c3")]
+_extended_garbage_component = NodePath("../PhysicsGarbageComponent")
 
-[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbage"]
+[node name="PhysicsGarbageComponent" parent="." instance=ExtResource("2_3ur7g")]
+
+[node name="Sprite2D" type="Sprite2D" parent="PhysicsGarbageComponent"]
 position = Vector2(-13.3424, 0.719569)
 rotation = -1.5708
 texture = ExtResource("2_u0ic3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbage"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsGarbageComponent"]
 position = Vector2(-12, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3ci8u")

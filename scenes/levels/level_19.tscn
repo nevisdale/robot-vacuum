@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://c4hf5du4k4dg7"]
+[gd_scene load_steps=21 format=3 uid="uid://c4hf5du4k4dg7"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_lsonx"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="2_8mpko"]
+[ext_resource type="Resource" uid="uid://ca83nm1uv4crn" path="res://resources/levels/level_19.tres" id="2_tqtdc"]
 [ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="2_vv23r"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_2hfxi"]
 [ext_resource type="PackedScene" uid="uid://c3na3lj8jr5gj" path="res://scenes/objects/wet_spot_big.tscn" id="3_7ad53"]
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="3_a6oh3"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/green_bottle_broken.tscn" id="4_0ucns"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/red_bottle_broken.tscn" id="4_6nrdj"]
+[ext_resource type="PackedScene" uid="uid://1jpnrcs40m3n" path="res://scenes/garbage/green_bottle_broken.tscn" id="4_0ucns"]
+[ext_resource type="PackedScene" uid="uid://cnspbur4ebc1y" path="res://scenes/garbage/red_bottle_broken.tscn" id="4_6nrdj"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="4_8tqwj"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="4_awkdb"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="4_n8qkd"]
@@ -21,8 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="18_m5ytc"]
 
 [node name="Level19" instance=ExtResource("1_lsonx")]
-_nextLevelScene = "res://scenes/levels/outro.tscn"
-_backgroundSoundType = 3
+_level_definition = ExtResource("2_tqtdc")
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("2_vv23r")]
 position = Vector2(679, -20)

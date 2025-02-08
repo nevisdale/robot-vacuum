@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3na3lj8jr5gj"]
 
-[ext_resource type="Script" path="res://scripts/objects/WetSpot.cs" id="1_job6f"]
+[ext_resource type="PackedScene" uid="uid://cfcwger4w80mg" path="res://scenes/components/wet_spot_component.tscn" id="1_2nlwu"]
 [ext_resource type="Texture2D" uid="uid://fqkux0wlx007" path="res://assets/objects/wet_spot_big.png" id="2_p1t8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4p5v"]
@@ -9,7 +9,9 @@ size = Vector2(344, 732)
 [node name="WetSpotBig" type="Area2D"]
 collision_layer = 4
 collision_mask = 6
-script = ExtResource("1_job6f")
+
+[node name="WetSpotComponent" parent="." node_paths=PackedStringArray("spot_area") instance=ExtResource("1_2nlwu")]
+spot_area = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_p1t8t")

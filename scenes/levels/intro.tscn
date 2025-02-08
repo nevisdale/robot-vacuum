@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bed4fidap1kpd"]
+[gd_scene load_steps=8 format=3 uid="uid://bed4fidap1kpd"]
 
-[ext_resource type="Script" path="res://scripts/levels/Intro.cs" id="1_kiqub"]
+[ext_resource type="Script" path="res://scenes/levels/intro.gd" id="1_nry2y"]
 [ext_resource type="PackedScene" uid="uid://ykv6f55ab02i" path="res://scenes/robot.tscn" id="1_x87a6"]
+[ext_resource type="Resource" uid="uid://cbm32h0g03yre" path="res://resources/levels/level_intro.tres" id="2_koq25"]
+[ext_resource type="PackedScene" uid="uid://dkk0isei6ttad" path="res://scenes/game_camera.tscn" id="3_7e525"]
 [ext_resource type="Texture2D" uid="uid://dt7kwq10k4sls" path="res://assets/ui/closedeye.png" id="3_tg21l"]
 [ext_resource type="PackedScene" uid="uid://qbhqvqkbs31j" path="res://scenes/ui/pause_menu.tscn" id="4_1jtti"]
 [ext_resource type="Texture2D" uid="uid://c8mc8tww2rf83" path="res://assets/ui/ear.png" id="4_t1vn6"]
 
 [node name="Intro" type="Node2D"]
-script = ExtResource("1_kiqub")
-_nextLevelScene = "res://scenes/levels/level_1.tscn"
+script = ExtResource("1_nry2y")
+_level_definition = ExtResource("2_koq25")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 blend_mode = 1
@@ -21,11 +23,11 @@ offset_bottom = 1863.0
 
 [node name="Robot" parent="." instance=ExtResource("1_x87a6")]
 
-[node name="Camera2D" type="Camera2D" parent="Robot"]
-process_callback = 0
+[node name="GameCamera" parent="Robot" instance=ExtResource("3_7e525")]
 
 [node name="StartAudioTimer" type="Timer" parent="."]
-wait_time = 3.0
+unique_name_in_owner = true
+wait_time = 2.4
 one_shot = true
 
 [node name="BlackColorRect" type="ColorRect" parent="."]
@@ -71,7 +73,8 @@ layout_mode = 2
 texture = ExtResource("3_tg21l")
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+[node name="EarIconTextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("4_t1vn6")
 stretch_mode = 4

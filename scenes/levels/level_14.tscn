@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=4 uid="uid://de1lseeix3n7n"]
+[gd_scene load_steps=20 format=4 uid="uid://de1lseeix3n7n"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_h7yur"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="2_2yoi3"]
+[ext_resource type="Resource" uid="uid://bjlv7gawk5s50" path="res://resources/levels/level_14.tres" id="2_45to4"]
 [ext_resource type="PackedScene" uid="uid://xo747btjxusq" path="res://scenes/objects/wet_spot.tscn" id="2_h2v6l"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_soun3"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="2_vd06i"]
@@ -12,16 +13,15 @@
 [ext_resource type="PackedScene" uid="uid://b4ybbs4t33jpo" path="res://scenes/objects/chair.tscn" id="5_esf61"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="5_s815l"]
 [ext_resource type="PackedScene" uid="uid://bn2othlmshkow" path="res://scenes/objects/computer_table.tscn" id="6_cqjwh"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/green_bottle_broken.tscn" id="6_ys12q"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/red_bottle_broken.tscn" id="7_g0i5x"]
+[ext_resource type="PackedScene" uid="uid://1jpnrcs40m3n" path="res://scenes/garbage/green_bottle_broken.tscn" id="6_ys12q"]
+[ext_resource type="PackedScene" uid="uid://cnspbur4ebc1y" path="res://scenes/garbage/red_bottle_broken.tscn" id="7_g0i5x"]
 [ext_resource type="PackedScene" uid="uid://dlr7u24giikc6" path="res://scenes/objects/flower_dry.tscn" id="13_lit33"]
 [ext_resource type="PackedScene" uid="uid://blhiww3e10vdc" path="res://scenes/objects/slippers_blue.tscn" id="15_jgavd"]
 [ext_resource type="PackedScene" uid="uid://c5qtxie7xv15x" path="res://scenes/objects/slippers_red.tscn" id="16_8drhi"]
 [ext_resource type="PackedScene" uid="uid://xoa3f53dq4f6" path="res://scenes/objects/slippers_baby.tscn" id="17_3ph8x"]
 
 [node name="Level14" instance=ExtResource("1_h7yur")]
-_nextLevelScene = "res://scenes/levels/level_15.tscn"
-_backgroundSoundType = 3
+_level_definition = ExtResource("2_45to4")
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(-1088, 1403)

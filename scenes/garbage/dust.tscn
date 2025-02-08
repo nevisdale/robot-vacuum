@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbgiiv38v36be"]
+[gd_scene load_steps=6 format=3 uid="uid://dbgiiv38v36be"]
 
-[ext_resource type="Script" path="res://scripts/garbage/CollectableGarbage.cs" id="1_uimen"]
+[ext_resource type="PackedScene" uid="uid://dyfqlgcptsd64" path="res://scenes/components/garbage_component.tscn" id="1_2tp0m"]
 [ext_resource type="Texture2D" uid="uid://ceul3r00pfexi" path="res://assets/garbage/dust.png" id="2_bnd7l"]
+[ext_resource type="PackedScene" uid="uid://datk3s23hhkju" path="res://scenes/components/collectable_garbage_component.tscn" id="2_cwoob"]
+[ext_resource type="PackedScene" uid="uid://c41tuvtdyxfkc" path="res://scenes/components/init_transform_component.tscn" id="3_i3d6t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5gt64"]
 radius = 420.0
@@ -11,7 +13,13 @@ height = 840.0
 scale = Vector2(0.1, 0.1)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_uimen")
+
+[node name="GarbageComponent" parent="." node_paths=PackedStringArray("_extended_garbage_component") instance=ExtResource("1_2tp0m")]
+_extended_garbage_component = NodePath("../CollectableGarbageComponent")
+
+[node name="CollectableGarbageComponent" parent="." instance=ExtResource("2_cwoob")]
+
+[node name="InitTransformComponent" parent="." instance=ExtResource("3_i3d6t")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_bnd7l")

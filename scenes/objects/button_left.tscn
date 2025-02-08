@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2x1rrijmhh2j"]
 
-[ext_resource type="Script" path="res://scripts/objects/FloorButton.cs" id="1_0qh5t"]
 [ext_resource type="Texture2D" uid="uid://bua4v67u8ol4p" path="res://assets/objects/button_left.png" id="2_2upwv"]
+[ext_resource type="PackedScene" uid="uid://soymre5jjrb" path="res://scenes/components/floor_button_component.tscn" id="2_dvmlo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ex715"]
 size = Vector2(212, 218)
@@ -9,7 +9,9 @@ size = Vector2(212, 218)
 [node name="ButtonLeft" type="Area2D"]
 collision_layer = 4
 collision_mask = 6
-script = ExtResource("1_0qh5t")
+
+[node name="FloorButtonComponent" parent="." node_paths=PackedStringArray("_button_area") instance=ExtResource("2_dvmlo")]
+_button_area = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_2upwv")

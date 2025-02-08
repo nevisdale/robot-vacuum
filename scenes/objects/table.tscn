@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwjmicc7dj7op"]
 
-[ext_resource type="Script" path="res://scripts/objects/Table.cs" id="1_q8fli"]
+[ext_resource type="Script" path="res://scenes/objects/table.gd" id="1_jmssl"]
 [ext_resource type="Texture2D" uid="uid://b0jevypoqjf0s" path="res://assets/objects/table.png" id="2_n8g4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbxo2"]
@@ -12,7 +12,7 @@ size = Vector2(440, 124)
 [node name="Table" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_q8fli")
+script = ExtResource("1_jmssl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 2

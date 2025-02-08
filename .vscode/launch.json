@@ -2,53 +2,13 @@
     "version": "2.0.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "coreclr",
+            "name": "GDScript Godot",
+            "type": "godot",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${env:GODOT4}",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopAtEntry": false,
-            "args": [
-                "--path",
-                "${workspaceRoot}"
-            ]
+            "project": "${workspaceFolder}",
+            "port": 6005,
+            "debugServer": 6006,
+            "address": "127.0.0.1",
         },
-        {
-            "name": "Launch (Select Scene)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${env:GODOT4}",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopAtEntry": false,
-            "args": [
-                "--path",
-                "${workspaceRoot}",
-                "${command:godot.csharp.getLaunchScene}"
-            ]
-        },
-        {
-            "name": "Launch Editor",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${env:GODOT4}",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopAtEntry": false,
-            "args": [
-                "--path",
-                "${workspaceRoot}",
-                "--editor"
-            ]
-        },
-        {
-            "name": "Attach to Process",
-            "type": "coreclr",
-            "request": "attach"
-        }
     ]
 }

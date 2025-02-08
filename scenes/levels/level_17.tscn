@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=4 uid="uid://onigbm6iodsm"]
+[gd_scene load_steps=21 format=4 uid="uid://onigbm6iodsm"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_aa7sb"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_067mw"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="2_87fuo"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="2_bfvjh"]
+[ext_resource type="Resource" uid="uid://bygaekt111rh4" path="res://resources/levels/level_17.tres" id="2_dh2hu"]
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="3_on1d0"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="3_x8rvx"]
 [ext_resource type="PackedScene" uid="uid://br4utgoe330x0" path="res://scenes/enemies/cat_follow.tscn" id="4_53k0r"]
@@ -26,8 +27,7 @@ _data = {
 point_count = 5
 
 [node name="Level17" instance=ExtResource("1_aa7sb")]
-_nextLevelScene = "res://scenes/levels/level_18.tscn"
-_backgroundSoundType = 3
+_level_definition = ExtResource("2_dh2hu")
 
 [node name="Charger" parent="." index="2"]
 position = Vector2(69, 1401)

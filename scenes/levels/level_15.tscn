@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=4 uid="uid://08rf7egj1j5r"]
+[gd_scene load_steps=22 format=4 uid="uid://08rf7egj1j5r"]
 
 [ext_resource type="PackedScene" uid="uid://beto5bgm5v55j" path="res://scenes/levels/level_template.tscn" id="1_h64m4"]
+[ext_resource type="Resource" uid="uid://cihb3dymm4kb" path="res://resources/levels/level_15.tres" id="2_2ufgj"]
 [ext_resource type="TileSet" uid="uid://wuv24cihm35a" path="res://resources/env.tres" id="2_tox7k"]
 [ext_resource type="PackedScene" uid="uid://dml7e66e4rtxd" path="res://scenes/objects/button_right.tscn" id="3_n1uoc"]
 [ext_resource type="PackedScene" uid="uid://cx0yv6ktaof73" path="res://scenes/objects/electricity.tscn" id="4_jf5pf"]
@@ -8,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://mc2cclmylgpj" path="res://scenes/garbage/seed_set.tscn" id="6_q3pye"]
 [ext_resource type="PackedScene" uid="uid://e02uf0quyt07" path="res://scenes/enemies/car.tscn" id="7_jcn1g"]
 [ext_resource type="PackedScene" uid="uid://dbgiiv38v36be" path="res://scenes/garbage/dust.tscn" id="7_kwkjw"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/green_bottle_broken.tscn" id="8_jms3e"]
+[ext_resource type="PackedScene" uid="uid://1jpnrcs40m3n" path="res://scenes/garbage/green_bottle_broken.tscn" id="8_jms3e"]
 [ext_resource type="PackedScene" uid="uid://bonjdc4kt2wxw" path="res://scenes/objects/bin.tscn" id="9_gjsjc"]
-[ext_resource type="PackedScene" path="res://scenes/garbage/red_bottle_broken.tscn" id="9_ojfci"]
+[ext_resource type="PackedScene" uid="uid://cnspbur4ebc1y" path="res://scenes/garbage/red_bottle_broken.tscn" id="9_ojfci"]
 [ext_resource type="PackedScene" uid="uid://cn6atu2mscgpf" path="res://scenes/objects/tv.tscn" id="10_ikgxn"]
 [ext_resource type="PackedScene" uid="uid://bnb38c8vujvsu" path="res://scenes/objects/sofa.tscn" id="11_hnolj"]
 [ext_resource type="PackedScene" uid="uid://dtsxbwa8xjbe7" path="res://scenes/objects/cosmetic_table.tscn" id="12_th74g"]
@@ -22,9 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://xoa3f53dq4f6" path="res://scenes/objects/slippers_baby.tscn" id="20_fer6a"]
 
 [node name="Level15" instance=ExtResource("1_h64m4")]
-position = Vector2(0, 3)
-_nextLevelScene = "res://scenes/levels/level_16.tscn"
-_backgroundSoundType = 3
+_level_definition = ExtResource("2_2ufgj")
 
 [node name="ButtonRight" parent="Buttons/Right" index="0" instance=ExtResource("3_n1uoc")]
 position = Vector2(546, -256)

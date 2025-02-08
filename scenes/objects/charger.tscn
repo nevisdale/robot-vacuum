@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cna5b0cu8gvw1"]
 
-[ext_resource type="Script" path="res://scripts/objects/Charger.cs" id="1_4luet"]
+[ext_resource type="Script" path="res://scenes/objects/charger.gd" id="1_42hkd"]
 [ext_resource type="Texture2D" uid="uid://cltj587de4pfp" path="res://assets/objects/station.png" id="2_7g7m7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws661"]
@@ -12,7 +12,7 @@ size = Vector2(254, 68)
 [node name="Charger" type="Area2D"]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_4luet")
+script = ExtResource("1_42hkd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708

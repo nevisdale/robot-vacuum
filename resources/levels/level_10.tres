@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=2 format=3 uid="uid://ovr53w88a4j6"]
+
+[ext_resource type="Script" path="res://resources/levels/level_definition.gd" id="1_oo18u"]
+
+[resource]
+script = ExtResource("1_oo18u")
+level_id = "do_slow_go_fast"
+level_scene_file_path = "res://scenes/levels/level_10.tscn"
+music_theme = 2
