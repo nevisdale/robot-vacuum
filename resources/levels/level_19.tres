@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_k8rd8")
-level_id = "best_level_for_you"
+level_id = "do_not_fail_after_all"
 level_scene_file_path = "res://scenes/levels/level_19.tscn"
 music_theme = 4
+is_intro = false
