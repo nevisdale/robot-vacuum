@@ -29,4 +29,3 @@ script = ExtResource("1_vod6x")
 _level_definitions = Array[ExtResource("2_auwin")]([ExtResource("3_78dbf"), ExtResource("4_1ia6u"), ExtResource("5_8yj5b"), ExtResource("5_r28ad"), ExtResource("6_80yo2"), ExtResource("7_yp28q"), ExtResource("8_vj1hd"), ExtResource("9_maf44"), ExtResource("10_1ktyx"), ExtResource("11_sujef"), ExtResource("12_wxyu4"), ExtResource("13_7v2j8"), ExtResource("14_pifbc"), ExtResource("15_cbveo"), ExtResource("16_knslk"), ExtResource("17_b26ag"), ExtResource("18_ctk6v"), ExtResource("19_nldak"), ExtResource("20_xkny5"), ExtResource("21_q63vg"), ExtResource("22_rrrq3")])
 _main_menu_scene_path = "res://scenes/ui/main_menu.tscn"
 _select_level_scene_path = "res://scenes/ui/select_level_menu.tscn"
-_intro_definition = ExtResource("3_78dbf")
