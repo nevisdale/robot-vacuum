@@ -7,7 +7,7 @@ extends RigidBody2D
 var _tocuhed_by_robot_last_time: float = 0
 var _touched_by_car_last_time: float = 0
 var _wet_spot_count: int = 0
-var _init_damp: Vector2 # linear damp and angular damp
+var _init_damp: Vector2  # linear damp and angular damp
 var _wet_damp: Vector2 = Vector2.ZERO
 
 

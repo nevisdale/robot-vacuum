@@ -2,7 +2,7 @@ class_name FloorButtonComponent
 
 extends Node2D
 
-enum Direction {LEFT, RIGHT}
+enum Direction { LEFT, RIGHT }
 
 @export var _button_area: Area2D
 @export var _direction: Direction = Direction.LEFT
