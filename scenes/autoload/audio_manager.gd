@@ -1,5 +1,13 @@
 extends Node
 
+enum MusicTheme {
+	UNKNOWN,
+	ALONE,
+	COUPLE,
+	FAMILY,
+	DIVORCE,
+}
+
 # SFX
 @onready var _push_garbage_player: AudioStreamPlayer = %PushGarbagePlayerSFX
 @onready var _capture_garbage_player: AudioStreamPlayer = %CaptureGarbagePlayerSFX
@@ -20,7 +28,7 @@ extends Node
 @onready var _main_theme_family_player: AudioStreamPlayer = %MainThemeFamilyPlayerMusic
 @onready var _main_theme_divorce_player: AudioStreamPlayer = %MainThemeDivorcePlayerMusic
 
-var _current_music_type: XTypes.MusicTheme = XTypes.MusicTheme.UNKNOWN
+var _current_music_type: MusicTheme = MusicTheme.UNKNOWN
 
 
 func play_sound_robot_capture_garbage() -> void:
@@ -63,33 +71,33 @@ func play_sound_level_error() -> void:
 	_try_play(_next_level_err_player)
 
 
-func play_intro(do_after: Callable = func() -> void: pass ) -> void:
+func play_intro(do_after: Callable = func() -> void: pass) -> void:
 	_intro_theme_player.play()
 	if do_after != null:
 		_intro_theme_player.finished.connect(do_after)
 
 
-func play_music(music_type: XTypes.MusicTheme) -> void:
+func play_music(music_type: MusicTheme) -> void:
 	if _current_music_type == music_type:
 		return
 
 	stop_music()
 	_current_music_type = music_type
 	match music_type:
-		XTypes.MusicTheme.ALONE:
+		MusicTheme.ALONE:
 			_main_theme_alone_player.play()
-		XTypes.MusicTheme.COUPLE:
+		MusicTheme.COUPLE:
 			_main_theme_couple_player.play()
-		XTypes.MusicTheme.FAMILY:
+		MusicTheme.FAMILY:
 			_main_theme_family_player.play()
-		XTypes.MusicTheme.DIVORCE:
+		MusicTheme.DIVORCE:
 			_main_theme_divorce_player.play()
 		_:
 			print_debug("Unknown music type: %s" % music_type)
 
 
 func stop_music() -> void:
-	_current_music_type = XTypes.MusicTheme.UNKNOWN
+	_current_music_type = MusicTheme.UNKNOWN
 	_main_theme_alone_player.stop()
 	_main_theme_couple_player.stop()
 	_main_theme_family_player.stop()
