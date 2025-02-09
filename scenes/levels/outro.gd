@@ -45,10 +45,10 @@ func _ready() -> void:
 
 	AudioManager.play_intro(_do_after_intro)
 
-	await get_tree().create_timer(9).timeout
+	await _wait(9)
 	_robot.in_danger_area()
 
-	await get_tree().create_timer(4).timeout
+	await _wait(4)
 	_robot.make_not_moveable()
 	_robot.disable_light()
 
@@ -74,9 +74,13 @@ func _do_after_intro() -> void:
 	_thank_you_label.modulate.a = 0
 
 	tween = create_tween()
-	tween.tween_property(_thank_you_label, "modulate:a", 0.8, 2)
+	tween.tween_property(_thank_you_label, "modulate:a", 0.6, 2)
 	tween.tween_interval(2)
 	tween.tween_property(_thank_you_label, "modulate:a", 0, 2)
 	await tween.finished
 
 	LevelManager.go_to_main_menu()
+
+
+func _wait(seconds: float) -> void:
+	await get_tree().create_timer(seconds).timeout
