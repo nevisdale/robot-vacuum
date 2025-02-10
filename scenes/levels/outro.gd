@@ -54,7 +54,7 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("next_level"):
+	if OS.is_debug_build() and event.is_action_pressed("next_level"):
 		LevelManager.go_to_next_level()
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("fullscreen"):
