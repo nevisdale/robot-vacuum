@@ -7,4 +7,4 @@
 lint:
 	gdformat .
 	# for windows
-	find  | xargs dos2unix -s
+	find -name "*.gd" | xargs dos2unix -s
