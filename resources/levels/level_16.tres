@@ -7,3 +7,4 @@ script = ExtResource("1_osjyf")
 level_id = "battery_for_all_cases"
 level_scene_file_path = "res://scenes/levels/level_16.tscn"
 music_theme = 4
+is_intro = false

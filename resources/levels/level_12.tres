@@ -7,3 +7,4 @@ script = ExtResource("1_clut3")
 level_id = "two_cars_are_not_joke_lol"
 level_scene_file_path = "res://scenes/levels/level_12.tscn"
 music_theme = 3
+is_intro = false

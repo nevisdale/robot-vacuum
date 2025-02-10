@@ -7,3 +7,4 @@ script = ExtResource("1_oo18u")
 level_id = "do_slow_go_fast"
 level_scene_file_path = "res://scenes/levels/level_10.tscn"
 music_theme = 2
+is_intro = false

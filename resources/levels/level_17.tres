@@ -7,3 +7,4 @@ script = ExtResource("1_6o3wr")
 level_id = "stop_please_No"
 level_scene_file_path = "res://scenes/levels/level_17.tscn"
 music_theme = 4
+is_intro = false

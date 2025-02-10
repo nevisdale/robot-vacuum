@@ -7,3 +7,4 @@ script = ExtResource("1_wfqwp")
 level_id = "goodbay_thx"
 level_scene_file_path = "res://scenes/levels/outro.tscn"
 music_theme = 4
+is_intro = false

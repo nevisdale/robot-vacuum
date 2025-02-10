@@ -7,3 +7,4 @@ script = ExtResource("1_mw42c")
 level_id = "like_tesla_13"
 level_scene_file_path = "res://scenes/levels/level_15.tscn"
 music_theme = 4
+is_intro = false

@@ -7,3 +7,4 @@ script = ExtResource("1_r7hot")
 level_id = "heart_in_flowers"
 level_scene_file_path = "res://scenes/levels/level_4.tscn"
 music_theme = 1
+is_intro = false

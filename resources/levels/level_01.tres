@@ -7,3 +7,4 @@ script = ExtResource("1_dvvha")
 level_id = "only_boxes_and_alone"
 level_scene_file_path = "res://scenes/levels/level_1.tscn"
 music_theme = 1
+is_intro = false

@@ -7,3 +7,4 @@ script = ExtResource("1_hyboh")
 level_id = "electro_jokes_hehe"
 level_scene_file_path = "res://scenes/levels/level_14.tscn"
 music_theme = 4
+is_intro = false

@@ -7,3 +7,4 @@ script = ExtResource("1_r7hot")
 level_id = "cat_is_my_best_friend"
 level_scene_file_path = "res://scenes/levels/level_3.tscn"
 music_theme = 1
+is_intro = false

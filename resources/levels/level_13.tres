@@ -7,3 +7,4 @@ script = ExtResource("1_bmla4")
 level_id = "real_hell"
 level_scene_file_path = "res://scenes/levels/level_13.tscn"
 music_theme = 3
+is_intro = false
