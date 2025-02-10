@@ -17,3 +17,6 @@
 - use custom resource for managing the game levels easily.
 - SaveManager uses level_id (NOT scene path) in save file. BREAKING CHANGE: old save files will not work.
 - add "THANK YOU FOR PLAYING" message at the end of the game.
+
+## running in web
+- Win + R -> chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security (tested in Google Chrome in Windows 11)
